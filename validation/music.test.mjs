@@ -66,6 +66,30 @@ test('estimateBeats 恢复合成曲的节拍网格并对齐小节线', () => {
   }
 });
 
+test('干净输入下识别副属/调外属七(解码器能力,防调内先验过强)', () => {
+  // C 大调里的副属进行 C - D7(V/V,含调外 F#) - G7(V,含调外 F) - C。
+  // 诊断意义:证实真实歌(如"美人鱼")漏副属 D 是上游提取的 F#/F 歧义、而非解码器——
+  // 音符干净时解码器报对。也守护:未来加强调内先验不得把调外属七压成三和弦。
+  const CHORDS = [
+    ['C', [60, 64, 67]],
+    ['D7', [62, 66, 69, 72]], // D F# A C(F# 调外)
+    ['G7', [67, 71, 74, 77]], // G B D F(F 调外)
+    ['C', [60, 64, 67]],
+  ];
+  const notes = [];
+  CHORDS.forEach(([, midis], bar) => {
+    for (const m of midis) {
+      for (let beat = 0; beat < 4; beat++) {
+        notes.push({ pitchMidi: m, startTimeSeconds: bar * 2 + beat * 0.5, durationSeconds: 0.45, amplitude: 1 });
+      }
+    }
+  });
+  const { segments } = detectChords(notes, 8);
+  const labels = segments.map((s) => s.label);
+  assert.ok(labels.includes('D7'), `应识别副属 D7,实得 ${labels.join(',')}`);
+  assert.ok(labels.includes('G7'), `应识别属七 G7,实得 ${labels.join(',')}`);
+});
+
 test('stable triads produce a compact chord timeline', () => {
   const notes = [];
   const pitches = [48, 52, 55];

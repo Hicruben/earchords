@@ -1,0 +1,21 @@
+# sitemap-radar 监控清单
+# 格式: 名称=sitemap地址   (# 开头为注释)
+#
+# 选站原则:盯"中小型、更新快、明显在追新词"的工具站,不要盯巨头
+# (巨头 sitemap 百万级,信号噪音大)。发现新的快站随时加进来。
+
+# —— chess.com 付费墙缺口案例站(哥飞公开复盘的原型,盯它扩词方向) ——
+chessigma=https://chessigma.com/sitemap.xml
+# wintrchess 没有 sitemap.xml(SPA,全路径 404),无法监控
+# wintrchess=https://wintrchess.com/sitemap.xml
+
+# —— 快节奏免费工具站(观察它们上新工具的方向) ——
+tinywow=https://tinywow.com/sitemap.xml
+
+# —— AI 工具目录站(新收录工具名 = 新词本身,注意量大) ——
+futurepedia=https://www.futurepedia.io/sitemap.xml
+aixploria=https://www.aixploria.com/sitemap.xml
+# toolify 有 Cloudflare 盾,403,脚本抓不了
+# toolify=https://www.toolify.ai/sitemap.xml
+
+# 待补充:调研代理产出候选方向后,把对应赛道的竞品站加进来

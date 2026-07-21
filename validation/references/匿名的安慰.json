@@ -1,0 +1,14 @@
+{
+  "title": "王心凌 - 匿名的安慰",
+  "key": {
+    "tonic": 1,
+    "mode": "major"
+  },
+  "requiredChords": [
+    "C#",
+    "F#",
+    "G#",
+    "A#m"
+  ],
+  "note": "Db 大调转 D(文本谱 Key=C#-D;C指法capo1);librosa 独立估计 C# major 佐证"
+}

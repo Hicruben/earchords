@@ -1,0 +1,221 @@
+{
+  "01_basic_triads": [
+    {
+      "start": 0.0,
+      "end": 2.0,
+      "label": "C",
+      "pitch_classes": [
+        0,
+        4,
+        7
+      ]
+    },
+    {
+      "start": 2.0,
+      "end": 4.0,
+      "label": "Am",
+      "pitch_classes": [
+        0,
+        4,
+        9
+      ]
+    },
+    {
+      "start": 4.0,
+      "end": 6.0,
+      "label": "F",
+      "pitch_classes": [
+        0,
+        5,
+        9
+      ]
+    },
+    {
+      "start": 6.0,
+      "end": 8.0,
+      "label": "G",
+      "pitch_classes": [
+        2,
+        7,
+        11
+      ]
+    }
+  ],
+  "02_pop_progression": [
+    {
+      "start": 0.0,
+      "end": 2.0,
+      "label": "C",
+      "pitch_classes": [
+        0,
+        4,
+        7
+      ]
+    },
+    {
+      "start": 2.0,
+      "end": 4.0,
+      "label": "G",
+      "pitch_classes": [
+        2,
+        7,
+        11
+      ]
+    },
+    {
+      "start": 4.0,
+      "end": 6.0,
+      "label": "Am",
+      "pitch_classes": [
+        0,
+        4,
+        9
+      ]
+    },
+    {
+      "start": 6.0,
+      "end": 8.0,
+      "label": "F",
+      "pitch_classes": [
+        0,
+        5,
+        9
+      ]
+    }
+  ],
+  "03_sevenths": [
+    {
+      "start": 0.0,
+      "end": 2.0,
+      "label": "Cmaj7",
+      "pitch_classes": [
+        0,
+        4,
+        7,
+        11
+      ]
+    },
+    {
+      "start": 2.0,
+      "end": 4.0,
+      "label": "Dm7",
+      "pitch_classes": [
+        0,
+        2,
+        5,
+        9
+      ]
+    },
+    {
+      "start": 4.0,
+      "end": 6.0,
+      "label": "G7",
+      "pitch_classes": [
+        2,
+        5,
+        7,
+        11
+      ]
+    },
+    {
+      "start": 6.0,
+      "end": 8.0,
+      "label": "Cmaj7",
+      "pitch_classes": [
+        0,
+        4,
+        7,
+        11
+      ]
+    }
+  ],
+  "04_inversions": [
+    {
+      "start": 0.0,
+      "end": 2.0,
+      "label": "C",
+      "pitch_classes": [
+        0,
+        4,
+        7
+      ]
+    },
+    {
+      "start": 2.0,
+      "end": 4.0,
+      "label": "F",
+      "pitch_classes": [
+        0,
+        5,
+        9
+      ]
+    },
+    {
+      "start": 4.0,
+      "end": 6.0,
+      "label": "G7",
+      "pitch_classes": [
+        2,
+        5,
+        7,
+        11
+      ]
+    },
+    {
+      "start": 6.0,
+      "end": 8.0,
+      "label": "C",
+      "pitch_classes": [
+        0,
+        4,
+        7
+      ]
+    }
+  ],
+  "05_jazz_ii_v_i": [
+    {
+      "start": 0.0,
+      "end": 2.0,
+      "label": "Dm7",
+      "pitch_classes": [
+        0,
+        2,
+        5,
+        9
+      ]
+    },
+    {
+      "start": 2.0,
+      "end": 4.0,
+      "label": "G7",
+      "pitch_classes": [
+        2,
+        5,
+        7,
+        11
+      ]
+    },
+    {
+      "start": 4.0,
+      "end": 6.0,
+      "label": "Cmaj7",
+      "pitch_classes": [
+        0,
+        4,
+        7,
+        11
+      ]
+    },
+    {
+      "start": 6.0,
+      "end": 8.0,
+      "label": "Am7",
+      "pitch_classes": [
+        0,
+        4,
+        7,
+        9
+      ]
+    }
+  ]
+}

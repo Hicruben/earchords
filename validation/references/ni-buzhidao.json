@@ -1,0 +1,8 @@
+{
+  "title": "王力宏 - 你不知道的事",
+  "durationSeconds": [277, 280],
+  "key": { "tonic": 1, "mode": "major" },
+  "bpm": [86, 88],
+  "requiredChords": ["C#", "F#", "G#", "A#m", "Fm"],
+  "segmentCount": [60, 130]
+}

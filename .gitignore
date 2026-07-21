@@ -1,0 +1,30 @@
+# 依赖与构建产物(可由 npm install / npm run build 重建)
+node_modules/
+dist/
+
+# Python 虚拟环境与缓存
+validation/.venv/
+**/__pycache__/
+*.pyc
+
+# 合成整曲语料(2.6GB,可由 validation/make_songs.py 重建)
+validation/songs/
+
+# 生成的 demo / A-B 听感验证音频(可由 make_demo.py / mix_verify.py 重建)
+validation/demo3/
+validation/verify/
+
+# 真实歌曲音频语料:版权原因不入库(分析结果 real_analysis/ 保留,可跑 score/redecode)
+validation/real/
+*.mp3
+*.flac
+*.m4a
+*.ogg
+
+# seo-radar 运行时快照与报告(每次运行按机器/时间产生)
+seo-radar/state/
+seo-radar/reports/
+
+# 系统与临时文件
+.DS_Store
+*.zip

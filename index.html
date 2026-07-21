@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChordSnap — Get the chords from any song, free & unlimited</title>
+    <meta
+      name="description"
+      content="Upload any song and get its chords instantly. Free, unlimited, no sign-up. Transpose, capo, slow down, and see guitar, piano & ukulele diagrams. Your audio never leaves your device."
+    />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2304060b'/%3E%3Cg fill='%23c9f24d'%3E%3Crect x='6' y='13' width='3' height='6' rx='1.5'/%3E%3Crect x='11' y='9' width='3' height='14' rx='1.5'/%3E%3Crect x='16' y='6' width='3' height='20' rx='1.5'/%3E%3Crect x='21' y='11' width='3' height='10' rx='1.5'/%3E%3C/g%3E%3C/svg%3E" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ChordSnap — Get the chords from any song" />
+    <meta property="og:description" content="Free, unlimited chord finder. Upload a song, get the chords, play along with transpose, capo, slow-down and instrument diagrams. Runs entirely in your browser." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ChordSnap — Get the chords from any song" />
+    <meta name="twitter:description" content="Free, unlimited chord finder that runs in your browser. Upload a song and play along." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="scroll-meter" aria-hidden="true"><i id="scroll-meter-fill"></i></div>
+
+    <a class="skip-link" href="#app">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#app" aria-label="ChordSnap home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 24" width="34" height="20">
+            <g fill="currentColor">
+              <rect x="0" y="9" width="3" height="6" rx="1.5" />
+              <rect x="5" y="5" width="3" height="14" rx="1.5" />
+              <rect x="10" y="1" width="3" height="22" rx="1.5" />
+              <rect x="15" y="7" width="3" height="10" rx="1.5" />
+              <rect x="20" y="3" width="3" height="18" rx="1.5" />
+              <rect x="25" y="8" width="3" height="8" rx="1.5" />
+              <rect x="30" y="4" width="3" height="16" rx="1.5" />
+              <rect x="35" y="10" width="3" height="4" rx="1.5" />
+            </g>
+          </svg>
+        </span>
+        <span class="brand-name">ChordSnap</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#how">How it works</a>
+        <a href="#privacy">Privacy</a>
+        <button id="theme-toggle" class="ghost-btn" title="Toggle theme" aria-label="Toggle theme">
+          <span class="theme-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+              <circle cx="12" cy="12" r="3.5" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+          </span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="app">
+      <!-- Upload view -->
+      <section id="upload-view" class="view active">
+        <div class="hero-stage">
+          <div class="hero-art" id="hero-art" aria-hidden="true">
+            <canvas id="hero-canvas"></canvas>
+          </div>
+          <div class="hero-copy">
+            <h1 class="hero-title">Get the chords<br />from <em>any song.</em></h1>
+            <p class="hero-sub">
+              Drop in a track. ChordSnap listens locally, finds the harmony, and builds a
+              chord sheet you can play.
+            </p>
+
+            <label id="drop-zone" class="drop-zone" tabindex="0" aria-describedby="drop-hint">
+              <input id="file-input" type="file" accept="audio/*" hidden />
+              <canvas id="drop-canvas" aria-hidden="true"></canvas>
+              <span class="drop-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M5 15v3.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V15" /></svg>
+              </span>
+              <span class="drop-copy">
+                <strong class="drop-title">Drop audio here</strong>
+                <span class="drop-choice">or choose a file</span>
+                <span class="drop-hint" id="drop-hint">MP3 · WAV · M4A · FLAC · OGG · up to 250 MB</span>
+              </span>
+            </label>
+
+            <div class="hero-actions">
+              <button id="mic-btn" class="mic-btn" type="button">
+                <span class="mic-ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4"/></svg>
+                </span>
+                Listen live
+              </button>
+              <button id="demo-btn" class="text-link">Try the demo <span>→</span></button>
+              <p class="privacy-note">
+                <span class="lock" aria-hidden="true">⌾</span>
+                Private by design. Audio never leaves this device.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Supporting content (SEO + explains the tool) -->
+        <div class="landing-content">
+          <section class="how reveal" id="how">
+            <div class="section-heading">
+              <h2 class="section-title">From waveform<br />to chord sheet<span>.</span></h2>
+              <p>ChordSnap turns your demo into playable chords—locally, privately, and fast.</p>
+            </div>
+            <ol class="steps">
+              <li>
+                <span class="step-num">1</span>
+                <div class="step-visual waveform-mini" aria-hidden="true"><i></i></div>
+                <h3>Drop a track</h3>
+                <p>Upload any audio file—a song, practice recording, or voice memo. It never leaves your device.</p>
+                <small>Local file → local analysis</small>
+              </li>
+              <li>
+                <span class="step-num">2</span>
+                <div class="step-visual chroma-mini" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+                <h3>ChordSnap listens</h3>
+                <p>Neural pitch detection maps the notes, then harmony modeling resolves each musical moment.</p>
+                <small>Neural analysis → harmony track</small>
+              </li>
+              <li>
+                <span class="step-num">3</span>
+                <div class="step-visual chord-mini" aria-hidden="true"><b>Am</b><b>F</b><b>C</b><b>G</b></div>
+                <h3>Play it your way</h3>
+                <p>Transpose, capo, slow down, and view every shape on guitar, piano, or ukulele.</p>
+                <small>Chord sheet → your instrument</small>
+              </li>
+            </ol>
+          </section>
+
+          <section class="features reveal" aria-label="Features">
+            <div class="feature"><span class="f-ic">∞</span><h3>Free & unlimited</h3><p>No account, credit card, or daily cap.</p></div>
+            <div class="feature"><span class="f-ic">01</span><h3>One private device</h3><p>Nothing is uploaded or stored remotely.</p></div>
+            <div class="feature"><span class="f-ic">03</span><h3>Three instruments</h3><p>Guitar, piano, and ukulele diagrams.</p></div>
+            <div class="feature"><span class="f-ic">½</span><h3>Half-speed practice</h3><p>Slow to 50% without changing pitch.</p></div>
+          </section>
+
+          <section class="privacy-band reveal" id="privacy">
+            <span class="privacy-symbol" aria-hidden="true">⌾</span>
+            <h2>Your demos stay yours<span>.</span></h2>
+            <p>All audio and analysis stay on your device. We don’t upload, store, or share your music—ever.</p>
+            <strong>100% private · 100% local</strong>
+          </section>
+
+          <section class="faq reveal">
+            <div class="faq-heading"><h2 class="section-title">Good to know<span>.</span></h2><p>Clear answers before you press play.</p></div>
+            <div class="faq-list">
+              <div class="faq-item"><h3>Is ChordSnap really free?</h3><p>Yes. It is unlimited and needs no account because analysis runs on your device.</p></div>
+              <div class="faq-item"><h3>What works best?</h3><p>Clear guitar, piano, singer-songwriter, and practice recordings are easiest to read. Dense mixes may produce approximate chords.</p></div>
+              <div class="faq-item"><h3>Which files can I use?</h3><p>MP3, WAV, M4A, FLAC, and OGG work—including ordinary voice memos.</p></div>
+            </div>
+          </section>
+        </div>
+        <footer class="site-footer"><span>ChordSnap</span><p>Hear it. Map it. Play it.</p><a href="#app">Back to top ↑</a></footer>
+      </section>
+
+      <!-- Processing view -->
+      <section id="processing-view" class="view">
+        <div class="processing">
+          <canvas id="processing-canvas" aria-hidden="true"></canvas>
+          <div class="proc-layout">
+            <div class="proc-context">
+              <span class="proc-kicker">Processing</span>
+              <h2 id="proc-title" class="proc-title">Transcribing your music</h2>
+              <p class="proc-context-copy">ChordSnap is listening closely and reconstructing the harmony, one musical moment at a time.</p>
+              <div class="proc-file-card">
+                <span class="proc-file-disc" aria-hidden="true"><i></i></span>
+                <p id="proc-file" class="proc-file"></p>
+              </div>
+              <button id="proc-cancel" class="proc-cancel" type="button">Cancel analysis</button>
+            </div>
+
+            <div class="proc-orbit" style="--progress: 14deg">
+              <div class="proc-core">
+                <span class="proc-signal" aria-hidden="true">≋</span>
+                <strong id="proc-percent" class="proc-percent">4%</strong>
+                <p id="proc-stage" class="proc-stage" aria-live="polite">Decoding audio</p>
+                <div class="progress-track" aria-hidden="true"><div id="progress-fill" class="progress-fill"></div></div>
+                <p id="proc-elapsed" class="proc-elapsed">Preparing the audio engine</p>
+                <p class="proc-private">Private by design · processed on this device</p>
+              </div>
+            </div>
+
+            <div class="proc-steps" aria-label="Analysis progress">
+              <span class="proc-step active" data-phase="decode"><i>1</i><b>Decode audio</b><small>Read and normalize the waveform.</small></span>
+              <span class="proc-step" data-phase="listen"><i>2</i><b>Hear notes</b><small>Separate pitch, timing, and intensity.</small></span>
+              <span class="proc-step" data-phase="name"><i>3</i><b>Name chords</b><small>Resolve notes into stable harmony.</small></span>
+              <span class="proc-step" data-phase="map"><i>4</i><b>Build timeline</b><small>Place every change on the song.</small></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Player view -->
+      <section id="player-view" class="view">
+        <div class="now-panel">
+          <canvas class="viz" id="viz" aria-hidden="true"></canvas>
+          <div class="now-chord">
+            <span class="current-kicker">Current chord</span>
+            <span class="now-label" id="now-label" aria-live="polite">—</span>
+            <span class="now-next" id="now-next"></span>
+            <span class="now-time" id="now-time">0:00 / 0:00</span>
+          </div>
+          <div class="now-diagram-wrap">
+            <div class="instrument-tabs" id="instrument-tabs" role="tablist" aria-label="Instrument diagram">
+              <button class="inst-tab active" data-inst="guitar" role="tab" aria-selected="true">Guitar</button>
+              <button class="inst-tab" data-inst="piano" role="tab" aria-selected="false">Piano</button>
+              <button class="inst-tab" data-inst="ukulele" role="tab" aria-selected="false">Ukulele</button>
+            </div>
+            <div class="now-diagram" id="now-diagram" title="Click for another voicing"></div>
+          </div>
+          <div class="track-identity">
+            <span class="player-brand" aria-label="ChordSnap">ChordSnap</span>
+            <span class="track-divider" aria-hidden="true"></span>
+            <strong id="song-title">Untitled track</strong>
+            <div class="song-meta" id="song-meta"></div>
+          </div>
+        </div>
+
+        <div class="transport">
+          <button id="play-btn" class="play-btn" aria-label="Play">
+            <span class="play-icon">▶</span>
+          </button>
+          <div class="scrub-wrap">
+            <canvas id="waveform" class="waveform" title="Click or drag to seek" tabindex="0" role="slider" aria-label="Song position" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></canvas>
+            <div id="wave-tip" class="wave-tip" hidden></div>
+          </div>
+
+          <div class="ctrl-cluster">
+            <div class="ctrl" title="Transpose the chords up or down">
+              <span class="ctrl-label">Key</span>
+              <div class="stepper">
+                <button data-act="transpose-down" aria-label="Transpose down">−</button>
+                <span id="transpose-val" class="stepper-val">0</span>
+                <button data-act="transpose-up" aria-label="Transpose up">+</button>
+              </div>
+            </div>
+            <div class="ctrl" title="Show shapes as played with a capo">
+              <span class="ctrl-label">Capo</span>
+              <div class="stepper">
+                <button data-act="capo-down" aria-label="Lower capo position">−</button>
+                <span id="capo-val" class="stepper-val">0</span>
+                <button data-act="capo-up" aria-label="Raise capo position">+</button>
+              </div>
+            </div>
+            <div class="ctrl" title="Slow the song down without changing pitch">
+              <span class="ctrl-label">Speed</span>
+              <div class="speed">
+                <input id="speed" type="range" min="50" max="100" step="5" value="100" />
+                <span id="speed-val" class="speed-val">100%</span>
+              </div>
+            </div>
+            <button id="chords-btn" class="toggle-btn hear-btn" aria-pressed="false" title="Hear the chords played along with the song — if they fit, they're right">♪ Play chords</button>
+            <button id="loop-btn" class="toggle-btn" aria-pressed="false" title="Loop — shift-click two bars to loop a section">↻ Loop</button>
+            <button id="autoscroll-btn" class="toggle-btn active" aria-pressed="true" title="Keep the current chord in view">⇅ Follow</button>
+            <button id="export-btn" class="toggle-btn" title="Copy the chord sheet as text">⧉ Copy</button>
+            <button id="new-btn" class="toggle-btn" title="Analyze another song">＋ New</button>
+          </div>
+        </div>
+
+        <p class="sheet-hint">Tip: click a bar to jump there · <kbd>←</kbd>/<kbd>→</kbd> step chords · <kbd>space</kbd> play · shift-click two bars to loop a section</p>
+        <div class="sheet-wrap">
+          <div id="sheet" class="sheet"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Live mic recording overlay -->
+    <div id="record-overlay" class="record-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="record-title">
+      <div class="record-card">
+        <button class="record-close" id="record-close" type="button" aria-label="Close">✕</button>
+        <span class="record-kicker">Listening</span>
+        <h2 class="record-title" id="record-title">Play the song out loud</h2>
+        <p class="record-sub" id="record-sub">Hold a phone or speaker near your mic and press play on the song. ChordSnap listens live — nothing is uploaded.</p>
+        <div class="record-visual">
+          <canvas id="record-meter" aria-hidden="true"></canvas>
+          <span class="record-dot" aria-hidden="true"></span>
+        </div>
+        <div class="record-time" id="record-time">0:00</div>
+        <div class="record-actions">
+          <button id="record-stop" class="record-stop" type="button" disabled>Stop &amp; get chords</button>
+        </div>
+        <p class="record-hint">Tip: capture a clear 15–30s section, volume up. Mic audio is noisier than a file, so chords may be a little rougher.</p>
+      </div>
+    </div>
+
+    <audio id="audio" preload="auto"></audio>
+    <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

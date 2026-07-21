@@ -1,0 +1,246 @@
+{
+ "pop_axis": {
+  "desc": "I–V–vi–IV(《四个和弦》流行万能进行)",
+  "prog": [
+   "C",
+   "G",
+   "Am",
+   "F",
+   "C",
+   "G",
+   "Am",
+   "F"
+  ],
+  "truth": [
+   {
+    "bar": 0,
+    "start": 0.0,
+    "chord": "C"
+   },
+   {
+    "bar": 1,
+    "start": 2.0,
+    "chord": "G"
+   },
+   {
+    "bar": 2,
+    "start": 4.0,
+    "chord": "Am"
+   },
+   {
+    "bar": 3,
+    "start": 6.0,
+    "chord": "F"
+   },
+   {
+    "bar": 4,
+    "start": 8.0,
+    "chord": "C"
+   },
+   {
+    "bar": 5,
+    "start": 10.0,
+    "chord": "G"
+   },
+   {
+    "bar": 6,
+    "start": 12.0,
+    "chord": "Am"
+   },
+   {
+    "bar": 7,
+    "start": 14.0,
+    "chord": "F"
+   }
+  ]
+ },
+ "canon_d": {
+  "desc": "帕赫贝尔卡农进行(大量流行歌骨架,含小三和弦)",
+  "prog": [
+   "D",
+   "A",
+   "Bm",
+   "F#m",
+   "G",
+   "D",
+   "G",
+   "A"
+  ],
+  "truth": [
+   {
+    "bar": 0,
+    "start": 0.0,
+    "chord": "D"
+   },
+   {
+    "bar": 1,
+    "start": 2.0,
+    "chord": "A"
+   },
+   {
+    "bar": 2,
+    "start": 4.0,
+    "chord": "Bm"
+   },
+   {
+    "bar": 3,
+    "start": 6.0,
+    "chord": "F#m"
+   },
+   {
+    "bar": 4,
+    "start": 8.0,
+    "chord": "G"
+   },
+   {
+    "bar": 5,
+    "start": 10.0,
+    "chord": "D"
+   },
+   {
+    "bar": 6,
+    "start": 12.0,
+    "chord": "G"
+   },
+   {
+    "bar": 7,
+    "start": 14.0,
+    "chord": "A"
+   }
+  ]
+ },
+ "doowop_50s": {
+  "desc": "I–vi–IV–V(50年代/doo-wop 经典)",
+  "prog": [
+   "C",
+   "Am",
+   "F",
+   "G",
+   "C",
+   "Am",
+   "F",
+   "G"
+  ],
+  "truth": [
+   {
+    "bar": 0,
+    "start": 0.0,
+    "chord": "C"
+   },
+   {
+    "bar": 1,
+    "start": 2.0,
+    "chord": "Am"
+   },
+   {
+    "bar": 2,
+    "start": 4.0,
+    "chord": "F"
+   },
+   {
+    "bar": 3,
+    "start": 6.0,
+    "chord": "G"
+   },
+   {
+    "bar": 4,
+    "start": 8.0,
+    "chord": "C"
+   },
+   {
+    "bar": 5,
+    "start": 10.0,
+    "chord": "Am"
+   },
+   {
+    "bar": 6,
+    "start": 12.0,
+    "chord": "F"
+   },
+   {
+    "bar": 7,
+    "start": 14.0,
+    "chord": "G"
+   }
+  ]
+ },
+ "blues_a": {
+  "desc": "A 调 12 小节布鲁斯(测七和弦)",
+  "prog": [
+   "A7",
+   "A7",
+   "A7",
+   "A7",
+   "D7",
+   "D7",
+   "A7",
+   "A7",
+   "E7",
+   "D7",
+   "A7",
+   "E7"
+  ],
+  "truth": [
+   {
+    "bar": 0,
+    "start": 0.0,
+    "chord": "A7"
+   },
+   {
+    "bar": 1,
+    "start": 2.0,
+    "chord": "A7"
+   },
+   {
+    "bar": 2,
+    "start": 4.0,
+    "chord": "A7"
+   },
+   {
+    "bar": 3,
+    "start": 6.0,
+    "chord": "A7"
+   },
+   {
+    "bar": 4,
+    "start": 8.0,
+    "chord": "D7"
+   },
+   {
+    "bar": 5,
+    "start": 10.0,
+    "chord": "D7"
+   },
+   {
+    "bar": 6,
+    "start": 12.0,
+    "chord": "A7"
+   },
+   {
+    "bar": 7,
+    "start": 14.0,
+    "chord": "A7"
+   },
+   {
+    "bar": 8,
+    "start": 16.0,
+    "chord": "E7"
+   },
+   {
+    "bar": 9,
+    "start": 18.0,
+    "chord": "D7"
+   },
+   {
+    "bar": 10,
+    "start": 20.0,
+    "chord": "A7"
+   },
+   {
+    "bar": 11,
+    "start": 22.0,
+    "chord": "E7"
+   }
+  ]
+ }
+}

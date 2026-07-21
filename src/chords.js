@@ -99,11 +99,15 @@ function scoreAllChords(chroma, keyCtx, out, bassPc = null) {
     // 扩展音证据:七/六/加九等扩展和弦的额外音若有实际能量,给补偿分。
     // 二值模板的余弦对多一个音的扩展和弦有系统性劣势(音级被稀释),
     // 这里按扩展音的实际强度补回,避免把 A7 报成 A(长尾类别校准)。
+    // 系数 0.24 用合成整曲精确真值校准(validation/synth_references):此值让
+    // 12 小节布鲁斯(全属七)exact 25%→62%,而流行/卡农/doo-wop 三和弦零回归;
+    // 因按扩展音实际能量加分(自门控),真三和弦无 b7 能量时不受影响。再高(0.30)
+    // 会让异根四音和弦(如 C 段的 Am7,借 C 的五音当 b7)误胜,故封顶 0.24。
     let extBonus = 0;
     if (c.ext.length) {
       let s = 0;
       for (const pc of c.ext) s += chroma[pc];
-      extBonus = 0.18 * (s / c.ext.length) / norm;
+      extBonus = 0.24 * (s / c.ext.length) / norm;
     }
     // 调内先验:根音在调内 +0.03,整个和弦都在调内再 +0.03
     let diatonic = 0;

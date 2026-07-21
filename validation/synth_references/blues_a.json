@@ -1,0 +1,66 @@
+{
+  "title": "blues_a",
+  "_source": "synthesized ground truth (songs_manifest.json)",
+  "segments": [
+    {
+      "start": 0,
+      "end": 2,
+      "label": "A7"
+    },
+    {
+      "start": 2,
+      "end": 4,
+      "label": "A7"
+    },
+    {
+      "start": 4,
+      "end": 6,
+      "label": "A7"
+    },
+    {
+      "start": 6,
+      "end": 8,
+      "label": "A7"
+    },
+    {
+      "start": 8,
+      "end": 10,
+      "label": "D7"
+    },
+    {
+      "start": 10,
+      "end": 12,
+      "label": "D7"
+    },
+    {
+      "start": 12,
+      "end": 14,
+      "label": "A7"
+    },
+    {
+      "start": 14,
+      "end": 16,
+      "label": "A7"
+    },
+    {
+      "start": 16,
+      "end": 18,
+      "label": "E7"
+    },
+    {
+      "start": 18,
+      "end": 20,
+      "label": "D7"
+    },
+    {
+      "start": 20,
+      "end": 22,
+      "label": "A7"
+    },
+    {
+      "start": 22,
+      "end": 25,
+      "label": "E7"
+    }
+  ]
+}

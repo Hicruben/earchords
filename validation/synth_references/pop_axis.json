@@ -1,0 +1,46 @@
+{
+  "title": "pop_axis",
+  "_source": "synthesized ground truth (songs_manifest.json)",
+  "segments": [
+    {
+      "start": 0,
+      "end": 2,
+      "label": "C"
+    },
+    {
+      "start": 2,
+      "end": 4,
+      "label": "G"
+    },
+    {
+      "start": 4,
+      "end": 6,
+      "label": "Am"
+    },
+    {
+      "start": 6,
+      "end": 8,
+      "label": "F"
+    },
+    {
+      "start": 8,
+      "end": 10,
+      "label": "C"
+    },
+    {
+      "start": 10,
+      "end": 12,
+      "label": "G"
+    },
+    {
+      "start": 12,
+      "end": 14,
+      "label": "Am"
+    },
+    {
+      "start": 14,
+      "end": 17,
+      "label": "F"
+    }
+  ]
+}

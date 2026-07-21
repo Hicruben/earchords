@@ -1,0 +1,14 @@
+{
+  "title": "Viva La Vida",
+  "_source": "public chord charts, web-verified 2026-07 (concert pitch, sharp spelling)",
+  "key": {
+    "tonic": 8,
+    "mode": "major"
+  },
+  "requiredChords": [
+    "C#",
+    "D#",
+    "G#",
+    "Fm"
+  ]
+}

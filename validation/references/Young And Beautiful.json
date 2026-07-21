@@ -1,0 +1,14 @@
+{
+  "title": "Young And Beautiful",
+  "_source": "public chord charts, web-verified 2026-07 (concert pitch, sharp spelling)",
+  "key": {
+    "tonic": 11,
+    "mode": "minor"
+  },
+  "requiredChords": [
+    "Bm",
+    "G",
+    "A",
+    "D"
+  ]
+}

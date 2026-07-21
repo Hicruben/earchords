@@ -1,0 +1,14 @@
+{
+  "title": "Yellow",
+  "_source": "public chord charts, web-verified 2026-07 (concert pitch, sharp spelling)",
+  "key": {
+    "tonic": 11,
+    "mode": "major"
+  },
+  "requiredChords": [
+    "B",
+    "F#",
+    "E",
+    "G#m"
+  ]
+}

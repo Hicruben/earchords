@@ -6,7 +6,7 @@
     "name": "G#",
     "tonic": 8,
     "mode": "major",
-    "confidence": 0.6990134529147984
+    "confidence": 0.6833183856502244
   },
   "tempo": {
     "bpm": 82,
@@ -86,13 +86,18 @@
     },
     {
       "start": 36.75,
-      "end": 39.5,
+      "end": 39.75,
       "label": "F#"
     },
     {
-      "start": 39.5,
+      "start": 39.75,
+      "end": 41.25,
+      "label": "Bmaj7"
+    },
+    {
+      "start": 41.25,
       "end": 42.5,
-      "label": "F#sus4"
+      "label": "Badd9"
     },
     {
       "start": 42.5,
@@ -107,7 +112,7 @@
     {
       "start": 47,
       "end": 48.25,
-      "label": "G#m7"
+      "label": "Bm6"
     },
     {
       "start": 48.25,
@@ -121,18 +126,8 @@
     },
     {
       "start": 50.75,
-      "end": 52.25,
-      "label": "Bmaj7"
-    },
-    {
-      "start": 52.25,
-      "end": 53.25,
-      "label": "Bsus4"
-    },
-    {
-      "start": 53.25,
       "end": 54.25,
-      "label": "A#m7"
+      "label": "Bmaj7"
     },
     {
       "start": 54.25,
@@ -151,16 +146,11 @@
     },
     {
       "start": 60,
-      "end": 63,
-      "label": "G#"
+      "end": 62.75,
+      "label": "G#add9"
     },
     {
-      "start": 63,
-      "end": 64.25,
-      "label": "C#"
-    },
-    {
-      "start": 64.25,
+      "start": 62.75,
       "end": 65,
       "label": "C#add9"
     },
@@ -176,13 +166,8 @@
     },
     {
       "start": 68.75,
-      "end": 69.75,
-      "label": "D#m7"
-    },
-    {
-      "start": 69.75,
       "end": 71.5,
-      "label": "C#"
+      "label": "D#m7"
     },
     {
       "start": 71.5,
@@ -206,11 +191,16 @@
     },
     {
       "start": 79.5,
-      "end": 80.75,
+      "end": 80.5,
       "label": "G#"
     },
     {
-      "start": 80.75,
+      "start": 80.5,
+      "end": 81.25,
+      "label": "C#add9"
+    },
+    {
+      "start": 81.25,
       "end": 83.5,
       "label": "C#"
     },
@@ -241,13 +231,8 @@
     },
     {
       "start": 94.25,
-      "end": 95.25,
-      "label": "D#"
-    },
-    {
-      "start": 95.25,
       "end": 96.75,
-      "label": "Cm"
+      "label": "D#6"
     },
     {
       "start": 96.75,
@@ -296,11 +281,16 @@
     },
     {
       "start": 115.5,
-      "end": 118.5,
+      "end": 118.25,
       "label": "C#maj7"
     },
     {
-      "start": 118.5,
+      "start": 118.25,
+      "end": 119,
+      "label": "Fm7"
+    },
+    {
+      "start": 119,
       "end": 121.5,
       "label": "Fm"
     },
@@ -331,11 +321,11 @@
     },
     {
       "start": 134.75,
-      "end": 136.25,
+      "end": 136.5,
       "label": "G#m7"
     },
     {
-      "start": 136.25,
+      "start": 136.5,
       "end": 138.75,
       "label": "E"
     },
@@ -356,11 +346,11 @@
     },
     {
       "start": 146.75,
-      "end": 148,
+      "end": 147.75,
       "label": "F#"
     },
     {
-      "start": 148,
+      "start": 147.75,
       "end": 149.5,
       "label": "F#6"
     },
@@ -382,7 +372,7 @@
     {
       "start": 153.25,
       "end": 156.25,
-      "label": "Bsus2"
+      "label": "C#m7"
     },
     {
       "start": 156.25,
@@ -436,11 +426,11 @@
     },
     {
       "start": 175.75,
-      "end": 177.25,
+      "end": 177,
       "label": "Fm"
     },
     {
-      "start": 177.25,
+      "start": 177,
       "end": 178.25,
       "label": "A#m7"
     },
@@ -531,13 +521,13 @@
     },
     {
       "start": 211.5,
-      "end": 212.25,
+      "end": 212.75,
       "label": "A#"
     },
     {
-      "start": 212.25,
+      "start": 212.75,
       "end": 214,
-      "label": "D#"
+      "label": "D#maj7"
     },
     {
       "start": 214,
@@ -561,18 +551,8 @@
     },
     {
       "start": 220.25,
-      "end": 224.25,
-      "label": "A#"
-    },
-    {
-      "start": 224.25,
-      "end": 225.5,
-      "label": "D#"
-    },
-    {
-      "start": 225.5,
       "end": 227,
-      "label": "F"
+      "label": "Gm7"
     },
     {
       "start": 227,
@@ -586,23 +566,18 @@
     },
     {
       "start": 230,
-      "end": 231.25,
+      "end": 231,
       "label": "Cm"
     },
     {
-      "start": 231.25,
-      "end": 233.25,
-      "label": "Dm"
+      "start": 231,
+      "end": 233,
+      "label": "Dm7"
     },
     {
-      "start": 233.25,
-      "end": 234.75,
-      "label": "D#add9"
-    },
-    {
-      "start": 234.75,
+      "start": 233,
       "end": 235.75,
-      "label": "F"
+      "label": "D#add9"
     },
     {
       "start": 235.75,
@@ -646,11 +621,11 @@
     },
     {
       "start": 250.5,
-      "end": 253.25,
+      "end": 253.75,
       "label": "Fadd9"
     },
     {
-      "start": 253.25,
+      "start": 253.75,
       "end": 256.5,
       "label": "D#"
     },

@@ -1,0 +1,14 @@
+{
+  "title": "Five Hundred Miles",
+  "_source": "public chord charts, web-verified 2026-07 (concert pitch, sharp spelling)",
+  "key": {
+    "tonic": 9,
+    "mode": "major"
+  },
+  "requiredChords": [
+    "A",
+    "Bm",
+    "E",
+    "F#m"
+  ]
+}

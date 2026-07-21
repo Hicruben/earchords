@@ -6,7 +6,7 @@
     "name": "D",
     "tonic": 2,
     "mode": "major",
-    "confidence": 0.951623740201568
+    "confidence": 0.9421052631578949
   },
   "tempo": {
     "bpm": 122,
@@ -41,11 +41,11 @@
     },
     {
       "start": 11.75,
-      "end": 12.75,
-      "label": "Gsus2"
+      "end": 13,
+      "label": "Gadd9"
     },
     {
-      "start": 12.75,
+      "start": 13,
       "end": 16,
       "label": "G"
     },
@@ -116,21 +116,26 @@
     },
     {
       "start": 37.5,
-      "end": 38.5,
+      "end": 38.75,
       "label": "Dadd9"
     },
     {
-      "start": 38.5,
+      "start": 38.75,
       "end": 39.5,
       "label": "A"
     },
     {
       "start": 39.5,
-      "end": 41.75,
+      "end": 41.25,
       "label": "Bm"
     },
     {
-      "start": 41.75,
+      "start": 41.25,
+      "end": 42,
+      "label": "Bm7"
+    },
+    {
+      "start": 42,
       "end": 43.5,
       "label": "A"
     },
@@ -156,38 +161,33 @@
     },
     {
       "start": 50.5,
-      "end": 51.75,
+      "end": 53.5,
       "label": "Dadd9"
     },
     {
-      "start": 51.75,
-      "end": 53.25,
-      "label": "D"
-    },
-    {
-      "start": 53.25,
+      "start": 53.5,
       "end": 55,
       "label": "A"
     },
     {
       "start": 55,
-      "end": 57.25,
+      "end": 57.5,
       "label": "Bm7"
     },
     {
-      "start": 57.25,
-      "end": 59.25,
+      "start": 57.5,
+      "end": 59,
       "label": "A"
     },
     {
-      "start": 59.25,
+      "start": 59,
       "end": 61,
-      "label": "G"
+      "label": "Gsus2"
     },
     {
       "start": 61,
       "end": 62.75,
-      "label": "D"
+      "label": "Gmaj7"
     },
     {
       "start": 62.75,
@@ -211,11 +211,11 @@
     },
     {
       "start": 71,
-      "end": 72.75,
+      "end": 73.25,
       "label": "Bm"
     },
     {
-      "start": 72.75,
+      "start": 73.25,
       "end": 74.75,
       "label": "A"
     },
@@ -232,25 +232,35 @@
     {
       "start": 77.75,
       "end": 79,
-      "label": "Bm"
+      "label": "D6"
     },
     {
       "start": 79,
-      "end": 81,
-      "label": "Em"
+      "end": 81.25,
+      "label": "G6"
     },
     {
-      "start": 81,
+      "start": 81.25,
       "end": 82.75,
       "label": "Gm"
     },
     {
       "start": 82.75,
-      "end": 90.5,
+      "end": 88,
       "label": "D"
     },
     {
-      "start": 90.5,
+      "start": 88,
+      "end": 89,
+      "label": "D6"
+    },
+    {
+      "start": 89,
+      "end": 90.25,
+      "label": "A6"
+    },
+    {
+      "start": 90.25,
       "end": 91.25,
       "label": "Gmaj7"
     },
@@ -346,16 +356,16 @@
     },
     {
       "start": 118.25,
-      "end": 120,
+      "end": 119.75,
       "label": "Em7"
     },
     {
-      "start": 120,
-      "end": 121.5,
-      "label": "A"
+      "start": 119.75,
+      "end": 120.75,
+      "label": "A7"
     },
     {
-      "start": 121.5,
+      "start": 120.75,
       "end": 124,
       "label": "Asus4"
     },
@@ -387,12 +397,12 @@
     {
       "start": 132.75,
       "end": 134,
-      "label": "Bm"
+      "label": "D6"
     },
     {
       "start": 134,
       "end": 135.5,
-      "label": "Em7"
+      "label": "Dadd9"
     },
     {
       "start": 135.5,
@@ -481,13 +491,8 @@
     },
     {
       "start": 167,
-      "end": 167.75,
-      "label": "C#m7"
-    },
-    {
-      "start": 167.75,
       "end": 169.25,
-      "label": "B"
+      "label": "C#m7"
     },
     {
       "start": 169.25,
@@ -541,11 +546,11 @@
     },
     {
       "start": 186.75,
-      "end": 187.5,
+      "end": 187.75,
       "label": "Amaj7"
     },
     {
-      "start": 187.5,
+      "start": 187.75,
       "end": 188.75,
       "label": "C#m7"
     },
@@ -561,18 +566,18 @@
     },
     {
       "start": 193.25,
-      "end": 196.5,
+      "end": 196.75,
       "label": "E"
     },
     {
-      "start": 196.5,
-      "end": 199,
-      "label": "F#m7"
+      "start": 196.75,
+      "end": 199.5,
+      "label": "Am6"
     },
     {
-      "start": 199,
+      "start": 199.5,
       "end": 203,
-      "label": "Am"
+      "label": "A"
     },
     {
       "start": 203,

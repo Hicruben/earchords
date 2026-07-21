@@ -1,0 +1,14 @@
+{
+  "title": "Counting Stars",
+  "_source": "public chord charts, web-verified 2026-07 (concert pitch, sharp spelling)",
+  "key": {
+    "tonic": 1,
+    "mode": "minor"
+  },
+  "requiredChords": [
+    "C#m",
+    "E",
+    "B",
+    "A"
+  ]
+}

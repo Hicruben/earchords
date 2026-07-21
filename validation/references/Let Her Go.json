@@ -1,0 +1,14 @@
+{
+  "title": "Let Her Go",
+  "_source": "public chord charts, web-verified 2026-07 (Hooktheory/SongBPM: sounding key G major, corrected from earlier D)",
+  "key": {
+    "tonic": 7,
+    "mode": "major"
+  },
+  "requiredChords": [
+    "G",
+    "C",
+    "D",
+    "Em"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Shape Of My Heart",
+  "_source": "public chord charts, web-verified 2026-07 (concert pitch, sharp spelling)",
+  "key": {
+    "tonic": 6,
+    "mode": "minor"
+  },
+  "requiredChords": [
+    "F#m",
+    "Bm",
+    "D",
+    "A"
+  ]
+}

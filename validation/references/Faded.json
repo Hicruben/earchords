@@ -1,0 +1,14 @@
+{
+  "title": "Faded",
+  "_source": "public chord charts, web-verified 2026-07 (concert pitch, sharp spelling)",
+  "key": {
+    "tonic": 3,
+    "mode": "minor"
+  },
+  "requiredChords": [
+    "D#m",
+    "B",
+    "F#",
+    "C#"
+  ]
+}

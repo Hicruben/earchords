@@ -8,7 +8,7 @@
 
 - **Vite** + 原生 JS(无框架,构建产物为纯静态站,可部署到任何静态托管)
 - **@spotify/basic-pitch**(+ TensorFlow.js):浏览器内音高检测,模型在 `public/model/`
-- 和弦识别:自研 chroma 向量 + 余弦相似度模板匹配 + 时间维众数平滑(`src/chords.js`)
+- 和弦识别:自研 chroma 向量 + 余弦相似度模板匹配 + HMM/Viterbi 全局最优序列解码(`src/chords.js`)
 - 播放:`<audio preservesPitch>` 实现变速不变调;requestAnimationFrame 驱动和弦谱同步
 
 ## 开发
@@ -54,7 +54,7 @@ Netlify / 自己的 Nginx)。无后端、无数据库。注意 `dist/model/`(~0.
 
 - **准确率**:合成音频与清晰单乐器/弹唱录音准确率高;密集全混音流行歌较难(品类通病),
   会以 N.C. 或近似和弦呈现。上线前建议用真实歌曲做主观测试。
-- **自动分段**:当前用"细窗识别 + 众数平滑 + 合并",非严格节拍对齐。可加节拍检测进一步提升。
+- **自动分段**:当前用"细窗识别 + HMM/Viterbi 解码 + 合并",非严格节拍对齐。可加节拍检测进一步提升。
 - **SEO**:落地页已含 how-it-works / FAQ 支撑文本 + TDK + OG。下一步做多落地页
   (针对 "chords from audio / chord finder / 各乐器" 等新词变体)扩关键词覆盖。
 - **变现**:接 AdSense 前用哥飞工具箱 73 项预检自查;工具页 RPM 偏低,可加 Pro(批量/导出)。

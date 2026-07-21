@@ -16,11 +16,11 @@
   "segments": [
     {
       "start": 0,
-      "end": 3.25,
+      "end": 3.5,
       "label": "D"
     },
     {
-      "start": 3.25,
+      "start": 3.5,
       "end": 5,
       "label": "Dmaj7"
     },
@@ -31,11 +31,11 @@
     },
     {
       "start": 6.25,
-      "end": 7,
+      "end": 7.25,
       "label": "Dmaj7"
     },
     {
-      "start": 7,
+      "start": 7.25,
       "end": 11,
       "label": "Bm7"
     },
@@ -81,26 +81,21 @@
     },
     {
       "start": 28.75,
-      "end": 30.25,
-      "label": "Dsus2"
+      "end": 30,
+      "label": "D"
     },
     {
-      "start": 30.25,
-      "end": 32.75,
+      "start": 30,
+      "end": 35.75,
       "label": "A"
     },
     {
-      "start": 32.75,
-      "end": 35.5,
-      "label": "Asus4"
-    },
-    {
-      "start": 35.5,
-      "end": 39.25,
+      "start": 35.75,
+      "end": 39.5,
       "label": "Bm7"
     },
     {
-      "start": 39.25,
+      "start": 39.5,
       "end": 42.75,
       "label": "Gsus2"
     },
@@ -116,31 +111,36 @@
     },
     {
       "start": 47.75,
-      "end": 50,
+      "end": 50.25,
       "label": "A"
     },
     {
-      "start": 50,
-      "end": 53.5,
+      "start": 50.25,
+      "end": 53.75,
       "label": "Bm7"
     },
     {
-      "start": 53.5,
-      "end": 57,
+      "start": 53.75,
+      "end": 57.25,
       "label": "Gadd9"
     },
     {
-      "start": 57,
+      "start": 57.25,
       "end": 58.5,
       "label": "G6"
     },
     {
       "start": 58.5,
-      "end": 60.75,
+      "end": 59.75,
       "label": "Gadd9"
     },
     {
-      "start": 60.75,
+      "start": 59.75,
+      "end": 61,
+      "label": "A7"
+    },
+    {
+      "start": 61,
       "end": 62.5,
       "label": "F#m7"
     },
@@ -156,11 +156,11 @@
     },
     {
       "start": 66,
-      "end": 68.25,
+      "end": 68.5,
       "label": "Bm7"
     },
     {
-      "start": 68.25,
+      "start": 68.5,
       "end": 74.5,
       "label": "Gadd9"
     },
@@ -201,46 +201,51 @@
     },
     {
       "start": 94.75,
-      "end": 97,
+      "end": 96.75,
       "label": "F#"
     },
     {
-      "start": 97,
-      "end": 100,
+      "start": 96.75,
+      "end": 100.25,
       "label": "Bm7"
     },
     {
-      "start": 100,
-      "end": 107.25,
+      "start": 100.25,
+      "end": 107.5,
       "label": "Gadd9"
     },
     {
-      "start": 107.25,
+      "start": 107.5,
       "end": 111,
       "label": "D"
     },
     {
       "start": 111,
-      "end": 115,
+      "end": 114.75,
       "label": "A"
     },
     {
-      "start": 115,
-      "end": 116.5,
+      "start": 114.75,
+      "end": 116.75,
       "label": "Em7"
     },
     {
-      "start": 116.5,
+      "start": 116.75,
       "end": 118.25,
       "label": "D"
     },
     {
       "start": 118.25,
-      "end": 120.75,
+      "end": 120,
       "label": "Gadd9"
     },
     {
-      "start": 120.75,
+      "start": 120,
+      "end": 121,
+      "label": "G"
+    },
+    {
+      "start": 121,
       "end": 122,
       "label": "Cadd9"
     },
@@ -251,11 +256,11 @@
     },
     {
       "start": 125,
-      "end": 126.75,
+      "end": 127,
       "label": "Dmaj7"
     },
     {
-      "start": 126.75,
+      "start": 127,
       "end": 129,
       "label": "A"
     },
@@ -301,11 +306,11 @@
     },
     {
       "start": 150,
-      "end": 152,
+      "end": 152.25,
       "label": "Em7"
     },
     {
-      "start": 152,
+      "start": 152.25,
       "end": 154,
       "label": "A7"
     },
@@ -326,13 +331,8 @@
     },
     {
       "start": 159.25,
-      "end": 161,
-      "label": "Cadd9"
-    },
-    {
-      "start": 161,
       "end": 161.75,
-      "label": "D7"
+      "label": "Csus2"
     },
     {
       "start": 161.75,
@@ -351,31 +351,31 @@
     },
     {
       "start": 172,
-      "end": 175.5,
+      "end": 175.75,
       "label": "Bm7"
     },
     {
-      "start": 175.5,
+      "start": 175.75,
       "end": 177.25,
-      "label": "Em7"
+      "label": "Em"
     },
     {
       "start": 177.25,
-      "end": 179,
+      "end": 179.25,
       "label": "A7"
     },
     {
-      "start": 179,
+      "start": 179.25,
       "end": 182.5,
       "label": "D"
     },
     {
       "start": 182.5,
-      "end": 184.25,
+      "end": 184.5,
       "label": "Dmaj7"
     },
     {
-      "start": 184.25,
+      "start": 184.5,
       "end": 186.25,
       "label": "F#"
     },
@@ -386,46 +386,61 @@
     },
     {
       "start": 189.75,
-      "end": 193,
+      "end": 193.25,
       "label": "Asus4"
     },
     {
-      "start": 193,
-      "end": 194.75,
+      "start": 193.25,
+      "end": 194.5,
       "label": "Gmaj7"
     },
     {
-      "start": 194.75,
+      "start": 194.5,
       "end": 197,
       "label": "A7"
     },
     {
       "start": 197,
-      "end": 198.5,
+      "end": 198,
       "label": "F#m"
     },
     {
-      "start": 198.5,
-      "end": 200.5,
+      "start": 198,
+      "end": 198.75,
+      "label": "F#"
+    },
+    {
+      "start": 198.75,
+      "end": 200.75,
       "label": "Bm"
     },
     {
-      "start": 200.5,
-      "end": 204,
+      "start": 200.75,
+      "end": 203.5,
       "label": "Em"
     },
     {
-      "start": 204,
+      "start": 203.5,
+      "end": 204.25,
+      "label": "Em7"
+    },
+    {
+      "start": 204.25,
       "end": 206,
       "label": "A#"
     },
     {
       "start": 206,
-      "end": 208.25,
+      "end": 207.25,
+      "label": "A"
+    },
+    {
+      "start": 207.25,
+      "end": 208,
       "label": "Asus4"
     },
     {
-      "start": 208.25,
+      "start": 208,
       "end": 209.5,
       "label": "Emaj7"
     },
@@ -446,41 +461,46 @@
     },
     {
       "start": 220.5,
-      "end": 221.75,
+      "end": 221.5,
       "label": "Em7"
     },
     {
-      "start": 221.75,
-      "end": 223.75,
-      "label": "A7"
+      "start": 221.5,
+      "end": 222.25,
+      "label": "D"
     },
     {
-      "start": 223.75,
+      "start": 222.25,
+      "end": 223.5,
+      "label": "G"
+    },
+    {
+      "start": 223.5,
       "end": 227.5,
       "label": "D"
     },
     {
       "start": 227.5,
-      "end": 229.25,
+      "end": 229.5,
       "label": "A"
     },
     {
-      "start": 229.25,
-      "end": 231,
+      "start": 229.5,
+      "end": 231.25,
       "label": "F#"
     },
     {
-      "start": 231,
+      "start": 231.25,
       "end": 234.75,
       "label": "Bm7"
     },
     {
       "start": 234.75,
-      "end": 236.25,
+      "end": 236,
       "label": "Esus4"
     },
     {
-      "start": 236.25,
+      "start": 236,
       "end": 237.75,
       "label": "Em7"
     },
@@ -506,26 +526,26 @@
     },
     {
       "start": 245.5,
-      "end": 248.75,
+      "end": 249,
       "label": "D"
     },
     {
-      "start": 248.75,
+      "start": 249,
       "end": 250.75,
       "label": "Dmaj7"
     },
     {
       "start": 250.75,
-      "end": 252.5,
+      "end": 252.75,
       "label": "A"
     },
     {
-      "start": 252.5,
-      "end": 254.75,
-      "label": "Bm7"
+      "start": 252.75,
+      "end": 254.5,
+      "label": "Bm"
     },
     {
-      "start": 254.75,
+      "start": 254.5,
       "end": 256.75,
       "label": "Am7"
     },

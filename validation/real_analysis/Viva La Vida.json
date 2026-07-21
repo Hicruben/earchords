@@ -26,21 +26,21 @@
     },
     {
       "start": 4,
-      "end": 5.5,
+      "end": 5.75,
       "label": "G#"
     },
     {
-      "start": 5.5,
+      "start": 5.75,
       "end": 7.5,
-      "label": "G#6"
+      "label": "Fm"
     },
     {
       "start": 7.5,
-      "end": 8.75,
+      "end": 9,
       "label": "C#"
     },
     {
-      "start": 8.75,
+      "start": 9,
       "end": 11,
       "label": "C#add9"
     },
@@ -66,16 +66,16 @@
     },
     {
       "start": 18,
-      "end": 19.25,
+      "end": 19.5,
       "label": "G#"
     },
     {
-      "start": 19.25,
-      "end": 21.25,
+      "start": 19.5,
+      "end": 21.5,
       "label": "Fm"
     },
     {
-      "start": 21.25,
+      "start": 21.5,
       "end": 22.75,
       "label": "C#maj7"
     },
@@ -86,16 +86,16 @@
     },
     {
       "start": 24.75,
-      "end": 26.5,
+      "end": 26.25,
       "label": "G#add9"
     },
     {
-      "start": 26.5,
-      "end": 28.25,
+      "start": 26.25,
+      "end": 28.5,
       "label": "Fm"
     },
     {
-      "start": 28.25,
+      "start": 28.5,
       "end": 30,
       "label": "C#"
     },
@@ -106,11 +106,11 @@
     },
     {
       "start": 31.75,
-      "end": 33.25,
+      "end": 33.5,
       "label": "G#"
     },
     {
-      "start": 33.25,
+      "start": 33.5,
       "end": 35.25,
       "label": "Fm"
     },
@@ -131,76 +131,81 @@
     },
     {
       "start": 40.25,
-      "end": 42,
+      "end": 42.25,
       "label": "Fm"
     },
     {
-      "start": 42,
+      "start": 42.25,
       "end": 43.5,
       "label": "C#maj7"
     },
     {
       "start": 43.5,
-      "end": 45.5,
+      "end": 45.75,
       "label": "D#7"
     },
     {
-      "start": 45.5,
-      "end": 47,
+      "start": 45.75,
+      "end": 47.25,
       "label": "G#add9"
     },
     {
-      "start": 47,
+      "start": 47.25,
       "end": 49.25,
       "label": "Fm"
     },
     {
       "start": 49.25,
-      "end": 50.5,
+      "end": 50.75,
       "label": "C#maj7"
     },
     {
-      "start": 50.5,
+      "start": 50.75,
       "end": 52.5,
       "label": "C#add9"
     },
     {
       "start": 52.5,
-      "end": 54.25,
+      "end": 54.5,
       "label": "G#"
     },
     {
-      "start": 54.25,
-      "end": 56,
-      "label": "G#6"
+      "start": 54.5,
+      "end": 56.25,
+      "label": "Fm"
     },
     {
-      "start": 56,
-      "end": 57.5,
+      "start": 56.25,
+      "end": 57.75,
       "label": "C#"
     },
     {
-      "start": 57.5,
-      "end": 59.25,
+      "start": 57.75,
+      "end": 59.5,
       "label": "C#add9"
     },
     {
-      "start": 59.25,
-      "end": 61.75,
+      "start": 59.5,
+      "end": 61.5,
       "label": "G#"
     },
     {
-      "start": 61.75,
+      "start": 61.5,
+      "end": 63,
+      "label": "Fm"
+    },
+    {
+      "start": 63,
       "end": 64.5,
       "label": "C#maj7"
     },
     {
       "start": 64.5,
-      "end": 66.25,
+      "end": 66.5,
       "label": "D#7"
     },
     {
-      "start": 66.25,
+      "start": 66.5,
       "end": 68.25,
       "label": "G#"
     },
@@ -216,11 +221,11 @@
     },
     {
       "start": 71.75,
-      "end": 73.25,
+      "end": 73.5,
       "label": "D#"
     },
     {
-      "start": 73.25,
+      "start": 73.5,
       "end": 75,
       "label": "G#"
     },
@@ -241,11 +246,11 @@
     },
     {
       "start": 80.5,
-      "end": 81.75,
+      "end": 82,
       "label": "G#"
     },
     {
-      "start": 81.75,
+      "start": 82,
       "end": 84,
       "label": "Fm"
     },
@@ -256,11 +261,11 @@
     },
     {
       "start": 85.75,
-      "end": 87.25,
+      "end": 87.5,
       "label": "D#"
     },
     {
-      "start": 87.25,
+      "start": 87.5,
       "end": 89,
       "label": "G#"
     },
@@ -276,11 +281,11 @@
     },
     {
       "start": 92.25,
-      "end": 94.25,
+      "end": 94.5,
       "label": "D#7"
     },
     {
-      "start": 94.25,
+      "start": 94.5,
       "end": 95.75,
       "label": "G#maj7"
     },
@@ -291,16 +296,16 @@
     },
     {
       "start": 98,
-      "end": 100.75,
+      "end": 100.5,
       "label": "D#7"
     },
     {
-      "start": 100.75,
-      "end": 102.25,
-      "label": "G#"
+      "start": 100.5,
+      "end": 101.5,
+      "label": "G#sus2"
     },
     {
-      "start": 102.25,
+      "start": 101.5,
       "end": 104.75,
       "label": "G#6"
     },
@@ -316,46 +321,46 @@
     },
     {
       "start": 108.25,
-      "end": 109.5,
+      "end": 109.75,
       "label": "G#"
     },
     {
-      "start": 109.5,
-      "end": 111.5,
+      "start": 109.75,
+      "end": 111.75,
       "label": "Fm"
     },
     {
-      "start": 111.5,
-      "end": 113,
+      "start": 111.75,
+      "end": 113.25,
       "label": "C#maj7"
     },
     {
-      "start": 113,
-      "end": 115,
+      "start": 113.25,
+      "end": 115.25,
       "label": "D#7"
     },
     {
-      "start": 115,
-      "end": 116.5,
+      "start": 115.25,
+      "end": 116.75,
       "label": "G#"
     },
     {
-      "start": 116.5,
+      "start": 116.75,
       "end": 118.75,
       "label": "Fm"
     },
     {
       "start": 118.75,
-      "end": 120,
+      "end": 120.25,
       "label": "C#maj7"
     },
     {
-      "start": 120,
-      "end": 121.75,
+      "start": 120.25,
+      "end": 121.5,
       "label": "D#7"
     },
     {
-      "start": 121.75,
+      "start": 121.5,
       "end": 124,
       "label": "G#"
     },
@@ -366,41 +371,31 @@
     },
     {
       "start": 125.5,
-      "end": 127,
+      "end": 127.5,
       "label": "C#"
     },
     {
-      "start": 127,
-      "end": 127.75,
-      "label": "C#add9"
-    },
-    {
-      "start": 127.75,
-      "end": 129,
+      "start": 127.5,
+      "end": 129.25,
       "label": "D#"
     },
     {
-      "start": 129,
-      "end": 130.5,
+      "start": 129.25,
+      "end": 130.75,
       "label": "G#"
     },
     {
-      "start": 130.5,
-      "end": 132.5,
+      "start": 130.75,
+      "end": 132.75,
       "label": "Fm"
     },
     {
-      "start": 132.5,
-      "end": 134,
+      "start": 132.75,
+      "end": 134.25,
       "label": "C#maj7"
     },
     {
-      "start": 134,
-      "end": 134.75,
-      "label": "D#7"
-    },
-    {
-      "start": 134.75,
+      "start": 134.25,
       "end": 136,
       "label": "D#"
     },
@@ -411,21 +406,21 @@
     },
     {
       "start": 137.75,
-      "end": 139.5,
+      "end": 140,
       "label": "Fm"
     },
     {
-      "start": 139.5,
-      "end": 141,
+      "start": 140,
+      "end": 141.25,
       "label": "C#"
     },
     {
-      "start": 141,
-      "end": 143.25,
-      "label": "C#add9"
+      "start": 141.25,
+      "end": 143,
+      "label": "D#"
     },
     {
-      "start": 143.25,
+      "start": 143,
       "end": 144.5,
       "label": "G#"
     },
@@ -436,16 +431,16 @@
     },
     {
       "start": 146.5,
-      "end": 148,
+      "end": 148.25,
       "label": "C#"
     },
     {
-      "start": 148,
-      "end": 149.75,
+      "start": 148.25,
+      "end": 150,
       "label": "D#7"
     },
     {
-      "start": 149.75,
+      "start": 150,
       "end": 151.5,
       "label": "G#"
     },
@@ -461,21 +456,21 @@
     },
     {
       "start": 155.25,
-      "end": 156.75,
+      "end": 157,
       "label": "D#"
     },
     {
-      "start": 156.75,
+      "start": 157,
       "end": 158.5,
       "label": "G#"
     },
     {
       "start": 158.5,
-      "end": 160.25,
+      "end": 160.5,
       "label": "Fm"
     },
     {
-      "start": 160.25,
+      "start": 160.5,
       "end": 161.75,
       "label": "C#maj7"
     },
@@ -511,11 +506,11 @@
     },
     {
       "start": 172.75,
-      "end": 174.25,
+      "end": 174.5,
       "label": "Fm"
     },
     {
-      "start": 174.25,
+      "start": 174.5,
       "end": 176.25,
       "label": "C#"
     },
@@ -526,11 +521,11 @@
     },
     {
       "start": 178,
-      "end": 181,
+      "end": 181.25,
       "label": "D#sus4"
     },
     {
-      "start": 181,
+      "start": 181.25,
       "end": 183,
       "label": "C#"
     },
@@ -551,11 +546,11 @@
     },
     {
       "start": 188.25,
-      "end": 190.25,
+      "end": 190,
       "label": "C#"
     },
     {
-      "start": 190.25,
+      "start": 190,
       "end": 191.75,
       "label": "D#"
     },
@@ -566,11 +561,11 @@
     },
     {
       "start": 193.25,
-      "end": 195,
+      "end": 195.25,
       "label": "Fm"
     },
     {
-      "start": 195,
+      "start": 195.25,
       "end": 197,
       "label": "C#"
     },
@@ -591,16 +586,16 @@
     },
     {
       "start": 202.25,
-      "end": 203.5,
+      "end": 203.75,
       "label": "C#"
     },
     {
-      "start": 203.5,
-      "end": 205.5,
-      "label": "D#7"
+      "start": 203.75,
+      "end": 205.75,
+      "label": "D#"
     },
     {
-      "start": 205.5,
+      "start": 205.75,
       "end": 207.25,
       "label": "G#"
     },
@@ -641,16 +636,16 @@
     },
     {
       "start": 219.5,
-      "end": 221.25,
+      "end": 221.5,
       "label": "G#maj7"
     },
     {
-      "start": 221.25,
-      "end": 222.75,
+      "start": 221.5,
+      "end": 223,
       "label": "G#6"
     },
     {
-      "start": 222.75,
+      "start": 223,
       "end": 225,
       "label": "C#maj7"
     },
@@ -666,11 +661,11 @@
     },
     {
       "start": 228.5,
-      "end": 230,
+      "end": 230.25,
       "label": "G#"
     },
     {
-      "start": 230,
+      "start": 230.25,
       "end": 232,
       "label": "C#maj7"
     },
@@ -681,11 +676,11 @@
     },
     {
       "start": 233.75,
-      "end": 235.5,
+      "end": 235.25,
       "label": "D#6"
     },
     {
-      "start": 235.5,
+      "start": 235.25,
       "end": 237,
       "label": "G#6"
     },

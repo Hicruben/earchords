@@ -31,11 +31,11 @@
     },
     {
       "start": 8,
-      "end": 11,
+      "end": 10.75,
       "label": "C#"
     },
     {
-      "start": 11,
+      "start": 10.75,
       "end": 13.5,
       "label": "D#m"
     },
@@ -51,26 +51,26 @@
     },
     {
       "start": 19,
-      "end": 21.75,
+      "end": 22,
       "label": "C#"
     },
     {
-      "start": 21.75,
-      "end": 24,
+      "start": 22,
+      "end": 24.25,
       "label": "D#m"
     },
     {
-      "start": 24,
+      "start": 24.25,
       "end": 27,
       "label": "B"
     },
     {
       "start": 27,
-      "end": 29.75,
+      "end": 29.5,
       "label": "F#"
     },
     {
-      "start": 29.75,
+      "start": 29.5,
       "end": 32.5,
       "label": "C#"
     },
@@ -106,21 +106,21 @@
     },
     {
       "start": 48,
-      "end": 51.25,
+      "end": 51,
       "label": "F#"
     },
     {
-      "start": 51.25,
+      "start": 51,
       "end": 53.75,
       "label": "C#"
     },
     {
       "start": 53.75,
-      "end": 55,
+      "end": 54.75,
       "label": null
     },
     {
-      "start": 55,
+      "start": 54.75,
       "end": 57.5,
       "label": "D#m"
     },
@@ -131,11 +131,11 @@
     },
     {
       "start": 60.5,
-      "end": 62.75,
+      "end": 63,
       "label": "F#"
     },
     {
-      "start": 62.75,
+      "start": 63,
       "end": 65.5,
       "label": "C#"
     },
@@ -166,8 +166,13 @@
     },
     {
       "start": 78.75,
-      "end": 81.75,
+      "end": 81,
       "label": "B"
+    },
+    {
+      "start": 81,
+      "end": 81.75,
+      "label": "B6"
     },
     {
       "start": 81.75,
@@ -181,41 +186,41 @@
     },
     {
       "start": 87,
-      "end": 89.25,
+      "end": 89.5,
       "label": "D#m"
     },
     {
-      "start": 89.25,
-      "end": 92.5,
+      "start": 89.5,
+      "end": 92.25,
       "label": "B"
     },
     {
-      "start": 92.5,
+      "start": 92.25,
       "end": 94.75,
       "label": "F#"
     },
     {
       "start": 94.75,
-      "end": 96.5,
+      "end": 96.25,
       "label": "C#"
     },
     {
-      "start": 96.5,
-      "end": 98,
-      "label": "D#m7"
+      "start": 96.25,
+      "end": 97.75,
+      "label": "C#sus4"
     },
     {
-      "start": 98,
-      "end": 99.75,
+      "start": 97.75,
+      "end": 100,
       "label": "D#m"
     },
     {
-      "start": 99.75,
-      "end": 103.25,
+      "start": 100,
+      "end": 103,
       "label": "B"
     },
     {
-      "start": 103.25,
+      "start": 103,
       "end": 105.5,
       "label": "F#"
     },
@@ -236,41 +241,41 @@
     },
     {
       "start": 113.75,
-      "end": 116,
+      "end": 116.25,
       "label": "F#"
     },
     {
-      "start": 116,
-      "end": 119.25,
+      "start": 116.25,
+      "end": 119,
       "label": "C#"
     },
     {
-      "start": 119.25,
+      "start": 119,
       "end": 121.25,
       "label": "D#m"
     },
     {
       "start": 121.25,
-      "end": 124.5,
+      "end": 124.25,
       "label": "B"
     },
     {
-      "start": 124.5,
+      "start": 124.25,
       "end": 127.25,
       "label": "F#"
     },
     {
       "start": 127.25,
-      "end": 129.75,
+      "end": 129.5,
       "label": "C#"
     },
     {
-      "start": 129.75,
-      "end": 132,
+      "start": 129.5,
+      "end": 132.25,
       "label": "D#m"
     },
     {
-      "start": 132,
+      "start": 132.25,
       "end": 135,
       "label": "B"
     },
@@ -281,58 +286,73 @@
     },
     {
       "start": 137.75,
-      "end": 140.5,
+      "end": 140.25,
       "label": "C#"
     },
     {
-      "start": 140.5,
-      "end": 142.5,
+      "start": 140.25,
+      "end": 142.75,
       "label": "D#m"
     },
     {
-      "start": 142.5,
-      "end": 145.75,
+      "start": 142.75,
+      "end": 145.5,
       "label": "B"
     },
     {
-      "start": 145.75,
+      "start": 145.5,
       "end": 148.5,
       "label": "F#"
     },
     {
       "start": 148.5,
-      "end": 151.75,
+      "end": 151.25,
       "label": "C#"
     },
     {
-      "start": 151.75,
+      "start": 151.25,
+      "end": 152,
+      "label": null
+    },
+    {
+      "start": 152,
       "end": 154,
       "label": "D#m"
     },
     {
       "start": 154,
-      "end": 154.75,
+      "end": 155,
       "label": "D#"
     },
     {
-      "start": 154.75,
-      "end": 157.25,
+      "start": 155,
+      "end": 156,
       "label": "B"
     },
     {
-      "start": 157.25,
+      "start": 156,
+      "end": 157.5,
+      "label": "Bsus2"
+    },
+    {
+      "start": 157.5,
       "end": 160.25,
       "label": "F#"
     },
     {
       "start": 160.25,
-      "end": 163.25,
+      "end": 163,
       "label": "C#"
     },
     {
-      "start": 163.25,
-      "end": 165.5,
+      "start": 163,
+      "end": 164.25,
       "label": "D#m"
+    },
+    {
+      "start": 164.25,
+      "end": 165.5,
+      "label": "D#"
     },
     {
       "start": 165.5,
@@ -341,11 +361,11 @@
     },
     {
       "start": 166.75,
-      "end": 168,
+      "end": 168.25,
       "label": "F#sus4"
     },
     {
-      "start": 168,
+      "start": 168.25,
       "end": 170.75,
       "label": "F#"
     },
@@ -356,16 +376,16 @@
     },
     {
       "start": 173.5,
-      "end": 175.75,
+      "end": 176,
       "label": "D#m"
     },
     {
-      "start": 175.75,
-      "end": 176.75,
+      "start": 176,
+      "end": 177,
       "label": "D#aug"
     },
     {
-      "start": 176.75,
+      "start": 177,
       "end": 179,
       "label": "C#7"
     },
@@ -381,11 +401,11 @@
     },
     {
       "start": 184.25,
-      "end": 186.5,
+      "end": 186.75,
       "label": "D#m"
     },
     {
-      "start": 186.5,
+      "start": 186.75,
       "end": 189.5,
       "label": "B"
     },
@@ -416,21 +436,21 @@
     },
     {
       "start": 203.25,
-      "end": 208.25,
+      "end": 208,
       "label": "C#"
     },
     {
-      "start": 208.25,
-      "end": 211.5,
+      "start": 208,
+      "end": 211.75,
       "label": null
     },
     {
-      "start": 211.5,
-      "end": 214.25,
+      "start": 211.75,
+      "end": 214,
       "label": "G"
     },
     {
-      "start": 214.25,
+      "start": 214,
       "end": 215.75,
       "label": null
     }

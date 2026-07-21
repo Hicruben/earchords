@@ -6,7 +6,7 @@
     "name": "A",
     "tonic": 9,
     "mode": "major",
-    "confidence": 0.7780000000000001
+    "confidence": 0.7730000000000001
   },
   "tempo": {
     "bpm": 120,
@@ -41,11 +41,11 @@
     },
     {
       "start": 20.25,
-      "end": 22.25,
+      "end": 22,
       "label": "A"
     },
     {
-      "start": 22.25,
+      "start": 22,
       "end": 25,
       "label": "E"
     }

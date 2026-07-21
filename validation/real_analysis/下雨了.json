@@ -41,16 +41,21 @@
     },
     {
       "start": 23.25,
-      "end": 24.25,
+      "end": 24,
       "label": "A#maj7"
     },
     {
-      "start": 24.25,
-      "end": 25.25,
-      "label": "Cm7"
+      "start": 24,
+      "end": 24.75,
+      "label": "A#add9"
     },
     {
-      "start": 25.25,
+      "start": 24.75,
+      "end": 25.75,
+      "label": "Gm"
+    },
+    {
+      "start": 25.75,
       "end": 27.25,
       "label": "Gsus2"
     },
@@ -61,11 +66,11 @@
     },
     {
       "start": 30,
-      "end": 31.75,
+      "end": 32,
       "label": "A#maj7"
     },
     {
-      "start": 31.75,
+      "start": 32,
       "end": 33.75,
       "label": "A#"
     },
@@ -76,56 +81,66 @@
     },
     {
       "start": 35.75,
-      "end": 37,
-      "label": "Gm"
+      "end": 37.25,
+      "label": "A#6"
     },
     {
-      "start": 37,
-      "end": 41.25,
-      "label": "Dm7"
+      "start": 37.25,
+      "end": 38.5,
+      "label": "A#add9"
     },
     {
-      "start": 41.25,
-      "end": 42.75,
+      "start": 38.5,
+      "end": 41.5,
+      "label": "F"
+    },
+    {
+      "start": 41.5,
+      "end": 42.5,
       "label": "D#"
     },
     {
-      "start": 42.75,
+      "start": 42.5,
       "end": 43.75,
-      "label": "A#m6"
+      "label": "A#6"
     },
     {
       "start": 43.75,
-      "end": 46.5,
-      "label": "Cm7"
+      "end": 45.75,
+      "label": "D#6"
     },
     {
-      "start": 46.5,
+      "start": 45.75,
+      "end": 46.75,
+      "label": "A#maj7"
+    },
+    {
+      "start": 46.75,
       "end": 48.5,
-      "label": "Dm"
+      "label": "F6"
     },
     {
       "start": 48.5,
       "end": 49.25,
-      "label": "Gm7"
+      "label": "Fsus4"
     },
     {
       "start": 49.25,
-      "end": 51.75,
+      "end": 51.5,
       "label": "Gm"
     },
     {
-      "start": 51.75,
+      "start": 51.5,
       "end": 52.5,
       "label": "A#maj7"
     },
     {
       "start": 52.5,
-      "end": 54,
+      "end": 53.75,
       "label": "D#"
     },
     {
-      "start": 54,
+      "start": 53.75,
       "end": 55.25,
       "label": "D#6"
     },
@@ -136,21 +151,21 @@
     },
     {
       "start": 57.25,
-      "end": 59.75,
+      "end": 60,
       "label": "Fsus4"
     },
     {
-      "start": 59.75,
+      "start": 60,
       "end": 61.25,
       "label": "F"
     },
     {
       "start": 61.25,
-      "end": 62.5,
+      "end": 62.75,
       "label": "A#dim"
     },
     {
-      "start": 62.5,
+      "start": 62.75,
       "end": 68,
       "label": "D#"
     },
@@ -196,11 +211,11 @@
     },
     {
       "start": 86.75,
-      "end": 88.5,
+      "end": 88.75,
       "label": "A#sus2"
     },
     {
-      "start": 88.5,
+      "start": 88.75,
       "end": 89.5,
       "label": "F7"
     },
@@ -226,11 +241,11 @@
     },
     {
       "start": 100,
-      "end": 104,
+      "end": 104.25,
       "label": "A#"
     },
     {
-      "start": 104,
+      "start": 104.25,
       "end": 105.5,
       "label": "Gm6"
     },
@@ -266,11 +281,11 @@
     },
     {
       "start": 117.5,
-      "end": 118.5,
+      "end": 118.75,
       "label": "Cm7"
     },
     {
-      "start": 118.5,
+      "start": 118.75,
       "end": 121.25,
       "label": "F"
     },
@@ -281,18 +296,28 @@
     },
     {
       "start": 125.25,
-      "end": 126.5,
-      "label": "Gm6"
+      "end": 126,
+      "label": "A#dim"
     },
     {
-      "start": 126.5,
+      "start": 126,
       "end": 129,
       "label": "D#"
     },
     {
       "start": 129,
-      "end": 131.25,
+      "end": 129.75,
       "label": "A#sus4"
+    },
+    {
+      "start": 129.75,
+      "end": 130.5,
+      "label": "F7"
+    },
+    {
+      "start": 130.5,
+      "end": 131.25,
+      "label": "A#sus2"
     },
     {
       "start": 131.25,
@@ -321,21 +346,21 @@
     },
     {
       "start": 142.5,
-      "end": 146.5,
+      "end": 146.75,
       "label": "A#"
     },
     {
-      "start": 146.5,
+      "start": 146.75,
       "end": 148,
       "label": "A#maj7"
     },
     {
       "start": 148,
-      "end": 151.75,
+      "end": 152,
       "label": "Gm7"
     },
     {
-      "start": 151.75,
+      "start": 152,
       "end": 153.25,
       "label": "Fadd9"
     },
@@ -351,11 +376,11 @@
     },
     {
       "start": 158.75,
-      "end": 161.5,
-      "label": "D#"
+      "end": 161.25,
+      "label": "D#sus2"
     },
     {
-      "start": 161.5,
+      "start": 161.25,
       "end": 165.75,
       "label": "Gm"
     },
@@ -366,61 +391,66 @@
     },
     {
       "start": 167,
-      "end": 169.75,
+      "end": 170,
       "label": "A#"
     },
     {
-      "start": 169.75,
+      "start": 170,
       "end": 172,
       "label": "A#maj7"
     },
     {
       "start": 172,
+      "end": 174,
+      "label": "Gm"
+    },
+    {
+      "start": 174,
       "end": 176.25,
       "label": "Fadd9"
     },
     {
       "start": 176.25,
-      "end": 177.75,
+      "end": 178,
       "label": "A#maj7"
     },
     {
-      "start": 177.75,
+      "start": 178,
       "end": 180.5,
       "label": "A#"
     },
     {
       "start": 180.5,
-      "end": 182.5,
+      "end": 182.75,
       "label": "A#maj7"
     },
     {
-      "start": 182.5,
-      "end": 184.5,
+      "start": 182.75,
+      "end": 184.75,
       "label": "Gm"
     },
     {
-      "start": 184.5,
+      "start": 184.75,
       "end": 188,
       "label": "Gm7"
     },
     {
       "start": 188,
-      "end": 189.5,
+      "end": 189.75,
       "label": "D#"
     },
     {
-      "start": 189.5,
-      "end": 193,
+      "start": 189.75,
+      "end": 193.25,
       "label": "D#6"
     },
     {
-      "start": 193,
-      "end": 195.75,
+      "start": 193.25,
+      "end": 195.5,
       "label": "Dm"
     },
     {
-      "start": 195.75,
+      "start": 195.5,
       "end": 197.75,
       "label": "Gm"
     },
@@ -431,16 +461,16 @@
     },
     {
       "start": 201,
-      "end": 202.25,
+      "end": 202.75,
       "label": "F7"
     },
     {
-      "start": 202.25,
-      "end": 204,
-      "label": "D#add9"
+      "start": 202.75,
+      "end": 204.25,
+      "label": "D#"
     },
     {
-      "start": 204,
+      "start": 204.25,
       "end": 208.25,
       "label": "F"
     },
@@ -451,8 +481,13 @@
     },
     {
       "start": 209.5,
-      "end": 212.25,
+      "end": 211.5,
       "label": "D#"
+    },
+    {
+      "start": 211.5,
+      "end": 212.25,
+      "label": "A#"
     },
     {
       "start": 212.25,
@@ -461,41 +496,41 @@
     },
     {
       "start": 213.25,
-      "end": 216,
+      "end": 216.25,
       "label": "A#"
     },
     {
-      "start": 216,
-      "end": 217.25,
-      "label": "A#maj7"
+      "start": 216.25,
+      "end": 217.5,
+      "label": "Dm7"
     },
     {
-      "start": 217.25,
-      "end": 219,
+      "start": 217.5,
+      "end": 219.25,
       "label": "Gm"
     },
     {
-      "start": 219,
+      "start": 219.25,
       "end": 220,
       "label": "Gm7"
     },
     {
       "start": 220,
+      "end": 221.75,
+      "label": "Cm"
+    },
+    {
+      "start": 221.75,
       "end": 222.75,
       "label": "Cm7"
     },
     {
       "start": 222.75,
-      "end": 224.75,
+      "end": 225.25,
       "label": "F"
     },
     {
-      "start": 224.75,
-      "end": 225.75,
-      "label": "A#maj7"
-    },
-    {
-      "start": 225.75,
+      "start": 225.25,
       "end": 229.25,
       "label": "A#"
     },
@@ -521,31 +556,31 @@
     },
     {
       "start": 234.5,
-      "end": 235.75,
-      "label": "Cm7"
+      "end": 235.5,
+      "label": "A#add9"
     },
     {
-      "start": 235.75,
-      "end": 238.5,
+      "start": 235.5,
+      "end": 238.75,
       "label": "Dm7"
     },
     {
-      "start": 238.5,
-      "end": 241.25,
+      "start": 238.75,
+      "end": 241.5,
       "label": "Gm"
     },
     {
-      "start": 241.25,
+      "start": 241.5,
       "end": 244,
       "label": "Cm7"
     },
     {
       "start": 244,
-      "end": 246.5,
+      "end": 246.75,
       "label": "F"
     },
     {
-      "start": 246.5,
+      "start": 246.75,
       "end": 250.75,
       "label": "A#"
     },
@@ -556,16 +591,16 @@
     },
     {
       "start": 252,
-      "end": 254.75,
+      "end": 254.5,
       "label": "D#maj7"
     },
     {
-      "start": 254.75,
-      "end": 255.75,
+      "start": 254.5,
+      "end": 256,
       "label": "D#6"
     },
     {
-      "start": 255.75,
+      "start": 256,
       "end": 257.75,
       "label": "A#sus4"
     },
@@ -586,16 +621,21 @@
     },
     {
       "start": 262.25,
-      "end": 265.25,
+      "end": 265.5,
       "label": "Cm7"
     },
     {
-      "start": 265.25,
-      "end": 267.75,
+      "start": 265.5,
+      "end": 267.5,
       "label": "F"
     },
     {
-      "start": 267.75,
+      "start": 267.5,
+      "end": 268.25,
+      "label": "A#maj7"
+    },
+    {
+      "start": 268.25,
       "end": 272,
       "label": "A#"
     },
@@ -606,21 +646,31 @@
     },
     {
       "start": 273.25,
-      "end": 275.5,
+      "end": 275.75,
       "label": "D#"
     },
     {
-      "start": 275.5,
+      "start": 275.75,
+      "end": 277.25,
+      "label": "F7"
+    },
+    {
+      "start": 277.25,
+      "end": 278,
+      "label": "A#sus2"
+    },
+    {
+      "start": 278,
       "end": 279,
       "label": "F7"
     },
     {
       "start": 279,
-      "end": 281.5,
+      "end": 281.25,
       "label": "Dm"
     },
     {
-      "start": 281.5,
+      "start": 281.25,
       "end": 284,
       "label": "Gm"
     },
@@ -641,16 +691,16 @@
     },
     {
       "start": 289.25,
-      "end": 293,
+      "end": 293.25,
       "label": "A#"
     },
     {
-      "start": 293,
-      "end": 303.75,
+      "start": 293.25,
+      "end": 303.5,
       "label": "A#maj7"
     },
     {
-      "start": 303.75,
+      "start": 303.5,
       "end": 305.5,
       "label": null
     }

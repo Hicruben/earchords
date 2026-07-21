@@ -21,16 +21,16 @@
     },
     {
       "start": 2,
-      "end": 4.25,
+      "end": 4,
       "label": "G"
     },
     {
-      "start": 4.25,
-      "end": 5.75,
+      "start": 4,
+      "end": 6,
       "label": "Am"
     },
     {
-      "start": 5.75,
+      "start": 6,
       "end": 8.25,
       "label": "F"
     },
@@ -41,16 +41,16 @@
     },
     {
       "start": 10,
-      "end": 12.25,
+      "end": 12,
       "label": "G"
     },
     {
-      "start": 12.25,
-      "end": 13.75,
+      "start": 12,
+      "end": 14,
       "label": "Am"
     },
     {
-      "start": 13.75,
+      "start": 14,
       "end": 17,
       "label": "F"
     }

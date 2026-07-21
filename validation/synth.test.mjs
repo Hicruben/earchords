@@ -38,7 +38,7 @@ function exactMatch(segments, truth) {
 
 // 每首精确匹配下限(当前值留安全余量),以及整体加权下限
 const FLOORS = { blues_a: 0.55, canon_d: 0.88, doowop_50s: 0.88, pop_axis: 0.88 };
-const WEIGHTED_FLOOR = 0.80;
+const WEIGHTED_FLOOR = 0.84; // win 0.65 后加权 exact ≈86.5%,留安全余量
 
 test('合成整曲:端到端精确匹配不低于校准基线(精度回归网)', () => {
   if (!existsSync(REF_DIR) || !existsSync(ANALYSIS_DIR)) {

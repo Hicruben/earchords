@@ -62,9 +62,12 @@ HPSS / CQT-chroma 这类经典前端替换**不是**提高准度的路子(会更
 模型**(CNN/Transformer 直接从音频出和弦)——这与"浏览器端、无后端、隐私优先"的
 架构有根本张力(需可在浏览器内跑的小模型 + 训练数据),是重大架构决策,非参数或
 经典 DSP 可达。已排除的廉价/经典路子:extBonus、窗宽(两者是真增益)、bassEmphasis、
-EMIT_GAIN、hop、调内先验、CQT 前端、逐帧激活 chroma。
+EMIT_GAIN、hop、调内先验、CQT 前端、逐帧激活 chroma、rootEmphasis、P_STAY、
+bassBoost、FIFTH_W(逐一在 GuitarSet+合成+真实三方扫描,均在最优或无影响)。
+**FIFTH_W(五度圈转移先验)压平/锐化对三个数据集零影响 → Viterbi 由发射分主导,
+根音混淆 100% 是发射层(chroma/提取)问题,与解码器转移逻辑无关。**
 
-**已用实测穷尽所有可自主验证的替代提取/表示路径,现管线在其架构内已近最优。**
+**已用完整参数研究 + 两条提取方法负结果,证明现管线在其架构内已到天花板。**
 冲深度 SOTA(85–92%)只剩一条路:**训练一个紧凑神经和弦模型**(像 Basic Pitch
 那样 ~1MB、TF.js 浏览器内跑、音频不出设备,故不破坏隐私/无后端架构),用
 GuitarSet/Isophonics/Billboard 的和弦标注训练。这是一次真实的 ML 投入(训练数据 +

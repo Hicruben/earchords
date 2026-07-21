@@ -39,6 +39,26 @@
 3. `npm run dev`(供模型)后 `npm run analyze:batch -- <音频目录> <分析目录>`。
 4. `npm run eval:mirex -- <分析目录> <标注目录>`。
 
+## 提取前端对比(2026-07,重要负结果)
+
+误差归因显示 GuitarSet 上主误差是**根音混淆 14.2%**(下属/属/关系调),性质错仅
+2.1%(属七校准已解决)。为验证"换更好的提取前端能否突破",在同一 29 首上跑了
+经典**频谱 CQT-chroma 前端**(cross_check.py 的 librosa 独立实现,Chordino 一系的
+经典 DSP 路线):
+
+| 提取前端 | GuitarSet MajMin-WCSR |
+|---|---|
+| **Basic Pitch 神经音符转录(现管线)** | **83.3%** |
+| librosa CQT-chroma(经典 DSP) | 60.2% |
+
+**结论:现有 Basic Pitch 提取已显著优于经典 DSP 频谱前端,不是短板。** 因此
+HPSS / CQT-chroma 这类经典前端替换**不是**提高准度的路子(会更差)。剩余根音混淆
+是"已强于经典方法"之后的硬残差,冲深度学习 SOTA(85–92%)需**紧凑的神经和弦
+模型**(CNN/Transformer 直接从音频出和弦)——这与"浏览器端、无后端、隐私优先"的
+架构有根本张力(需可在浏览器内跑的小模型 + 训练数据),是重大架构决策,非参数或
+经典 DSP 可达。已排除的廉价/经典路子:extBonus、窗宽(两者是真增益)、bassEmphasis、
+EMIT_GAIN、hop、调内先验、CQT 前端。
+
 ## 待补(需外部资源)
 
 - **Isophonics(Beatles/Queen)**:和弦识别的黄金难基准,标准 majmin WCSR。

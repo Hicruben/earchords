@@ -177,6 +177,42 @@ export function spellRoot(pc, isFlat) {
   return (isFlat ? FLAT : SHARP)[((pc % 12) + 12) % 12];
 }
 
+// 估计节拍位置(不只是周期)。estimateTempo 给出拍长,这里在 [0,beat) 里用
+// 梳状滤波搜相位,让节拍点尽量落在 onset 能量峰上,返回全曲节拍时刻数组。
+// 用途:beat-synchronous 和弦解码——把 chroma 聚合到节拍/小节区间,让和弦边界
+// 对齐真实节拍,消除固定 hop 网格的 ~0.25s 边界滞后(SOTA 和弦识别的标准做法)。
+export function estimateBeats(notes, duration) {
+  const tempo = estimateTempo(notes, duration);
+  if (!notes.length || !tempo.beat || duration <= 0) return { beats: [], ...tempo };
+  const beat = tempo.beat;
+  const binSize = 0.02;
+  const nBins = Math.ceil(duration / binSize) + 1;
+  const env = new Float64Array(nBins);
+  for (const n of notes) {
+    const b = Math.floor(n.startTimeSeconds / binSize);
+    if (b >= 0 && b < nBins) env[b] += (n.amplitude || 1);
+  }
+  // 相位搜索:节拍偏移 phi ∈ [0,beat),打分 = 各节拍点 ±1 bin 内 env 之和,取最大。
+  const nPhi = 24;
+  let bestPhi = 0;
+  let bestScore = -1;
+  for (let k = 0; k < nPhi; k++) {
+    const phi = (k / nPhi) * beat;
+    let score = 0;
+    for (let t = phi; t < duration; t += beat) {
+      const b = Math.round(t / binSize);
+      for (let d = -1; d <= 1; d++) {
+        const bb = b + d;
+        if (bb >= 0 && bb < nBins) score += env[bb];
+      }
+    }
+    if (score > bestScore) { bestScore = score; bestPhi = phi; }
+  }
+  const beats = [];
+  for (let t = bestPhi; t < duration + 1e-9; t += beat) beats.push(+t.toFixed(3));
+  return { beats, beat, bpm: tempo.bpm, confidence: tempo.confidence };
+}
+
 // 从音符起始估计速度(BPM)与节拍周期(秒)。
 // 方法:构建 onset 强度包络 -> 自相关 -> 在 [0.3s,1.0s] 找主周期。
 export function estimateTempo(notes, duration) {

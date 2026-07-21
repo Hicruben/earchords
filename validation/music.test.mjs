@@ -1,7 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { existsSync, readFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { matchChroma, detectChords } from '../src/chords.js';
-import { detectKey, estimateTempo } from '../src/music.js';
+import { detectKey, estimateTempo, estimateBeats } from '../src/music.js';
 
 function chroma(...pitchClasses) {
   const vector = new Float64Array(12);
@@ -42,6 +45,25 @@ test('tempo interpolation resolves 87 BPM without snapping to 88', () => {
   const tempo = estimateTempo(notes, duration);
   assert.equal(tempo.bpm, 87);
   assert.ok(Math.abs(tempo.beat - 60 / 87) < 0.012);
+});
+
+test('estimateBeats 恢复合成曲的节拍网格并对齐小节线', () => {
+  // 合成曲为 120 BPM(拍长 0.5s)、4/4、和弦每 2s(每小节)换。
+  // 节拍跟踪器应恢复 0.5s 网格,且小节线(2s 整数倍)有节拍点落在其附近。
+  // 这是 beat-synchronous 解码(消除固定 hop 边界滞后)的前置能力。
+  const HERE = dirname(fileURLToPath(import.meta.url));
+  const path = join(HERE, 'synth_analysis', 'canon_d.json');
+  if (!existsSync(path)) return; // 缺合成语料时跳过
+  const a = JSON.parse(readFileSync(path));
+  const { beats, beat, bpm } = estimateBeats(a.notes, a.duration);
+  assert.equal(bpm, 120);
+  assert.ok(Math.abs(beat - 0.5) < 0.02, `拍长 ${beat} 应≈0.5s`);
+  assert.ok(beats.length >= 30, '应恢复整曲的节拍序列');
+  // 每条小节线(0,2,4,…)都应有节拍点在 60ms 内
+  for (let bar = 0; bar + 2 <= a.duration; bar += 2) {
+    const nearest = Math.min(...beats.map((b) => Math.abs(b - bar)));
+    assert.ok(nearest < 0.06, `小节线 ${bar}s 无节拍对齐(最近 ${(nearest * 1000).toFixed(0)}ms)`);
+  }
 });
 
 test('stable triads produce a compact chord timeline', () => {

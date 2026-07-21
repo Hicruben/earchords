@@ -118,6 +118,15 @@ python3 seo-radar/radar.py --report
   blues_a 62%、pop/canon/doo-wop 92-94%、加权 82.9%。迭代循环:改 `chords.js` →
   `npm run redecode -- validation/synth_analysis` → `npm run score:batch --
   validation/synth_analysis validation/synth_references`。
+  **精度路线图(2026-07 探明)**:合成曲残余 ~7% 误差是**边界时序**(固定 0.25s
+  hop 的滞后),标签本身对。已排除的廉价路子:调内先验是承重墙(削它会按下葫芦
+  浮起瓢)、细化 hop 与 `P_STAY` 耦合反而更差。**下一个高杠杆是 beat-synchronous
+  解码**:`music.js` 新增并测试了 `estimateBeats`(梳状滤波求节拍相位,合成曲
+  <16ms 恢复网格)。原型验证:把和弦边界吸附到**小节线/强拍**(非每一拍)在合成
+  精确真值上是干净的 **+5.2(82.9%→88.1%)**;吸到每一拍只有 +1.3 且伤部分歌
+  (会吸到 offbeat)。**尚未接入生产解码器**——真实歌有前奏/散拍/速度漂移且强拍
+  相位未知,而边界时序无法用现有粗检验证,需先有细粒度真实真值(见 `seed:reference`
+  脚手架)才能确认不倒退。这是通往"最准"的下一个大动作,但需要真实细粒度标注解锁。
 - `make_demo.py` / `make_xingxing_demo.py` / `mix_verify.py` — 生成 demo 音频与
   A/B 听感验证音频(`demo3/`、`verify/`)。注意 `mix_verify.py`、`extract_all.py`
   是历史一次性脚本,里面硬编码了 `/private/tmp/...` 绝对路径,不能直接在别处运行。

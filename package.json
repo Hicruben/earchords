@@ -13,7 +13,8 @@
     "redecode": "node validation/redecode.mjs",
     "seed:reference": "node validation/seed_reference.mjs",
     "verify:reference": "node validation/verify_reference.mjs",
-    "test": "node --test validation/*.test.mjs"
+    "test": "node --test validation/*.test.mjs",
+    "eval:mirex": "node validation/eval_mirex.mjs"
   },
   "dependencies": {
     "@spotify/basic-pitch": "^1.0.1",

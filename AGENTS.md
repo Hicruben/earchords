@@ -108,6 +108,16 @@ python3 seo-radar/radar.py --report
   "分段检测"这一独立风险,只测和弦识别本身。
 - `make_songs.py` + `songs_manifest.json` + `songs/` — 带完整伴奏(贝斯+和弦+
   旋律)的整曲合成与标准答案。
+- **`synth.test.mjs` + `synth_analysis/` + `synth_references/` — 端到端逐小节精度
+  回归网(接入 `npm test`,精度的第一道防线)**。`songs/` 顶层 4 首合成整曲
+  (pop_axis / canon_d / doowop_50s / blues_a)有 manifest 精确时间轴真值,
+  `synth_references/` 由其转成 `segments`,`synth_analysis/` 是保留 notes 的分析
+  结果。测试对 notes 重跑 `detectChords` 算时间重叠加权 exact-match,per-song +
+  加权下限断言。**改 `chords.js` 识别参数必须先跑 `npm test` 看这条**:它抓得到
+  合成 fixtures / 真实粗检抓不到的性质错(如属七被压成三和弦)。当前基线:
+  blues_a 62%、pop/canon/doo-wop 92-94%、加权 82.9%。迭代循环:改 `chords.js` →
+  `npm run redecode -- validation/synth_analysis` → `npm run score:batch --
+  validation/synth_analysis validation/synth_references`。
 - `make_demo.py` / `make_xingxing_demo.py` / `mix_verify.py` — 生成 demo 音频与
   A/B 听感验证音频(`demo3/`、`verify/`)。注意 `mix_verify.py`、`extract_all.py`
   是历史一次性脚本,里面硬编码了 `/private/tmp/...` 绝对路径,不能直接在别处运行。
@@ -128,6 +138,16 @@ python3 seo-radar/radar.py --report
   打印最长的若干不一致段。该参考系统在干净合成音频上对真值 96%,可作
   可信第二意见。注:madmom 与 py3.11 不兼容(装不上);essentia 的
   NNLSChroma 封装有坑(chroma 输出全零),均勿再浪费时间。
+  **重要教训(2026-07):cross_check 在真实全混音上太吵,不能当调优标尺**——
+  librosa 自身在密集流行歌上会大幅出错(如"小酒窝"模型对上公开乐谱、librosa 却
+  判成整首错,一致率仅 2.9%),拿它调参会把模型往 librosa 的噪声带偏。真实歌的
+  可靠真值是公开乐谱(人工 `references`);合成整曲/fixtures 才是可信精度标尺。
+- **参考真值的 concert-key 纪律**:模型从音频听到的是**实际发声音高**,不是乐谱
+  上的 capo 手型。建真实歌 `references` 时,凡带变调夹的原声歌必须把和弦/调性
+  转成 concert pitch,并用升号拼写(`PC_NAME`)。别信单一乐谱站的 capo 标注——
+  用 Hooktheory/SongBPM 等按音频分析的源交叉确认(例:Let Her Go 实际发声是
+  G 大调不是 D)。错的参考比没有更糟,会污染验证。英文歌参考的 `_source` 字段
+  注明了来源与核对时间。
 
 已知边界:合成音频与清晰弹唱录音准确率高;密集全混音流行歌较难(品类通病),
 会以 N.C. 或近似和弦呈现。自动分段是"细窗识别 + 众数平滑 + 合并",非严格节拍

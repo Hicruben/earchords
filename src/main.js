@@ -251,15 +251,38 @@ function drawMeter() {
   rec.raf = requestAnimationFrame(frame);
 }
 
-// 打开录音面板:先让用户选来源(抓取播放音频 / 麦克风)
+// 采集能力 + 平台探测:决定显示哪些选项、用什么文案(避免"以为能抓结果抓不到")
+function captureCaps() {
+  const md = navigator.mediaDevices;
+  const ua = navigator.userAgent || '';
+  const isMac = /Mac/.test(ua) && !/iPhone|iPad|iPod/.test(ua);
+  return {
+    canDisplay: !!(md && md.getDisplayMedia), // 桌面 Chrome/Edge 有;手机/部分浏览器没有
+    isMac, // macOS 浏览器抓不了系统/窗口音频,只能抓浏览器标签页
+  };
+}
+
+// 打开录音面板:先让用户选来源。按系统只显示"真能抓到"的选项 + 对应文案。
 function openRecorder() {
   recordOverlay.hidden = false;
   recordOverlay.classList.remove('is-recording');
   recordChoose.hidden = false;
   recordLive.hidden = true;
   recordStop.textContent = 'Stop & get chords';
-  // getDisplayMedia 不支持(多数手机/部分浏览器)时隐藏"抓取播放音频"选项
-  captureTab.hidden = !(navigator.mediaDevices && navigator.mediaDevices.getDisplayMedia);
+  const { canDisplay, isMac } = captureCaps();
+  captureTab.hidden = !canDisplay; // 手机等抓不了 -> 直接不显示,只留麦克风
+  if (canDisplay) {
+    const title = captureTab.querySelector('.capture-txt strong');
+    const desc = captureTab.querySelector('.capture-txt small');
+    if (isMac) {
+      // macOS:只能抓浏览器标签页,说清楚,免得用户以为能抓桌面 App
+      title.textContent = 'Capture a browser tab playing the song';
+      desc.textContent = 'Best quality — play it in a tab (YouTube, Spotify web…). Desktop apps can’t be captured on macOS.';
+    } else {
+      title.textContent = 'Capture a song playing on this computer';
+      desc.textContent = 'Best quality — grab audio from a tab, or your whole screen’s sound.';
+    }
+  }
 }
 
 function backToChoose() {
@@ -277,10 +300,13 @@ async function startCapture(source) {
   recordTime.textContent = '0:00';
   rec.chunks = [];
   rec.peak = 0; // 记录整段最大电平,用于停止时判断是否真的收到了声音
-  recordSub.textContent = source === 'tab' ? 'Choose the tab or window playing the song…' : 'Requesting microphone…';
+  const caps = captureCaps();
+  recordSub.textContent = source === 'tab' ? 'Choose what’s playing the song…' : 'Requesting microphone…';
   recordHint.textContent = source === 'tab'
-    ? 'Play the song in another tab (YouTube, Spotify…), pick it here, and turn on “Share tab audio”. 15–30s is plenty — nothing is uploaded.'
-    : 'Hold the mic near a speaker playing the song, volume up. 15–30s is plenty. Mic audio is rougher than a direct capture.';
+    ? (caps.isMac
+        ? 'Pick the tab playing the song and turn on “Share tab audio”. 15–30s is plenty — nothing is uploaded.'
+        : 'Pick the tab (turn on “Share tab audio”), or choose “Entire screen” to grab your system sound. 15–30s is plenty — nothing is uploaded.')
+    : 'Point your mic at a speaker playing the song, volume up. 15–30s is plenty — mic audio is rougher than a direct capture.';
   try {
     if (source === 'tab') {
       const display = await navigator.mediaDevices.getDisplayMedia({ video: true, audio: true });

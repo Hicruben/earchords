@@ -1,1 +1,268 @@
-[{"title":"Hey There Delilah","artist":"Plain White T's","key":"D major"}]
+[
+ {
+  "title": "Wonderwall",
+  "artist": "Oasis",
+  "slug": "wonderwall-chords",
+  "keyword": "wonderwall chords",
+  "volume": 22200
+ },
+ {
+  "title": "Hallelujah",
+  "artist": "Jeff Buckley",
+  "slug": "hallelujah-chords",
+  "keyword": "hallelujah chords",
+  "volume": 18100
+ },
+ {
+  "title": "Iris",
+  "artist": "Goo Goo Dolls",
+  "slug": "iris-chords",
+  "keyword": "iris chords",
+  "volume": 18100
+ },
+ {
+  "title": "Riptide",
+  "artist": "Vance Joy",
+  "slug": "riptide-chords",
+  "keyword": "riptide chords",
+  "volume": 14800
+ },
+ {
+  "title": "Wagon Wheel",
+  "artist": "Darius Rucker",
+  "slug": "wagon-wheel-chords",
+  "keyword": "wagon wheel chords",
+  "volume": 14800
+ },
+ {
+  "title": "Wish You Were Here",
+  "artist": "Pink Floyd",
+  "slug": "wish-you-were-here-chords",
+  "keyword": "wish you were here chords",
+  "volume": 14800
+ },
+ {
+  "title": "House of the Rising Sun",
+  "artist": "The Animals",
+  "slug": "house-of-the-rising-sun-chords",
+  "keyword": "house of the rising sun chords",
+  "volume": 12100
+ },
+ {
+  "title": "Let It Be",
+  "artist": "The Beatles",
+  "slug": "let-it-be-chords",
+  "keyword": "let it be chords",
+  "volume": 12100
+ },
+ {
+  "title": "Hey There Delilah",
+  "artist": "Plain White T's",
+  "slug": "hey-there-delilah-chords",
+  "keyword": "hey there delilah chords",
+  "volume": 9900
+ },
+ {
+  "title": "Stand By Me",
+  "artist": "Ben E. King",
+  "slug": "stand-by-me-chords",
+  "keyword": "stand by me chords",
+  "volume": 9900
+ },
+ {
+  "title": "Knockin' on Heaven's Door",
+  "artist": "Bob Dylan",
+  "slug": "knockin-on-heavens-door-chords",
+  "keyword": "knockin on heavens door chords",
+  "volume": 8100
+ },
+ {
+  "title": "Don't Look Back in Anger",
+  "artist": "Oasis",
+  "slug": "dont-look-back-in-anger-chords",
+  "keyword": "dont look back in anger chords",
+  "volume": 6600
+ },
+ {
+  "title": "All of Me",
+  "artist": "John Legend",
+  "slug": "all-of-me-chords",
+  "keyword": "all of me chords",
+  "volume": 5400
+ },
+ {
+  "title": "Blackbird",
+  "artist": "The Beatles",
+  "slug": "blackbird-chords",
+  "keyword": "blackbird chords",
+  "volume": 5400
+ },
+ {
+  "title": "Fast Car",
+  "artist": "Tracy Chapman",
+  "slug": "fast-car-chords",
+  "keyword": "fast car chords",
+  "volume": 5400
+ },
+ {
+  "title": "Someone Like You",
+  "artist": "Adele",
+  "slug": "someone-like-you-chords",
+  "keyword": "someone like you chords",
+  "volume": 5400
+ },
+ {
+  "title": "Dust in the Wind",
+  "artist": "Kansas",
+  "slug": "dust-in-the-wind-chords",
+  "keyword": "dust in the wind chords",
+  "volume": 4400
+ },
+ {
+  "title": "Perfect",
+  "artist": "Ed Sheeran",
+  "slug": "perfect-chords",
+  "keyword": "perfect chords",
+  "volume": 4400
+ },
+ {
+  "title": "Banana Pancakes",
+  "artist": "Jack Johnson",
+  "slug": "banana-pancakes-chords",
+  "keyword": "banana pancakes chords",
+  "volume": 3600
+ },
+ {
+  "title": "Ho Hey",
+  "artist": "The Lumineers",
+  "slug": "ho-hey-chords",
+  "keyword": "ho hey chords",
+  "volume": 3600
+ },
+ {
+  "title": "Imagine",
+  "artist": "John Lennon",
+  "slug": "imagine-chords",
+  "keyword": "imagine chords",
+  "volume": 3600
+ },
+ {
+  "title": "Fix You",
+  "artist": "Coldplay",
+  "slug": "fix-you-chords",
+  "keyword": "fix you chords",
+  "volume": 2900
+ },
+ {
+  "title": "I'm Yours",
+  "artist": "Jason Mraz",
+  "slug": "im-yours-chords",
+  "keyword": "im yours chords",
+  "volume": 2900
+ },
+ {
+  "title": "Let Her Go",
+  "artist": "Passenger",
+  "slug": "let-her-go-chords",
+  "keyword": "let her go chords",
+  "volume": 2900
+ },
+ {
+  "title": "More Than Words",
+  "artist": "Extreme",
+  "slug": "more-than-words-chords",
+  "keyword": "more than words chords",
+  "volume": 2900
+ },
+ {
+  "title": "Photograph",
+  "artist": "Ed Sheeran",
+  "slug": "photograph-chords",
+  "keyword": "photograph chords",
+  "volume": 2900
+ },
+ {
+  "title": "Thinking Out Loud",
+  "artist": "Ed Sheeran",
+  "slug": "thinking-out-loud-chords",
+  "keyword": "thinking out loud chords",
+  "volume": 2900
+ },
+ {
+  "title": "Your Song",
+  "artist": "Elton John",
+  "slug": "your-song-chords",
+  "keyword": "your song chords",
+  "volume": 2900
+ },
+ {
+  "title": "All I Want",
+  "artist": "Kodaline",
+  "slug": "all-i-want-chords",
+  "keyword": "all i want chords",
+  "volume": 2400
+ },
+ {
+  "title": "Hurt",
+  "artist": "Johnny Cash",
+  "slug": "hurt-chords",
+  "keyword": "hurt chords",
+  "volume": 2400
+ },
+ {
+  "title": "Tears in Heaven",
+  "artist": "Eric Clapton",
+  "slug": "tears-in-heaven-chords",
+  "keyword": "tears in heaven chords",
+  "volume": 2400
+ },
+ {
+  "title": "Someone You Loved",
+  "artist": "Lewis Capaldi",
+  "slug": "someone-you-loved-chords",
+  "keyword": "someone you loved chords",
+  "volume": 1900
+ },
+ {
+  "title": "Skinny Love",
+  "artist": "Bon Iver",
+  "slug": "skinny-love-chords",
+  "keyword": "skinny love chords",
+  "volume": 1600
+ },
+ {
+  "title": "Clocks",
+  "artist": "Coldplay",
+  "slug": "clocks-chords",
+  "keyword": "clocks chords",
+  "volume": 1000
+ },
+ {
+  "title": "Before You Go",
+  "artist": "Lewis Capaldi",
+  "slug": "before-you-go-chords",
+  "keyword": "before you go chords",
+  "volume": 720
+ },
+ {
+  "title": "The A Team",
+  "artist": "Ed Sheeran",
+  "slug": "the-a-team-chords",
+  "keyword": "the a team chords",
+  "volume": 590
+ },
+ {
+  "title": "Budapest",
+  "artist": "George Ezra",
+  "slug": "budapest-chords",
+  "keyword": "budapest chords",
+  "volume": 480
+ },
+ {
+  "title": "River Flows in You",
+  "artist": "Yiruma",
+  "slug": "river-flows-in-you-chords",
+  "keyword": "river flows in you chords",
+  "volume": 260
+ }
+]

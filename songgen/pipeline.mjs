@@ -4,7 +4,7 @@
 //   歌单 json:[{title, artist?, key?, capo?, youtubeId?, slug?}]  (默认 songgen/pipeline-songs.json)
 // 需要:dev server 在跑(提供模型)、yt-dlp、ffmpeg。
 import { spawnSync } from 'node:child_process';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renderSongPage, slugify, cleanChart } from './render.mjs';
@@ -20,15 +20,21 @@ function fetchAudio(query, outBase) {
   const audio = `${outBase}.m4a`;
   const dl = spawnSync('yt-dlp', ['-f', 'bestaudio', '--no-playlist', '-o', audio, `https://youtu.be/${id}`], { encoding: 'utf8', env, timeout: 120000 });
   if (dl.status !== 0) throw new Error('yt-dlp download: ' + (dl.stderr || '').slice(-200));
-  return { id, uploader, audio };
+  // 截前 120s(verse+chorus 已覆盖主和弦)加快推理;转 wav 便于 ffmpeg 解码
+  const trimmed = `${outBase}_trim.wav`;
+  const tr = spawnSync('ffmpeg', ['-y', '-v', 'error', '-t', '120', '-i', audio, '-ac', '1', trimmed], { encoding: 'utf8', timeout: 60000 });
+  return { id, uploader, audio: tr.status === 0 ? trimmed : audio };
 }
 
 const listPath = process.argv[2] || join(HERE, 'pipeline-songs.json');
 const songs = JSON.parse(readFileSync(listPath, 'utf8'));
 const model = getModel();
 let ok = 0, fail = 0;
+const force = process.argv.includes('--force');
 for (const song of songs) {
   const slug = song.slug || slugify(`${song.title} chords`);
+  const outPath = join(HERE, 'out', `${slug}.html`);
+  if (!force && existsSync(outPath)) { console.log(`skip ${slug} (已生成)`); ok++; continue; }
   try {
     const query = song.youtubeId ? `https://youtu.be/${song.youtubeId}` : `ytsearch1:${song.title} ${song.artist || ''} official audio`;
     process.stderr.write(`→ ${song.title}: fetching… `);

@@ -212,6 +212,7 @@ function drawMeter() {
       level = Math.min(1, Math.sqrt(sum / N) * 4.5); // RMS 放大到 0..1
     }
     smooth += (level - smooth) * 0.25;
+    if (level > rec.peak) rec.peak = level; // 追踪整段最大电平
     const col = accent();
     const mid = h / 2;
     // 实时波形(时域),明显随声音起伏
@@ -251,6 +252,7 @@ async function openRecorder() {
   recordSub.textContent = 'Requesting microphone…';
   recordTime.textContent = '0:00';
   rec.chunks = [];
+  rec.peak = 0; // 记录整段最大电平,用于停止时判断是否真的收到了声音
   try {
     rec.stream = await navigator.mediaDevices.getUserMedia({
       audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false },
@@ -306,11 +308,17 @@ function onRecorderStop() {
   const type = (rec.recorder && rec.recorder.mimeType) || 'audio/webm';
   const analyze = rec.analyze;
   const elapsed = (performance.now() - rec.startedAt) / 1000;
+  const peak = rec.peak || 0;
   cleanupMic();
   recordOverlay.hidden = true;
   if (!analyze) return;
   if (elapsed < 4 || !rec.chunks.length) {
     announce('That clip was too short — try recording at least 5 seconds.');
+    return;
+  }
+  // 整段几乎没收到声音:别浪费时间去解析静音(会出一堆垃圾和弦),直接提示重录
+  if (peak < 0.03) {
+    announce('We barely heard anything — turn the volume up or move the mic closer, then record again.');
     return;
   }
   const ext = type.includes('mp4') ? 'm4a' : type.includes('ogg') ? 'ogg' : 'webm';

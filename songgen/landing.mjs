@@ -11,7 +11,7 @@ function landing(p) {
   const url = `${SITE}/${p.slug}`;
   const related = (p.related || []).map(([slug, name]) => `<li><a href="${SITE}/${slug}">${esc(name)} chords</a></li>`).join('');
   const faq = [
-    ['Is it free?', 'Yes — ChordSnap is free and runs entirely in your browser. There’s no sign-up and nothing is uploaded to a server.'],
+    ['Is it free?', 'Yes — EarChords is free and runs entirely in your browser. There’s no sign-up and nothing is uploaded to a server.'],
     ['How does it find the chords?', 'It uses on-device neural pitch detection plus harmony modelling to hear the notes and work out the chord at each moment — the same way a musician does by ear, in seconds.'],
     ['Do I need the audio file?', 'No. You can play the song out loud, capture a tab that’s playing it, or upload a file. Whatever you use, the audio never leaves your device.'],
   ];
@@ -19,7 +19,7 @@ function landing(p) {
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'WebApplication', name: `ChordSnap ${p.h1}`, url, applicationCategory: 'MultimediaApplication', operatingSystem: 'Web browser', offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, description: p.lead },
+      { '@type': 'WebApplication', name: `EarChords ${p.h1}`, url, applicationCategory: 'MultimediaApplication', operatingSystem: 'Web browser', offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, description: p.lead },
       { '@type': 'FAQPage', mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
     ],
   };
@@ -28,7 +28,7 @@ function landing(p) {
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>${esc(p.title)} | ChordSnap</title>
+<title>${esc(p.title)} | EarChords</title>
 <meta name="description" content="${esc(p.lead)}" />
 <link rel="canonical" href="${esc(url)}" />
 <meta property="og:title" content="${esc(p.title)}" />
@@ -61,8 +61,8 @@ function landing(p) {
 <body>
 <div class="wrap">
   <header>
-    <a class="brand" href="${SITE}/">Chord<span>Snap</span></a>
-    <a class="cta" style="padding:.5rem .9rem;font-size:.85rem;border-radius:999px" href="${SITE}/">Open ChordSnap →</a>
+    <a class="brand" href="${SITE}/">Ear<span>Chords</span></a>
+    <a class="cta" style="padding:.5rem .9rem;font-size:.85rem;border-radius:999px" href="${SITE}/">Open EarChords →</a>
   </header>
 
   <h1>${esc(p.h1)}</h1>
@@ -72,11 +72,11 @@ function landing(p) {
   <h2>How it works</h2>
   <ul class="steps">
     <li><b>1 · Play or capture</b><small>Play the song out loud, capture a tab that’s playing it, or upload a file.</small></li>
-    <li><b>2 · ChordSnap listens</b><small>On-device AI hears the notes and resolves the chord at every moment.</small></li>
+    <li><b>2 · EarChords listens</b><small>On-device AI hears the notes and resolves the chord at every moment.</small></li>
     <li><b>3 · Get a chord sheet</b><small>Key, tempo and the full progression — transpose, capo, slow down, loop.</small></li>
   </ul>
 
-  <h2>Why ChordSnap</h2>
+  <h2>Why EarChords</h2>
   <ul class="why">
     <li><b>Free & instant</b> — no sign-up, no upload, no waiting.</li>
     <li><b>Private by design</b> — audio is analysed on your device and never leaves it.</li>
@@ -91,7 +91,7 @@ function landing(p) {
   ${faqHtml}
 
   <a class="cta" href="${SITE}/" style="margin-top:1.5rem">Try it on a song now →</a>
-  <footer>ChordSnap — get the chords from any song, free & private, in your browser.
+  <footer>EarChords — get the chords from any song, free & private, in your browser.
     · <a href="${SITE}/chord-identifier">Chord identifier</a> · <a href="${SITE}/piano-chord-finder">Piano chord finder</a> · <a href="${SITE}/">Home</a></footer>
 </div>
 </body>

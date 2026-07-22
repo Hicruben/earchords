@@ -1,6 +1,6 @@
 // 批量流水线:歌名 -> yt-dlp 抓音频 -> 我们的引擎分析 -> 生成静态和弦页。
 // 纯构建期(离线在本机跑),不托管音频、无运行时后端。
-// 用法:CHORDSNAP_MODEL_URL=http://localhost:<port>/model/model.json node songgen/pipeline.mjs [歌单json]
+// 用法:EARCHORDS_MODEL_URL=http://localhost:<port>/model/model.json node songgen/pipeline.mjs [歌单json]
 //   歌单 json:[{title, artist?, key?, capo?, youtubeId?, slug?}]  (默认 songgen/pipeline-songs.json)
 // 需要:dev server 在跑(提供模型)、yt-dlp、ffmpeg。
 import { spawnSync } from 'node:child_process';

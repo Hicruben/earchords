@@ -1,8 +1,8 @@
-# ChordSnap 仓库指南
+# EarChords 仓库指南
 
 ## 项目概览
 
-ChordSnap 是一个纯浏览器端的"从音频扒和弦"工具站:用户上传任意歌曲,在本地用
+EarChords 是一个纯浏览器端的"从音频扒和弦"工具站:用户上传任意歌曲,在本地用
 Spotify Basic Pitch 神经网络扒出音符事件,再做和弦识别,生成可跟弹的和弦谱。
 支持转调、变调夹、变速不变调(50%–100%)、吉他/钢琴/尤克里里指法图、A-B 段落
 循环、导出文本谱、明暗双主题。音频全程不离开用户设备,无后端、无数据库,构建
@@ -66,7 +66,7 @@ npm run analyze -- <audio> [output.json]
                          # 用浏览器同款模型在 Node 中分析真实音频;
                          # 需先保持 npm run dev 运行(脚本默认从
                          # http://127.0.0.1:5173/model/model.json 拉模型,
-                         # 可用环境变量 CHORDSNAP_MODEL_URL 覆盖)
+                         # 可用环境变量 EARCHORDS_MODEL_URL 覆盖)
 npm run verify:reference -- <analysis.json> [reference.json]
                          # 把 analyze 结果与 validation/references/ 下的
                          # 参考标注(默认 ni-buzhidao.json)做对照

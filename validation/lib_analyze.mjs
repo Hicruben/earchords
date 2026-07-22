@@ -10,7 +10,7 @@ import {
 import { detectChords } from '../src/chords.js';
 
 export const SAMPLE_RATE = 22050;
-const MODEL_URL = process.env.CHORDSNAP_MODEL_URL || 'http://127.0.0.1:5173/model/model.json';
+const MODEL_URL = process.env.EARCHORDS_MODEL_URL || 'http://127.0.0.1:5173/model/model.json';
 
 let sharedModel = null;
 export function getModel() {

@@ -1,4 +1,4 @@
-/* ChordSnap premium v2 — cold near-black, fluorescent lime/green, glass.
+/* EarChords premium v2 — cold near-black, fluorescent lime/green, glass.
    Drop-in replacement for src/premium.css (loads after style.css and overrides it).
    No main.js changes required. Small decorative micro-copy is hidden via CSS;
    see handoff/README.md for the optional index.html deletions. */
@@ -791,4 +791,20 @@ input[type='range']::-moz-range-thumb { background: var(--accent); border-color:
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
   .reveal { opacity: 1; transform: none; }
+}
+
+/* Popular chords — homepage internal-link directory (SEO crawl path + user nav) */
+.popular { margin: clamp(3rem, 8vw, 6rem) 0 0; }
+.popular-links {
+  display: flex; flex-wrap: wrap; gap: .5rem .55rem; margin-top: 1.4rem;
+}
+.popular-links a {
+  font-size: .92rem; font-weight: 600; color: var(--ink, #eef2f6);
+  text-decoration: none; padding: .5rem .85rem; border-radius: 999px;
+  border: 1px solid var(--line, #232a34); background: var(--panel, #12161d);
+  transition: border-color .15s ease, color .15s ease, transform .15s ease;
+}
+.popular-links a:hover {
+  color: var(--accent, #c9f24d); border-color: var(--accent, #c9f24d);
+  transform: translateY(-1px);
 }

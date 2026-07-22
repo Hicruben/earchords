@@ -1,12 +1,13 @@
 {
-  "name": "chordsnap",
+  "name": "earchords",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node songgen/assemble.mjs",
     "preview": "vite preview",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name=earchords",
     "analyze": "node validation/analyze_song.mjs",
     "analyze:batch": "node validation/batch_analyze.mjs",
     "score:batch": "node validation/score_batch.mjs",
@@ -21,6 +22,7 @@
     "@tensorflow/tfjs": "^3.21.0"
   },
   "devDependencies": {
-    "vite": "^5.4.0"
+    "vite": "^5.4.0",
+    "wrangler": "^4.113.0"
   }
 }

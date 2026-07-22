@@ -1,5 +1,5 @@
 """合成 4 段带完整伴奏(贝斯+和弦+旋律)的测试曲,均为流行歌常用进行。
-每段一个已知的和弦序列(ground truth),用于客观验证 ChordSnap。
+每段一个已知的和弦序列(ground truth),用于客观验证 EarChords。
 """
 import math, struct, wave, json, random
 from pathlib import Path

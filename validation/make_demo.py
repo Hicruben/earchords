@@ -31,6 +31,6 @@ for name in PROG:
 
 peak = max(abs(x) for x in buf) or 1.0
 frames = b"".join(struct.pack("<h", int(max(-1,min(1,x/peak))*28000)) for x in buf)
-with wave.open("/Users/jerry/chordsnap/public/demo.wav","w") as w:
+with wave.open("/Users/jerry/earchords/public/demo.wav","w") as w:
     w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(frames)
 print(f"demo.wav: {len(buf)/SR:.1f}s, 进行 {' '.join(PROG)}")

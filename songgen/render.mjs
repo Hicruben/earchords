@@ -1,6 +1,6 @@
 // 歌曲页渲染(可复用):分析结果 + 歌曲元数据 -> SEO 优化的静态和弦页 HTML。
 // 被 generate.mjs(手工列表)与 pipeline.mjs(yt-dlp 批量)共用。
-export const SITE = 'https://chordsnap.app'; // 部署域名占位,替换成真实域名
+export const SITE = 'https://earchords.com'; // 部署域名占位,替换成真实域名
 export const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 export const slugify = (s) => s.toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
@@ -38,7 +38,7 @@ export function renderSongPage(meta, analysis) {
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>${esc(titleTag)} | ChordSnap</title>
+<title>${esc(titleTag)} | EarChords</title>
 <meta name="description" content="${esc(desc)}" />
 <link rel="canonical" href="${esc(url)}" />
 <meta property="og:title" content="${esc(titleTag)}" />
@@ -79,7 +79,7 @@ export function renderSongPage(meta, analysis) {
 <body>
 <div class="wrap">
   <header>
-    <a class="brand" href="${esc(SITE)}/">Chord<span>Snap</span></a>
+    <a class="brand" href="${esc(SITE)}/">Ear<span>Chords</span></a>
     <a class="cta-top" href="${esc(SITE)}/">Get chords from any song →</a>
   </header>
   <h1>${esc(meta.title)} Chords</h1>
@@ -90,18 +90,18 @@ export function renderSongPage(meta, analysis) {
     ${meta.capo ? `<span class="pill">${esc(meta.capo)}</span>` : ''}
     <span class="pill"><b>${main.length}</b> chords</span>
   </div>
-  <p class="intro">Chords for <b>${esc(meta.title)}</b> by ${esc(meta.artist)}, in the key of <b>${esc(key)}</b>. This song is built around ${esc(main.slice(0, 4).join(', '))}. Play along with the video below, then open it in ChordSnap to transpose, add a capo, slow it down, and follow the chords in real time.</p>
+  <p class="intro">Chords for <b>${esc(meta.title)}</b> by ${esc(meta.artist)}, in the key of <b>${esc(key)}</b>. This song is built around ${esc(main.slice(0, 4).join(', '))}. Play along with the video below, then open it in EarChords to transpose, add a capo, slow it down, and follow the chords in real time.</p>
   <h2>Chords used</h2>
   <div class="chips">${chips}</div>
   <h2>Play along</h2>
   <div class="yt"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/${esc(meta.youtubeId)}" title="${esc(meta.title)} — ${esc(meta.artist)}" allow="encrypted-media" allowfullscreen></iframe></div>
   <h2>Chord progression</h2>
   <div class="grid">${bars}</div>
-  <p class="note">AI-detected from the recording — verify by ear with the play-along. Want it exact and interactive (capo / transpose / A-B loop)? Open it in ChordSnap.</p>
+  <p class="note">AI-detected from the recording — verify by ear with the play-along. Want it exact and interactive (capo / transpose / A-B loop)? Open it in EarChords.</p>
   <a class="cta" href="${esc(SITE)}/">Open “${esc(meta.title)}” in the interactive player →</a>
   <footer>
     <div>More chords: <a href="${esc(SITE)}/piano-chord-finder">Piano chord finder</a> <a href="${esc(SITE)}/chord-identifier">Chord identifier</a> <a href="${esc(SITE)}/">Any song → chords</a></div>
-    <p>ChordSnap detects chords from any song — in your browser, free, private. Audio never leaves your device.</p>
+    <p>EarChords detects chords from any song — in your browser, free, private. Audio never leaves your device.</p>
   </footer>
 </div>
 </body>

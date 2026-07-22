@@ -8,7 +8,7 @@ if (!inputPath) {
   process.exit(1);
 }
 
-console.error(`Analyzing ${inputPath} with the ChordSnap browser model…`);
+console.error(`Analyzing ${inputPath} with the EarChords browser model…`);
 const result = await analyzeFile(inputPath, {
   onProgress: (progress) => process.stderr.write(`\rPitch inference ${Math.round(progress * 100)}%`),
 });

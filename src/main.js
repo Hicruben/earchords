@@ -1051,7 +1051,7 @@ function chordSheetText() {
     lines.push(state.segments.filter((s) => s.label).map((s) => effDisplay(s)).join('  '));
   }
   lines.push('');
-  lines.push('Made with ChordSnap');
+  lines.push('Made with EarChords');
   return lines.join('\n');
 }
 document.getElementById('export-btn').addEventListener('click', async () => {

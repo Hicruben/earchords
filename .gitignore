@@ -14,8 +14,11 @@ validation/songs/
 validation/demo3/
 validation/verify/
 
-# 真实歌曲音频语料:版权原因不入库(分析结果 real_analysis/ 保留,可跑 score/redecode)
+# 真实歌曲音频语料:版权原因不入库
 validation/real/
+# 真实歌曲的逐音符检测结果:体积大且属受版权作品的完整转写,不进公开仓库
+# (本地保留即可跑 score:batch / redecode,无需重新下载音频)
+validation/real_analysis/
 *.mp3
 *.flac
 *.m4a

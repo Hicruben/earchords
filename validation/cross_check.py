@@ -1,6 +1,6 @@
 # 交叉验证:用 librosa 独立实现经典 CQT-chroma + HMM 管线识别真实歌曲,
-# 与 ChordSnap 的分析结果(validation/real_analysis/*.json)做时间轴对照。
-# 前端完全不同(librosa 直接从音频算 CQT chroma,Chordsnap 走 Basic Pitch
+# 与 EarChords 的分析结果(validation/real_analysis/*.json)做时间轴对照。
+# 前端完全不同(librosa 直接从音频算 CQT chroma,EarChords 走 Basic Pitch
 # 神经转录),解码各自独立 —— 两边一致的部分可视为高置信,不一致的列出供排查。
 # 用法:validation/.venv/bin/python validation/cross_check.py [歌曲名前缀]
 import json

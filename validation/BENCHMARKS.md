@@ -1,14 +1,14 @@
 # 对外基准结果(External Benchmarks)
 
 "最精准"是比较级,必须用**公开数据集 + 领域标准指标**判定,不能靠自建语料自证。
-本文件记录 ChordSnap 在公开基准上的 WCSR(Weighted Chord Symbol Recall,MIREX
+本文件记录 EarChords 在公开基准上的 WCSR(Weighted Chord Symbol Recall,MIREX
 标准和弦识别指标),可复现。评测工具:`npm run eval:mirex -- <analysisDir> <refDir>`
 (`validation/eval_mirex.mjs`,读 `.jams`/`.lab`,自检:完美匹配 100%、根音错位 0%)。
 
 ## GuitarSet(2026-07)
 
 - **数据集**:GuitarSet(Zenodo record 3371780,CC-BY),独奏吉他,`mic` 音轨。
-  ChordSnap 未在其上训练/调参 —— 完全 held-out,测的是泛化。
+  EarChords 未在其上训练/调参 —— 完全 held-out,测的是泛化。
 - **子集**:29 首 comp(伴奏)音轨,跨 5 风格(唱作/摇滚/放克/bossa nova/爵士),
   共 871s。参考为 `.jams` 里的 `chord` 标注(玩家被指示弹的和弦)。
 - **指标**:Root-WCSR / MajMin-WCSR(时间重叠加权正确率,MIREX 标准两档)。

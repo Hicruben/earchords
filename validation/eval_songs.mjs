@@ -1,8 +1,8 @@
 // 合成整曲 fixtures 评估:对 validation/songs/*.wav 跑完整 JS 分析管线
 // (Basic Pitch + detectChords),对照 songs_manifest.json 的逐小节标准答案,
 // 输出时间重叠加权的精确/根音匹配率。改 src/chords.js 后用它确认 fixtures 不回归。
-// 需要模型服务(CHORDSNAP_MODEL_URL,默认 4173 端口的 vite preview)。
-// 用法:CHORDSNAP_MODEL_URL=http://localhost:4173/model/model.json node validation/eval_songs.mjs
+// 需要模型服务(EARCHORDS_MODEL_URL,默认 4173 端口的 vite preview)。
+// 用法:EARCHORDS_MODEL_URL=http://localhost:4173/model/model.json node validation/eval_songs.mjs
 import { readFileSync } from 'node:fs';
 import { analyzeFile } from './lib_analyze.mjs';
 import { chordByLabel } from '../src/chords.js';

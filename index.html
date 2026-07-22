@@ -66,36 +66,36 @@
           <div class="hero-copy">
             <h1 class="hero-title">Get the chords<br />from <em>any song.</em></h1>
             <p class="hero-sub">
-              Drop in a track. ChordSnap listens locally, finds the harmony, and builds a
-              chord sheet you can play.
+              Play a song out loud near your mic. ChordSnap listens live, finds the
+              harmony, and builds a chord sheet you can play — nothing ever leaves your device.
             </p>
 
-            <label id="drop-zone" class="drop-zone" tabindex="0" aria-describedby="drop-hint">
-              <input id="file-input" type="file" accept="audio/*" hidden />
+            <button id="mic-btn" class="record-primary" type="button" aria-describedby="drop-hint">
               <canvas id="drop-canvas" aria-hidden="true"></canvas>
-              <span class="drop-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M5 15v3.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V15" /></svg>
+              <span class="rec-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4"/></svg>
               </span>
-              <span class="drop-copy">
-                <strong class="drop-title">Drop audio here</strong>
-                <span class="drop-choice">or choose a file</span>
-                <span class="drop-hint" id="drop-hint">MP3 · WAV · M4A · FLAC · OGG · up to 250 MB</span>
+              <span class="rec-copy">
+                <strong class="rec-title">Listen to a song</strong>
+                <span class="rec-choice">Play it near your mic to get chords →</span>
               </span>
-            </label>
+            </button>
 
             <div class="hero-actions">
-              <button id="mic-btn" class="mic-btn" type="button">
-                <span class="mic-ic" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4"/></svg>
+              <label id="drop-zone" class="upload-secondary" tabindex="0" aria-describedby="drop-hint">
+                <input id="file-input" type="file" accept="audio/*" hidden />
+                <span class="up-ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M5 15v3.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V15" /></svg>
                 </span>
-                Listen live
-              </button>
+                Upload a file
+              </label>
               <button id="demo-btn" class="text-link">Try the demo <span>→</span></button>
-              <p class="privacy-note">
-                <span class="lock" aria-hidden="true">⌾</span>
-                Private by design. Audio never leaves this device.
-              </p>
             </div>
+            <p class="drop-hint" id="drop-hint">Or drop an audio file here · MP3 · WAV · M4A · FLAC · OGG</p>
+            <p class="privacy-note">
+              <span class="lock" aria-hidden="true">⌾</span>
+              Private by design. Audio never leaves this device.
+            </p>
           </div>
         </div>
 
@@ -110,9 +110,9 @@
               <li>
                 <span class="step-num">1</span>
                 <div class="step-visual waveform-mini" aria-hidden="true"><i></i></div>
-                <h3>Drop a track</h3>
-                <p>Upload any audio file—a song, practice recording, or voice memo. It never leaves your device.</p>
-                <small>Local file → local analysis</small>
+                <h3>Play it out loud</h3>
+                <p>Hold your phone or speaker near the mic and play the song — ChordSnap listens live. Or upload a file. Either way it stays on your device.</p>
+                <small>Live mic (or file) → local analysis</small>
               </li>
               <li>
                 <span class="step-num">2</span>

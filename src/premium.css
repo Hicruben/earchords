@@ -260,7 +260,73 @@ body[data-view='player'] .site-header { display: none; }
 .text-link { margin: 0; padding: 0.35rem 0; color: var(--accent-text); font-weight: 600; }
 .text-link span { display: inline-block; margin-left: 0.5rem; transition: transform 180ms ease; }
 .text-link:hover span { transform: translateX(0.3rem); }
-.privacy-note { display: none; }
+
+/* ---- 录音为主 / 上传为辅(2026-07 输入优先级调整)---- */
+/* 主入口:麦克风录音,沿用旧 drop-zone 的醒目卡片视觉,并做成 accent 填充以示首选 */
+.record-primary {
+  position: relative;
+  display: grid;
+  grid-template-columns: 3.7rem 1fr;
+  align-items: center;
+  gap: 0.95rem;
+  width: min(100%, 42rem);
+  min-height: 8.2rem;
+  padding: 1.3rem 1.6rem;
+  overflow: hidden;
+  text-align: left;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--accent-soft) 60%, var(--panel-solid));
+  backdrop-filter: blur(18px);
+  box-shadow: inset 0 1px 0 var(--edge), 0 0 44px -14px var(--glow);
+  cursor: pointer;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+.record-primary:hover, .record-primary:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: inset 0 1px 0 var(--edge), 0 1.6rem 4rem rgba(0, 4, 12, 0.5), 0 0 56px -10px var(--glow);
+  outline: none;
+}
+.record-primary #drop-canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.5; z-index: 0; pointer-events: none; }
+.rec-ic {
+  position: relative; z-index: 2;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 3.2rem; height: 3.2rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--btn-ink, #0a1404);
+  box-shadow: 0 0 22px -6px var(--glow);
+}
+.rec-ic svg { width: 1.5rem; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.rec-copy { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: flex-start; gap: 0.28rem; }
+.rec-title { font-size: 1.18rem; font-weight: 700; color: var(--ink); }
+.rec-choice { font-size: 0.92rem; font-weight: 600; color: var(--accent-text); }
+
+/* 次入口:上传文件,做成小药丸(沿用 mic-btn 视觉),明显低于主入口 */
+.upload-secondary {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  padding: 0.7rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid var(--panel-line-hi);
+  background: var(--panel);
+  backdrop-filter: blur(12px);
+  color: var(--ink);
+  font-weight: 700; font-size: 0.9rem;
+  box-shadow: inset 0 1px 0 var(--edge);
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.upload-secondary:hover, .upload-secondary:focus-visible, .upload-secondary.drag {
+  transform: translateY(-2px); border-color: var(--accent);
+  box-shadow: inset 0 1px 0 var(--edge), 0 0 26px -8px var(--glow); outline: none;
+}
+.upload-secondary.drag { border-style: dashed; }
+.upload-secondary.is-rejected { border-color: var(--danger); animation: rejectShake 380ms ease; }
+.upload-secondary .up-ic svg { width: 1.05rem; fill: none; stroke: var(--accent-text); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
+.hero-copy .drop-hint { display: block; margin: 0.8rem 0 0; font-size: 0.8rem; color: var(--ink-dim); }
+.hero-copy .privacy-note { display: inline-flex; align-items: center; gap: 0.45rem; margin: 0.6rem 0 0; font-size: 0.8rem; color: var(--ink-dim); }
+.hero-copy .privacy-note .lock { color: var(--accent-text); }
 
 /* ---------- landing sections ---------- */
 .landing-content { max-width: 100rem; margin: 0 auto; padding: 0; }

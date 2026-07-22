@@ -892,6 +892,9 @@ document.getElementById('new-btn').addEventListener('click', () => {
   announce('Ready for a new song.');
 });
 
+// header 里的"New song"(播放/分析页显示)复用 new-btn 的完整重置逻辑
+document.getElementById('header-new').addEventListener('click', () => document.getElementById('new-btn').click());
+
 // 全局导航在播放器/分析页保持可用：先回到落地页，再定位对应内容。
 document.querySelectorAll('.brand, .site-nav a[href^="#"]').forEach((link) => {
   link.addEventListener('click', (event) => {

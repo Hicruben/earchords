@@ -194,7 +194,15 @@ body[data-view='processing'] .nav-player { display: inline-flex; }
 :root[data-theme='light'] .hero-art { opacity: 0.5; filter: none; mix-blend-mode: normal; }
 :root[data-theme='light'] #hero-canvas { mix-blend-mode: normal; }
 
-.hero-copy { width: min(49rem, 62vw); padding: clamp(9rem, 19vh, 12rem) 0 clamp(3rem, 7vh, 5rem) clamp(1.25rem, 4vw, 4.5rem); }
+.hero-copy {
+  width: min(49rem, 92vw);
+  margin-inline: auto;
+  padding: clamp(6.5rem, 15vh, 9rem) clamp(1.25rem, 4vw, 2rem) clamp(3rem, 7vh, 5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 .hero-title {
   max-width: 11ch;
   font-family: var(--font-display);
@@ -259,7 +267,7 @@ body[data-view='processing'] .nav-player { display: inline-flex; }
 .drop-choice { color: var(--accent-text); font-size: 0.87rem; border-bottom: 1px solid currentColor; }
 .drop-hint { display: none; }
 
-.hero-actions { display: flex; align-items: center; gap: 1.5rem; margin-top: 1.3rem; flex-wrap: wrap; }
+.hero-actions { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 1.3rem; flex-wrap: wrap; }
 .mic-btn {
   padding: 0.75rem 1.25rem;
   border-radius: 999px;

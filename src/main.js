@@ -173,6 +173,11 @@ const recordStop = document.getElementById('record-stop');
 const recordTime = document.getElementById('record-time');
 const recordSub = document.getElementById('record-sub');
 const recordMeter = document.getElementById('record-meter');
+const recordChoose = document.getElementById('record-choose');
+const recordLive = document.getElementById('record-live');
+const recordHint = document.getElementById('record-hint');
+const captureTab = document.getElementById('capture-tab');
+const captureMic = document.getElementById('capture-mic');
 const rec = {
   recorder: null, chunks: [], stream: null, ctx: null, analyser: null,
   raf: null, timer: null, startedAt: 0, analyze: false, data: null,
@@ -246,21 +251,61 @@ function drawMeter() {
   rec.raf = requestAnimationFrame(frame);
 }
 
-async function openRecorder() {
+// 打开录音面板:先让用户选来源(抓取播放音频 / 麦克风)
+function openRecorder() {
   recordOverlay.hidden = false;
+  recordOverlay.classList.remove('is-recording');
+  recordChoose.hidden = false;
+  recordLive.hidden = true;
+  recordStop.textContent = 'Stop & get chords';
+  // getDisplayMedia 不支持(多数手机/部分浏览器)时隐藏"抓取播放音频"选项
+  captureTab.hidden = !(navigator.mediaDevices && navigator.mediaDevices.getDisplayMedia);
+}
+
+function backToChoose() {
+  cleanupMic();
+  recordLive.hidden = true;
+  recordChoose.hidden = false;
+}
+
+// 采集音频并开始录制。source='tab' 抓标签页/系统音频(数字直取,音质=原文件);
+// source='mic' 用麦克风(手机凑音箱的兜底,音质有损)。
+async function startCapture(source) {
+  recordChoose.hidden = true;
+  recordLive.hidden = false;
   recordStop.disabled = true;
-  recordSub.textContent = 'Requesting microphone…';
   recordTime.textContent = '0:00';
   rec.chunks = [];
   rec.peak = 0; // 记录整段最大电平,用于停止时判断是否真的收到了声音
+  recordSub.textContent = source === 'tab' ? 'Choose the tab or window playing the song…' : 'Requesting microphone…';
+  recordHint.textContent = source === 'tab'
+    ? 'Play the song in another tab (YouTube, Spotify…), pick it here, and turn on “Share tab audio”. 15–30s is plenty — nothing is uploaded.'
+    : 'Hold the mic near a speaker playing the song, volume up. 15–30s is plenty. Mic audio is rougher than a direct capture.';
   try {
-    rec.stream = await navigator.mediaDevices.getUserMedia({
-      audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false },
-      video: false,
-    });
+    if (source === 'tab') {
+      const display = await navigator.mediaDevices.getDisplayMedia({ video: true, audio: true });
+      const audioTracks = display.getAudioTracks();
+      display.getVideoTracks().forEach((t) => t.stop()); // 视频用不上,只留音频
+      if (!audioTracks.length) {
+        display.getTracks().forEach((t) => t.stop());
+        announce('No audio was shared — pick a tab and turn on “Share tab audio”.');
+        backToChoose();
+        return;
+      }
+      rec.stream = new MediaStream(audioTracks);
+      // 用户在共享栏点"停止共享" -> 视为完成并出谱
+      audioTracks[0].addEventListener('ended', () => {
+        if (rec.recorder && rec.recorder.state !== 'inactive') stopRecorder(true);
+      });
+    } else {
+      rec.stream = await navigator.mediaDevices.getUserMedia({
+        audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false },
+        video: false,
+      });
+    }
   } catch (e) {
-    recordSub.textContent = 'Microphone was blocked. Allow mic access in your browser, or upload a file instead.';
-    announce('Microphone permission denied.');
+    announce(source === 'tab' ? 'Audio capture was canceled or blocked.' : 'Microphone permission denied.');
+    backToChoose();
     return;
   }
   const AC = window.AudioContext || window.webkitAudioContext;
@@ -285,7 +330,7 @@ async function openRecorder() {
   rec.recorder.onstop = onRecorderStop;
   rec.recorder.start();
   rec.startedAt = performance.now();
-  recordSub.textContent = 'Listening… play the song now.';
+  recordSub.textContent = source === 'tab' ? 'Capturing — let the song play.' : 'Listening… play the song now.';
   recordStop.disabled = false;
   recordOverlay.classList.add('is-recording');
   rec.timer = setInterval(() => {
@@ -333,12 +378,15 @@ function stopRecorder(analyze) {
 }
 
 micBtn.addEventListener('click', () => {
-  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-    announce('This browser can’t access the microphone. Please upload a file.');
+  const md = navigator.mediaDevices;
+  if (!md || (!md.getUserMedia && !md.getDisplayMedia)) {
+    announce('This browser can’t capture audio. Please upload a file instead.');
     return;
   }
   openRecorder();
 });
+captureTab.addEventListener('click', () => startCapture('tab'));
+captureMic.addEventListener('click', () => startCapture('mic'));
 recordStop.addEventListener('click', () => stopRecorder(true));
 recordClose.addEventListener('click', () => stopRecorder(false));
 recordOverlay.addEventListener('click', (e) => { if (e.target === recordOverlay) stopRecorder(false); });

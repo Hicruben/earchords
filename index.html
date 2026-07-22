@@ -267,22 +267,50 @@
       </section>
     </main>
 
-    <!-- Live mic recording overlay -->
+    <!-- Capture / record overlay -->
     <div id="record-overlay" class="record-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="record-title">
       <div class="record-card">
         <button class="record-close" id="record-close" type="button" aria-label="Close">✕</button>
-        <span class="record-kicker">Listening</span>
-        <h2 class="record-title" id="record-title">Play the song out loud</h2>
-        <p class="record-sub" id="record-sub">Hold a phone or speaker near your mic and press play on the song. ChordSnap listens live — nothing is uploaded.</p>
-        <div class="record-visual">
-          <canvas id="record-meter" aria-hidden="true"></canvas>
-          <span class="record-dot" aria-hidden="true"></span>
+        <span class="record-kicker">Get chords</span>
+        <h2 class="record-title" id="record-title">Capture the song</h2>
+
+        <!-- Step 1 — pick a source -->
+        <div class="record-choose" id="record-choose">
+          <p class="record-choose-sub">Play the song you want the chords for, then let ChordSnap capture it. Nothing is uploaded.</p>
+          <button class="capture-opt is-primary" id="capture-tab" type="button">
+            <span class="capture-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8.5 20h7M12 16v4"/></svg>
+            </span>
+            <span class="capture-txt">
+              <strong>Capture a song playing on this computer</strong>
+              <small>Best quality — grabs audio straight from a tab (YouTube, Spotify…)</small>
+            </span>
+            <span class="capture-badge">Recommended</span>
+          </button>
+          <button class="capture-opt" id="capture-mic" type="button">
+            <span class="capture-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4"/></svg>
+            </span>
+            <span class="capture-txt">
+              <strong>Use the microphone</strong>
+              <small>On a phone — hold it near a speaker playing the song</small>
+            </span>
+          </button>
         </div>
-        <div class="record-time" id="record-time">0:00</div>
-        <div class="record-actions">
-          <button id="record-stop" class="record-stop" type="button" disabled>Stop &amp; get chords</button>
+
+        <!-- Step 2 — live capture -->
+        <div class="record-live" id="record-live" hidden>
+          <p class="record-sub" id="record-sub"></p>
+          <div class="record-visual">
+            <canvas id="record-meter" aria-hidden="true"></canvas>
+            <span class="record-dot" aria-hidden="true"></span>
+          </div>
+          <div class="record-time" id="record-time">0:00</div>
+          <div class="record-actions">
+            <button id="record-stop" class="record-stop" type="button" disabled>Stop &amp; get chords</button>
+          </div>
+          <p class="record-hint" id="record-hint"></p>
         </div>
-        <p class="record-hint">Tip: capture a clear 15–30s section, volume up. Mic audio is noisier than a file, so chords may be a little rougher.</p>
       </div>
     </div>
 

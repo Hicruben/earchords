@@ -694,6 +694,31 @@ input[type='range']::-moz-range-thumb { background: var(--accent); border-color:
 .record-hint { display: none; }
 .record-stop { border-radius: 14px; background: linear-gradient(135deg, var(--accent), var(--accent-strong)); color: var(--btn-ink); font-weight: 800; box-shadow: 0 0 30px -8px var(--glow); }
 
+/* ---- 录音来源选择:抓取播放音频(推荐) / 麦克风 ---- */
+.record-choose { display: flex; flex-direction: column; gap: 0.7rem; margin-top: 0.3rem; }
+.record-choose[hidden] { display: none; } /* 类选择器会盖过 [hidden] 的 display:none,显式还原 */
+.record-choose-sub { color: var(--ink-dim); font-size: 0.9rem; line-height: 1.5; margin: 0 0 0.4rem; }
+.capture-opt {
+  position: relative; display: grid; grid-template-columns: 2.6rem 1fr;
+  align-items: center; gap: 0.85rem; width: 100%;
+  padding: 0.9rem 1rem; text-align: left; cursor: pointer;
+  border: 1px solid var(--panel-line-hi); border-radius: 14px;
+  background: var(--panel); color: var(--ink);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+.capture-opt:hover, .capture-opt:focus-visible { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 0 26px -8px var(--glow); outline: none; }
+.capture-opt.is-primary { border-color: var(--accent); background: color-mix(in srgb, var(--accent-soft) 45%, var(--panel)); }
+.capture-ic { display: inline-flex; align-items: center; justify-content: center; width: 2.6rem; height: 2.6rem; border-radius: 50%; background: var(--accent-soft); color: var(--accent-text); }
+.capture-opt.is-primary .capture-ic { background: var(--accent); color: var(--btn-ink, #0a1404); }
+.capture-ic svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.capture-txt { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.capture-txt strong { font-size: 0.96rem; font-weight: 700; }
+.capture-opt.is-primary .capture-txt strong { padding-right: 5.6rem; }
+.capture-txt small { font-size: 0.78rem; color: var(--ink-dim); line-height: 1.4; }
+.capture-badge { position: absolute; top: 0.6rem; right: 0.7rem; font-size: 0.6rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: var(--btn-ink, #0a1404); background: var(--accent); padding: 0.14rem 0.45rem; border-radius: 999px; }
+.capture-opt:not(.is-primary) .capture-badge { display: none; }
+.record-live .record-hint { display: block; margin-top: 0.9rem; font-size: 0.8rem; color: var(--ink-dim); line-height: 1.5; }
+
 /* ---------- toast ---------- */
 .toast-region {
   position: fixed;

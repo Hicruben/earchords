@@ -186,34 +186,63 @@ function pickRecMime() {
   return '';
 }
 
+// 录音反馈:实时波形 + 电平条 + 声音强度文字状态,让用户一眼看出"有没有收到声音"。
 function drawMeter() {
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
-  const w = recordMeter.clientWidth || 260;
-  const h = recordMeter.clientHeight || 70;
+  const w = recordMeter.clientWidth || 300;
+  const h = recordMeter.clientHeight || 90;
   recordMeter.width = w * dpr; recordMeter.height = h * dpr;
   const ctx = recordMeter.getContext('2d');
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  const accent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#ff9d3d';
-  const frame = () => {
+  const accent = () => getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#c9f24d';
+  const N = rec.analyser ? rec.analyser.fftSize : 1024;
+  const timeBuf = new Uint8Array(N);
+  let smooth = 0;            // 平滑后的电平(驱动电平条/透明度)
+  let quietMs = 0;           // 持续安静时长(用于"太安静"提示)
+  let heardOnce = false;     // 是否曾经听到明显声音
+  let last = performance.now();
+  const frame = (ts) => {
+    const dt = ts - last; last = ts;
     ctx.clearRect(0, 0, w, h);
-    let bins;
+    let level = 0;
     if (rec.analyser) {
-      bins = new Uint8Array(rec.analyser.frequencyBinCount);
-      rec.analyser.getByteFrequencyData(bins);
-    } else { bins = new Uint8Array(48); }
-    const n = 48;
-    const bw = w / n;
-    ctx.fillStyle = accent;
-    for (let i = 0; i < n; i++) {
-      const v = (bins[i] || 0) / 255;
-      const bh = Math.max(2, v * h);
-      ctx.globalAlpha = 0.35 + v * 0.65;
-      ctx.fillRect(i * bw + bw * 0.2, (h - bh) / 2, bw * 0.6, bh);
+      rec.analyser.getByteTimeDomainData(timeBuf);
+      let sum = 0;
+      for (let i = 0; i < N; i++) { const d = (timeBuf[i] - 128) / 128; sum += d * d; }
+      level = Math.min(1, Math.sqrt(sum / N) * 4.5); // RMS 放大到 0..1
     }
+    smooth += (level - smooth) * 0.25;
+    const col = accent();
+    const mid = h / 2;
+    // 实时波形(时域),明显随声音起伏
+    ctx.lineWidth = 2.5; ctx.lineJoin = 'round'; ctx.strokeStyle = col;
+    ctx.globalAlpha = 0.55 + smooth * 0.45;
+    ctx.beginPath();
+    const step = Math.max(1, Math.floor(N / w));
+    for (let i = 0, x = 0; i < N; i += step, x = (i / (N - 1)) * w) {
+      const y = mid + ((timeBuf[i] - 128) / 128) * (mid - 6) * 1.7;
+      i === 0 ? ctx.moveTo(0, y) : ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    // 底部电平条:随音量填充,直观显示"收到多大声"
     ctx.globalAlpha = 1;
+    ctx.fillStyle = 'rgba(127,127,127,0.18)';
+    ctx.fillRect(0, h - 5, w, 4);
+    ctx.fillStyle = col;
+    ctx.fillRect(0, h - 5, w * smooth, 4);
+    ctx.globalAlpha = 1;
+    // 文字状态
+    if (level > 0.06) heardOnce = true;
+    if (level < 0.02) quietMs += dt; else quietMs = 0;
+    if (recordOverlay.classList.contains('is-recording')) {
+      recordSub.textContent = quietMs > 1400
+        ? (heardOnce ? 'Paused? Play the song again — turn it up or move the mic closer.'
+                     : 'Too quiet — turn the volume up or move the mic closer to the sound.')
+        : 'Hearing the sound 🎵 — keep it playing.';
+    }
     rec.raf = requestAnimationFrame(frame);
   };
-  frame();
+  rec.raf = requestAnimationFrame(frame);
 }
 
 async function openRecorder() {
@@ -234,9 +263,12 @@ async function openRecorder() {
   }
   const AC = window.AudioContext || window.webkitAudioContext;
   rec.ctx = new AC();
+  // 关键:AudioContext 可能以 suspended 启动,不 resume 分析器会一直是 0(反馈假死)
+  if (rec.ctx.state === 'suspended') { try { await rec.ctx.resume(); } catch (_) {} }
   const src = rec.ctx.createMediaStreamSource(rec.stream);
   rec.analyser = rec.ctx.createAnalyser();
-  rec.analyser.fftSize = 256;
+  rec.analyser.fftSize = 1024;
+  rec.analyser.smoothingTimeConstant = 0.6;
   src.connect(rec.analyser);
   drawMeter();
 

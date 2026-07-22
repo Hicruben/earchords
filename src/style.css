@@ -619,10 +619,14 @@ input[type='range']::-moz-range-thumb {
 .record-title { font-family: var(--font-display); font-weight: 700; font-size: 1.7rem; margin: 8px 0 8px; }
 .record-sub { color: var(--ink-dim); font-size: 0.95rem; line-height: 1.5; min-height: 2.8em; }
 .record-visual {
-  position: relative; margin: 22px auto 8px;
-  height: 74px; display: flex; align-items: center; justify-content: center;
+  position: relative; margin: 20px auto 10px;
+  height: 96px; display: flex; align-items: center; justify-content: center;
+  padding: 8px 12px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--panel-line, rgba(255,255,255,0.1)));
 }
-#record-meter { width: 100%; height: 74px; }
+#record-meter { width: 100%; height: 88px; }
 .record-dot {
   position: absolute; top: -4px; left: 50%; transform: translateX(-50%);
   width: 9px; height: 9px; border-radius: 50%; background: var(--ink-faint);

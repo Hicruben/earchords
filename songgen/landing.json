@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "piano-chord-finder",
+    "h1": "Piano Chord Finder",
+    "title": "Piano Chord Finder — Detect the Chords in Any Piano Song",
+    "kw": "piano chord finder",
+    "lead": "Find the chords to any piano song. Play it, capture what’s playing in a tab, or upload a recording — ChordSnap listens and builds an instant, interactive chord sheet. Free, private, in your browser.",
+    "strength": "piano and clean recordings",
+    "related": [["let-it-be-chords", "Let It Be"], ["imagine-chords", "Imagine"], ["clocks-chords", "Clocks"], ["your-song-chords", "Your Song"]]
+  },
+  {
+    "slug": "chord-identifier",
+    "h1": "Chord Identifier",
+    "title": "Chord Identifier — Identify the Chords in Any Song from Audio",
+    "kw": "chord identifier",
+    "lead": "Identify the chords in any song from audio. Record it, capture what’s playing, or upload a file — and get the key, tempo, and full chord progression instantly. Free and private, nothing is uploaded.",
+    "strength": "acoustic guitar, piano and singer-songwriter",
+    "related": [["wonderwall-chords", "Wonderwall"], ["let-her-go-chords", "Let Her Go"], ["riptide-chords", "Riptide"], ["hallelujah-chords", "Hallelujah"]]
+  }
+]

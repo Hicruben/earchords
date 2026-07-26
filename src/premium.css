@@ -121,17 +121,16 @@ body::before {
 /* ---------- header: floating glass capsule ---------- */
 .site-header {
   position: sticky;
-  top: 0.85rem;
+  top: 0;
   z-index: 60;
-  width: min(76rem, calc(100% - clamp(2rem, 6vw, 5rem)));
-  min-height: 3.4rem;
-  margin: 0.85rem auto 0;
-  padding: 0.4rem 0.55rem 0.4rem 1.1rem;
-  border: 1px solid var(--panel-line);
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--bg) 68%, transparent);
-  backdrop-filter: blur(20px) saturate(1.4);
-  box-shadow: inset 0 1px 0 var(--edge), 0 12px 40px rgba(0, 4, 12, 0.35);
+  width: min(1240px, 100%);
+  min-height: 82px;
+  margin: 0 auto;
+  padding: 0 40px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
   box-sizing: border-box;
 }
 /* 播放/处理视图:头部改为整宽不透明栏,避免半透明胶囊漂在滚动内容(和弦/指法图)上造成重叠 */
@@ -216,13 +215,13 @@ body[data-view='processing'] .nav-player { display: inline-flex; }
   text-align: center;
 }
 .hero-title {
-  max-width: 11ch;
+  max-width: none;
   font-family: var(--font-display);
-  font-size: clamp(4.4rem, 8vw, 8.6rem);
+  font-size: clamp(3.6rem, 5.42vw, 6.5rem);
   font-weight: 600;
-  line-height: 0.82;
-  letter-spacing: -0.045em;
-  text-wrap: balance;
+  line-height: 0.86;
+  letter-spacing: -0.028em;
+  text-wrap: initial;
 }
 /* optional: wrap "any song." in <em> for a fluorescent gradient */
 .hero-title em {
@@ -232,7 +231,7 @@ body[data-view='processing'] .nav-player { display: inline-flex; }
   -webkit-text-fill-color: transparent; color: transparent;
   filter: drop-shadow(0 0 26px var(--glow));
 }
-.hero-sub { max-width: 32rem; margin: 1.6rem 0 0; color: var(--ink-dim); font-size: clamp(1rem, 1.3vw, 1.18rem); line-height: 1.6; text-wrap: balance; }
+.hero-sub { max-width: 443px; margin: 1.55rem 0 0; color: var(--ink-dim); font-size: 16.5px; line-height: 1.62; text-wrap: initial; }
 
 /* ---- 极简 hero CTA:两个胶囊 + demo 链接 + 一句说明 ---- */
 .hero-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin-top: 2.2rem; }
@@ -400,7 +399,10 @@ body[data-view='processing'] .nav-player { display: inline-flex; }
 
 /* ---------- landing sections ---------- */
 .landing-content { max-width: 100rem; margin: 0 auto; padding: 0; }
-.how, .features, .privacy-band, .faq, .showcase, .follow, .popular { padding-inline: clamp(1.25rem, 4vw, 4.5rem); content-visibility: auto; contain-intrinsic-size: auto 44rem; }
+.how, .features, .privacy-band, .faq, .showcase { padding-inline: clamp(1.25rem, 4vw, 4.5rem); content-visibility: auto; contain-intrinsic-size: auto 44rem; }
+/* v3 设计:内容统一 1240px 容器,与 header / hero 对齐 */
+.follow, .popular { width: min(1240px, 100%); margin-inline: auto; padding-inline: 40px; box-sizing: border-box; }
+.site-footer { width: min(1240px, 100%); margin-inline: auto; padding-inline: 40px; box-sizing: border-box; }
 .how { padding-top: clamp(5rem, 10vw, 9rem); padding-bottom: clamp(4rem, 8vw, 7rem); }
 .section-heading { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(16rem, 0.8fr); align-items: end; gap: 3rem; margin-bottom: 3.6rem; }
 .section-heading p { max-width: 35rem; color: var(--ink-dim); font-size: 1.05rem; line-height: 1.7; }
@@ -914,36 +916,22 @@ input[type='range']::-moz-range-thumb { background: var(--accent); border-color:
   .reveal { opacity: 1; transform: none; }
 }
 
-/* Popular chords — homepage internal-link directory (SEO crawl path + user nav) */
-.popular { margin: clamp(3rem, 8vw, 6rem) 0 0; }
-.popular-links {
-  display: flex; flex-wrap: wrap; gap: .5rem .55rem; margin-top: 1.4rem;
-}
-.popular-links a {
-  font-size: .92rem; font-weight: 600; color: var(--ink, #eef2f6);
-  text-decoration: none; padding: .5rem .85rem; border-radius: 999px;
-  border: 1px solid var(--line, #232a34); background: var(--panel, #12161d);
-  transition: border-color .15s ease, color .15s ease, transform .15s ease;
-}
-.popular-links a:hover {
-  color: var(--accent, #c9f24d); border-color: var(--accent, #c9f24d);
-  transform: translateY(-1px);
-}
+/* Popular chords 的样式见下方 v3 设计段(四列目录列表) */
 
 /* ---------- native harmony visual + capture experience ---------- */
 /* 两栏 hero:左文案 + 右视觉。缺这段时 .hero-visual 会全宽撑成满屏方形。 */
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.9fr);
+  grid-template-columns: minmax(0, 1fr) 554px;
   align-items: center;
-  gap: clamp(1.5rem, 4vw, 4rem);
-  width: min(74rem, 92vw);
+  gap: clamp(2rem, 4vw, 4rem);
+  width: min(1240px, 100%);
   margin-inline: auto;
-  padding: clamp(5.5rem, 12vh, 8rem) clamp(1.25rem, 4vw, 2rem) clamp(3rem, 7vh, 5rem);
+  padding: 7rem 40px 7rem;
 }
 .hero-grid .hero-copy {
   width: auto;
-  max-width: 36rem;
+  max-width: none;
   margin: 0;
   padding: 0;
   align-items: flex-start;
@@ -976,12 +964,16 @@ input[type='range']::-moz-range-thumb { background: var(--accent); border-color:
 .pcard-play svg { width: 0.85rem; height: 0.85rem; fill: var(--btn-ink); }
 .pcard-file { font-family: var(--font-mono); font-size: 0.82rem; color: var(--ink); }
 .pcard-meta { margin-left: auto; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.03em; color: var(--ink-faint); }
-.pcard-body { display: grid; grid-template-columns: 1fr 7.5rem; gap: 0.9rem; padding: 1rem; }
+.pcard-now { display: flex; align-items: baseline; gap: 0.7rem; padding: 1rem 1.1rem 0.2rem; }
+.pcard-now b { font-family: var(--font-display); font-weight: 600; font-size: 2.9rem; line-height: 1; color: var(--ink); }
+.pcard-now span { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); }
+.pcard-now i { font-style: normal; color: var(--ink-dim); }
+.pcard-body { display: grid; grid-template-columns: 1fr 7.5rem; gap: 0.9rem; padding: 0.6rem 1rem 1rem; }
 .pcard-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; }
 .pc-cell {
   position: relative;
   display: flex; align-items: flex-end;
-  min-height: 3.1rem; padding: 0.4rem 0.55rem;
+  min-height: 3.5rem; padding: 0.4rem 0.6rem;
   border: 1px solid var(--panel-line);
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.015);

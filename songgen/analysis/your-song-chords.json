@@ -4,7 +4,7 @@
     "artist": "Elton John",
     "slug": "your-song-chords",
     "youtubeId": "sG-AiFlD7A4",
-    "key": "D#"
+    "key": "Eb"
   },
   "analysis": {
     "source": "youtube:sG-AiFlD7A4",
@@ -567,5 +567,33 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "Eb",
+    "confidence": "high",
+    "mainChords": [
+      "Eb",
+      "Ab",
+      "Bb",
+      "Cm",
+      "Fm",
+      "Gm",
+      "Bb/D",
+      "Abmaj7"
+    ],
+    "capo": {
+      "fret": 1,
+      "shapes": [
+        "D",
+        "G",
+        "A",
+        "Bm",
+        "Em",
+        "F#m"
+      ]
+    },
+    "bpm": 64,
+    "notes": "Same key as our D#, but sources spell it Eb. Piano song; guitarists capo 1 with D shapes.",
+    "detectedKeyWasCorrect": true
   }
 }

@@ -522,5 +522,21 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "Am",
+    "confidence": "high",
+    "mainChords": [
+      "Am",
+      "C",
+      "D",
+      "Dsus2",
+      "G",
+      "F"
+    ],
+    "capo": null,
+    "bpm": 91,
+    "notes": "Johnny Cash 2002 cover. Fadd9/Am7 are voicing colours.",
+    "detectedKeyWasCorrect": true
   }
 }

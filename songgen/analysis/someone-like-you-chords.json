@@ -4,7 +4,7 @@
     "artist": "Adele",
     "slug": "someone-like-you-chords",
     "youtubeId": "22c3_LoIfZQ",
-    "key": "F#m"
+    "key": "A"
   },
   "analysis": {
     "source": "youtube:22c3_LoIfZQ",
@@ -707,5 +707,27 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "A",
+    "confidence": "high",
+    "mainChords": [
+      "A",
+      "E/G#",
+      "F#m",
+      "D"
+    ],
+    "capo": {
+      "fret": 2,
+      "shapes": [
+        "G",
+        "D/F#",
+        "Em",
+        "C"
+      ]
+    },
+    "bpm": 135,
+    "notes": "WE SAID F#m = relative minor, wrong tonic. Official Musicnotes editions all say A major.",
+    "detectedKeyWasCorrect": false
   }
 }

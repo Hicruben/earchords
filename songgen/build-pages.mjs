@@ -20,8 +20,8 @@ if (!existsSync(ANALYSIS)) {
 const files = readdirSync(ANALYSIS).filter((f) => f.endsWith('.json'));
 let n = 0;
 for (const f of files) {
-  const { meta, analysis } = JSON.parse(readFileSync(join(ANALYSIS, f), 'utf8'));
-  writeFileSync(join(OUT, `${meta.slug}.html`), renderSongPage(meta, analysis));
+  const { meta, analysis, verified } = JSON.parse(readFileSync(join(ANALYSIS, f), 'utf8'));
+  writeFileSync(join(OUT, `${meta.slug}.html`), renderSongPage(meta, analysis, verified));
   n++;
   console.log(`✓ ${meta.slug}.html`);
 }

@@ -1,0 +1,10 @@
+{"results":[
+{"title":"I'm Yours","verifiedKey":"B","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["B","F#","G#m","E"],"capo":{"fret":4,"shapes":["G","D","Em","C"]},"bpm":151,"notes":"I-V-vi-IV. Our Emaj7/Bmaj7 are artifacts."},
+{"title":"Imagine","verifiedKey":"C","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["C","Cmaj7","F","Am","Dm","G","G7","E7"],"capo":null,"bpm":76,"notes":"Our Asus2/Csus2 are artifacts of Cmaj7 sustains; Am and E7 were missed."},
+{"title":"Iris","verifiedKey":"Bm (rel. D)","ourKeyCorrect":false,"keyConfidence":"high","mainChords":["Bm","A","G","D","Em"],"capo":null,"bpm":156,"notes":"Tonic is Bm; we said D (relative major). BDDDDD tuning - five ringing D drones is WHY we over-report D and invent maj7 chords. Bmaj7/G#maj7 wrong."},
+{"title":"Knockin on Heavens Door","verifiedKey":"G","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["G","D","Am","C"],"capo":null,"bpm":70,"notes":"Only 4 chords. Our Gm is spurious - not in song at all."},
+{"title":"Let Her Go","verifiedKey":"G","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["Em","C","G","D"],"capo":{"fret":7,"shapes":["Am","F","C","G"]},"bpm":75,"notes":"Exact match. Capo 7 with C-position shapes."},
+{"title":"Let It Be","verifiedKey":"C","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["C","G","Am","F"],"capo":null,"bpm":72,"notes":"Am7/Dm7 are reasonable extended readings."},
+{"title":"More Than Words","verifiedKey":"F#","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["F#","Badd9","G#m7","C#","D#m","A#m7"],"capo":null,"bpm":92,"notes":"NO capo - guitar tuned DOWN a half step playing G shapes. Our set matches exactly."},
+{"title":"Perfect","verifiedKey":"Ab","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["Ab","Fm","Db","Eb"],"capo":{"fret":1,"shapes":["G","Em","C","D"]},"bpm":95,"notes":"Ab = our G#. Official Musicnotes score in Ab."}
+]}

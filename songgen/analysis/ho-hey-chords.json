@@ -262,5 +262,19 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "C",
+    "confidence": "high",
+    "mainChords": [
+      "F",
+      "C",
+      "Am",
+      "G"
+    ],
+    "capo": null,
+    "bpm": 80,
+    "notes": "Only 4 chords. Gsus4/Am7 are strum colours.",
+    "detectedKeyWasCorrect": true
   }
 }

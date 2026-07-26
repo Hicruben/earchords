@@ -307,5 +307,25 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "F",
+    "confidence": "high",
+    "mainChords": [
+      "F",
+      "Bb",
+      "C"
+    ],
+    "capo": {
+      "fret": 3,
+      "shapes": [
+        "D",
+        "G",
+        "A"
+      ]
+    },
+    "bpm": 128,
+    "notes": "Only 3 chords I-IV-V. Our A#=Bb, exact match.",
+    "detectedKeyWasCorrect": true
   }
 }

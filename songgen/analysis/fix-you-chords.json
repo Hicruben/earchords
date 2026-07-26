@@ -4,7 +4,7 @@
     "artist": "Coldplay",
     "slug": "fix-you-chords",
     "youtubeId": "bzRMneypG04",
-    "key": "D#"
+    "key": "Eb"
   },
   "analysis": {
     "source": "youtube:bzRMneypG04",
@@ -592,5 +592,33 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "Eb",
+    "confidence": "high",
+    "mainChords": [
+      "Eb",
+      "Bb",
+      "Ab",
+      "Cm",
+      "Gm",
+      "Abmaj7",
+      "Bb6"
+    ],
+    "capo": {
+      "fret": 3,
+      "shapes": [
+        "C",
+        "G",
+        "F",
+        "Am",
+        "Em",
+        "Fmaj7",
+        "G6"
+      ]
+    },
+    "bpm": 138,
+    "notes": "Matches well.",
+    "detectedKeyWasCorrect": true
   }
 }

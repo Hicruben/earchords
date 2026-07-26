@@ -482,5 +482,27 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "B",
+    "confidence": "high",
+    "mainChords": [
+      "B",
+      "F#",
+      "G#m",
+      "E"
+    ],
+    "capo": {
+      "fret": 4,
+      "shapes": [
+        "G",
+        "D",
+        "Em",
+        "C"
+      ]
+    },
+    "bpm": 151,
+    "notes": "I-V-vi-IV. Our Emaj7/Bmaj7 are artifacts.",
+    "detectedKeyWasCorrect": true
   }
 }

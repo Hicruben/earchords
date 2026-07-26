@@ -22,11 +22,14 @@ export function cleanChart(segments, duration) {
   return { main, sequence: seq };
 }
 
+import { chordStats, topProgression, capoSuggestion, difficulty, howToPlay, structureNote } from './song-content.mjs';
+
 const r2 = (n) => Math.round(n * 100) / 100;
 
-export function renderSongPage(meta, analysis) {
+export function renderSongPage(meta, analysis, verified = null) {
   const key = meta.key || (analysis.key ? analysis.key.name : '—');
-  const bpm = analysis.tempo?.bpm || null;
+  // 已核对的 BPM 优先(核对时会区分 double-time / 实际打拍速度)
+  const bpm = verified?.bpm || analysis.tempo?.bpm || null;
   const segments = analysis.segments || [];
   const duration = analysis.duration || (segments.length ? segments[segments.length - 1].end : 1);
   const { main, sequence } = cleanChart(segments, duration);
@@ -44,10 +47,49 @@ export function renderSongPage(meta, analysis) {
 
   const chips = main.map((c) => `<span class="chip">${esc(c)}</span>`).join('');
   const staticBars = progression.map((c) => `<span class="sbar">${esc(c)}</span>`).join('');
-  const schema = {
-    '@context': 'https://schema.org', '@type': 'WebPage', name: titleTag, description: desc, url,
-    about: { '@type': 'MusicComposition', name: meta.title, composer: { '@type': 'MusicGroup', name: meta.artist } },
-  };
+
+  // ---- 页面事实内容:以人工核对结果为准(verified),检测结果只驱动时间轴 ----
+  const stats = chordStats(segments, duration);
+  const vChords = verified?.mainChords?.length ? verified.mainChords : stats.slice(0, 4).map((c) => c.label);
+  const capo = verified?.capo || null;
+  const diff = difficulty(vChords.map((l) => ({ label: l })), bpm);
+  const chordCount = vChords.length;
+  const chordList = vChords.join(', ');
+
+  const faqs = [
+    {
+      q: `What key is ${meta.title} in?`,
+      a: `${meta.title} by ${meta.artist} is in the key of ${key}${bpm ? `, at around ${bpm} BPM` : ''}. That's the key the recording actually sounds in${capo ? `, not the shapes you finger — with a capo on fret ${capo.fret} you play ${capo.shapes.slice(0, 4).join(', ')} shapes and it still sounds in ${key}` : ''}.`,
+    },
+    {
+      q: `What chords do I need for ${meta.title}?`,
+      a: `The core of the song is ${chordList}${capo ? `, which most players finger as ${capo.shapes.join(', ')} with a capo on fret ${capo.fret}` : ''}.`,
+    },
+    {
+      q: `Is ${meta.title} good for beginners?`,
+      a: `${diff.level}. ${diff.why.charAt(0).toUpperCase() + diff.why.slice(1)}.${capo ? ` The capo does a lot of the work here — it turns the chords into ${capo.shapes.slice(0, 4).join(', ')} shapes.` : ''}`,
+    },
+  ];
+  if (capo) {
+    faqs.push({
+      q: `What capo do you use for ${meta.title}?`,
+      a: `Fret ${capo.fret}. With the capo there you play ${capo.shapes.join(', ')} shapes, and the song sounds in its original key of ${key}.`,
+    });
+  }
+
+  const schema = [
+    {
+      '@context': 'https://schema.org', '@type': 'WebPage', name: titleTag, description: desc, url,
+      about: { '@type': 'MusicComposition', name: meta.title, composer: { '@type': 'MusicGroup', name: meta.artist }, musicalKey: key },
+    },
+    {
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question', name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    },
+  ];
 
   return `<!doctype html>
 <html lang="en" data-theme="dark">
@@ -147,12 +189,27 @@ ${SONG_CSS}
     <div class="legend" id="ec-legend"></div>
   </section>
 
-  <!-- SEO 静态内容 + 无 JS 兜底 -->
-  <section class="section">
-    <p class="intro">Chords for <b>${esc(meta.title)}</b> by ${esc(meta.artist)}, in the key of <b>${esc(key)}</b>${bpm ? `, around ${bpm} BPM` : ''}. Built around ${esc(main.slice(0, 4).join(', '))}. Press play — the chords highlight in time with the video. Transpose, add a capo, switch between guitar, piano and ukulele diagrams, or slow it down to practice.</p>
-    <h2>Chord progression</h2>
+  <!-- 正文:事实部分来自人工核对(verified),时间轴来自音频检测 -->
+  <section class="section article">
+    <p class="intro">Chords for <b>${esc(meta.title)}</b> by ${esc(meta.artist)}, in the key of <b>${esc(key)}</b>${bpm ? `, around ${bpm} BPM` : ''}. The song is built on ${esc(chordList)}${capo ? `, usually played with a capo on fret ${capo.fret}` : ''}. Press play — the chord sheet above highlights in time with the track, and you can click any bar to jump there.</p>
+
+    <h2>How to play ${esc(meta.title)}</h2>
+    <p>${esc(key)} is the key you actually hear on the record.${capo ? ` Most players don't finger those chords directly — they put a capo on fret ${capo.fret} and play ${esc(capo.shapes.join(', '))} shapes, which sound as ${esc(vChords.join(', '))}. That's why chord sites often list this song "in ${esc((String(capo.shapes[0] || '').match(/^([A-G][#b]?)(m(?!aj))?/) || [capo.shapes[0]])[0])}": they're printing the shapes, not the sounding key.` : ` No capo needed — the chords are played in open position as written.`}</p>
+    <p><b>Difficulty:</b> ${esc(diff.level)} — ${esc(diff.why)}.${capo && diff.level !== 'Beginner' ? ` The capo makes it considerably easier than the key suggests.` : ''}</p>
+    ${verified?.notes ? `<p class="ctx">${esc(verified.notes)}</p>` : ''}
+
+    <h2>Chords you need</h2>
+    <div class="static-bars">${vChords.map((c) => `<span class="sbar">${esc(c)}</span>`).join('')}</div>
+    ${capo ? `<p class="note">With a capo on fret ${capo.fret}, finger these as ${esc(capo.shapes.join(', '))}.</p>` : ''}
+
+    <h2>Chord progression through the song</h2>
     <div class="static-bars">${staticBars}</div>
-    <p class="note">Auto-detected from the recording by EarChords — verify by ear with the play-along.</p>
+    <p class="note">The bar-by-bar timeline above is detected from the audio by EarChords and can include passing voicings the songbooks simplify away — the key, the core chords and the capo position on this page are checked against published sheet music and audio-analysis sources.</p>
+
+    <h2>Frequently asked</h2>
+    <div class="faq-list">
+      ${faqs.map((f) => `<div class="faq-item"><h3>${esc(f.q)}</h3><p>${esc(f.a)}</p></div>`).join('')}
+    </div>
   </section>
 
   <footer class="foot">
@@ -260,6 +317,16 @@ h2{font-family:var(--font-disp);font-weight:700;letter-spacing:.01em;font-size:1
 .ec-chip>span{font-family:var(--font-disp);font-weight:800;font-size:1.15rem}
 .ec-chip svg{max-width:78px;height:auto}
 .intro{color:var(--dim);max-width:66ch}
+.article{max-width:78ch}
+.article h2{font-family:var(--font-disp);font-size:1.9rem;font-weight:700;letter-spacing:-.01em;margin:2.4rem 0 .9rem}
+.article p{color:var(--dim);line-height:1.75;margin:.7rem 0}
+.article p b{color:var(--ink)}
+.article .ctx{padding:.9rem 1.1rem;border-left:2px solid var(--accent);background:rgba(255,255,255,.02);border-radius:0 8px 8px 0;font-size:.92rem}
+.faq-list{margin-top:.6rem}
+.faq-item{padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.faq-item:first-child{border-top:1px solid var(--line)}
+.faq-item h3{font-family:var(--font-ui);font-size:1rem;font-weight:700;color:var(--ink);margin:0 0 .4rem}
+.faq-item p{margin:0;font-size:.94rem}
 .static-bars{display:flex;flex-wrap:wrap;gap:.4rem}
 .sbar{font-family:var(--font-disp);font-weight:700;font-size:1.05rem;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:.35rem .7rem}
 .chip{font-weight:700;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.3rem .6rem;font-size:.95rem}

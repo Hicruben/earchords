@@ -392,5 +392,25 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "G",
+    "confidence": "high",
+    "mainChords": [
+      "G",
+      "Am7/G",
+      "G/B",
+      "C",
+      "C#dim7",
+      "D",
+      "Em",
+      "A7",
+      "Cm",
+      "G+"
+    ],
+    "capo": null,
+    "bpm": 94,
+    "notes": "3/4. Our Cm and Gaug ARE genuine; only Gm looks spurious.",
+    "detectedKeyWasCorrect": true
   }
 }

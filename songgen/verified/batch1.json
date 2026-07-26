@@ -1,0 +1,10 @@
+{"results":[
+{"title":"All I Want","verifiedKey":"C","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["C","F","G","Am","Dm","F/C","G/B"],"capo":{"fret":5,"shapes":["G","C","D","Em"]},"bpm":187,"notes":"6/8-12/8 feel; practical half-time ~93. Our chords match."},
+{"title":"All of Me","verifiedKey":"Ab","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["Fm","Db","Ab","Eb","Bbm"],"capo":{"fret":1,"shapes":["Em","C","G","D","Am"]},"bpm":120,"notes":"Ab = our G#. Loop Fm-Db-Ab-Eb."},
+{"title":"Banana Pancakes","verifiedKey":"G","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["Am7","G7","C7","D7","Bm7","Em7"],"capo":null,"bpm":114,"notes":"MISSED: song's character is dominant-7 voicings (G7 C7 D7) and centres on Am7, not plain G triads."},
+{"title":"Before You Go","verifiedKey":"Eb","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["Eb","Bb","Cm","Ab","Abmaj7","Bb11"],"capo":{"fret":3,"shapes":["C","G","Am","F","Fmaj7","G11"]},"bpm":112,"notes":"Our Fm7 unconfirmed in charts."},
+{"title":"Blackbird","verifiedKey":"G","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["G","Am7/G","G/B","C","C#dim7","D","Em","A7","Cm","G+"],"capo":null,"bpm":94,"notes":"3/4. Our Cm and Gaug ARE genuine; only Gm looks spurious."},
+{"title":"Budapest","verifiedKey":"F","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["F","Bb","C"],"capo":{"fret":3,"shapes":["D","G","A"]},"bpm":128,"notes":"Only 3 chords I-IV-V. Our A#=Bb, exact match."},
+{"title":"Clocks","verifiedKey":"Eb Mixolydian (sources split: Fm / Bbm)","ourKeyCorrect":false,"keyConfidence":"medium","mainChords":["Eb","Bbm","Fm"],"capo":null,"bpm":131,"notes":"All sources agree chord set Eb-Bbm-Fm. Wikipedia: Eb Mixolydian. Our A#m(Bbm) is the middle chord, minority reading of tonic."},
+{"title":"Don't Look Back in Anger","verifiedKey":"C","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["C","G","Am","E7","F","Fm","G/B","Csus2"],"capo":null,"bpm":82,"notes":"MISSED: E7 (III7 secondary dominant) and the F-Fm move in bridge. Our Dm7/Fmaj7 likely mislabels."}
+]}

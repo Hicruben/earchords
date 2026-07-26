@@ -667,5 +667,19 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "C",
+    "confidence": "high",
+    "mainChords": [
+      "C",
+      "G",
+      "Am",
+      "F"
+    ],
+    "capo": null,
+    "bpm": 72,
+    "notes": "Am7/Dm7 are reasonable extended readings.",
+    "detectedKeyWasCorrect": true
   }
 }

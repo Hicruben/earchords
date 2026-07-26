@@ -4,7 +4,7 @@
     "artist": "Vance Joy",
     "slug": "riptide-chords",
     "youtubeId": "HXSIxi-VUBM",
-    "key": "C#"
+    "key": "Db"
   },
   "analysis": {
     "source": "youtube:HXSIxi-VUBM",
@@ -627,5 +627,27 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "Db",
+    "confidence": "high",
+    "mainChords": [
+      "Bbm",
+      "Ab",
+      "Db",
+      "Gb"
+    ],
+    "capo": {
+      "fret": 1,
+      "shapes": [
+        "Am",
+        "G",
+        "C",
+        "F"
+      ]
+    },
+    "bpm": 102,
+    "notes": "Our Fm is a mis-read of F#/Gb; Emaj7 spurious. Vance Joy tunes uke down a major 3rd rather than capo.",
+    "detectedKeyWasCorrect": true
   }
 }

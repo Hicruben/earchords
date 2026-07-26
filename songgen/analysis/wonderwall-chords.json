@@ -4,7 +4,7 @@
     "artist": "Oasis",
     "slug": "wonderwall-chords",
     "youtubeId": "I0O95n70jjc",
-    "key": "D"
+    "key": "F#m"
   },
   "analysis": {
     "source": "youtube:I0O95n70jjc",
@@ -592,5 +592,33 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "F#m",
+    "confidence": "high",
+    "mainChords": [
+      "F#m7",
+      "A",
+      "Esus4",
+      "B7sus4",
+      "Dadd9",
+      "D",
+      "E"
+    ],
+    "capo": {
+      "fret": 2,
+      "shapes": [
+        "Em7",
+        "G",
+        "Dsus4",
+        "A7sus4",
+        "Cadd9",
+        "C",
+        "D"
+      ]
+    },
+    "bpm": 87,
+    "notes": "KEY WRONG in our detection: tonic is F#m, we said D major. Pitch material was right; tonal-centre assignment failed. Bm7 not in song.",
+    "detectedKeyWasCorrect": false
   }
 }

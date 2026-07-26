@@ -892,5 +892,27 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "A",
+    "confidence": "high",
+    "mainChords": [
+      "A",
+      "E",
+      "F#m",
+      "D"
+    ],
+    "capo": {
+      "fret": 2,
+      "shapes": [
+        "G",
+        "D",
+        "Em",
+        "C"
+      ]
+    },
+    "bpm": 148,
+    "notes": "Chord sites say key of G = SHAPE key with capo 2, not sounding key. F#m7/Dmaj7 are extension mislabels.",
+    "detectedKeyWasCorrect": true
   }
 }

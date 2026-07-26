@@ -367,5 +367,19 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "A",
+    "confidence": "high",
+    "mainChords": [
+      "A",
+      "F#m",
+      "D",
+      "E"
+    ],
+    "capo": null,
+    "bpm": 118,
+    "notes": "Classic I-vi-IV-V. Amaj7/Eadd9 are decoration, not real chords.",
+    "detectedKeyWasCorrect": true
   }
 }

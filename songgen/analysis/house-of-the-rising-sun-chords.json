@@ -732,5 +732,21 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "Am",
+    "confidence": "high",
+    "mainChords": [
+      "Am",
+      "C",
+      "D",
+      "F",
+      "E",
+      "E7"
+    ],
+    "capo": null,
+    "bpm": 117,
+    "notes": "CHORD QUALITY WRONG: record plays D MAJOR and E MAJOR (borrowed), we output Dm/Em. The F# in D and G# in E are the defining sound. Our Dm7 not in song.",
+    "detectedKeyWasCorrect": true
   }
 }

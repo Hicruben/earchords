@@ -1,0 +1,10 @@
+{"results":[
+{"title":"Dust in the Wind","verifiedKey":"C (rel. Am)","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["C","Cmaj7","Cadd9","Am","Asus2","Asus4","G","G/B","D/F#","Dm7"],"capo":null,"bpm":94,"notes":"Our F is NOT in the recording; the real outside chord is D/F#."},
+{"title":"Fast Car","verifiedKey":"A","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["Dmaj7","A","F#m","E","Esus4"],"capo":{"fret":2,"shapes":["Cmaj7","G","Em","Dadd11"]},"bpm":104,"notes":"Spotify-derived sites say Em - inconsistent with capo-2 evidence; our A matches the recording."},
+{"title":"Fix You","verifiedKey":"Eb","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["Eb","Bb","Ab","Cm","Gm","Abmaj7","Bb6"],"capo":{"fret":3,"shapes":["C","G","F","Am","Em","Fmaj7","G6"]},"bpm":138,"notes":"Matches well."},
+{"title":"Hallelujah","verifiedKey":"C","ourKeyCorrect":false,"keyConfidence":"high","mainChords":["C","Am","F","G","E7","Em"],"capo":{"fret":5,"shapes":["G","Em7","C","D","B7"]},"bpm":71,"notes":"OUR C# IS A SEMITONE SHARP. Whole progression transposed up 1 - suggests the analysed YouTube audio was pitched/sped up, not a harmonic error."},
+{"title":"Hey There Delilah","verifiedKey":"D","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["D","F#m","Bm","G","A","Em"],"capo":{"fret":2,"shapes":["C","Em","Am","F","G","Dm"]},"bpm":104,"notes":"D6/Bm7 are voicing colours, not charted chords."},
+{"title":"Ho Hey","verifiedKey":"C","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["F","C","Am","G"],"capo":null,"bpm":80,"notes":"Only 4 chords. Gsus4/Am7 are strum colours."},
+{"title":"House of the Rising Sun","verifiedKey":"Am","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["Am","C","D","F","E","E7"],"capo":null,"bpm":117,"notes":"CHORD QUALITY WRONG: record plays D MAJOR and E MAJOR (borrowed), we output Dm/Em. The F# in D and G# in E are the defining sound. Our Dm7 not in song."},
+{"title":"Hurt","verifiedKey":"Am","ourKeyCorrect":true,"keyConfidence":"high","mainChords":["Am","C","D","Dsus2","G","F"],"capo":null,"bpm":91,"notes":"Johnny Cash 2002 cover. Fadd9/Am7 are voicing colours."}
+]}

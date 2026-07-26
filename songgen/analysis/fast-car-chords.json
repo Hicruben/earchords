@@ -1112,5 +1112,28 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "A",
+    "confidence": "high",
+    "mainChords": [
+      "Dmaj7",
+      "A",
+      "F#m",
+      "E",
+      "Esus4"
+    ],
+    "capo": {
+      "fret": 2,
+      "shapes": [
+        "Cmaj7",
+        "G",
+        "Em",
+        "Dadd11"
+      ]
+    },
+    "bpm": 104,
+    "notes": "Spotify-derived sites say Em - inconsistent with capo-2 evidence; our A matches the recording.",
+    "detectedKeyWasCorrect": true
   }
 }

@@ -4,7 +4,7 @@
     "artist": "John Legend",
     "slug": "all-of-me-chords",
     "youtubeId": "ZWlrw2Tx1Yk",
-    "key": "G#"
+    "key": "Ab"
   },
   "analysis": {
     "source": "youtube:ZWlrw2Tx1Yk",
@@ -752,5 +752,29 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "Ab",
+    "confidence": "high",
+    "mainChords": [
+      "Fm",
+      "Db",
+      "Ab",
+      "Eb",
+      "Bbm"
+    ],
+    "capo": {
+      "fret": 1,
+      "shapes": [
+        "Em",
+        "C",
+        "G",
+        "D",
+        "Am"
+      ]
+    },
+    "bpm": 120,
+    "notes": "Ab = our G#. Loop Fm-Db-Ab-Eb.",
+    "detectedKeyWasCorrect": true
   }
 }

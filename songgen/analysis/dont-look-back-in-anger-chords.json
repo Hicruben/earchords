@@ -777,5 +777,23 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "C",
+    "confidence": "high",
+    "mainChords": [
+      "C",
+      "G",
+      "Am",
+      "E7",
+      "F",
+      "Fm",
+      "G/B",
+      "Csus2"
+    ],
+    "capo": null,
+    "bpm": 82,
+    "notes": "MISSED: E7 (III7 secondary dominant) and the F-Fm move in bridge. Our Dm7/Fmaj7 likely mislabels.",
+    "detectedKeyWasCorrect": true
   }
 }

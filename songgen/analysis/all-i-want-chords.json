@@ -477,5 +477,30 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "C",
+    "confidence": "high",
+    "mainChords": [
+      "C",
+      "F",
+      "G",
+      "Am",
+      "Dm",
+      "F/C",
+      "G/B"
+    ],
+    "capo": {
+      "fret": 5,
+      "shapes": [
+        "G",
+        "C",
+        "D",
+        "Em"
+      ]
+    },
+    "bpm": 187,
+    "notes": "6/8-12/8 feel; practical half-time ~93. Our chords match.",
+    "detectedKeyWasCorrect": true
   }
 }

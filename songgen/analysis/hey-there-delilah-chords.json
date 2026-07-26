@@ -572,5 +572,31 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "D",
+    "confidence": "high",
+    "mainChords": [
+      "D",
+      "F#m",
+      "Bm",
+      "G",
+      "A",
+      "Em"
+    ],
+    "capo": {
+      "fret": 2,
+      "shapes": [
+        "C",
+        "Em",
+        "Am",
+        "F",
+        "G",
+        "Dm"
+      ]
+    },
+    "bpm": 104,
+    "notes": "D6/Bm7 are voicing colours, not charted chords.",
+    "detectedKeyWasCorrect": true
   }
 }

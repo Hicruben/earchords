@@ -452,5 +452,27 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "E",
+    "confidence": "high",
+    "mainChords": [
+      "E",
+      "B",
+      "C#m",
+      "A"
+    ],
+    "capo": {
+      "fret": 4,
+      "shapes": [
+        "C",
+        "G",
+        "Am",
+        "F"
+      ]
+    },
+    "bpm": 108,
+    "notes": "I-V-vi-IV. Bsus4/Amaj7 are passing colours, not core.",
+    "detectedKeyWasCorrect": true
   }
 }

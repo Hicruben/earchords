@@ -4,7 +4,7 @@
     "artist": "Kansas",
     "slug": "dust-in-the-wind-chords",
     "youtubeId": "90msAuGKbjY",
-    "key": "Am"
+    "key": "C"
   },
   "analysis": {
     "source": "youtube:90msAuGKbjY",
@@ -452,5 +452,25 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "C (rel. Am)",
+    "confidence": "high",
+    "mainChords": [
+      "C",
+      "Cmaj7",
+      "Cadd9",
+      "Am",
+      "Asus2",
+      "Asus4",
+      "G",
+      "G/B",
+      "D/F#",
+      "Dm7"
+    ],
+    "capo": null,
+    "bpm": 94,
+    "notes": "Our F is NOT in the recording; the real outside chord is D/F#.",
+    "detectedKeyWasCorrect": true
   }
 }

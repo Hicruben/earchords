@@ -757,5 +757,19 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "C (tonic ambiguous C/Am)",
+    "confidence": "medium",
+    "mainChords": [
+      "Am",
+      "C",
+      "G",
+      "F"
+    ],
+    "capo": null,
+    "bpm": 76,
+    "notes": "Open C tuning, no capo. IMPORTANT: original recording is ~20 cents FLAT of A=440, so playing along at 440 sounds off. Spotify-derived sites say Em (likely algorithmic error).",
+    "detectedKeyWasCorrect": true
   }
 }

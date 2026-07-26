@@ -527,5 +527,31 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "A",
+    "confidence": "high",
+    "mainChords": [
+      "A",
+      "E/G#",
+      "F#m",
+      "D",
+      "Dadd9",
+      "Bm7"
+    ],
+    "capo": {
+      "fret": 2,
+      "shapes": [
+        "G",
+        "D/F#",
+        "Em",
+        "C",
+        "Cadd9",
+        "Am7"
+      ]
+    },
+    "bpm": 85,
+    "notes": "Capo 2 with G-family shapes. Our A6 is enharmonically F#m7.",
+    "detectedKeyWasCorrect": true
   }
 }

@@ -747,5 +747,21 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "F#",
+    "confidence": "high",
+    "mainChords": [
+      "F#",
+      "Badd9",
+      "G#m7",
+      "C#",
+      "D#m",
+      "A#m7"
+    ],
+    "capo": null,
+    "bpm": 92,
+    "notes": "NO capo - guitar tuned DOWN a half step playing G shapes. Our set matches exactly.",
+    "detectedKeyWasCorrect": true
   }
 }

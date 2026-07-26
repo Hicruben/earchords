@@ -4,7 +4,7 @@
     "artist": "Lewis Capaldi",
     "slug": "someone-you-loved-chords",
     "youtubeId": "xrcMgO2fgpA",
-    "key": "C#"
+    "key": "Db"
   },
   "analysis": {
     "source": "youtube:xrcMgO2fgpA",
@@ -497,5 +497,27 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "Db",
+    "confidence": "high",
+    "mainChords": [
+      "Db",
+      "Ab",
+      "Bbm",
+      "Gb"
+    ],
+    "capo": {
+      "fret": 1,
+      "shapes": [
+        "C",
+        "G",
+        "Am",
+        "F"
+      ]
+    },
+    "bpm": 110,
+    "notes": "Our D#m7/G#6 are extensions; the expected vi is Bbm not D#m.",
+    "detectedKeyWasCorrect": true
   }
 }

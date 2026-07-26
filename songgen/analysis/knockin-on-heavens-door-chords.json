@@ -372,5 +372,19 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "G",
+    "confidence": "high",
+    "mainChords": [
+      "G",
+      "D",
+      "Am",
+      "C"
+    ],
+    "capo": null,
+    "bpm": 70,
+    "notes": "Only 4 chords. Our Gm is spurious - not in song at all.",
+    "detectedKeyWasCorrect": true
   }
 }

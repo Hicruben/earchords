@@ -1,0 +1,822 @@
+{
+ "results": [
+  {
+   "title": "All I Want",
+   "verifiedKey": "C",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "C",
+    "F",
+    "G",
+    "Am",
+    "Dm",
+    "F/C",
+    "G/B"
+   ],
+   "capo": {
+    "fret": 5,
+    "shapes": [
+     "G",
+     "C",
+     "D",
+     "Em"
+    ]
+   },
+   "bpm": 187,
+   "notes": "6/8-12/8 feel; practical half-time ~93. Our chords match."
+  },
+  {
+   "title": "All of Me",
+   "verifiedKey": "Ab",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "Fm",
+    "Db",
+    "Ab",
+    "Eb",
+    "Bbm"
+   ],
+   "capo": {
+    "fret": 1,
+    "shapes": [
+     "Em",
+     "C",
+     "G",
+     "D",
+     "Am"
+    ]
+   },
+   "bpm": 120,
+   "notes": "Ab = our G#. Loop Fm-Db-Ab-Eb."
+  },
+  {
+   "title": "Banana Pancakes",
+   "verifiedKey": "G",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "Am7",
+    "G7",
+    "C7",
+    "D7",
+    "Bm7",
+    "Em7"
+   ],
+   "capo": null,
+   "bpm": 114,
+   "notes": "MISSED: song's character is dominant-7 voicings (G7 C7 D7) and centres on Am7, not plain G triads."
+  },
+  {
+   "title": "Before You Go",
+   "verifiedKey": "Eb",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "Eb",
+    "Bb",
+    "Cm",
+    "Ab",
+    "Abmaj7",
+    "Bb11"
+   ],
+   "capo": {
+    "fret": 3,
+    "shapes": [
+     "C",
+     "G",
+     "Am",
+     "F",
+     "Fmaj7",
+     "G11"
+    ]
+   },
+   "bpm": 112,
+   "notes": "Our Fm7 unconfirmed in charts."
+  },
+  {
+   "title": "Blackbird",
+   "verifiedKey": "G",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "G",
+    "Am7/G",
+    "G/B",
+    "C",
+    "C#dim7",
+    "D",
+    "Em",
+    "A7",
+    "Cm",
+    "G+"
+   ],
+   "capo": null,
+   "bpm": 94,
+   "notes": "3/4. Our Cm and Gaug ARE genuine; only Gm looks spurious."
+  },
+  {
+   "title": "Budapest",
+   "verifiedKey": "F",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "F",
+    "Bb",
+    "C"
+   ],
+   "capo": {
+    "fret": 3,
+    "shapes": [
+     "D",
+     "G",
+     "A"
+    ]
+   },
+   "bpm": 128,
+   "notes": "Only 3 chords I-IV-V. Our A#=Bb, exact match."
+  },
+  {
+   "title": "Clocks",
+   "verifiedKey": "Eb Mixolydian (sources split: Fm / Bbm)",
+   "ourKeyCorrect": false,
+   "keyConfidence": "medium",
+   "mainChords": [
+    "Eb",
+    "Bbm",
+    "Fm"
+   ],
+   "capo": null,
+   "bpm": 131,
+   "notes": "All sources agree chord set Eb-Bbm-Fm. Wikipedia: Eb Mixolydian. Our A#m(Bbm) is the middle chord, minority reading of tonic."
+  },
+  {
+   "title": "Don't Look Back in Anger",
+   "verifiedKey": "C",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "C",
+    "G",
+    "Am",
+    "E7",
+    "F",
+    "Fm",
+    "G/B",
+    "Csus2"
+   ],
+   "capo": null,
+   "bpm": 82,
+   "notes": "MISSED: E7 (III7 secondary dominant) and the F-Fm move in bridge. Our Dm7/Fmaj7 likely mislabels."
+  },
+  {
+   "title": "Dust in the Wind",
+   "verifiedKey": "C (rel. Am)",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "C",
+    "Cmaj7",
+    "Cadd9",
+    "Am",
+    "Asus2",
+    "Asus4",
+    "G",
+    "G/B",
+    "D/F#",
+    "Dm7"
+   ],
+   "capo": null,
+   "bpm": 94,
+   "notes": "Our F is NOT in the recording; the real outside chord is D/F#."
+  },
+  {
+   "title": "Fast Car",
+   "verifiedKey": "A",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "Dmaj7",
+    "A",
+    "F#m",
+    "E",
+    "Esus4"
+   ],
+   "capo": {
+    "fret": 2,
+    "shapes": [
+     "Cmaj7",
+     "G",
+     "Em",
+     "Dadd11"
+    ]
+   },
+   "bpm": 104,
+   "notes": "Spotify-derived sites say Em - inconsistent with capo-2 evidence; our A matches the recording."
+  },
+  {
+   "title": "Fix You",
+   "verifiedKey": "Eb",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "Eb",
+    "Bb",
+    "Ab",
+    "Cm",
+    "Gm",
+    "Abmaj7",
+    "Bb6"
+   ],
+   "capo": {
+    "fret": 3,
+    "shapes": [
+     "C",
+     "G",
+     "F",
+     "Am",
+     "Em",
+     "Fmaj7",
+     "G6"
+    ]
+   },
+   "bpm": 138,
+   "notes": "Matches well."
+  },
+  {
+   "title": "Hallelujah",
+   "verifiedKey": "C",
+   "ourKeyCorrect": false,
+   "keyConfidence": "high",
+   "mainChords": [
+    "C",
+    "Am",
+    "F",
+    "G",
+    "E7",
+    "Em"
+   ],
+   "capo": {
+    "fret": 5,
+    "shapes": [
+     "G",
+     "Em7",
+     "C",
+     "D",
+     "B7"
+    ]
+   },
+   "bpm": 71,
+   "notes": "OUR C# IS A SEMITONE SHARP. Whole progression transposed up 1 - suggests the analysed YouTube audio was pitched/sped up, not a harmonic error."
+  },
+  {
+   "title": "Hey There Delilah",
+   "verifiedKey": "D",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "D",
+    "F#m",
+    "Bm",
+    "G",
+    "A",
+    "Em"
+   ],
+   "capo": {
+    "fret": 2,
+    "shapes": [
+     "C",
+     "Em",
+     "Am",
+     "F",
+     "G",
+     "Dm"
+    ]
+   },
+   "bpm": 104,
+   "notes": "D6/Bm7 are voicing colours, not charted chords."
+  },
+  {
+   "title": "Ho Hey",
+   "verifiedKey": "C",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "F",
+    "C",
+    "Am",
+    "G"
+   ],
+   "capo": null,
+   "bpm": 80,
+   "notes": "Only 4 chords. Gsus4/Am7 are strum colours."
+  },
+  {
+   "title": "House of the Rising Sun",
+   "verifiedKey": "Am",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "Am",
+    "C",
+    "D",
+    "F",
+    "E",
+    "E7"
+   ],
+   "capo": null,
+   "bpm": 117,
+   "notes": "CHORD QUALITY WRONG: record plays D MAJOR and E MAJOR (borrowed), we output Dm/Em. The F# in D and G# in E are the defining sound. Our Dm7 not in song."
+  },
+  {
+   "title": "Hurt",
+   "verifiedKey": "Am",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "Am",
+    "C",
+    "D",
+    "Dsus2",
+    "G",
+    "F"
+   ],
+   "capo": null,
+   "bpm": 91,
+   "notes": "Johnny Cash 2002 cover. Fadd9/Am7 are voicing colours."
+  },
+  {
+   "title": "I'm Yours",
+   "verifiedKey": "B",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "B",
+    "F#",
+    "G#m",
+    "E"
+   ],
+   "capo": {
+    "fret": 4,
+    "shapes": [
+     "G",
+     "D",
+     "Em",
+     "C"
+    ]
+   },
+   "bpm": 151,
+   "notes": "I-V-vi-IV. Our Emaj7/Bmaj7 are artifacts."
+  },
+  {
+   "title": "Imagine",
+   "verifiedKey": "C",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "C",
+    "Cmaj7",
+    "F",
+    "Am",
+    "Dm",
+    "G",
+    "G7",
+    "E7"
+   ],
+   "capo": null,
+   "bpm": 76,
+   "notes": "Our Asus2/Csus2 are artifacts of Cmaj7 sustains; Am and E7 were missed."
+  },
+  {
+   "title": "Iris",
+   "verifiedKey": "Bm (rel. D)",
+   "ourKeyCorrect": false,
+   "keyConfidence": "high",
+   "mainChords": [
+    "Bm",
+    "A",
+    "G",
+    "D",
+    "Em"
+   ],
+   "capo": null,
+   "bpm": 156,
+   "notes": "Tonic is Bm; we said D (relative major). BDDDDD tuning - five ringing D drones is WHY we over-report D and invent maj7 chords. Bmaj7/G#maj7 wrong."
+  },
+  {
+   "title": "Knockin on Heavens Door",
+   "verifiedKey": "G",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "G",
+    "D",
+    "Am",
+    "C"
+   ],
+   "capo": null,
+   "bpm": 70,
+   "notes": "Only 4 chords. Our Gm is spurious - not in song at all."
+  },
+  {
+   "title": "Let Her Go",
+   "verifiedKey": "G",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "Em",
+    "C",
+    "G",
+    "D"
+   ],
+   "capo": {
+    "fret": 7,
+    "shapes": [
+     "Am",
+     "F",
+     "C",
+     "G"
+    ]
+   },
+   "bpm": 75,
+   "notes": "Exact match. Capo 7 with C-position shapes."
+  },
+  {
+   "title": "Let It Be",
+   "verifiedKey": "C",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "C",
+    "G",
+    "Am",
+    "F"
+   ],
+   "capo": null,
+   "bpm": 72,
+   "notes": "Am7/Dm7 are reasonable extended readings."
+  },
+  {
+   "title": "More Than Words",
+   "verifiedKey": "F#",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "F#",
+    "Badd9",
+    "G#m7",
+    "C#",
+    "D#m",
+    "A#m7"
+   ],
+   "capo": null,
+   "bpm": 92,
+   "notes": "NO capo - guitar tuned DOWN a half step playing G shapes. Our set matches exactly."
+  },
+  {
+   "title": "Perfect",
+   "verifiedKey": "Ab",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "Ab",
+    "Fm",
+    "Db",
+    "Eb"
+   ],
+   "capo": {
+    "fret": 1,
+    "shapes": [
+     "G",
+     "Em",
+     "C",
+     "D"
+    ]
+   },
+   "bpm": 95,
+   "notes": "Ab = our G#. Official Musicnotes score in Ab."
+  },
+  {
+   "title": "Photograph",
+   "verifiedKey": "E",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "E",
+    "B",
+    "C#m",
+    "A"
+   ],
+   "capo": {
+    "fret": 4,
+    "shapes": [
+     "C",
+     "G",
+     "Am",
+     "F"
+    ]
+   },
+   "bpm": 108,
+   "notes": "I-V-vi-IV. Bsus4/Amaj7 are passing colours, not core."
+  },
+  {
+   "title": "Riptide",
+   "verifiedKey": "Db",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "Bbm",
+    "Ab",
+    "Db",
+    "Gb"
+   ],
+   "capo": {
+    "fret": 1,
+    "shapes": [
+     "Am",
+     "G",
+     "C",
+     "F"
+    ]
+   },
+   "bpm": 102,
+   "notes": "Our Fm is a mis-read of F#/Gb; Emaj7 spurious. Vance Joy tunes uke down a major 3rd rather than capo."
+  },
+  {
+   "title": "River Flows in You",
+   "verifiedKey": "A",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "A",
+    "E",
+    "F#m",
+    "D"
+   ],
+   "capo": null,
+   "bpm": 72,
+   "notes": "Solo piano, Musicnotes official edition in A. Our Aadd9/Dadd9/F#m7 are CONSISTENT with the open-5th voicings, not errors."
+  },
+  {
+   "title": "Skinny Love",
+   "verifiedKey": "C (tonic ambiguous C/Am)",
+   "ourKeyCorrect": true,
+   "keyConfidence": "medium",
+   "mainChords": [
+    "Am",
+    "C",
+    "G",
+    "F"
+   ],
+   "capo": null,
+   "bpm": 76,
+   "notes": "Open C tuning, no capo. IMPORTANT: original recording is ~20 cents FLAT of A=440, so playing along at 440 sounds off. Spotify-derived sites say Em (likely algorithmic error)."
+  },
+  {
+   "title": "Someone Like You",
+   "verifiedKey": "A",
+   "ourKeyCorrect": false,
+   "keyConfidence": "high",
+   "mainChords": [
+    "A",
+    "E/G#",
+    "F#m",
+    "D"
+   ],
+   "capo": {
+    "fret": 2,
+    "shapes": [
+     "G",
+     "D/F#",
+     "Em",
+     "C"
+    ]
+   },
+   "bpm": 135,
+   "notes": "WE SAID F#m = relative minor, wrong tonic. Official Musicnotes editions all say A major."
+  },
+  {
+   "title": "Someone You Loved",
+   "verifiedKey": "Db",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "Db",
+    "Ab",
+    "Bbm",
+    "Gb"
+   ],
+   "capo": {
+    "fret": 1,
+    "shapes": [
+     "C",
+     "G",
+     "Am",
+     "F"
+    ]
+   },
+   "bpm": 110,
+   "notes": "Our D#m7/G#6 are extensions; the expected vi is Bbm not D#m."
+  },
+  {
+   "title": "Stand By Me",
+   "verifiedKey": "A",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "A",
+    "F#m",
+    "D",
+    "E"
+   ],
+   "capo": null,
+   "bpm": 118,
+   "notes": "Classic I-vi-IV-V. Amaj7/Eadd9 are decoration, not real chords."
+  },
+  {
+   "title": "Tears in Heaven",
+   "verifiedKey": "A (bridge modulates to G)",
+   "ourKeyCorrect": true,
+   "keyConfidence": "high",
+   "mainChords": [
+    "A",
+    "E/G#",
+    "F#m7",
+    "D/F#",
+    "E7sus4",
+    "E7"
+   ],
+   "capo": null,
+   "bpm": 77,
+   "notes": "Bridge MODULATES to G major - structural detail worth publishing. Our F#m7/D/Dadd9 line up with real voicings."
+  },
+  {
+   "title": "The A Team",
+   "verifiedKey": "A",
+   "keyConfidence": "high",
+   "ourKeyCorrect": true,
+   "mainChords": [
+    "A",
+    "E/G#",
+    "F#m",
+    "D",
+    "Dadd9",
+    "Bm7"
+   ],
+   "capo": {
+    "fret": 2,
+    "shapes": [
+     "G",
+     "D/F#",
+     "Em",
+     "C",
+     "Cadd9",
+     "Am7"
+    ]
+   },
+   "bpm": 85,
+   "sources": [
+    "https://songbpm.com/@ed-sheeran/the-a-team",
+    "https://www.musicnotes.com/sheetmusic/ed-sheeran/the-a-team/MN0095832"
+   ],
+   "notes": "Capo 2 with G-family shapes. Our A6 is enharmonically F#m7."
+  },
+  {
+   "title": "Thinking Out Loud",
+   "verifiedKey": "D",
+   "keyConfidence": "high",
+   "ourKeyCorrect": true,
+   "mainChords": [
+    "D",
+    "D/F#",
+    "G",
+    "A",
+    "A7",
+    "Em",
+    "Bm"
+   ],
+   "capo": null,
+   "bpm": 79,
+   "sources": [
+    "https://songbpm.com/@ed-sheeran/thinking-out-loud",
+    "https://en.wikipedia.org/wiki/Thinking_Out_Loud"
+   ],
+   "notes": "No capo, open D shapes. Our Gmaj7 likely a mislabelled G."
+  },
+  {
+   "title": "Wagon Wheel",
+   "verifiedKey": "A",
+   "keyConfidence": "high",
+   "ourKeyCorrect": true,
+   "mainChords": [
+    "A",
+    "E",
+    "F#m",
+    "D"
+   ],
+   "capo": {
+    "fret": 2,
+    "shapes": [
+     "G",
+     "D",
+     "Em",
+     "C"
+    ]
+   },
+   "bpm": 148,
+   "sources": [
+    "https://songbpm.com/@darius-rucker/wagon-wheel",
+    "https://guitarmammoth.com/wagon-wheel-chords/"
+   ],
+   "notes": "Chord sites say key of G = SHAPE key with capo 2, not sounding key. F#m7/Dmaj7 are extension mislabels."
+  },
+  {
+   "title": "Wish You Were Here",
+   "verifiedKey": "G",
+   "keyConfidence": "high",
+   "ourKeyCorrect": true,
+   "mainChords": [
+    "Em7",
+    "G",
+    "A7sus4",
+    "C",
+    "D",
+    "Am"
+   ],
+   "capo": null,
+   "bpm": 61,
+   "sources": [
+    "https://songbpm.com/@pink-floyd/wish-you-were-here",
+    "https://www.musicnotes.com/sheetmusic/pink-floyd/wish-you-were-here/MN0044717"
+   ],
+   "notes": "Our 'A' is the A7sus4. Detection essentially correct."
+  },
+  {
+   "title": "Wonderwall",
+   "verifiedKey": "F#m",
+   "keyConfidence": "high",
+   "ourKeyCorrect": false,
+   "mainChords": [
+    "F#m7",
+    "A",
+    "Esus4",
+    "B7sus4",
+    "Dadd9",
+    "D",
+    "E"
+   ],
+   "capo": {
+    "fret": 2,
+    "shapes": [
+     "Em7",
+     "G",
+     "Dsus4",
+     "A7sus4",
+     "Cadd9",
+     "C",
+     "D"
+    ]
+   },
+   "bpm": 87,
+   "sources": [
+    "https://www.musicnotes.com/sheetmusic/mtd.asp?ppn=MN0053372",
+    "https://www.hooktheory.com/theorytab/view/oasis/wonderwall"
+   ],
+   "notes": "KEY WRONG in our detection: tonic is F#m, we said D major. Pitch material was right; tonal-centre assignment failed. Bm7 not in song."
+  },
+  {
+   "title": "Your Song",
+   "verifiedKey": "Eb",
+   "keyConfidence": "high",
+   "ourKeyCorrect": true,
+   "mainChords": [
+    "Eb",
+    "Ab",
+    "Bb",
+    "Cm",
+    "Fm",
+    "Gm",
+    "Bb/D",
+    "Abmaj7"
+   ],
+   "capo": {
+    "fret": 1,
+    "shapes": [
+     "D",
+     "G",
+     "A",
+     "Bm",
+     "Em",
+     "F#m"
+    ]
+   },
+   "bpm": 64,
+   "sources": [
+    "https://songbpm.com/@elton-john/your-song",
+    "https://musicstax.com/track/your-song/747fyAuUDG3feXRd6pILnx"
+   ],
+   "notes": "Same key as our D#, but sources spell it Eb. Piano song; guitarists capo 1 with D shapes."
+  }
+ ]
+}

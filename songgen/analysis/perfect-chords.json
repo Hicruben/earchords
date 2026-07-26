@@ -4,7 +4,7 @@
     "artist": "Ed Sheeran",
     "slug": "perfect-chords",
     "youtubeId": "817P8W8-mGE",
-    "key": "G#"
+    "key": "Ab"
   },
   "analysis": {
     "source": "youtube:817P8W8-mGE",
@@ -612,5 +612,27 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "Ab",
+    "confidence": "high",
+    "mainChords": [
+      "Ab",
+      "Fm",
+      "Db",
+      "Eb"
+    ],
+    "capo": {
+      "fret": 1,
+      "shapes": [
+        "G",
+        "Em",
+        "C",
+        "D"
+      ]
+    },
+    "bpm": 95,
+    "notes": "Ab = our G#. Official Musicnotes score in Ab.",
+    "detectedKeyWasCorrect": true
   }
 }

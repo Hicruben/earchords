@@ -4,7 +4,7 @@
     "artist": "Coldplay",
     "slug": "clocks-chords",
     "youtubeId": "3A3hgfstCxE",
-    "key": "A#m"
+    "key": "Eb"
   },
   "analysis": {
     "source": "youtube:3A3hgfstCxE",
@@ -697,5 +697,18 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "Eb Mixolydian (sources split: Fm / Bbm)",
+    "confidence": "medium",
+    "mainChords": [
+      "Eb",
+      "Bbm",
+      "Fm"
+    ],
+    "capo": null,
+    "bpm": 131,
+    "notes": "All sources agree chord set Eb-Bbm-Fm. Wikipedia: Eb Mixolydian. Our A#m(Bbm) is the middle chord, minority reading of tonic.",
+    "detectedKeyWasCorrect": false
   }
 }

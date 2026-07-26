@@ -557,5 +557,19 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "A",
+    "confidence": "high",
+    "mainChords": [
+      "A",
+      "E",
+      "F#m",
+      "D"
+    ],
+    "capo": null,
+    "bpm": 72,
+    "notes": "Solo piano, Musicnotes official edition in A. Our Aadd9/Dadd9/F#m7 are CONSISTENT with the open-5th voicings, not errors.",
+    "detectedKeyWasCorrect": true
   }
 }

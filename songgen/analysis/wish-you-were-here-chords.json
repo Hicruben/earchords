@@ -467,5 +467,21 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "G",
+    "confidence": "high",
+    "mainChords": [
+      "Em7",
+      "G",
+      "A7sus4",
+      "C",
+      "D",
+      "Am"
+    ],
+    "capo": null,
+    "bpm": 61,
+    "notes": "Our 'A' is the A7sus4. Detection essentially correct.",
+    "detectedKeyWasCorrect": true
   }
 }

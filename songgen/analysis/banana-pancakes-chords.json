@@ -467,5 +467,21 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "G",
+    "confidence": "high",
+    "mainChords": [
+      "Am7",
+      "G7",
+      "C7",
+      "D7",
+      "Bm7",
+      "Em7"
+    ],
+    "capo": null,
+    "bpm": 114,
+    "notes": "MISSED: song's character is dominant-7 voicings (G7 C7 D7) and centres on Am7, not plain G triads.",
+    "detectedKeyWasCorrect": true
   }
 }

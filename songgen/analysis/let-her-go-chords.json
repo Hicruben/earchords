@@ -727,5 +727,27 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "G",
+    "confidence": "high",
+    "mainChords": [
+      "Em",
+      "C",
+      "G",
+      "D"
+    ],
+    "capo": {
+      "fret": 7,
+      "shapes": [
+        "Am",
+        "F",
+        "C",
+        "G"
+      ]
+    },
+    "bpm": 75,
+    "notes": "Exact match. Capo 7 with C-position shapes.",
+    "detectedKeyWasCorrect": true
   }
 }

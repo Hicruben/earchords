@@ -767,5 +767,22 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "D",
+    "confidence": "high",
+    "mainChords": [
+      "D",
+      "D/F#",
+      "G",
+      "A",
+      "A7",
+      "Em",
+      "Bm"
+    ],
+    "capo": null,
+    "bpm": 79,
+    "notes": "No capo, open D shapes. Our Gmaj7 likely a mislabelled G.",
+    "detectedKeyWasCorrect": true
   }
 }

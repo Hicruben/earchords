@@ -702,5 +702,21 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "A (bridge modulates to G)",
+    "confidence": "high",
+    "mainChords": [
+      "A",
+      "E/G#",
+      "F#m7",
+      "D/F#",
+      "E7sus4",
+      "E7"
+    ],
+    "capo": null,
+    "bpm": 77,
+    "notes": "Bridge MODULATES to G major - structural detail worth publishing. Our F#m7/D/Dadd9 line up with real voicings.",
+    "detectedKeyWasCorrect": true
   }
 }

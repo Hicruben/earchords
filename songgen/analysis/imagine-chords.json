@@ -457,5 +457,23 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "C",
+    "confidence": "high",
+    "mainChords": [
+      "C",
+      "Cmaj7",
+      "F",
+      "Am",
+      "Dm",
+      "G",
+      "G7",
+      "E7"
+    ],
+    "capo": null,
+    "bpm": 76,
+    "notes": "Our Asus2/Csus2 are artifacts of Cmaj7 sustains; Am and E7 were missed.",
+    "detectedKeyWasCorrect": true
   }
 }

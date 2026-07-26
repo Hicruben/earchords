@@ -4,7 +4,7 @@
     "artist": "Goo Goo Dolls",
     "slug": "iris-chords",
     "youtubeId": "v9-mAjytBBM",
-    "key": "D"
+    "key": "Bm"
   },
   "analysis": {
     "source": "youtube:v9-mAjytBBM",
@@ -1142,5 +1142,20 @@
         "label": null
       }
     ]
+  },
+  "verified": {
+    "key": "Bm (rel. D)",
+    "confidence": "high",
+    "mainChords": [
+      "Bm",
+      "A",
+      "G",
+      "D",
+      "Em"
+    ],
+    "capo": null,
+    "bpm": 156,
+    "notes": "Tonic is Bm; we said D (relative major). BDDDDD tuning - five ringing D drones is WHY we over-report D and invent maj7 chords. Bmaj7/G#maj7 wrong.",
+    "detectedKeyWasCorrect": false
   }
 }

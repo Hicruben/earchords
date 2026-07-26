@@ -237,6 +237,8 @@ h2{font-family:var(--font-disp);font-weight:700;letter-spacing:.01em;font-size:1
 .t-play{flex:none;width:46px;height:46px;border-radius:50%;border:0;background:var(--accent);color:var(--ink2);cursor:pointer;display:grid;place-items:center;box-shadow:0 6px 20px -6px rgba(201,242,77,.6)}
 .t-play svg{width:22px;height:22px;fill:currentColor}
 .t-play .i-pause{display:none}.t-play.is-playing .i-play{display:none}.t-play.is-playing .i-pause{display:block}
+.t-play.is-loading{animation:ec-pulse 1s ease-in-out infinite}
+@keyframes ec-pulse{0%,100%{opacity:1}50%{opacity:.45}}
 .t-time{font-family:var(--font-mono);font-size:.78rem;color:var(--dim);flex:none;min-width:34px;text-align:center}
 .t-prog{flex:1;height:8px;background:var(--panel2);border-radius:999px;cursor:pointer;overflow:hidden;min-width:80px}
 .t-prog-fill{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-strong));border-radius:999px}

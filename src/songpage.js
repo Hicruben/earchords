@@ -53,6 +53,9 @@ function boot() {
     videoBlocked: false,  // 嵌入被挡后置真,降级到内部时钟 + 合成器
     autoFallback: false,  // 兜底是自动触发的(区别于用户手动开跟弹)
     userChords: false,    // 用户手动开过跟弹和弦
+    waitingVideo: false,  // 已点播放、正等原声视频起播(此时不推进时间轴)
+    pendingPlay: false,   // 在 YT API 就绪前点了播放,待 onReady 补起播
+    loading: false,
   };
 
   // ---- 渲染和弦网格 ----
@@ -120,6 +123,7 @@ function boot() {
   let clockBase = performance.now(); // 内部时钟基准(perf 毫秒)
   let clockT = 0;                    // clockBase 时刻对应的播放秒数
   let curSpeed = 1;
+  let waitTimer = null;
   const DEFAULT_NOTE = 'Video is the audio source · chords sync to playback';
 
   const videoLive = () =>
@@ -204,25 +208,53 @@ function boot() {
     rafId = requestAnimationFrame(tick);
   }
 
+  function setLoading(on) {
+    state.loading = on;
+    playBtn.classList.toggle('is-loading', on);
+    const note = $('#ec-video-note');
+    if (note && !state.videoBlocked) note.textContent = on ? 'Loading original audio…' : DEFAULT_NOTE;
+  }
+
+  // 开始推进时间轴(视频起播后 或 兜底模式);此前 grid 停在 state.t 不抢跑
+  function beginTick() {
+    state.waitingVideo = false;
+    clearTimeout(waitTimer);
+    setLoading(false);
+    cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(tick);
+  }
+
   function play() {
     if (state.playing) return;
     state.playing = true;
     playBtn.classList.add('is-playing');
     player.ensure();
-    setClock(state.t);
-    if (ytReady && !state.videoBlocked) {
-      try { yt.playVideo(); } catch { /* noop */ }
+    if (!state.videoBlocked) {
+      // 原声视频当音源:进入等待态,先不推进时间轴,等它真正起播再走
+      // (否则视频还在 loading,和弦已抢跑,等视频起播又跳回从头)
+      state.waitingVideo = true;
+      setLoading(true);
+      if (ytReady) { try { yt.playVideo(); } catch { /* noop */ } }
+      else { state.pendingPlay = true; } // YT API 还没就绪,onReady 里再起播
+      // 兜底防卡:10s 仍没起播(视频真被挡 / YT API 被拦)就切内部时钟
+      clearTimeout(waitTimer);
+      waitTimer = setTimeout(() => { if (state.playing && state.waitingVideo) markVideoBlocked(); }, 10000);
+    } else {
+      // 已知不可嵌:内部时钟自走
+      setClock(state.t);
+      beginTick();
     }
-    cancelAnimationFrame(rafId);
-    rafId = requestAnimationFrame(tick);
   }
 
   function pause() {
     if (!state.playing) return;
-    state.t = clockNow();
+    if (!state.waitingVideo) { state.t = clockNow(); setClock(state.t); }
     state.playing = false;
+    state.waitingVideo = false;
+    state.pendingPlay = false;
+    clearTimeout(waitTimer);
+    setLoading(false);
     playBtn.classList.remove('is-playing');
-    setClock(state.t);
     if (ytReady) { try { yt.pauseVideo(); } catch { /* noop */ } }
     cancelAnimationFrame(rafId);
     player.silence();
@@ -251,6 +283,8 @@ function boot() {
     }
     document.querySelector('.video-frame')?.classList.add('is-blocked');
     if (!state.playChords) setChords(true); // 没原声时至少让和弦轨发声(非用户手动)
+    // 若正在等视频起播却被判定不可嵌,立刻切到内部时钟自走
+    if (state.playing && state.waitingVideo) { setClock(state.t); beginTick(); }
   }
 
   // 视频最终成功起播:撤销自动兜底(除非用户手动开了跟弹)
@@ -270,9 +304,21 @@ function boot() {
       videoId: data.youtubeId,
       playerVars: { rel: 0, modestbranding: 1, playsinline: 1, origin: location.origin },
       events: {
-        onReady: () => { ytReady = true; },
+        onReady: () => {
+          ytReady = true;
+          // 用户在 API 就绪前就点了播放:现在补起播
+          if (state.pendingPlay && state.playing && !state.videoBlocked) {
+            state.pendingPlay = false;
+            try { yt.playVideo(); } catch { /* noop */ }
+          }
+        },
         onStateChange: (e) => {
-          if (e.data === YT.PlayerState.PLAYING) { setClock(yt.getCurrentTime()); restoreVideo(); }
+          if (e.data === YT.PlayerState.PLAYING) {
+            // 视频真正起播:以视频时间为准开始推进(避免抢跑/跳回)
+            restoreVideo();
+            setClock(yt.getCurrentTime());
+            if (state.playing) beginTick();
+          }
         },
         onError: () => { markVideoBlocked(); }, // 150/101 嵌入禁用、100 不存在等一律降级
       },

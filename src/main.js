@@ -6,6 +6,7 @@ import { spellRoot } from './music.js';
 import { ChordPlayer, voicingFor } from './chordplayer.js';
 import { drawWaveform, Visualizer } from './visuals.js';
 import { initAmbientMotion, setProcessingProgress } from './ambient.js';
+import './home-showcase.js';
 
 initAmbientMotion();
 

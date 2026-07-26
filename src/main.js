@@ -173,15 +173,21 @@ const recordClose = document.getElementById('record-close');
 const recordStop = document.getElementById('record-stop');
 const recordTime = document.getElementById('record-time');
 const recordSub = document.getElementById('record-sub');
+const recordTitle = document.getElementById('record-title');
 const recordMeter = document.getElementById('record-meter');
 const recordChoose = document.getElementById('record-choose');
 const recordLive = document.getElementById('record-live');
 const recordHint = document.getElementById('record-hint');
 const captureTab = document.getElementById('capture-tab');
 const captureMic = document.getElementById('capture-mic');
+const recordBack = document.getElementById('record-back');
+const recordError = document.getElementById('record-error');
+const recordSource = document.getElementById('record-source');
+const captureCtaLabel = document.getElementById('capture-cta-label');
 const rec = {
   recorder: null, chunks: [], stream: null, ctx: null, analyser: null,
   raf: null, timer: null, startedAt: 0, analyze: false, data: null,
+  source: null, returnToChoose: false,
 };
 
 function pickRecMime() {
@@ -242,10 +248,17 @@ function drawMeter() {
     if (level > 0.06) heardOnce = true;
     if (level < 0.02) quietMs += dt; else quietMs = 0;
     if (recordOverlay.classList.contains('is-recording')) {
-      recordSub.textContent = quietMs > 1400
-        ? (heardOnce ? 'Paused? Play the song again — turn it up or move the mic closer.'
-                     : 'Too quiet — turn the volume up or move the mic closer to the sound.')
-        : 'Hearing the sound 🎵 — keep it playing.';
+      if (rec.source === 'tab') {
+        recordSub.textContent = quietMs > 1400
+          ? (heardOnce ? 'No signal right now — keep the selected tab playing.'
+                       : 'No tab audio yet — make sure “Share tab audio” is enabled.')
+          : 'Audio signal received — keep the song playing.';
+      } else {
+        recordSub.textContent = quietMs > 1400
+          ? (heardOnce ? 'The room went quiet — start the song again.'
+                       : 'Too quiet — turn it up or move closer to the sound.')
+          : 'Audio signal received — keep the song playing.';
+      }
     }
     rec.raf = requestAnimationFrame(frame);
   };
@@ -263,13 +276,29 @@ function captureCaps() {
   };
 }
 
+function updateCaptureEntry() {
+  const { canDisplay } = captureCaps();
+  if (captureCtaLabel) {
+    captureCtaLabel.textContent = canDisplay ? 'Capture playing audio' : 'Listen with microphone';
+  }
+}
+
+function setRecordError(message = '') {
+  recordError.hidden = !message;
+  recordError.textContent = message;
+}
+
 // 打开录音面板:先让用户选来源。按系统只显示"真能抓到"的选项 + 对应文案。
 function openRecorder() {
   recordOverlay.hidden = false;
   recordOverlay.classList.remove('is-recording');
+  recordOverlay.dataset.step = 'choose';
+  recordTitle.textContent = 'How is the song playing?';
   recordChoose.hidden = false;
   recordLive.hidden = true;
-  recordStop.textContent = 'Stop & get chords';
+  recordStop.textContent = 'Waiting for audio…';
+  recordStop.disabled = true;
+  setRecordError();
   const { canDisplay, isMac } = captureCaps();
   captureTab.hidden = !canDisplay; // 手机等抓不了 -> 直接不显示,只留麦克风
   if (canDisplay) {
@@ -277,37 +306,52 @@ function openRecorder() {
     const desc = captureTab.querySelector('.capture-txt small');
     if (isMac) {
       // macOS:只能抓浏览器标签页,说清楚,免得用户以为能抓桌面 App
-      title.textContent = 'Capture a browser tab playing the song';
-      desc.textContent = 'Best quality — play it in a tab (YouTube, Spotify web…). Desktop apps can’t be captured on macOS.';
+      title.textContent = 'Capture a browser tab';
+      desc.textContent = 'Choose the tab playing the song and keep “Share tab audio” enabled. Desktop apps can’t be captured on macOS.';
     } else {
-      title.textContent = 'Capture a song playing on this computer';
-      desc.textContent = 'Best quality — grab audio from a tab, or your whole screen’s sound.';
+      title.textContent = 'Capture browser or system audio';
+      desc.textContent = 'Choose a browser tab, or share your screen with audio when the browser supports it.';
     }
   }
+  requestAnimationFrame(() => (canDisplay ? captureTab : captureMic).focus());
 }
 
-function backToChoose() {
+function backToChoose(message = '') {
   cleanupMic();
+  recordOverlay.hidden = false;
+  recordOverlay.dataset.step = 'choose';
+  recordTitle.textContent = 'How is the song playing?';
   recordLive.hidden = true;
   recordChoose.hidden = false;
+  setRecordError(message);
+  const { canDisplay } = captureCaps();
+  requestAnimationFrame(() => (canDisplay ? captureTab : captureMic).focus());
 }
 
 // 采集音频并开始录制。source='tab' 抓标签页/系统音频(数字直取,音质=原文件);
 // source='mic' 用麦克风(手机凑音箱的兜底,音质有损)。
 async function startCapture(source) {
+  setRecordError();
   recordChoose.hidden = true;
   recordLive.hidden = false;
+  recordOverlay.dataset.step = 'capture';
+  recordOverlay.dataset.source = source;
+  recordTitle.textContent = 'Capture the clearest part.';
   recordStop.disabled = true;
+  recordStop.textContent = 'Waiting for audio…';
   recordTime.textContent = '0:00';
   rec.chunks = [];
   rec.peak = 0; // 记录整段最大电平,用于停止时判断是否真的收到了声音
+  rec.source = source;
+  rec.returnToChoose = false;
+  recordSource.textContent = source === 'tab' ? 'Browser tab' : 'Microphone';
   const caps = captureCaps();
-  recordSub.textContent = source === 'tab' ? 'Choose what’s playing the song…' : 'Requesting microphone…';
+  recordSub.textContent = source === 'tab' ? 'Choose the tab that is playing the song…' : 'Requesting microphone access…';
   recordHint.textContent = source === 'tab'
     ? (caps.isMac
-        ? 'Pick the tab playing the song and turn on “Share tab audio”. 15–30s is plenty — nothing is uploaded.'
-        : 'Pick the tab (turn on “Share tab audio”), or choose “Entire screen” to grab your system sound. 15–30s is plenty — nothing is uploaded.')
-    : 'Point your mic at a speaker playing the song, volume up. 15–30s is plenty — mic audio is rougher than a direct capture.';
+        ? 'In the browser picker, choose the music tab and keep “Share tab audio” on. Capture 15–30 seconds with a few chord changes.'
+        : 'Choose the music tab with audio enabled, or share the entire screen when system audio is available. Capture 15–30 seconds.')
+    : 'Play the song through a nearby speaker. Keep the room quiet and capture 15–30 seconds with a few chord changes.';
   try {
     if (source === 'tab') {
       const display = await navigator.mediaDevices.getDisplayMedia({ video: true, audio: true });
@@ -315,8 +359,7 @@ async function startCapture(source) {
       display.getVideoTracks().forEach((t) => t.stop()); // 视频用不上,只留音频
       if (!audioTracks.length) {
         display.getTracks().forEach((t) => t.stop());
-        announce('No audio was shared — pick a tab and turn on “Share tab audio”.');
-        backToChoose();
+        backToChoose('No audio was shared. Choose a browser tab and keep “Share tab audio” enabled.');
         return;
       }
       rec.stream = new MediaStream(audioTracks);
@@ -331,8 +374,9 @@ async function startCapture(source) {
       });
     }
   } catch (e) {
-    announce(source === 'tab' ? 'Audio capture was canceled or blocked.' : 'Microphone permission denied.');
-    backToChoose();
+    backToChoose(source === 'tab'
+      ? 'Capture was canceled. Choose a source when you’re ready to try again.'
+      : 'Microphone access was blocked. Allow access in your browser settings, or upload a file instead.');
     return;
   }
   const AC = window.AudioContext || window.webkitAudioContext;
@@ -348,8 +392,7 @@ async function startCapture(source) {
 
   const mime = pickRecMime();
   if (mime === null) {
-    recordSub.textContent = 'Recording is not supported in this browser. Please upload a file instead.';
-    cleanupMic();
+    backToChoose('This browser can’t record audio. Upload a file instead.');
     return;
   }
   rec.recorder = new MediaRecorder(rec.stream, mime ? { mimeType: mime } : undefined);
@@ -357,13 +400,19 @@ async function startCapture(source) {
   rec.recorder.onstop = onRecorderStop;
   rec.recorder.start();
   rec.startedAt = performance.now();
-  recordSub.textContent = source === 'tab' ? 'Capturing — let the song play.' : 'Listening… play the song now.';
-  recordStop.disabled = false;
+  recordSub.textContent = source === 'tab' ? 'Capturing a clean digital signal.' : 'Listening through your microphone.';
+  recordStop.textContent = 'Keep playing · 4s';
   recordOverlay.classList.add('is-recording');
   rec.timer = setInterval(() => {
     const s = Math.floor((performance.now() - rec.startedAt) / 1000);
     recordTime.textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
-    if (s >= 4) recordStop.textContent = 'Stop & get chords';
+    if (s < 4) {
+      recordStop.disabled = true;
+      recordStop.textContent = `Keep playing · ${4 - s}s`;
+    } else {
+      recordStop.disabled = false;
+      recordStop.textContent = 'Use this clip';
+    }
   }, 250);
 }
 
@@ -379,31 +428,50 @@ function cleanupMic() {
 function onRecorderStop() {
   const type = (rec.recorder && rec.recorder.mimeType) || 'audio/webm';
   const analyze = rec.analyze;
+  const returnToChoose = rec.returnToChoose;
   const elapsed = (performance.now() - rec.startedAt) / 1000;
   const peak = rec.peak || 0;
   cleanupMic();
-  recordOverlay.hidden = true;
-  if (!analyze) return;
+  if (returnToChoose) {
+    rec.returnToChoose = false;
+    backToChoose();
+    return;
+  }
+  if (!analyze) {
+    recordOverlay.hidden = true;
+    micBtn.focus();
+    return;
+  }
   if (elapsed < 4 || !rec.chunks.length) {
-    announce('That clip was too short — try recording at least 5 seconds.');
+    backToChoose('That clip was too short. Capture at least five seconds so there is enough harmony to analyze.');
     return;
   }
   // 整段几乎没收到声音:别浪费时间去解析静音(会出一堆垃圾和弦),直接提示重录
   if (peak < 0.03) {
-    announce('We barely heard anything — turn the volume up or move the mic closer, then record again.');
+    backToChoose(rec.source === 'tab'
+      ? 'No usable tab audio was captured. Try again and keep “Share tab audio” enabled.'
+      : 'The clip was too quiet. Turn the song up or move closer, then try again.');
     return;
   }
+  recordOverlay.hidden = true;
   const ext = type.includes('mp4') ? 'm4a' : type.includes('ogg') ? 'ogg' : 'webm';
   const blob = new Blob(rec.chunks, { type });
   handleFile(new File([blob], `Live recording.${ext}`, { type }));
 }
 
-function stopRecorder(analyze) {
+function stopRecorder(analyze, returnToChoose = false) {
   rec.analyze = analyze;
+  rec.returnToChoose = returnToChoose;
+  if (analyze) {
+    recordStop.disabled = true;
+    recordStop.textContent = 'Preparing clip…';
+  }
   if (rec.recorder && rec.recorder.state !== 'inactive') rec.recorder.stop();
-  else { cleanupMic(); recordOverlay.hidden = true; }
+  else if (returnToChoose) backToChoose();
+  else { cleanupMic(); recordOverlay.hidden = true; micBtn.focus(); }
 }
 
+updateCaptureEntry();
 micBtn.addEventListener('click', () => {
   const md = navigator.mediaDevices;
   if (!md || (!md.getUserMedia && !md.getDisplayMedia)) {
@@ -415,10 +483,27 @@ micBtn.addEventListener('click', () => {
 captureTab.addEventListener('click', () => startCapture('tab'));
 captureMic.addEventListener('click', () => startCapture('mic'));
 recordStop.addEventListener('click', () => stopRecorder(true));
+recordBack.addEventListener('click', () => stopRecorder(false, true));
 recordClose.addEventListener('click', () => stopRecorder(false));
-recordOverlay.addEventListener('click', (e) => { if (e.target === recordOverlay) stopRecorder(false); });
+recordOverlay.addEventListener('click', (e) => {
+  if (e.target === recordOverlay && !recordOverlay.classList.contains('is-recording')) stopRecorder(false);
+});
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && !recordOverlay.hidden) stopRecorder(false);
+  if (e.key === 'Tab' && !recordOverlay.hidden) {
+    const focusable = [...recordOverlay.querySelectorAll('button:not([hidden]):not(:disabled), [tabindex="0"]:not([hidden])')]
+      .filter((element) => element.getClientRects().length);
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
 });
 
 const procTitle = document.getElementById('proc-title');

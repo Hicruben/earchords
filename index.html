@@ -43,6 +43,9 @@
         <span class="brand-name">EarChords</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
+        <a href="/chord-identifier" class="nav-landing">Chord identifier</a>
+        <a href="/piano-chord-finder" class="nav-landing">Piano chords</a>
+        <a href="#songs" class="nav-landing">Song index</a>
         <button id="header-new" class="nav-player" type="button" title="Analyze another song">＋ New song</button>
         <button id="theme-toggle" class="ghost-btn" title="Toggle theme" aria-label="Toggle theme">
           <span class="theme-icon" aria-hidden="true">
@@ -62,62 +65,106 @@
           <div class="hero-art" id="hero-art" aria-hidden="true">
             <canvas id="hero-canvas"></canvas>
           </div>
-          <div class="hero-copy">
-            <h1 class="hero-title">Get the chords<br />from <em>any song.</em></h1>
-            <p class="hero-sub">
-              Upload a track or play it near your mic — every chord mapped in seconds, right on your device.
-            </p>
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="hero-kicker"><i aria-hidden="true"></i> Private harmony engine</p>
+              <h1 class="hero-title">Get the chords<br />from <em>any song.</em></h1>
+              <p class="hero-sub">
+                Upload a track, capture audio from another browser tab, or listen through your mic — every chord mapped right on your device.
+              </p>
 
-            <div class="hero-cta">
-              <button id="mic-btn" class="cta cta-mic" type="button" aria-describedby="hero-formats">
-                <canvas id="drop-canvas" aria-hidden="true"></canvas>
-                <span class="cta-ic" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4"/></svg>
-                </span>
-                <span>Play near your mic</span>
-              </button>
-              <label id="drop-zone" class="cta cta-upload" tabindex="0" aria-describedby="hero-formats">
-                <input id="file-input" type="file" accept="audio/*" hidden />
-                <span class="cta-ic" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M5 15v3.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V15" /></svg>
-                </span>
-                <span>Upload a file</span>
-              </label>
+              <div class="hero-cta">
+                <button id="mic-btn" class="cta cta-mic" type="button" aria-describedby="hero-formats">
+                  <canvas id="drop-canvas" aria-hidden="true"></canvas>
+                  <span class="cta-ic" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 12h2l1.3-3 2.2 6 1.8-4 1.2 2H18"/></svg>
+                  </span>
+                  <span id="capture-cta-label">Capture playing audio</span>
+                </button>
+                <label id="drop-zone" class="cta cta-upload" tabindex="0" aria-describedby="hero-formats">
+                  <input id="file-input" type="file" accept="audio/*" hidden />
+                  <span class="cta-ic" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M5 15v3.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V15" /></svg>
+                  </span>
+                  <span>Upload a file</span>
+                </label>
+              </div>
+              <button id="demo-btn" class="cta-demo">Try the demo <span>→</span></button>
+              <p class="hero-formats" id="hero-formats">Free · no signup · MP3 · WAV · M4A · FLAC · OGG · audio never leaves your device</p>
             </div>
-            <button id="demo-btn" class="cta-demo">Try the demo <span>→</span></button>
-            <p class="hero-formats" id="hero-formats">Free · no signup · MP3 · WAV · M4A · FLAC · OGG · audio never leaves your device</p>
+
+            <div class="hero-visual" aria-hidden="true">
+              <div class="pcard">
+                <div class="pcard-top">
+                  <span class="pcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+                  <span class="pcard-file">sunset-drive.mp3</span>
+                  <span class="pcard-meta">Am · 96 BPM</span>
+                </div>
+                <div class="pcard-body">
+                  <div class="pcard-grid">
+                    <span class="pc-cell"><i>1</i><b>Am</b></span>
+                    <span class="pc-cell"><i>2</i><b>Am</b></span>
+                    <span class="pc-cell"><i>3</i><b>F</b></span>
+                    <span class="pc-cell"><i>4</i><b>F</b></span>
+                    <span class="pc-cell"><i>5</i><b>C</b></span>
+                    <span class="pc-cell is-active"><i>6</i><b>C</b></span>
+                    <span class="pc-cell"><i>7</i><b>G</b></span>
+                    <span class="pc-cell"><i>8</i><b>G</b></span>
+                    <span class="pc-cell"><i>9</i><b>Am</b></span>
+                    <span class="pc-cell"><i>10</i><b>Am</b></span>
+                    <span class="pc-cell"><i>11</i><b>F</b></span>
+                    <span class="pc-cell"><i>12</i><b>F</b></span>
+                  </div>
+                  <div class="pcard-side">
+                    <span class="pc-inst">Guitar</span>
+                    <svg class="pc-diagram" viewBox="0 0 120 140" aria-hidden="true">
+                      <g stroke="var(--fret-line)" stroke-width="1.5">
+                        <line x1="20" y1="24" x2="100" y2="24"/>
+                        <line x1="20" y1="52" x2="100" y2="52"/>
+                        <line x1="20" y1="80" x2="100" y2="80"/>
+                        <line x1="20" y1="108" x2="100" y2="108"/>
+                        <line x1="20" y1="24" x2="20" y2="108"/>
+                        <line x1="36" y1="24" x2="36" y2="108"/>
+                        <line x1="52" y1="24" x2="52" y2="108"/>
+                        <line x1="68" y1="24" x2="68" y2="108"/>
+                        <line x1="84" y1="24" x2="84" y2="108"/>
+                        <line x1="100" y1="24" x2="100" y2="108"/>
+                      </g>
+                      <text x="20" y="16" class="pc-mute">×</text>
+                      <circle cx="52" cy="14" r="3" class="pc-open"/>
+                      <circle cx="100" cy="14" r="3" class="pc-open"/>
+                      <circle cx="36" cy="66" r="6" class="pc-dot"/>
+                      <circle cx="52" cy="38" r="6" class="pc-dot"/>
+                      <circle cx="84" cy="38" r="6" class="pc-dot"/>
+                    </svg>
+                    <span class="pc-frets">x 3 2 0 1 0</span>
+                  </div>
+                </div>
+                <div class="pcard-bar"><i></i></div>
+                <div class="pcard-time"><span>0:04</span><span>1:20</span></div>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Supporting content (SEO + explains the tool) -->
         <div class="landing-content">
-          <section class="showcase reveal" aria-label="What you get">
-            <div class="section-heading showcase-head">
+          <section class="follow reveal" aria-label="What you get">
+            <div class="section-heading">
               <h2 class="section-title">Not just chords —<br />a player you follow<span>.</span></h2>
               <p>Every song becomes a living sheet: chords light up in time, click any bar to jump, transpose, capo, slow it down, and see the shape on guitar, piano or ukulele.</p>
             </div>
-            <div class="hs-frame" id="home-showcase" aria-hidden="true">
-              <div class="hs-top">
-                <span class="hs-dot"></span><span class="hs-dot"></span><span class="hs-dot"></span>
-                <span class="hs-song">Your song · chords in real time</span>
-              </div>
-              <div class="hs-body">
-                <div class="hs-grid" id="hs-grid"></div>
-                <aside class="hs-side">
-                  <span class="hs-kicker">Now playing</span>
-                  <span class="hs-now" id="hs-now">C</span>
-                  <div class="hs-diagram" id="hs-diagram"></div>
-                  <div class="hs-tabs"><b class="on">Guitar</b><b>Piano</b><b>Uke</b></div>
-                </aside>
-              </div>
-              <div class="hs-bar"><i class="hs-bar-fill" id="hs-fill"></i></div>
-            </div>
+            <ol class="follow-cards">
+              <li><span class="fc-num">01</span><h3>Bars that keep time</h3><p>The current bar fills as the song plays. Click ahead to jump, shift-click two bars to loop the tricky part.</p></li>
+              <li><span class="fc-num">02</span><h3>Your key, your capo</h3><p>Transpose to a key you can sing, set a capo position, and every diagram redraws to the shape you actually play.</p></li>
+              <li><span class="fc-num">03</span><h3>Slow it down, hear it back</h3><p>Drop to half speed without changing pitch, and play the detected chords over the track to check they fit.</p></li>
+            </ol>
           </section>
 
-          <section class="popular reveal" aria-label="Popular chords">
-            <div class="section-heading">
+          <section class="popular reveal" id="songs" aria-label="Popular chords">
+            <div class="section-heading popular-head">
               <h2 class="section-title">Popular chords<span>.</span></h2>
-              <p>Jump straight to a song — or <a href="/chord-identifier">identify the chords</a> in any track, <a href="/piano-chord-finder">piano included</a>.</p>
+              <p class="popular-meta">38 songs · updated weekly</p>
             </div>
             <div class="popular-links">
               <a href="/all-i-want-chords">All I Want</a>
@@ -161,7 +208,7 @@
             </div>
           </section>
         </div>
-        <footer class="site-footer"><span>EarChords</span><p>Hear it. Map it. Play it.</p><a href="#app">Back to top ↑</a></footer>
+        <footer class="site-footer"><span class="foot-brand">EarChords</span><p class="foot-tag">Hear it · Map it · Play it</p><a href="#app">Back to top ↑</a></footer>
       </section>
 
       <!-- Processing view -->
@@ -274,48 +321,68 @@
     </main>
 
     <!-- Capture / record overlay -->
-    <div id="record-overlay" class="record-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="record-title">
+    <div id="record-overlay" class="record-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="record-title" aria-describedby="record-description">
       <div class="record-card">
         <button class="record-close" id="record-close" type="button" aria-label="Close">✕</button>
-        <span class="record-kicker">Get chords</span>
-        <h2 class="record-title" id="record-title">Capture the song</h2>
+        <header class="record-header">
+          <span class="record-kicker">Live capture</span>
+          <h2 class="record-title" id="record-title">How is the song playing?</h2>
+          <p class="record-description" id="record-description">Choose the cleanest source available. EarChords records only the short clip you capture and keeps it on this device.</p>
+        </header>
+        <div class="record-steps" aria-hidden="true">
+          <span class="active"><i>1</i>Choose source</span>
+          <span><i>2</i>Capture</span>
+          <span><i>3</i>Get chords</span>
+        </div>
 
         <!-- Step 1 — pick a source -->
         <div class="record-choose" id="record-choose">
-          <p class="record-choose-sub">Play the song you want the chords for, then let EarChords capture it. Nothing is uploaded.</p>
           <button class="capture-opt is-primary" id="capture-tab" type="button">
             <span class="capture-ic" aria-hidden="true">
               <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8.5 20h7M12 16v4"/></svg>
             </span>
             <span class="capture-txt">
-              <strong>Capture a song playing on this computer</strong>
-              <small>Best quality — grabs audio straight from a tab (YouTube, Spotify…)</small>
+              <span class="capture-label">Browser tab</span>
+              <strong>Capture audio directly</strong>
+              <small>Use a song playing in YouTube, Spotify Web, or another browser tab.</small>
             </span>
-            <span class="capture-badge">Recommended</span>
+            <span class="capture-badge">Best quality</span>
+            <span class="capture-arrow" aria-hidden="true">↗</span>
           </button>
           <button class="capture-opt" id="capture-mic" type="button">
             <span class="capture-ic" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4"/></svg>
             </span>
             <span class="capture-txt">
-              <strong>Use the microphone</strong>
-              <small>Point a mic at a speaker playing the song — a phone works best</small>
+              <span class="capture-label">Microphone</span>
+              <strong>Listen to the room</strong>
+              <small>Use when the song is playing from a phone, speaker, or instrument nearby.</small>
             </span>
+            <span class="capture-arrow" aria-hidden="true">→</span>
           </button>
+          <p class="record-error" id="record-error" hidden role="alert"></p>
+          <p class="record-privacy"><span aria-hidden="true">●</span> Audio stays in this browser and is discarded when you start over.</p>
         </div>
 
         <!-- Step 2 — live capture -->
         <div class="record-live" id="record-live" hidden>
-          <p class="record-sub" id="record-sub"></p>
+          <div class="record-live-head">
+            <div>
+              <span class="record-source" id="record-source">Browser tab</span>
+              <p class="record-sub" id="record-sub" aria-live="polite"></p>
+            </div>
+            <div class="record-time" id="record-time">0:00</div>
+          </div>
           <div class="record-visual">
             <canvas id="record-meter" aria-hidden="true"></canvas>
-            <span class="record-dot" aria-hidden="true"></span>
+            <span class="record-dot" aria-hidden="true"><i></i></span>
           </div>
-          <div class="record-time" id="record-time">0:00</div>
-          <div class="record-actions">
-            <button id="record-stop" class="record-stop" type="button" disabled>Stop &amp; get chords</button>
-          </div>
+          <div class="record-signal"><span>Input signal</span><i></i><i></i><i></i><i></i><i></i></div>
           <p class="record-hint" id="record-hint"></p>
+          <div class="record-actions">
+            <button id="record-back" class="record-back" type="button">Change source</button>
+            <button id="record-stop" class="record-stop" type="button" disabled>Waiting for audio…</button>
+          </div>
         </div>
       </div>
     </div>

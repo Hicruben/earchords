@@ -1,0 +1,671 @@
+{
+  "meta": {
+    "title": "Let It Be",
+    "artist": "The Beatles",
+    "slug": "let-it-be-chords",
+    "youtubeId": "5AnNkJ_VK9E",
+    "key": "C"
+  },
+  "analysis": {
+    "source": "youtube:5AnNkJ_VK9E",
+    "duration": 243.36839002267573,
+    "key": {
+      "name": "C",
+      "tonic": 0,
+      "mode": "major",
+      "confidence": 0.99
+    },
+    "tempo": {
+      "bpm": 73,
+      "beat": 0.8225648849778655,
+      "confidence": 0.17814971014558725
+    },
+    "segments": [
+      {
+        "start": 0,
+        "end": 2,
+        "label": "C"
+      },
+      {
+        "start": 2,
+        "end": 3.75,
+        "label": "G"
+      },
+      {
+        "start": 3.75,
+        "end": 5.25,
+        "label": "Am"
+      },
+      {
+        "start": 5.25,
+        "end": 7,
+        "label": "F"
+      },
+      {
+        "start": 7,
+        "end": 8.75,
+        "label": "C"
+      },
+      {
+        "start": 8.75,
+        "end": 10.25,
+        "label": "G"
+      },
+      {
+        "start": 10.25,
+        "end": 11.25,
+        "label": "F"
+      },
+      {
+        "start": 11.25,
+        "end": 15.25,
+        "label": "C"
+      },
+      {
+        "start": 15.25,
+        "end": 17,
+        "label": "G"
+      },
+      {
+        "start": 17,
+        "end": 18.25,
+        "label": "Am"
+      },
+      {
+        "start": 18.25,
+        "end": 19.75,
+        "label": "F"
+      },
+      {
+        "start": 19.75,
+        "end": 21.5,
+        "label": "C"
+      },
+      {
+        "start": 21.5,
+        "end": 23,
+        "label": "G"
+      },
+      {
+        "start": 23,
+        "end": 24,
+        "label": "F"
+      },
+      {
+        "start": 24,
+        "end": 27.75,
+        "label": "C"
+      },
+      {
+        "start": 27.75,
+        "end": 29.5,
+        "label": "G"
+      },
+      {
+        "start": 29.5,
+        "end": 31,
+        "label": "Am"
+      },
+      {
+        "start": 31,
+        "end": 32.5,
+        "label": "Dm7"
+      },
+      {
+        "start": 32.5,
+        "end": 34.25,
+        "label": "C"
+      },
+      {
+        "start": 34.25,
+        "end": 35.75,
+        "label": "G"
+      },
+      {
+        "start": 35.75,
+        "end": 36.5,
+        "label": "F"
+      },
+      {
+        "start": 36.5,
+        "end": 39,
+        "label": "C"
+      },
+      {
+        "start": 39,
+        "end": 40.75,
+        "label": "Am"
+      },
+      {
+        "start": 40.75,
+        "end": 42.5,
+        "label": "Am7"
+      },
+      {
+        "start": 42.5,
+        "end": 44,
+        "label": "F"
+      },
+      {
+        "start": 44,
+        "end": 47.5,
+        "label": "C"
+      },
+      {
+        "start": 47.5,
+        "end": 49,
+        "label": "G"
+      },
+      {
+        "start": 49,
+        "end": 49.75,
+        "label": "F"
+      },
+      {
+        "start": 49.75,
+        "end": 54,
+        "label": "C"
+      },
+      {
+        "start": 54,
+        "end": 55.5,
+        "label": "G"
+      },
+      {
+        "start": 55.5,
+        "end": 56.75,
+        "label": "Am"
+      },
+      {
+        "start": 56.75,
+        "end": 59,
+        "label": "Dm7"
+      },
+      {
+        "start": 59,
+        "end": 60.5,
+        "label": "C"
+      },
+      {
+        "start": 60.5,
+        "end": 62,
+        "label": "G"
+      },
+      {
+        "start": 62,
+        "end": 63,
+        "label": "F"
+      },
+      {
+        "start": 63,
+        "end": 63.75,
+        "label": "Cadd9"
+      },
+      {
+        "start": 63.75,
+        "end": 67,
+        "label": "C"
+      },
+      {
+        "start": 67,
+        "end": 68.75,
+        "label": "G"
+      },
+      {
+        "start": 68.75,
+        "end": 70.25,
+        "label": "C6"
+      },
+      {
+        "start": 70.25,
+        "end": 71.75,
+        "label": "F"
+      },
+      {
+        "start": 71.75,
+        "end": 74,
+        "label": "C"
+      },
+      {
+        "start": 74,
+        "end": 75.25,
+        "label": "G"
+      },
+      {
+        "start": 75.25,
+        "end": 76.25,
+        "label": "G7"
+      },
+      {
+        "start": 76.25,
+        "end": 78.75,
+        "label": "C"
+      },
+      {
+        "start": 78.75,
+        "end": 80.25,
+        "label": "Am"
+      },
+      {
+        "start": 80.25,
+        "end": 82.25,
+        "label": "Am7"
+      },
+      {
+        "start": 82.25,
+        "end": 83.75,
+        "label": "F"
+      },
+      {
+        "start": 83.75,
+        "end": 87,
+        "label": "C"
+      },
+      {
+        "start": 87,
+        "end": 88.75,
+        "label": "G"
+      },
+      {
+        "start": 88.75,
+        "end": 89.75,
+        "label": "G7"
+      },
+      {
+        "start": 89.75,
+        "end": 92.25,
+        "label": "C"
+      },
+      {
+        "start": 92.25,
+        "end": 93.75,
+        "label": "Am"
+      },
+      {
+        "start": 93.75,
+        "end": 95.5,
+        "label": "Am7"
+      },
+      {
+        "start": 95.5,
+        "end": 97,
+        "label": "F"
+      },
+      {
+        "start": 97,
+        "end": 100.75,
+        "label": "C"
+      },
+      {
+        "start": 100.75,
+        "end": 102,
+        "label": "G"
+      },
+      {
+        "start": 102,
+        "end": 103,
+        "label": "G7"
+      },
+      {
+        "start": 103,
+        "end": 105.5,
+        "label": "C"
+      },
+      {
+        "start": 105.5,
+        "end": 106.75,
+        "label": "F"
+      },
+      {
+        "start": 106.75,
+        "end": 108.5,
+        "label": "Cadd9"
+      },
+      {
+        "start": 108.5,
+        "end": 110.75,
+        "label": "Fadd9"
+      },
+      {
+        "start": 110.75,
+        "end": 112.5,
+        "label": "C"
+      },
+      {
+        "start": 112.5,
+        "end": 114.25,
+        "label": "F"
+      },
+      {
+        "start": 114.25,
+        "end": 121.25,
+        "label": "C"
+      },
+      {
+        "start": 121.25,
+        "end": 124.5,
+        "label": "Am7"
+      },
+      {
+        "start": 124.5,
+        "end": 126.25,
+        "label": "F"
+      },
+      {
+        "start": 126.25,
+        "end": 128.25,
+        "label": "C"
+      },
+      {
+        "start": 128.25,
+        "end": 129.75,
+        "label": "G"
+      },
+      {
+        "start": 129.75,
+        "end": 130.75,
+        "label": "F"
+      },
+      {
+        "start": 130.75,
+        "end": 131.75,
+        "label": "Cadd9"
+      },
+      {
+        "start": 131.75,
+        "end": 135.25,
+        "label": "C"
+      },
+      {
+        "start": 135.25,
+        "end": 136.75,
+        "label": "G"
+      },
+      {
+        "start": 136.75,
+        "end": 138.5,
+        "label": "Am7"
+      },
+      {
+        "start": 138.5,
+        "end": 140,
+        "label": "F"
+      },
+      {
+        "start": 140,
+        "end": 142,
+        "label": "C"
+      },
+      {
+        "start": 142,
+        "end": 143.5,
+        "label": "G"
+      },
+      {
+        "start": 143.5,
+        "end": 144.75,
+        "label": "G7"
+      },
+      {
+        "start": 144.75,
+        "end": 145.75,
+        "label": "Cadd9"
+      },
+      {
+        "start": 145.75,
+        "end": 147.25,
+        "label": "Cmaj7"
+      },
+      {
+        "start": 147.25,
+        "end": 148.75,
+        "label": "Am"
+      },
+      {
+        "start": 148.75,
+        "end": 150.75,
+        "label": "Am7"
+      },
+      {
+        "start": 150.75,
+        "end": 152.25,
+        "label": "F"
+      },
+      {
+        "start": 152.25,
+        "end": 156.25,
+        "label": "C"
+      },
+      {
+        "start": 156.25,
+        "end": 158,
+        "label": "G"
+      },
+      {
+        "start": 158,
+        "end": 159.5,
+        "label": "Fmaj7"
+      },
+      {
+        "start": 159.5,
+        "end": 163.25,
+        "label": "C"
+      },
+      {
+        "start": 163.25,
+        "end": 164.75,
+        "label": "G"
+      },
+      {
+        "start": 164.75,
+        "end": 166.5,
+        "label": "C6"
+      },
+      {
+        "start": 166.5,
+        "end": 168,
+        "label": "F6"
+      },
+      {
+        "start": 168,
+        "end": 169.75,
+        "label": "C"
+      },
+      {
+        "start": 169.75,
+        "end": 171.75,
+        "label": "G"
+      },
+      {
+        "start": 171.75,
+        "end": 173,
+        "label": "Fmaj7"
+      },
+      {
+        "start": 173,
+        "end": 173.75,
+        "label": "Cadd9"
+      },
+      {
+        "start": 173.75,
+        "end": 177.25,
+        "label": "C"
+      },
+      {
+        "start": 177.25,
+        "end": 179,
+        "label": "G"
+      },
+      {
+        "start": 179,
+        "end": 180.25,
+        "label": "Am"
+      },
+      {
+        "start": 180.25,
+        "end": 182,
+        "label": "F"
+      },
+      {
+        "start": 182,
+        "end": 184.25,
+        "label": "C"
+      },
+      {
+        "start": 184.25,
+        "end": 185.5,
+        "label": "G"
+      },
+      {
+        "start": 185.5,
+        "end": 186.75,
+        "label": "G7"
+      },
+      {
+        "start": 186.75,
+        "end": 187.75,
+        "label": "Cadd9"
+      },
+      {
+        "start": 187.75,
+        "end": 189.25,
+        "label": "Cmaj7"
+      },
+      {
+        "start": 189.25,
+        "end": 190.75,
+        "label": "Am"
+      },
+      {
+        "start": 190.75,
+        "end": 192.75,
+        "label": "Am7"
+      },
+      {
+        "start": 192.75,
+        "end": 194.5,
+        "label": "F"
+      },
+      {
+        "start": 194.5,
+        "end": 198,
+        "label": "C"
+      },
+      {
+        "start": 198,
+        "end": 199.75,
+        "label": "G"
+      },
+      {
+        "start": 199.75,
+        "end": 201.5,
+        "label": "Fmaj7"
+      },
+      {
+        "start": 201.5,
+        "end": 203,
+        "label": "Cmaj7"
+      },
+      {
+        "start": 203,
+        "end": 204.75,
+        "label": "Am"
+      },
+      {
+        "start": 204.75,
+        "end": 206.75,
+        "label": "Am7"
+      },
+      {
+        "start": 206.75,
+        "end": 208,
+        "label": "F"
+      },
+      {
+        "start": 208,
+        "end": 212,
+        "label": "C"
+      },
+      {
+        "start": 212,
+        "end": 213.5,
+        "label": "G"
+      },
+      {
+        "start": 213.5,
+        "end": 216.75,
+        "label": "Dm7"
+      },
+      {
+        "start": 216.75,
+        "end": 218.75,
+        "label": "Am"
+      },
+      {
+        "start": 218.75,
+        "end": 220.25,
+        "label": "Am7"
+      },
+      {
+        "start": 220.25,
+        "end": 222.25,
+        "label": "Fsus2"
+      },
+      {
+        "start": 222.25,
+        "end": 225.5,
+        "label": "C"
+      },
+      {
+        "start": 225.5,
+        "end": 227.5,
+        "label": "G"
+      },
+      {
+        "start": 227.5,
+        "end": 229.5,
+        "label": "F"
+      },
+      {
+        "start": 229.5,
+        "end": 231,
+        "label": "C"
+      },
+      {
+        "start": 231,
+        "end": 232.25,
+        "label": "F"
+      },
+      {
+        "start": 232.25,
+        "end": 233,
+        "label": "Cadd9"
+      },
+      {
+        "start": 233,
+        "end": 234.75,
+        "label": "C"
+      },
+      {
+        "start": 234.75,
+        "end": 235.75,
+        "label": "G"
+      },
+      {
+        "start": 235.75,
+        "end": 236.75,
+        "label": "F"
+      },
+      {
+        "start": 236.75,
+        "end": 242.25,
+        "label": "C"
+      },
+      {
+        "start": 242.25,
+        "end": 243.5,
+        "label": null
+      }
+    ]
+  }
+}

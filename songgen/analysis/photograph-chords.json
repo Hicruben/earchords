@@ -1,0 +1,456 @@
+{
+  "meta": {
+    "title": "Photograph",
+    "artist": "Ed Sheeran",
+    "slug": "photograph-chords",
+    "youtubeId": "HpphFd_mzXE",
+    "key": "E"
+  },
+  "analysis": {
+    "source": "youtube:HpphFd_mzXE",
+    "duration": 257.7995918367347,
+    "key": {
+      "name": "E",
+      "tonic": 4,
+      "mode": "major",
+      "confidence": 0.99
+    },
+    "tempo": {
+      "bpm": 72,
+      "beat": 0.8330127255374608,
+      "confidence": 0.22781073712802277
+    },
+    "segments": [
+      {
+        "start": 0,
+        "end": 4.5,
+        "label": "E"
+      },
+      {
+        "start": 4.5,
+        "end": 8.25,
+        "label": "C#m"
+      },
+      {
+        "start": 8.25,
+        "end": 9.5,
+        "label": "C#m7"
+      },
+      {
+        "start": 9.5,
+        "end": 13.5,
+        "label": "Bsus4"
+      },
+      {
+        "start": 13.5,
+        "end": 17.25,
+        "label": "A"
+      },
+      {
+        "start": 17.25,
+        "end": 22.5,
+        "label": "E"
+      },
+      {
+        "start": 22.5,
+        "end": 26.75,
+        "label": "C#m"
+      },
+      {
+        "start": 26.75,
+        "end": 28,
+        "label": "B"
+      },
+      {
+        "start": 28,
+        "end": 31.5,
+        "label": "Bsus4"
+      },
+      {
+        "start": 31.5,
+        "end": 34.75,
+        "label": "A"
+      },
+      {
+        "start": 34.75,
+        "end": 35.75,
+        "label": "Amaj7"
+      },
+      {
+        "start": 35.75,
+        "end": 36.75,
+        "label": "E"
+      },
+      {
+        "start": 36.75,
+        "end": 38,
+        "label": "Eadd9"
+      },
+      {
+        "start": 38,
+        "end": 40.25,
+        "label": "E"
+      },
+      {
+        "start": 40.25,
+        "end": 44.5,
+        "label": "C#m"
+      },
+      {
+        "start": 44.5,
+        "end": 48,
+        "label": "B"
+      },
+      {
+        "start": 48,
+        "end": 49,
+        "label": "E"
+      },
+      {
+        "start": 49,
+        "end": 50,
+        "label": "Amaj7"
+      },
+      {
+        "start": 50,
+        "end": 53.5,
+        "label": "A"
+      },
+      {
+        "start": 53.5,
+        "end": 56,
+        "label": "C#m"
+      },
+      {
+        "start": 56,
+        "end": 58,
+        "label": "A"
+      },
+      {
+        "start": 58,
+        "end": 60.5,
+        "label": "E"
+      },
+      {
+        "start": 60.5,
+        "end": 62.5,
+        "label": "B"
+      },
+      {
+        "start": 62.5,
+        "end": 64.75,
+        "label": "C#m"
+      },
+      {
+        "start": 64.75,
+        "end": 67,
+        "label": "F#m7"
+      },
+      {
+        "start": 67,
+        "end": 69.25,
+        "label": "E"
+      },
+      {
+        "start": 69.25,
+        "end": 70.75,
+        "label": "Bsus4"
+      },
+      {
+        "start": 70.75,
+        "end": 76,
+        "label": "E"
+      },
+      {
+        "start": 76,
+        "end": 78.25,
+        "label": "B"
+      },
+      {
+        "start": 78.25,
+        "end": 79,
+        "label": "B6"
+      },
+      {
+        "start": 79,
+        "end": 80.25,
+        "label": "B7"
+      },
+      {
+        "start": 80.25,
+        "end": 84.75,
+        "label": "C#m"
+      },
+      {
+        "start": 84.75,
+        "end": 88.75,
+        "label": "A"
+      },
+      {
+        "start": 88.75,
+        "end": 98,
+        "label": "E"
+      },
+      {
+        "start": 98,
+        "end": 102.5,
+        "label": "C#m"
+      },
+      {
+        "start": 102.5,
+        "end": 103.75,
+        "label": "B"
+      },
+      {
+        "start": 103.75,
+        "end": 107,
+        "label": "Bsus4"
+      },
+      {
+        "start": 107,
+        "end": 110.5,
+        "label": "A"
+      },
+      {
+        "start": 110.5,
+        "end": 111.5,
+        "label": "Amaj7"
+      },
+      {
+        "start": 111.5,
+        "end": 115.75,
+        "label": "E"
+      },
+      {
+        "start": 115.75,
+        "end": 120.25,
+        "label": "C#m"
+      },
+      {
+        "start": 120.25,
+        "end": 124.25,
+        "label": "B"
+      },
+      {
+        "start": 124.25,
+        "end": 125,
+        "label": "E"
+      },
+      {
+        "start": 125,
+        "end": 129,
+        "label": "A"
+      },
+      {
+        "start": 129,
+        "end": 131.25,
+        "label": "C#m"
+      },
+      {
+        "start": 131.25,
+        "end": 133.75,
+        "label": "A"
+      },
+      {
+        "start": 133.75,
+        "end": 136,
+        "label": "E"
+      },
+      {
+        "start": 136,
+        "end": 138,
+        "label": "B"
+      },
+      {
+        "start": 138,
+        "end": 140.25,
+        "label": "C#m"
+      },
+      {
+        "start": 140.25,
+        "end": 142.5,
+        "label": "B7"
+      },
+      {
+        "start": 142.5,
+        "end": 151.75,
+        "label": "E"
+      },
+      {
+        "start": 151.75,
+        "end": 155.25,
+        "label": "B"
+      },
+      {
+        "start": 155.25,
+        "end": 156,
+        "label": "Bsus4"
+      },
+      {
+        "start": 156,
+        "end": 159.25,
+        "label": "C#m"
+      },
+      {
+        "start": 159.25,
+        "end": 165,
+        "label": "A"
+      },
+      {
+        "start": 165,
+        "end": 169.5,
+        "label": "E"
+      },
+      {
+        "start": 169.5,
+        "end": 173.75,
+        "label": "B"
+      },
+      {
+        "start": 173.75,
+        "end": 178,
+        "label": "C#m"
+      },
+      {
+        "start": 178,
+        "end": 182.75,
+        "label": "A"
+      },
+      {
+        "start": 182.75,
+        "end": 186.75,
+        "label": "C#m"
+      },
+      {
+        "start": 186.75,
+        "end": 191.5,
+        "label": "A"
+      },
+      {
+        "start": 191.5,
+        "end": 196,
+        "label": "E"
+      },
+      {
+        "start": 196,
+        "end": 200.5,
+        "label": "Bsus4"
+      },
+      {
+        "start": 200.5,
+        "end": 206,
+        "label": "E"
+      },
+      {
+        "start": 206,
+        "end": 207.25,
+        "label": "B"
+      },
+      {
+        "start": 207.25,
+        "end": 209.25,
+        "label": "E"
+      },
+      {
+        "start": 209.25,
+        "end": 213.5,
+        "label": "C#m"
+      },
+      {
+        "start": 213.5,
+        "end": 214.75,
+        "label": "F#m7"
+      },
+      {
+        "start": 214.75,
+        "end": 216.5,
+        "label": "Amaj7"
+      },
+      {
+        "start": 216.5,
+        "end": 218.25,
+        "label": "A"
+      },
+      {
+        "start": 218.25,
+        "end": 223.25,
+        "label": "E"
+      },
+      {
+        "start": 223.25,
+        "end": 225,
+        "label": "B"
+      },
+      {
+        "start": 225,
+        "end": 226.25,
+        "label": "B6"
+      },
+      {
+        "start": 226.25,
+        "end": 227.25,
+        "label": "B"
+      },
+      {
+        "start": 227.25,
+        "end": 231.75,
+        "label": "C#m"
+      },
+      {
+        "start": 231.75,
+        "end": 233,
+        "label": "A"
+      },
+      {
+        "start": 233,
+        "end": 236,
+        "label": "Amaj7"
+      },
+      {
+        "start": 236,
+        "end": 239.25,
+        "label": "E"
+      },
+      {
+        "start": 239.25,
+        "end": 240,
+        "label": "Amaj7"
+      },
+      {
+        "start": 240,
+        "end": 242.75,
+        "label": "Bsus4"
+      },
+      {
+        "start": 242.75,
+        "end": 244.5,
+        "label": "B6"
+      },
+      {
+        "start": 244.5,
+        "end": 249,
+        "label": "C#m"
+      },
+      {
+        "start": 249,
+        "end": 252,
+        "label": "A"
+      },
+      {
+        "start": 252,
+        "end": 253,
+        "label": "Emaj7"
+      },
+      {
+        "start": 253,
+        "end": 255,
+        "label": "E"
+      },
+      {
+        "start": 255,
+        "end": 258,
+        "label": null
+      }
+    ]
+  }
+}

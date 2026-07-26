@@ -1,0 +1,471 @@
+{
+  "meta": {
+    "title": "Before You Go",
+    "artist": "Lewis Capaldi",
+    "slug": "before-you-go-chords",
+    "youtubeId": "Ow7Zg2AUZks",
+    "key": "D#"
+  },
+  "analysis": {
+    "source": "youtube:Ow7Zg2AUZks",
+    "duration": 245.42331065759637,
+    "key": {
+      "name": "D#",
+      "tonic": 3,
+      "mode": "major",
+      "confidence": 0.99
+    },
+    "tempo": {
+      "bpm": 113,
+      "beat": 0.5330740860396139,
+      "confidence": 0.18068176414764478
+    },
+    "segments": [
+      {
+        "start": 0,
+        "end": 3.75,
+        "label": "D#"
+      },
+      {
+        "start": 3.75,
+        "end": 11,
+        "label": "Fm7"
+      },
+      {
+        "start": 11,
+        "end": 14.25,
+        "label": "G#"
+      },
+      {
+        "start": 14.25,
+        "end": 15.5,
+        "label": "G#6"
+      },
+      {
+        "start": 15.5,
+        "end": 17.25,
+        "label": "A#sus4"
+      },
+      {
+        "start": 17.25,
+        "end": 19,
+        "label": "A#"
+      },
+      {
+        "start": 19,
+        "end": 22.75,
+        "label": "D#"
+      },
+      {
+        "start": 22.75,
+        "end": 24,
+        "label": "Fm7"
+      },
+      {
+        "start": 24,
+        "end": 27.25,
+        "label": "Cm7"
+      },
+      {
+        "start": 27.25,
+        "end": 28,
+        "label": "Fm7"
+      },
+      {
+        "start": 28,
+        "end": 29,
+        "label": "G#maj7"
+      },
+      {
+        "start": 29,
+        "end": 30,
+        "label": "G#6"
+      },
+      {
+        "start": 30,
+        "end": 32.5,
+        "label": "G#"
+      },
+      {
+        "start": 32.5,
+        "end": 33.25,
+        "label": "D#"
+      },
+      {
+        "start": 33.25,
+        "end": 34.75,
+        "label": "A#sus4"
+      },
+      {
+        "start": 34.75,
+        "end": 36.75,
+        "label": "A#"
+      },
+      {
+        "start": 36.75,
+        "end": 41,
+        "label": "D#"
+      },
+      {
+        "start": 41,
+        "end": 42.75,
+        "label": "A#"
+      },
+      {
+        "start": 42.75,
+        "end": 45.25,
+        "label": "A#6"
+      },
+      {
+        "start": 45.25,
+        "end": 49.5,
+        "label": "Cm"
+      },
+      {
+        "start": 49.5,
+        "end": 53.75,
+        "label": "G#maj7"
+      },
+      {
+        "start": 53.75,
+        "end": 58.25,
+        "label": "D#"
+      },
+      {
+        "start": 58.25,
+        "end": 62.5,
+        "label": "A#6"
+      },
+      {
+        "start": 62.5,
+        "end": 66.75,
+        "label": "Cm"
+      },
+      {
+        "start": 66.75,
+        "end": 71,
+        "label": "G#"
+      },
+      {
+        "start": 71,
+        "end": 74.25,
+        "label": "A#sus4"
+      },
+      {
+        "start": 74.25,
+        "end": 75,
+        "label": "D#maj7"
+      },
+      {
+        "start": 75,
+        "end": 81,
+        "label": "D#"
+      },
+      {
+        "start": 81,
+        "end": 87.5,
+        "label": "Fm7"
+      },
+      {
+        "start": 87.5,
+        "end": 89.75,
+        "label": "G#"
+      },
+      {
+        "start": 89.75,
+        "end": 92.75,
+        "label": "A#7"
+      },
+      {
+        "start": 92.75,
+        "end": 94.75,
+        "label": "A#sus4"
+      },
+      {
+        "start": 94.75,
+        "end": 95.75,
+        "label": "A#"
+      },
+      {
+        "start": 95.75,
+        "end": 100,
+        "label": "D#"
+      },
+      {
+        "start": 100,
+        "end": 101.25,
+        "label": "Fm7"
+      },
+      {
+        "start": 101.25,
+        "end": 104.5,
+        "label": "Cm7"
+      },
+      {
+        "start": 104.5,
+        "end": 105.25,
+        "label": "Fm7"
+      },
+      {
+        "start": 105.25,
+        "end": 106.25,
+        "label": "G#maj7"
+      },
+      {
+        "start": 106.25,
+        "end": 107,
+        "label": "G#6"
+      },
+      {
+        "start": 107,
+        "end": 109.75,
+        "label": "G#"
+      },
+      {
+        "start": 109.75,
+        "end": 111.75,
+        "label": "D#add9"
+      },
+      {
+        "start": 111.75,
+        "end": 113.75,
+        "label": "A#"
+      },
+      {
+        "start": 113.75,
+        "end": 118.25,
+        "label": "D#"
+      },
+      {
+        "start": 118.25,
+        "end": 120,
+        "label": "A#"
+      },
+      {
+        "start": 120,
+        "end": 122.25,
+        "label": "A#6"
+      },
+      {
+        "start": 122.25,
+        "end": 126.75,
+        "label": "Cm"
+      },
+      {
+        "start": 126.75,
+        "end": 131,
+        "label": "G#"
+      },
+      {
+        "start": 131,
+        "end": 135.5,
+        "label": "D#"
+      },
+      {
+        "start": 135.5,
+        "end": 137,
+        "label": "A#"
+      },
+      {
+        "start": 137,
+        "end": 139.5,
+        "label": "A#6"
+      },
+      {
+        "start": 139.5,
+        "end": 144,
+        "label": "Cm"
+      },
+      {
+        "start": 144,
+        "end": 148.25,
+        "label": "G#"
+      },
+      {
+        "start": 148.25,
+        "end": 152.5,
+        "label": "A#"
+      },
+      {
+        "start": 152.5,
+        "end": 154.75,
+        "label": "Fm7"
+      },
+      {
+        "start": 154.75,
+        "end": 156.75,
+        "label": "G#"
+      },
+      {
+        "start": 156.75,
+        "end": 159.25,
+        "label": "D#"
+      },
+      {
+        "start": 159.25,
+        "end": 161,
+        "label": "A#"
+      },
+      {
+        "start": 161,
+        "end": 162.75,
+        "label": "Cm"
+      },
+      {
+        "start": 162.75,
+        "end": 164.25,
+        "label": "G#maj7"
+      },
+      {
+        "start": 164.25,
+        "end": 165.75,
+        "label": "A#7"
+      },
+      {
+        "start": 165.75,
+        "end": 167,
+        "label": "A#"
+      },
+      {
+        "start": 167,
+        "end": 169.5,
+        "label": "A#6"
+      },
+      {
+        "start": 169.5,
+        "end": 173.75,
+        "label": "D#"
+      },
+      {
+        "start": 173.75,
+        "end": 175.5,
+        "label": "D#maj7"
+      },
+      {
+        "start": 175.5,
+        "end": 177.5,
+        "label": "G#dim"
+      },
+      {
+        "start": 177.5,
+        "end": 178.25,
+        "label": "G#maj7"
+      },
+      {
+        "start": 178.25,
+        "end": 182.25,
+        "label": "Cm"
+      },
+      {
+        "start": 182.25,
+        "end": 185.25,
+        "label": "G#"
+      },
+      {
+        "start": 185.25,
+        "end": 186.75,
+        "label": "G#6"
+      },
+      {
+        "start": 186.75,
+        "end": 191.25,
+        "label": "D#"
+      },
+      {
+        "start": 191.25,
+        "end": 194.5,
+        "label": "A#"
+      },
+      {
+        "start": 194.5,
+        "end": 195.5,
+        "label": "A#6"
+      },
+      {
+        "start": 195.5,
+        "end": 199.5,
+        "label": "Cm"
+      },
+      {
+        "start": 199.5,
+        "end": 203.75,
+        "label": "G#"
+      },
+      {
+        "start": 203.75,
+        "end": 208,
+        "label": "A#"
+      },
+      {
+        "start": 208,
+        "end": 215.25,
+        "label": "D#"
+      },
+      {
+        "start": 215.25,
+        "end": 222.5,
+        "label": "Fm7"
+      },
+      {
+        "start": 222.5,
+        "end": 225.75,
+        "label": "G#"
+      },
+      {
+        "start": 225.75,
+        "end": 227,
+        "label": "G#6"
+      },
+      {
+        "start": 227,
+        "end": 228.75,
+        "label": "A#sus4"
+      },
+      {
+        "start": 228.75,
+        "end": 230.75,
+        "label": "A#"
+      },
+      {
+        "start": 230.75,
+        "end": 234.25,
+        "label": "D#"
+      },
+      {
+        "start": 234.25,
+        "end": 235.5,
+        "label": "Fm7"
+      },
+      {
+        "start": 235.5,
+        "end": 238.75,
+        "label": "Cm7"
+      },
+      {
+        "start": 238.75,
+        "end": 239.5,
+        "label": "Fm7"
+      },
+      {
+        "start": 239.5,
+        "end": 240.5,
+        "label": "G#maj7"
+      },
+      {
+        "start": 240.5,
+        "end": 241.5,
+        "label": "G#6"
+      },
+      {
+        "start": 241.5,
+        "end": 244.25,
+        "label": "G#"
+      },
+      {
+        "start": 244.25,
+        "end": 245.5,
+        "label": null
+      }
+    ]
+  }
+}

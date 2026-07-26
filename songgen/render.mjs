@@ -1,6 +1,7 @@
-// 歌曲页渲染(可复用):分析结果 + 歌曲元数据 -> SEO 优化的静态和弦页 HTML。
-// 被 generate.mjs(手工列表)与 pipeline.mjs(yt-dlp 批量)共用。
-export const SITE = 'https://earchords.com'; // 部署域名占位,替换成真实域名
+// 歌曲页渲染(可复用):分析结果 + 歌曲元数据 -> Chordify 式互动和弦页(含 SEO 静态内容)。
+// 被 build-pages.mjs(从保存的分析重渲染)与 pipeline.mjs(yt-dlp 批量)共用。
+// 互动逻辑在 /assets/songpage.js(由 src/songpage.js 打包),数据以 JSON 嵌在页内。
+export const SITE = 'https://earchords.com';
 export const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 export const slugify = (s) => s.toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
@@ -21,23 +22,38 @@ export function cleanChart(segments, duration) {
   return { main, sequence: seq };
 }
 
+const r2 = (n) => Math.round(n * 100) / 100;
+
 export function renderSongPage(meta, analysis) {
   const key = meta.key || (analysis.key ? analysis.key.name : '—');
   const bpm = analysis.tempo?.bpm || null;
-  const { main, sequence } = cleanChart(analysis.segments || [], analysis.duration || 1);
-  const progression = sequence.slice(0, 32);
+  const segments = analysis.segments || [];
+  const duration = analysis.duration || (segments.length ? segments[segments.length - 1].end : 1);
+  const { main, sequence } = cleanChart(segments, duration);
+  const progression = sequence.slice(0, 40);
   const titleTag = `${meta.title} Chords by ${meta.artist}`;
-  const desc = `${meta.title} chords by ${meta.artist}. Key of ${key}${bpm ? `, ${bpm} BPM` : ''}. Uses ${main.slice(0, 6).join(', ')}. Free interactive chord sheet — play along, transpose, capo.`;
+  const desc = `${meta.title} chords by ${meta.artist}. Key of ${key}${bpm ? `, ${bpm} BPM` : ''}. Play along with the video — chords highlight in real time. Free & interactive: transpose, capo, guitar/piano/ukulele diagrams.`;
   const url = `${SITE}/${meta.slug}`;
-  const bars = progression.map((c, i) => `<div class="bar"><span class="n">${i + 1}</span><b>${esc(c)}</b></div>`).join('');
+
+  // 嵌入互动数据(时间轴)
+  const chordData = {
+    title: meta.title, artist: meta.artist, youtubeId: meta.youtubeId,
+    key, bpm, duration: r2(duration),
+    chords: segments.map((s) => ({ t: r2(s.start), e: r2(s.end), c: s.label })),
+  };
+
   const chips = main.map((c) => `<span class="chip">${esc(c)}</span>`).join('');
-  const schema = { '@context': 'https://schema.org', '@type': 'WebPage', name: titleTag, description: desc, url, about: { '@type': 'MusicComposition', name: meta.title, composer: { '@type': 'MusicGroup', name: meta.artist } } };
+  const staticBars = progression.map((c) => `<span class="sbar">${esc(c)}</span>`).join('');
+  const schema = {
+    '@context': 'https://schema.org', '@type': 'WebPage', name: titleTag, description: desc, url,
+    about: { '@type': 'MusicComposition', name: meta.title, composer: { '@type': 'MusicGroup', name: meta.artist } },
+  };
 
   return `<!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>${esc(titleTag)} | EarChords</title>
 <meta name="description" content="${esc(desc)}" />
 <link rel="canonical" href="${esc(url)}" />
@@ -45,65 +61,216 @@ export function renderSongPage(meta, analysis) {
 <meta property="og:description" content="${esc(desc)}" />
 <meta property="og:type" content="music.song" />
 <meta property="og:url" content="${esc(url)}" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2304060b'/%3E%3Cg fill='%23c9f24d'%3E%3Crect x='6' y='13' width='3' height='6' rx='1.5'/%3E%3Crect x='11' y='9' width='3' height='14' rx='1.5'/%3E%3Crect x='16' y='6' width='3' height='20' rx='1.5'/%3E%3Crect x='21' y='11' width='3' height='10' rx='1.5'/%3E%3C/g%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <script type="application/ld+json">${JSON.stringify(schema)}</script>
 <style>
-  :root{--bg:#0a0d12;--panel:#12161d;--line:#232a34;--ink:#eef2f6;--dim:#9aa6b2;--accent:#c9f24d;--ink2:#0a1404}
-  *{box-sizing:border-box}body{margin:0;font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-  a{color:var(--accent)}
-  .wrap{max-width:860px;margin:0 auto;padding:1.2rem clamp(1rem,4vw,2rem) 4rem}
-  header{display:flex;align-items:center;justify-content:space-between;padding:.6rem 0 1.4rem}
-  .brand{font-weight:800;letter-spacing:-.01em;color:var(--ink);text-decoration:none;font-size:1.05rem}
-  .brand span{color:var(--accent)}
-  .cta-top{font-size:.85rem;font-weight:700;color:var(--ink2);background:var(--accent);padding:.5rem .9rem;border-radius:999px;text-decoration:none}
-  h1{font-size:clamp(1.8rem,5vw,2.6rem);margin:.2rem 0 .3rem;letter-spacing:-.02em}
-  .sub{color:var(--dim);margin:0 0 1.2rem}
-  .meta{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.4rem}
-  .pill{font-size:.82rem;color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:.3rem .8rem}
-  .pill b{color:var(--ink)}
-  .chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:.2rem 0 1.6rem}
-  .chip{font-weight:800;font-size:1.05rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:.45rem .8rem}
-  h2{font-size:1.15rem;margin:2rem 0 .8rem}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:.5rem}
-  .bar{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1rem .6rem;text-align:center}
-  .bar .n{position:absolute;top:.35rem;left:.5rem;font-size:.6rem;color:var(--dim)}
-  .bar b{font-size:1.25rem}
-  .yt{position:relative;padding-bottom:56.25%;height:0;border-radius:14px;overflow:hidden;border:1px solid var(--line);margin:.4rem 0}
-  .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-  .cta{display:block;text-align:center;margin:2rem 0 .5rem;background:linear-gradient(135deg,var(--accent),#a6e02a);color:var(--ink2);font-weight:800;padding:1rem;border-radius:14px;text-decoration:none;font-size:1.05rem}
-  .note{font-size:.82rem;color:var(--dim);margin:.6rem 0 0}
-  .intro{color:var(--dim);max-width:60ch}
-  footer{margin-top:3rem;padding-top:1.4rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--dim)}
-  footer a{margin-right:1rem}
+${SONG_CSS}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <a class="brand" href="${esc(SITE)}/">Ear<span>Chords</span></a>
-    <a class="cta-top" href="${esc(SITE)}/">Get chords from any song →</a>
-  </header>
-  <h1>${esc(meta.title)} Chords</h1>
-  <p class="sub">by ${esc(meta.artist)}</p>
-  <div class="meta">
-    <span class="pill">Key <b>${esc(key)}</b></span>
-    ${bpm ? `<span class="pill">Tempo <b>${bpm} BPM</b></span>` : ''}
-    ${meta.capo ? `<span class="pill">${esc(meta.capo)}</span>` : ''}
-    <span class="pill"><b>${main.length}</b> chords</span>
+<div class="bg-glow" aria-hidden="true"></div>
+
+<header class="top">
+  <a class="brand" href="${esc(SITE)}/">
+    <svg viewBox="0 0 40 24" width="30" height="18" aria-hidden="true"><g fill="currentColor">
+      <rect x="0" y="9" width="3" height="6" rx="1.5"/><rect x="5" y="5" width="3" height="14" rx="1.5"/><rect x="10" y="1" width="3" height="22" rx="1.5"/><rect x="15" y="7" width="3" height="10" rx="1.5"/><rect x="20" y="3" width="3" height="18" rx="1.5"/><rect x="25" y="8" width="3" height="8" rx="1.5"/><rect x="30" y="4" width="3" height="16" rx="1.5"/><rect x="35" y="10" width="3" height="4" rx="1.5"/>
+    </g></svg>
+    <span>Ear<b>Chords</b></span>
+  </a>
+  <div class="top-song">
+    <strong>${esc(meta.title)}</strong><span>${esc(meta.artist)}</span>
   </div>
-  <p class="intro">Chords for <b>${esc(meta.title)}</b> by ${esc(meta.artist)}, in the key of <b>${esc(key)}</b>. This song is built around ${esc(main.slice(0, 4).join(', '))}. Play along with the video below, then open it in EarChords to transpose, add a capo, slow it down, and follow the chords in real time.</p>
-  <h2>Chords used</h2>
-  <div class="chips">${chips}</div>
-  <h2>Play along</h2>
-  <div class="yt"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/${esc(meta.youtubeId)}" title="${esc(meta.title)} — ${esc(meta.artist)}" allow="encrypted-media" allowfullscreen></iframe></div>
-  <h2>Chord progression</h2>
-  <div class="grid">${bars}</div>
-  <p class="note">AI-detected from the recording — verify by ear with the play-along. Want it exact and interactive (capo / transpose / A-B loop)? Open it in EarChords.</p>
-  <a class="cta" href="${esc(SITE)}/">Open “${esc(meta.title)}” in the interactive player →</a>
-  <footer>
-    <div>More chords: <a href="${esc(SITE)}/piano-chord-finder">Piano chord finder</a> <a href="${esc(SITE)}/chord-identifier">Chord identifier</a> <a href="${esc(SITE)}/">Any song → chords</a></div>
-    <p>EarChords detects chords from any song — in your browser, free, private. Audio never leaves your device.</p>
+  <a class="top-cta" href="${esc(SITE)}/">Analyze a song →</a>
+</header>
+
+<main class="stage">
+  <section class="player">
+    <div class="player-head">
+      <h1>${esc(meta.title)} <span>Chords</span></h1>
+      <div class="pills">
+        <span class="pill">Key <b>${esc(key)}</b></span>
+        ${bpm ? `<span class="pill">${bpm} BPM</span>` : ''}
+        <span class="pill capo-pill">Capo <b id="ec-capo-tag">0</b></span>
+      </div>
+    </div>
+
+    <div class="stage-grid">
+      <!-- 和弦网格:主角 -->
+      <div class="grid-scroll" id="ec-grid-scroll">
+        <div class="grid" id="ec-grid" aria-label="Chord timeline"></div>
+      </div>
+
+      <!-- 当前和弦 + 指法图 + 视频 -->
+      <aside class="now">
+        <div class="now-card">
+          <span class="now-kicker">Now playing</span>
+          <span class="now-label" id="ec-now-label">—</span>
+          <span class="now-next" id="ec-now-next"></span>
+          <div class="now-diagram" id="ec-diagram"></div>
+          <div class="inst" id="ec-inst" role="tablist">
+            <button class="ec-inst-tab is-on" data-inst="guitar">Guitar</button>
+            <button class="ec-inst-tab" data-inst="piano">Piano</button>
+            <button class="ec-inst-tab" data-inst="ukulele">Uke</button>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-frame"><div id="ec-video"></div></div>
+          <p class="video-note" id="ec-video-note">Video is the audio source · chords sync to playback</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 底部常驻播放条 -->
+  <div class="transport">
+    <button class="t-play" id="ec-play" aria-label="Play / pause"><svg class="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="i-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg></button>
+    <div class="t-time"><span id="ec-time-cur">0:00</span></div>
+    <div class="t-prog" id="ec-prog"><div class="t-prog-fill" id="ec-prog-fill"></div></div>
+    <div class="t-time t-dur"><span id="ec-time-dur">0:00</span></div>
+    <div class="t-ctrl">
+      <div class="stepper" title="Transpose"><span class="lab">Key</span><button id="ec-trans-down">−</button><b id="ec-trans-val">0</b><button id="ec-trans-up">+</button></div>
+      <div class="stepper" title="Capo"><span class="lab">Capo</span><button id="ec-capo-down">−</button><b id="ec-capo-val">0</b><button id="ec-capo-up">+</button></div>
+      <label class="t-speed" title="Playback speed"><span>Speed</span>
+        <select id="ec-speed"><option value="0.5">0.5×</option><option value="0.75">0.75×</option><option value="1" selected>1×</option></select>
+      </label>
+      <button class="t-toggle" id="ec-chords-toggle" aria-pressed="false" title="Play the chords along with the song">♪ Chords</button>
+      <button class="t-toggle t-loop" id="ec-loop-clear" title="Clear A–B loop (shift-click two cells to set)">↻ Loop</button>
+    </div>
+  </div>
+
+  <!-- 唯一和弦图例 -->
+  <section class="section legend-sec">
+    <h2>Chords in this song</h2>
+    <div class="legend" id="ec-legend"></div>
+  </section>
+
+  <!-- SEO 静态内容 + 无 JS 兜底 -->
+  <section class="section">
+    <p class="intro">Chords for <b>${esc(meta.title)}</b> by ${esc(meta.artist)}, in the key of <b>${esc(key)}</b>${bpm ? `, around ${bpm} BPM` : ''}. Built around ${esc(main.slice(0, 4).join(', '))}. Press play — the chords highlight in time with the video. Transpose, add a capo, switch between guitar, piano and ukulele diagrams, or slow it down to practice.</p>
+    <h2>Chord progression</h2>
+    <div class="static-bars">${staticBars}</div>
+    <p class="note">Auto-detected from the recording by EarChords — verify by ear with the play-along.</p>
+  </section>
+
+  <footer class="foot">
+    <div>More chords: <a href="${esc(SITE)}/piano-chord-finder">Piano chord finder</a> · <a href="${esc(SITE)}/chord-identifier">Chord identifier</a> · <a href="${esc(SITE)}/">Any song → chords</a></div>
+    <p>EarChords detects chords from any song, in your browser. Free & private.</p>
   </footer>
-</div>
+</main>
+
+<script type="application/json" id="ec-data">${JSON.stringify(chordData)}</script>
+<script type="module" src="/assets/songpage.js"></script>
 </body>
 </html>`;
 }
+
+const SONG_CSS = `
+:root{
+  --bg:#06080d; --bg2:#0b0f16; --panel:#11161f; --panel2:#161c27; --line:#232b38;
+  --ink:#eaf0f7; --dim:#93a1b3; --faint:#5c6a7d;
+  --accent:#c9f24d; --accent-strong:#dcff6b; --accent-soft:rgba(201,242,77,.16); --ink2:#0a1404;
+  --key-white:#e9edf3; --key-black:#0d1218; --key-stroke:#c3ccd8; --diagram-fg:#dfe6ef; --fret-line:#6d7a8c; --ink-dim:#9aa6b2; --ink-faint:#7c8a9c;
+  --font-ui:'Manrope',system-ui,sans-serif; --font-mono:'DM Mono',ui-monospace,monospace; --font-disp:'Barlow Condensed',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-ui);line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:120px}
+.bg-glow{position:fixed;inset:0;z-index:-1;background:radial-gradient(1200px 600px at 80% -10%,rgba(201,242,77,.10),transparent 60%),radial-gradient(900px 500px at 0% 0%,rgba(90,120,255,.08),transparent 55%),var(--bg)}
+a{color:var(--accent);text-decoration:none}
+h2{font-family:var(--font-disp);font-weight:700;letter-spacing:.01em;font-size:1.3rem;margin:0 0 1rem}
+
+/* 顶栏 */
+.top{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:1rem;padding:.7rem clamp(1rem,4vw,2.2rem);background:rgba(6,8,13,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:.5rem;color:var(--accent);font-weight:800;font-size:1.02rem}
+.brand span{color:var(--ink)}.brand b{color:var(--accent);font-weight:800}
+.top-song{margin-left:.4rem;display:flex;flex-direction:column;line-height:1.15;border-left:1px solid var(--line);padding-left:1rem}
+.top-song strong{font-size:.95rem}.top-song span{font-size:.78rem;color:var(--dim)}
+.top-cta{margin-left:auto;font-size:.82rem;font-weight:700;color:var(--ink2);background:var(--accent);padding:.5rem .95rem;border-radius:999px}
+
+.stage{max-width:1180px;margin:0 auto;padding:clamp(1rem,3vw,2rem) clamp(1rem,4vw,2.2rem) 0}
+.player-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.player-head h1{font-family:var(--font-disp);font-weight:800;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.01em;margin:0;line-height:1}
+.player-head h1 span{color:var(--dim);font-weight:700}
+.pills{display:flex;gap:.5rem;flex-wrap:wrap}
+.pill{font-size:.8rem;color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:.35rem .8rem;background:var(--panel)}
+.pill b{color:var(--ink);font-weight:700}
+
+.stage-grid{display:grid;grid-template-columns:1fr 320px;gap:1.4rem;align-items:start}
+
+/* 和弦网格 —— 主角 */
+.grid-scroll{height:min(58vh,560px);overflow-y:auto;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,var(--panel),var(--bg2));padding:1.1rem}
+.grid-scroll::-webkit-scrollbar{width:8px}.grid-scroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:.6rem}
+.ec-cell{position:relative;appearance:none;border:1px solid var(--line);background:var(--panel2);color:var(--ink);border-radius:14px;padding:1rem .5rem;min-height:66px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:transform .18s cubic-bezier(.2,.8,.2,1),background .18s,border-color .18s,box-shadow .18s,opacity .25s;font-family:var(--font-disp)}
+.ec-cell-lab{font-size:1.5rem;font-weight:800;letter-spacing:.01em;line-height:1}
+.ec-cell-t{font-family:var(--font-mono);font-size:.6rem;color:var(--faint);margin-top:.25rem;opacity:0}
+.ec-cell:hover{border-color:var(--accent);transform:translateY(-2px)}
+.ec-cell.is-past{opacity:.42}
+.ec-cell.is-active{background:linear-gradient(180deg,var(--accent-strong),var(--accent));color:var(--ink2);border-color:var(--accent);transform:scale(1.09);box-shadow:0 10px 34px -8px rgba(201,242,77,.55),0 0 0 1px var(--accent);z-index:2;opacity:1}
+.ec-cell.is-loop{outline:2px dashed var(--accent);outline-offset:2px}
+
+/* 当前和弦 / 指法图 / 视频 */
+.now{position:sticky;top:76px;display:flex;flex-direction:column;gap:1rem}
+.now-card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:20px;padding:1.2rem;display:flex;flex-direction:column;align-items:center;text-align:center}
+.now-kicker{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.now-label{font-family:var(--font-disp);font-weight:800;font-size:3.4rem;line-height:1;color:var(--accent);margin:.15rem 0 .1rem}
+.now-next{font-size:.78rem;color:var(--dim);font-family:var(--font-mono);min-height:1.1em}
+.now-diagram{margin:.9rem 0 .3rem;min-height:118px;display:flex;align-items:center;justify-content:center;width:100%}
+.now-diagram svg{max-width:170px;height:auto}
+.inst{display:inline-flex;background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px}
+.ec-inst-tab{appearance:none;border:0;background:transparent;color:var(--dim);font-family:var(--font-ui);font-weight:600;font-size:.8rem;padding:.35rem .7rem;border-radius:999px;cursor:pointer}
+.ec-inst-tab.is-on{background:var(--accent);color:var(--ink2)}
+.video-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:.6rem;overflow:hidden}
+.video-frame{position:relative;padding-bottom:56.25%;height:0;border-radius:10px;overflow:hidden;background:#000}
+.video-frame>div,.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-note{font-size:.68rem;color:var(--faint);text-align:center;margin:.5rem 0 .1rem}
+.video-note.is-blocked{color:var(--dim)}
+.video-note.is-blocked a{color:var(--accent);text-decoration:none;font-weight:600}
+.video-frame.is-blocked{padding-bottom:0;height:auto;background:transparent}
+.video-frame.is-blocked iframe{position:static;height:0}
+
+/* 底部播放条 */
+.transport{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;gap:.8rem;padding:.7rem clamp(1rem,4vw,2.2rem);background:rgba(9,12,18,.82);backdrop-filter:blur(18px);border-top:1px solid var(--line)}
+.t-play{flex:none;width:46px;height:46px;border-radius:50%;border:0;background:var(--accent);color:var(--ink2);cursor:pointer;display:grid;place-items:center;box-shadow:0 6px 20px -6px rgba(201,242,77,.6)}
+.t-play svg{width:22px;height:22px;fill:currentColor}
+.t-play .i-pause{display:none}.t-play.is-playing .i-play{display:none}.t-play.is-playing .i-pause{display:block}
+.t-time{font-family:var(--font-mono);font-size:.78rem;color:var(--dim);flex:none;min-width:34px;text-align:center}
+.t-prog{flex:1;height:8px;background:var(--panel2);border-radius:999px;cursor:pointer;overflow:hidden;min-width:80px}
+.t-prog-fill{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-strong));border-radius:999px}
+.t-ctrl{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.stepper{display:flex;align-items:center;gap:.15rem;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:.2rem .3rem}
+.stepper .lab{font-size:.68rem;color:var(--dim);padding:0 .35rem;font-weight:600}
+.stepper button{appearance:none;border:0;background:var(--panel2);color:var(--ink);width:26px;height:26px;border-radius:50%;cursor:pointer;font-size:1rem;line-height:1}
+.stepper button:hover{background:var(--accent);color:var(--ink2)}
+.stepper b{min-width:20px;text-align:center;font-family:var(--font-mono);font-size:.82rem}
+.t-speed{display:flex;align-items:center;gap:.35rem;font-size:.68rem;color:var(--dim);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:.2rem .5rem .2rem .7rem}
+.t-speed select{appearance:none;background:var(--panel2);color:var(--ink);border:0;border-radius:999px;padding:.25rem .5rem;font-family:var(--font-mono);font-size:.78rem;cursor:pointer}
+.t-toggle{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--dim);font-weight:600;font-size:.8rem;padding:.42rem .8rem;border-radius:999px;cursor:pointer}
+.t-toggle.is-on{background:var(--accent);color:var(--ink2);border-color:var(--accent)}
+
+/* 图例 + SEO */
+.section{max-width:1180px;margin:2.4rem auto 0;padding:0 clamp(1rem,4vw,2.2rem)}
+.legend{display:flex;flex-wrap:wrap;gap:.7rem}
+.ec-chip{display:flex;flex-direction:column;align-items:center;gap:.3rem;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:.7rem .6rem .5rem;cursor:default;min-width:92px}
+.ec-chip>span{font-family:var(--font-disp);font-weight:800;font-size:1.15rem}
+.ec-chip svg{max-width:78px;height:auto}
+.intro{color:var(--dim);max-width:66ch}
+.static-bars{display:flex;flex-wrap:wrap;gap:.4rem}
+.sbar{font-family:var(--font-disp);font-weight:700;font-size:1.05rem;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:.35rem .7rem}
+.chip{font-weight:700;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.3rem .6rem;font-size:.95rem}
+.note{font-size:.82rem;color:var(--faint);margin-top:.7rem}
+.foot{max-width:1180px;margin:3rem auto 0;padding:1.4rem clamp(1rem,4vw,2.2rem);border-top:1px solid var(--line);font-size:.85rem;color:var(--dim)}
+.foot a{margin:0 .2rem}
+
+@media (max-width:860px){
+  .stage-grid{grid-template-columns:1fr}
+  .now{position:static;flex-direction:column-reverse}
+  .grid-scroll{height:auto;max-height:52vh}
+  .top-song{display:none}
+  .t-ctrl{gap:.35rem}
+  .t-ctrl .stepper .lab{display:none}
+}
+`;

@@ -1,0 +1,376 @@
+{
+  "meta": {
+    "title": "Knockin' on Heaven's Door",
+    "artist": "Bob Dylan",
+    "slug": "knockin-on-heavens-door-chords",
+    "youtubeId": "rm9coqlk8fY",
+    "key": "G"
+  },
+  "analysis": {
+    "source": "youtube:rm9coqlk8fY",
+    "duration": 151.42403628117913,
+    "key": {
+      "name": "G",
+      "tonic": 7,
+      "mode": "major",
+      "confidence": 0.99
+    },
+    "tempo": {
+      "bpm": 140,
+      "beat": 0.428208475031757,
+      "confidence": 0.1970231442907228
+    },
+    "segments": [
+      {
+        "start": 0,
+        "end": 1.25,
+        "label": null
+      },
+      {
+        "start": 1.25,
+        "end": 3.5,
+        "label": "G"
+      },
+      {
+        "start": 3.5,
+        "end": 5,
+        "label": "D"
+      },
+      {
+        "start": 5,
+        "end": 8.25,
+        "label": "Am"
+      },
+      {
+        "start": 8.25,
+        "end": 10.5,
+        "label": "G"
+      },
+      {
+        "start": 10.5,
+        "end": 12,
+        "label": "D"
+      },
+      {
+        "start": 12,
+        "end": 15,
+        "label": "C"
+      },
+      {
+        "start": 15,
+        "end": 17.25,
+        "label": "G"
+      },
+      {
+        "start": 17.25,
+        "end": 19.25,
+        "label": "D"
+      },
+      {
+        "start": 19.25,
+        "end": 22.5,
+        "label": "Am"
+      },
+      {
+        "start": 22.5,
+        "end": 24.25,
+        "label": "G"
+      },
+      {
+        "start": 24.25,
+        "end": 26,
+        "label": "D"
+      },
+      {
+        "start": 26,
+        "end": 28.75,
+        "label": "C"
+      },
+      {
+        "start": 28.75,
+        "end": 31.25,
+        "label": "G"
+      },
+      {
+        "start": 31.25,
+        "end": 33,
+        "label": "D"
+      },
+      {
+        "start": 33,
+        "end": 36,
+        "label": "Am"
+      },
+      {
+        "start": 36,
+        "end": 38.25,
+        "label": "G"
+      },
+      {
+        "start": 38.25,
+        "end": 39.5,
+        "label": "D"
+      },
+      {
+        "start": 39.5,
+        "end": 43.25,
+        "label": "C"
+      },
+      {
+        "start": 43.25,
+        "end": 45,
+        "label": "G"
+      },
+      {
+        "start": 45,
+        "end": 47,
+        "label": "D"
+      },
+      {
+        "start": 47,
+        "end": 49.75,
+        "label": "Am"
+      },
+      {
+        "start": 49.75,
+        "end": 52,
+        "label": "G"
+      },
+      {
+        "start": 52,
+        "end": 53.25,
+        "label": "D"
+      },
+      {
+        "start": 53.25,
+        "end": 56.25,
+        "label": "C"
+      },
+      {
+        "start": 56.25,
+        "end": 59,
+        "label": "G"
+      },
+      {
+        "start": 59,
+        "end": 60.5,
+        "label": "D"
+      },
+      {
+        "start": 60.5,
+        "end": 63.5,
+        "label": "Am"
+      },
+      {
+        "start": 63.5,
+        "end": 65.5,
+        "label": "G"
+      },
+      {
+        "start": 65.5,
+        "end": 67.25,
+        "label": "D"
+      },
+      {
+        "start": 67.25,
+        "end": 70.5,
+        "label": "C"
+      },
+      {
+        "start": 70.5,
+        "end": 72.5,
+        "label": "Gm"
+      },
+      {
+        "start": 72.5,
+        "end": 74.5,
+        "label": "D"
+      },
+      {
+        "start": 74.5,
+        "end": 76,
+        "label": "Am"
+      },
+      {
+        "start": 76,
+        "end": 76.75,
+        "label": "Am7"
+      },
+      {
+        "start": 76.75,
+        "end": 77.5,
+        "label": "Em7"
+      },
+      {
+        "start": 77.5,
+        "end": 79.5,
+        "label": "G"
+      },
+      {
+        "start": 79.5,
+        "end": 81,
+        "label": "D"
+      },
+      {
+        "start": 81,
+        "end": 83.25,
+        "label": "C"
+      },
+      {
+        "start": 83.25,
+        "end": 84.25,
+        "label": "C6"
+      },
+      {
+        "start": 84.25,
+        "end": 86,
+        "label": "Gm"
+      },
+      {
+        "start": 86,
+        "end": 88,
+        "label": "D"
+      },
+      {
+        "start": 88,
+        "end": 91.25,
+        "label": "Am"
+      },
+      {
+        "start": 91.25,
+        "end": 93.25,
+        "label": "G"
+      },
+      {
+        "start": 93.25,
+        "end": 94.75,
+        "label": "D"
+      },
+      {
+        "start": 94.75,
+        "end": 97.75,
+        "label": "C"
+      },
+      {
+        "start": 97.75,
+        "end": 100,
+        "label": "G"
+      },
+      {
+        "start": 100,
+        "end": 101.25,
+        "label": "D"
+      },
+      {
+        "start": 101.25,
+        "end": 104.75,
+        "label": "Am"
+      },
+      {
+        "start": 104.75,
+        "end": 106.5,
+        "label": "G"
+      },
+      {
+        "start": 106.5,
+        "end": 108.25,
+        "label": "D"
+      },
+      {
+        "start": 108.25,
+        "end": 111.5,
+        "label": "C"
+      },
+      {
+        "start": 111.5,
+        "end": 113.75,
+        "label": "G"
+      },
+      {
+        "start": 113.75,
+        "end": 115.25,
+        "label": "D"
+      },
+      {
+        "start": 115.25,
+        "end": 118.5,
+        "label": "Am"
+      },
+      {
+        "start": 118.5,
+        "end": 120.5,
+        "label": "G"
+      },
+      {
+        "start": 120.5,
+        "end": 122,
+        "label": "D"
+      },
+      {
+        "start": 122,
+        "end": 125.25,
+        "label": "C"
+      },
+      {
+        "start": 125.25,
+        "end": 127.25,
+        "label": "G"
+      },
+      {
+        "start": 127.25,
+        "end": 128.75,
+        "label": "D"
+      },
+      {
+        "start": 128.75,
+        "end": 132,
+        "label": "Am"
+      },
+      {
+        "start": 132,
+        "end": 134.25,
+        "label": "G"
+      },
+      {
+        "start": 134.25,
+        "end": 135.75,
+        "label": "D"
+      },
+      {
+        "start": 135.75,
+        "end": 138.75,
+        "label": "C"
+      },
+      {
+        "start": 138.75,
+        "end": 141,
+        "label": "G"
+      },
+      {
+        "start": 141,
+        "end": 142.75,
+        "label": "D"
+      },
+      {
+        "start": 142.75,
+        "end": 146,
+        "label": "Am"
+      },
+      {
+        "start": 146,
+        "end": 147.75,
+        "label": "G"
+      },
+      {
+        "start": 147.75,
+        "end": 149.25,
+        "label": "D"
+      },
+      {
+        "start": 149.25,
+        "end": 151.5,
+        "label": null
+      }
+    ]
+  }
+}

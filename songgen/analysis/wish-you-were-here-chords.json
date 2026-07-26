@@ -1,0 +1,471 @@
+{
+  "meta": {
+    "title": "Wish You Were Here",
+    "artist": "Pink Floyd",
+    "slug": "wish-you-were-here-chords",
+    "youtubeId": "DPL_SV3n7IU",
+    "key": "G"
+  },
+  "analysis": {
+    "source": "youtube:DPL_SV3n7IU",
+    "duration": 320.1451247165533,
+    "key": {
+      "name": "G",
+      "tonic": 7,
+      "mode": "major",
+      "confidence": 0.99
+    },
+    "tempo": {
+      "bpm": 121,
+      "beat": 0.49577294192845406,
+      "confidence": 0.2508494521099451
+    },
+    "segments": [
+      {
+        "start": 0,
+        "end": 1,
+        "label": "Bm7"
+      },
+      {
+        "start": 1,
+        "end": 3.75,
+        "label": "Em7"
+      },
+      {
+        "start": 3.75,
+        "end": 8.5,
+        "label": "G"
+      },
+      {
+        "start": 8.5,
+        "end": 9.5,
+        "label": "Gadd9"
+      },
+      {
+        "start": 9.5,
+        "end": 11,
+        "label": "G6"
+      },
+      {
+        "start": 11,
+        "end": 17.25,
+        "label": "G"
+      },
+      {
+        "start": 17.25,
+        "end": 21.5,
+        "label": "Em7"
+      },
+      {
+        "start": 21.5,
+        "end": 23.5,
+        "label": "Am7"
+      },
+      {
+        "start": 23.5,
+        "end": 25,
+        "label": "Asus4"
+      },
+      {
+        "start": 25,
+        "end": 29.5,
+        "label": "Em7"
+      },
+      {
+        "start": 29.5,
+        "end": 33,
+        "label": "Asus4"
+      },
+      {
+        "start": 33,
+        "end": 41,
+        "label": "G"
+      },
+      {
+        "start": 41,
+        "end": 42,
+        "label": "D"
+      },
+      {
+        "start": 42,
+        "end": 42.75,
+        "label": "Esus4"
+      },
+      {
+        "start": 42.75,
+        "end": 52.5,
+        "label": "Em7"
+      },
+      {
+        "start": 52.5,
+        "end": 57.25,
+        "label": "G"
+      },
+      {
+        "start": 57.25,
+        "end": 58.25,
+        "label": "Dadd9"
+      },
+      {
+        "start": 58.25,
+        "end": 59,
+        "label": "Asus2"
+      },
+      {
+        "start": 59,
+        "end": 62,
+        "label": "Em7"
+      },
+      {
+        "start": 62,
+        "end": 63.75,
+        "label": "Am"
+      },
+      {
+        "start": 63.75,
+        "end": 65.25,
+        "label": "A"
+      },
+      {
+        "start": 65.25,
+        "end": 67,
+        "label": "Asus4"
+      },
+      {
+        "start": 67,
+        "end": 67.75,
+        "label": "Em7"
+      },
+      {
+        "start": 67.75,
+        "end": 69.75,
+        "label": "Esus2"
+      },
+      {
+        "start": 69.75,
+        "end": 73.5,
+        "label": "Am"
+      },
+      {
+        "start": 73.5,
+        "end": 78,
+        "label": "G"
+      },
+      {
+        "start": 78,
+        "end": 82.25,
+        "label": "C"
+      },
+      {
+        "start": 82.25,
+        "end": 86.25,
+        "label": "D"
+      },
+      {
+        "start": 86.25,
+        "end": 87.5,
+        "label": "Asus4"
+      },
+      {
+        "start": 87.5,
+        "end": 90.5,
+        "label": "Am"
+      },
+      {
+        "start": 90.5,
+        "end": 94.75,
+        "label": "G"
+      },
+      {
+        "start": 94.75,
+        "end": 99.25,
+        "label": "D"
+      },
+      {
+        "start": 99.25,
+        "end": 103.25,
+        "label": "C"
+      },
+      {
+        "start": 103.25,
+        "end": 107.5,
+        "label": "Am"
+      },
+      {
+        "start": 107.5,
+        "end": 111.5,
+        "label": "G"
+      },
+      {
+        "start": 111.5,
+        "end": 115.75,
+        "label": "C"
+      },
+      {
+        "start": 115.75,
+        "end": 119.75,
+        "label": "D"
+      },
+      {
+        "start": 119.75,
+        "end": 123.75,
+        "label": "Am"
+      },
+      {
+        "start": 123.75,
+        "end": 127.75,
+        "label": "G"
+      },
+      {
+        "start": 127.75,
+        "end": 131.75,
+        "label": "D"
+      },
+      {
+        "start": 131.75,
+        "end": 136,
+        "label": "C"
+      },
+      {
+        "start": 136,
+        "end": 140,
+        "label": "Am"
+      },
+      {
+        "start": 140,
+        "end": 144,
+        "label": "G"
+      },
+      {
+        "start": 144,
+        "end": 148.25,
+        "label": "G6"
+      },
+      {
+        "start": 148.25,
+        "end": 152,
+        "label": "G"
+      },
+      {
+        "start": 152,
+        "end": 156,
+        "label": "G6"
+      },
+      {
+        "start": 156,
+        "end": 159.25,
+        "label": "G"
+      },
+      {
+        "start": 159.25,
+        "end": 163.75,
+        "label": "Em7"
+      },
+      {
+        "start": 163.75,
+        "end": 167.25,
+        "label": "A"
+      },
+      {
+        "start": 167.25,
+        "end": 171.75,
+        "label": "Em7"
+      },
+      {
+        "start": 171.75,
+        "end": 175.25,
+        "label": "A"
+      },
+      {
+        "start": 175.25,
+        "end": 179.5,
+        "label": "G"
+      },
+      {
+        "start": 179.5,
+        "end": 183.25,
+        "label": "C"
+      },
+      {
+        "start": 183.25,
+        "end": 187.5,
+        "label": "D"
+      },
+      {
+        "start": 187.5,
+        "end": 191.25,
+        "label": "Am"
+      },
+      {
+        "start": 191.25,
+        "end": 195.5,
+        "label": "G"
+      },
+      {
+        "start": 195.5,
+        "end": 199.25,
+        "label": "D"
+      },
+      {
+        "start": 199.25,
+        "end": 203.25,
+        "label": "C"
+      },
+      {
+        "start": 203.25,
+        "end": 207.25,
+        "label": "Am"
+      },
+      {
+        "start": 207.25,
+        "end": 211.25,
+        "label": "G"
+      },
+      {
+        "start": 211.25,
+        "end": 215.25,
+        "label": "Em"
+      },
+      {
+        "start": 215.25,
+        "end": 218.25,
+        "label": "G"
+      },
+      {
+        "start": 218.25,
+        "end": 219.25,
+        "label": "Gadd9"
+      },
+      {
+        "start": 219.25,
+        "end": 223,
+        "label": "Em"
+      },
+      {
+        "start": 223,
+        "end": 226.5,
+        "label": "G"
+      },
+      {
+        "start": 226.5,
+        "end": 230.75,
+        "label": "Em7"
+      },
+      {
+        "start": 230.75,
+        "end": 234.25,
+        "label": "A"
+      },
+      {
+        "start": 234.25,
+        "end": 238.5,
+        "label": "Em7"
+      },
+      {
+        "start": 238.5,
+        "end": 242.25,
+        "label": "A"
+      },
+      {
+        "start": 242.25,
+        "end": 249.25,
+        "label": "G"
+      },
+      {
+        "start": 249.25,
+        "end": 250.25,
+        "label": "Em7"
+      },
+      {
+        "start": 250.25,
+        "end": 254,
+        "label": "Em"
+      },
+      {
+        "start": 254,
+        "end": 257.75,
+        "label": "G"
+      },
+      {
+        "start": 257.75,
+        "end": 261.75,
+        "label": "G6"
+      },
+      {
+        "start": 261.75,
+        "end": 265.25,
+        "label": "G"
+      },
+      {
+        "start": 265.25,
+        "end": 269.25,
+        "label": "Em7"
+      },
+      {
+        "start": 269.25,
+        "end": 272.25,
+        "label": "A"
+      },
+      {
+        "start": 272.25,
+        "end": 273,
+        "label": "Bm7"
+      },
+      {
+        "start": 273,
+        "end": 276.75,
+        "label": "Em7"
+      },
+      {
+        "start": 276.75,
+        "end": 280.25,
+        "label": "A"
+      },
+      {
+        "start": 280.25,
+        "end": 288.5,
+        "label": "G"
+      },
+      {
+        "start": 288.5,
+        "end": 292.25,
+        "label": "Em"
+      },
+      {
+        "start": 292.25,
+        "end": 296.25,
+        "label": "G"
+      },
+      {
+        "start": 296.25,
+        "end": 299.25,
+        "label": "Em"
+      },
+      {
+        "start": 299.25,
+        "end": 303.5,
+        "label": "G"
+      },
+      {
+        "start": 303.5,
+        "end": 307.25,
+        "label": "G6"
+      },
+      {
+        "start": 307.25,
+        "end": 309.75,
+        "label": "A"
+      },
+      {
+        "start": 309.75,
+        "end": 312,
+        "label": "Em7"
+      },
+      {
+        "start": 312,
+        "end": 320.25,
+        "label": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,1116 @@
+{
+  "meta": {
+    "title": "Fast Car",
+    "artist": "Tracy Chapman",
+    "slug": "fast-car-chords",
+    "youtubeId": "uzOdm9w3J94",
+    "key": "A"
+  },
+  "analysis": {
+    "source": "youtube:uzOdm9w3J94",
+    "duration": 294.05755102040814,
+    "key": {
+      "name": "A",
+      "tonic": 9,
+      "mode": "major",
+      "confidence": 0.99
+    },
+    "tempo": {
+      "bpm": 138,
+      "beat": 0.4335432659324833,
+      "confidence": 0.21358781439880228
+    },
+    "segments": [
+      {
+        "start": 0,
+        "end": 0.5,
+        "label": null
+      },
+      {
+        "start": 0.5,
+        "end": 1.25,
+        "label": "A"
+      },
+      {
+        "start": 1.25,
+        "end": 2.25,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 2.25,
+        "end": 3.75,
+        "label": "A"
+      },
+      {
+        "start": 3.75,
+        "end": 5,
+        "label": "A6"
+      },
+      {
+        "start": 5,
+        "end": 6.25,
+        "label": "Amaj7"
+      },
+      {
+        "start": 6.25,
+        "end": 7.25,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 7.25,
+        "end": 8.5,
+        "label": "A"
+      },
+      {
+        "start": 8.5,
+        "end": 9.75,
+        "label": "A6"
+      },
+      {
+        "start": 9.75,
+        "end": 11,
+        "label": "Amaj7"
+      },
+      {
+        "start": 11,
+        "end": 12,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 12,
+        "end": 13.5,
+        "label": "A"
+      },
+      {
+        "start": 13.5,
+        "end": 14.75,
+        "label": "A6"
+      },
+      {
+        "start": 14.75,
+        "end": 15.75,
+        "label": "E"
+      },
+      {
+        "start": 15.75,
+        "end": 18.25,
+        "label": "A"
+      },
+      {
+        "start": 18.25,
+        "end": 19.25,
+        "label": "A6"
+      },
+      {
+        "start": 19.25,
+        "end": 20.75,
+        "label": "Amaj7"
+      },
+      {
+        "start": 20.75,
+        "end": 21.75,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 21.75,
+        "end": 23,
+        "label": "A"
+      },
+      {
+        "start": 23,
+        "end": 24,
+        "label": "A6"
+      },
+      {
+        "start": 24,
+        "end": 25.5,
+        "label": "Esus4"
+      },
+      {
+        "start": 25.5,
+        "end": 26.25,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 26.25,
+        "end": 27.5,
+        "label": "A"
+      },
+      {
+        "start": 27.5,
+        "end": 28.5,
+        "label": "Bm7"
+      },
+      {
+        "start": 28.5,
+        "end": 30,
+        "label": "E"
+      },
+      {
+        "start": 30,
+        "end": 31,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 31,
+        "end": 32.5,
+        "label": "A"
+      },
+      {
+        "start": 32.5,
+        "end": 34,
+        "label": "Eadd9"
+      },
+      {
+        "start": 34,
+        "end": 36.75,
+        "label": "A"
+      },
+      {
+        "start": 36.75,
+        "end": 39.25,
+        "label": "F#m7"
+      },
+      {
+        "start": 39.25,
+        "end": 40,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 40,
+        "end": 41.5,
+        "label": "A"
+      },
+      {
+        "start": 41.5,
+        "end": 42.5,
+        "label": "A6"
+      },
+      {
+        "start": 42.5,
+        "end": 44,
+        "label": "Amaj7"
+      },
+      {
+        "start": 44,
+        "end": 44.75,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 44.75,
+        "end": 46.25,
+        "label": "A"
+      },
+      {
+        "start": 46.25,
+        "end": 47.25,
+        "label": "A6"
+      },
+      {
+        "start": 47.25,
+        "end": 48.75,
+        "label": "Amaj7"
+      },
+      {
+        "start": 48.75,
+        "end": 49.5,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 49.5,
+        "end": 50.75,
+        "label": "A"
+      },
+      {
+        "start": 50.75,
+        "end": 53.25,
+        "label": "F#m7"
+      },
+      {
+        "start": 53.25,
+        "end": 54.25,
+        "label": "D"
+      },
+      {
+        "start": 54.25,
+        "end": 55.5,
+        "label": "A"
+      },
+      {
+        "start": 55.5,
+        "end": 56.5,
+        "label": "A6"
+      },
+      {
+        "start": 56.5,
+        "end": 57.75,
+        "label": "Amaj7"
+      },
+      {
+        "start": 57.75,
+        "end": 58.75,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 58.75,
+        "end": 60,
+        "label": "A"
+      },
+      {
+        "start": 60,
+        "end": 61,
+        "label": "A6"
+      },
+      {
+        "start": 61,
+        "end": 62.5,
+        "label": "Esus4"
+      },
+      {
+        "start": 62.5,
+        "end": 63.25,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 63.25,
+        "end": 64.5,
+        "label": "Asus2"
+      },
+      {
+        "start": 64.5,
+        "end": 65.5,
+        "label": "F#m"
+      },
+      {
+        "start": 65.5,
+        "end": 67.75,
+        "label": "F#m7"
+      },
+      {
+        "start": 67.75,
+        "end": 69.25,
+        "label": "A"
+      },
+      {
+        "start": 69.25,
+        "end": 70.5,
+        "label": "A6"
+      },
+      {
+        "start": 70.5,
+        "end": 71.5,
+        "label": "Amaj7"
+      },
+      {
+        "start": 71.5,
+        "end": 72.5,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 72.5,
+        "end": 74,
+        "label": "A"
+      },
+      {
+        "start": 74,
+        "end": 75,
+        "label": "A6"
+      },
+      {
+        "start": 75,
+        "end": 76.25,
+        "label": "Amaj7"
+      },
+      {
+        "start": 76.25,
+        "end": 77,
+        "label": "Dadd9"
+      },
+      {
+        "start": 77,
+        "end": 79.75,
+        "label": "A6"
+      },
+      {
+        "start": 79.75,
+        "end": 81,
+        "label": "Esus4"
+      },
+      {
+        "start": 81,
+        "end": 81.75,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 81.75,
+        "end": 83,
+        "label": "A"
+      },
+      {
+        "start": 83,
+        "end": 85.5,
+        "label": "F#m7"
+      },
+      {
+        "start": 85.5,
+        "end": 88.5,
+        "label": "Bm7"
+      },
+      {
+        "start": 88.5,
+        "end": 90,
+        "label": "Esus4"
+      },
+      {
+        "start": 90,
+        "end": 90.75,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 90.75,
+        "end": 92.25,
+        "label": "A"
+      },
+      {
+        "start": 92.25,
+        "end": 93.25,
+        "label": "A6"
+      },
+      {
+        "start": 93.25,
+        "end": 94.5,
+        "label": "Esus4"
+      },
+      {
+        "start": 94.5,
+        "end": 95.5,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 95.5,
+        "end": 96.75,
+        "label": "A"
+      },
+      {
+        "start": 96.75,
+        "end": 97.75,
+        "label": "A6"
+      },
+      {
+        "start": 97.75,
+        "end": 99.25,
+        "label": "Amaj7"
+      },
+      {
+        "start": 99.25,
+        "end": 100,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 100,
+        "end": 101.5,
+        "label": "A"
+      },
+      {
+        "start": 101.5,
+        "end": 102.5,
+        "label": "A6"
+      },
+      {
+        "start": 102.5,
+        "end": 104,
+        "label": "Amaj7"
+      },
+      {
+        "start": 104,
+        "end": 105,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 105,
+        "end": 106.25,
+        "label": "A"
+      },
+      {
+        "start": 106.25,
+        "end": 107.25,
+        "label": "Eadd9"
+      },
+      {
+        "start": 107.25,
+        "end": 108.5,
+        "label": "Esus4"
+      },
+      {
+        "start": 108.5,
+        "end": 109.5,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 109.5,
+        "end": 110.75,
+        "label": "A"
+      },
+      {
+        "start": 110.75,
+        "end": 111.75,
+        "label": "Bm7"
+      },
+      {
+        "start": 111.75,
+        "end": 113,
+        "label": "E"
+      },
+      {
+        "start": 113,
+        "end": 115.25,
+        "label": "A"
+      },
+      {
+        "start": 115.25,
+        "end": 116.5,
+        "label": "A6"
+      },
+      {
+        "start": 116.5,
+        "end": 117.75,
+        "label": "Amaj7"
+      },
+      {
+        "start": 117.75,
+        "end": 118.5,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 118.5,
+        "end": 120,
+        "label": "A"
+      },
+      {
+        "start": 120,
+        "end": 121,
+        "label": "A6"
+      },
+      {
+        "start": 121,
+        "end": 122.5,
+        "label": "E7"
+      },
+      {
+        "start": 122.5,
+        "end": 124.5,
+        "label": "D"
+      },
+      {
+        "start": 124.5,
+        "end": 126.75,
+        "label": "A"
+      },
+      {
+        "start": 126.75,
+        "end": 129.25,
+        "label": "F#m"
+      },
+      {
+        "start": 129.25,
+        "end": 131.25,
+        "label": "E"
+      },
+      {
+        "start": 131.25,
+        "end": 132.25,
+        "label": "Dadd9"
+      },
+      {
+        "start": 132.25,
+        "end": 134,
+        "label": "F#m"
+      },
+      {
+        "start": 134,
+        "end": 136,
+        "label": "E"
+      },
+      {
+        "start": 136,
+        "end": 137,
+        "label": "Dadd9"
+      },
+      {
+        "start": 137,
+        "end": 138.25,
+        "label": "F#m"
+      },
+      {
+        "start": 138.25,
+        "end": 139,
+        "label": "F#m7"
+      },
+      {
+        "start": 139,
+        "end": 140.5,
+        "label": "Esus4"
+      },
+      {
+        "start": 140.5,
+        "end": 143,
+        "label": "Dadd9"
+      },
+      {
+        "start": 143,
+        "end": 143.75,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 143.75,
+        "end": 145.25,
+        "label": "A"
+      },
+      {
+        "start": 145.25,
+        "end": 146.25,
+        "label": "A6"
+      },
+      {
+        "start": 146.25,
+        "end": 147.5,
+        "label": "Amaj7"
+      },
+      {
+        "start": 147.5,
+        "end": 148.5,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 148.5,
+        "end": 149.75,
+        "label": "A"
+      },
+      {
+        "start": 149.75,
+        "end": 151,
+        "label": "A6"
+      },
+      {
+        "start": 151,
+        "end": 152.5,
+        "label": "Amaj7"
+      },
+      {
+        "start": 152.5,
+        "end": 153.25,
+        "label": "D"
+      },
+      {
+        "start": 153.25,
+        "end": 154.75,
+        "label": "A"
+      },
+      {
+        "start": 154.75,
+        "end": 155.75,
+        "label": "Eadd9"
+      },
+      {
+        "start": 155.75,
+        "end": 157,
+        "label": "Esus4"
+      },
+      {
+        "start": 157,
+        "end": 157.75,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 157.75,
+        "end": 159,
+        "label": "A"
+      },
+      {
+        "start": 159,
+        "end": 160.25,
+        "label": "A6"
+      },
+      {
+        "start": 160.25,
+        "end": 161.5,
+        "label": "Esus4"
+      },
+      {
+        "start": 161.5,
+        "end": 162.25,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 162.25,
+        "end": 163.75,
+        "label": "A"
+      },
+      {
+        "start": 163.75,
+        "end": 164.5,
+        "label": "Bm7"
+      },
+      {
+        "start": 164.5,
+        "end": 166.25,
+        "label": "F#m7"
+      },
+      {
+        "start": 166.25,
+        "end": 169.25,
+        "label": "Bm7"
+      },
+      {
+        "start": 169.25,
+        "end": 170.75,
+        "label": "Esus4"
+      },
+      {
+        "start": 170.75,
+        "end": 171.5,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 171.5,
+        "end": 173,
+        "label": "A"
+      },
+      {
+        "start": 173,
+        "end": 174,
+        "label": "A6"
+      },
+      {
+        "start": 174,
+        "end": 175.25,
+        "label": "Amaj7"
+      },
+      {
+        "start": 175.25,
+        "end": 176.25,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 176.25,
+        "end": 177.5,
+        "label": "A"
+      },
+      {
+        "start": 177.5,
+        "end": 178.75,
+        "label": "A6"
+      },
+      {
+        "start": 178.75,
+        "end": 179.75,
+        "label": "E"
+      },
+      {
+        "start": 179.75,
+        "end": 182.25,
+        "label": "D"
+      },
+      {
+        "start": 182.25,
+        "end": 184.25,
+        "label": "A"
+      },
+      {
+        "start": 184.25,
+        "end": 186.75,
+        "label": "F#m"
+      },
+      {
+        "start": 186.75,
+        "end": 188.75,
+        "label": "E"
+      },
+      {
+        "start": 188.75,
+        "end": 189.75,
+        "label": "Dadd9"
+      },
+      {
+        "start": 189.75,
+        "end": 191.75,
+        "label": "F#m"
+      },
+      {
+        "start": 191.75,
+        "end": 193.5,
+        "label": "E"
+      },
+      {
+        "start": 193.5,
+        "end": 194.5,
+        "label": "D"
+      },
+      {
+        "start": 194.5,
+        "end": 196,
+        "label": "F#m"
+      },
+      {
+        "start": 196,
+        "end": 198,
+        "label": "E"
+      },
+      {
+        "start": 198,
+        "end": 200.5,
+        "label": "Dadd9"
+      },
+      {
+        "start": 200.5,
+        "end": 201.25,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 201.25,
+        "end": 202.5,
+        "label": "A"
+      },
+      {
+        "start": 202.5,
+        "end": 203.75,
+        "label": "A6"
+      },
+      {
+        "start": 203.75,
+        "end": 205,
+        "label": "Amaj7"
+      },
+      {
+        "start": 205,
+        "end": 206,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 206,
+        "end": 207.25,
+        "label": "A"
+      },
+      {
+        "start": 207.25,
+        "end": 208.25,
+        "label": "A6"
+      },
+      {
+        "start": 208.25,
+        "end": 209.75,
+        "label": "Amaj7"
+      },
+      {
+        "start": 209.75,
+        "end": 210.75,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 210.75,
+        "end": 212.25,
+        "label": "A"
+      },
+      {
+        "start": 212.25,
+        "end": 213.25,
+        "label": "Eadd9"
+      },
+      {
+        "start": 213.25,
+        "end": 214.25,
+        "label": "Esus4"
+      },
+      {
+        "start": 214.25,
+        "end": 215,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 215,
+        "end": 216.5,
+        "label": "A"
+      },
+      {
+        "start": 216.5,
+        "end": 217.25,
+        "label": "A6"
+      },
+      {
+        "start": 217.25,
+        "end": 218.75,
+        "label": "E"
+      },
+      {
+        "start": 218.75,
+        "end": 219.75,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 219.75,
+        "end": 222,
+        "label": "Bm7"
+      },
+      {
+        "start": 222,
+        "end": 223.5,
+        "label": "E"
+      },
+      {
+        "start": 223.5,
+        "end": 226.5,
+        "label": "Bm7"
+      },
+      {
+        "start": 226.5,
+        "end": 228,
+        "label": "Esus4"
+      },
+      {
+        "start": 228,
+        "end": 228.75,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 228.75,
+        "end": 230.25,
+        "label": "A"
+      },
+      {
+        "start": 230.25,
+        "end": 231.25,
+        "label": "A6"
+      },
+      {
+        "start": 231.25,
+        "end": 232.5,
+        "label": "Amaj7"
+      },
+      {
+        "start": 232.5,
+        "end": 233.5,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 233.5,
+        "end": 234.75,
+        "label": "A"
+      },
+      {
+        "start": 234.75,
+        "end": 236,
+        "label": "A6"
+      },
+      {
+        "start": 236,
+        "end": 237,
+        "label": "E"
+      },
+      {
+        "start": 237,
+        "end": 239.5,
+        "label": "D"
+      },
+      {
+        "start": 239.5,
+        "end": 241.5,
+        "label": "A"
+      },
+      {
+        "start": 241.5,
+        "end": 244,
+        "label": "F#m"
+      },
+      {
+        "start": 244,
+        "end": 246,
+        "label": "E"
+      },
+      {
+        "start": 246,
+        "end": 247,
+        "label": "Dadd9"
+      },
+      {
+        "start": 247,
+        "end": 248.5,
+        "label": "F#m"
+      },
+      {
+        "start": 248.5,
+        "end": 250.5,
+        "label": "E"
+      },
+      {
+        "start": 250.5,
+        "end": 253.25,
+        "label": "F#m7"
+      },
+      {
+        "start": 253.25,
+        "end": 255,
+        "label": "E"
+      },
+      {
+        "start": 255,
+        "end": 257.75,
+        "label": "Dadd9"
+      },
+      {
+        "start": 257.75,
+        "end": 258.5,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 258.5,
+        "end": 259.75,
+        "label": "A"
+      },
+      {
+        "start": 259.75,
+        "end": 260.75,
+        "label": "A6"
+      },
+      {
+        "start": 260.75,
+        "end": 262.25,
+        "label": "Amaj7"
+      },
+      {
+        "start": 262.25,
+        "end": 263,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 263,
+        "end": 264.5,
+        "label": "A"
+      },
+      {
+        "start": 264.5,
+        "end": 265.5,
+        "label": "A6"
+      },
+      {
+        "start": 265.5,
+        "end": 267,
+        "label": "Amaj7"
+      },
+      {
+        "start": 267,
+        "end": 268,
+        "label": "D"
+      },
+      {
+        "start": 268,
+        "end": 269,
+        "label": "A"
+      },
+      {
+        "start": 269,
+        "end": 270,
+        "label": "Bm7"
+      },
+      {
+        "start": 270,
+        "end": 271.5,
+        "label": "E"
+      },
+      {
+        "start": 271.5,
+        "end": 272.5,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 272.5,
+        "end": 274,
+        "label": "A"
+      },
+      {
+        "start": 274,
+        "end": 275.25,
+        "label": "Eadd9"
+      },
+      {
+        "start": 275.25,
+        "end": 276,
+        "label": "Esus4"
+      },
+      {
+        "start": 276,
+        "end": 276.75,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 276.75,
+        "end": 278.25,
+        "label": "A"
+      },
+      {
+        "start": 278.25,
+        "end": 279.25,
+        "label": "A6"
+      },
+      {
+        "start": 279.25,
+        "end": 280.75,
+        "label": "Amaj7"
+      },
+      {
+        "start": 280.75,
+        "end": 281.5,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 281.5,
+        "end": 282.75,
+        "label": "A"
+      },
+      {
+        "start": 282.75,
+        "end": 284,
+        "label": "A6"
+      },
+      {
+        "start": 284,
+        "end": 285.25,
+        "label": "Amaj7"
+      },
+      {
+        "start": 285.25,
+        "end": 286,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 286,
+        "end": 287.5,
+        "label": "A"
+      },
+      {
+        "start": 287.5,
+        "end": 288.5,
+        "label": "A6"
+      },
+      {
+        "start": 288.5,
+        "end": 289.75,
+        "label": "Amaj7"
+      },
+      {
+        "start": 289.75,
+        "end": 290.75,
+        "label": "Dmaj7"
+      },
+      {
+        "start": 290.75,
+        "end": 292.5,
+        "label": "A"
+      },
+      {
+        "start": 292.5,
+        "end": 294.25,
+        "label": null
+      }
+    ]
+  }
+}

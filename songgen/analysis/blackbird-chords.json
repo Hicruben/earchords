@@ -1,0 +1,396 @@
+{
+  "meta": {
+    "title": "Blackbird",
+    "artist": "The Beatles",
+    "slug": "blackbird-chords",
+    "youtubeId": "0gNLltUiOAg",
+    "key": "G"
+  },
+  "analysis": {
+    "source": "youtube:0gNLltUiOAg",
+    "duration": 138.3677551020408,
+    "key": {
+      "name": "G",
+      "tonic": 7,
+      "mode": "major",
+      "confidence": 0.99
+    },
+    "tempo": {
+      "bpm": 93,
+      "beat": 0.645079986144139,
+      "confidence": 0.23674665576997445
+    },
+    "segments": [
+      {
+        "start": 0,
+        "end": 5.25,
+        "label": "G"
+      },
+      {
+        "start": 5.25,
+        "end": 6.25,
+        "label": "Gadd9"
+      },
+      {
+        "start": 6.25,
+        "end": 9.25,
+        "label": "G"
+      },
+      {
+        "start": 9.25,
+        "end": 10.5,
+        "label": "Am7"
+      },
+      {
+        "start": 10.5,
+        "end": 11.75,
+        "label": "D"
+      },
+      {
+        "start": 11.75,
+        "end": 13,
+        "label": "Em"
+      },
+      {
+        "start": 13,
+        "end": 14.5,
+        "label": "Gaug"
+      },
+      {
+        "start": 14.5,
+        "end": 15.5,
+        "label": "Gadd9"
+      },
+      {
+        "start": 15.5,
+        "end": 18.25,
+        "label": "Cm"
+      },
+      {
+        "start": 18.25,
+        "end": 19.5,
+        "label": "G"
+      },
+      {
+        "start": 19.5,
+        "end": 21,
+        "label": "A"
+      },
+      {
+        "start": 21,
+        "end": 22.25,
+        "label": "Gadd9"
+      },
+      {
+        "start": 22.25,
+        "end": 23.25,
+        "label": "G"
+      },
+      {
+        "start": 23.25,
+        "end": 24,
+        "label": "C"
+      },
+      {
+        "start": 24,
+        "end": 24.75,
+        "label": "G"
+      },
+      {
+        "start": 24.75,
+        "end": 26,
+        "label": "A7"
+      },
+      {
+        "start": 26,
+        "end": 29,
+        "label": "G"
+      },
+      {
+        "start": 29,
+        "end": 30,
+        "label": "Gadd9"
+      },
+      {
+        "start": 30,
+        "end": 33,
+        "label": "G"
+      },
+      {
+        "start": 33,
+        "end": 33.75,
+        "label": "C"
+      },
+      {
+        "start": 33.75,
+        "end": 34.75,
+        "label": "Gadd9"
+      },
+      {
+        "start": 34.75,
+        "end": 35.5,
+        "label": "Cm"
+      },
+      {
+        "start": 35.5,
+        "end": 36.75,
+        "label": "G6"
+      },
+      {
+        "start": 36.75,
+        "end": 38.25,
+        "label": "Gaug"
+      },
+      {
+        "start": 38.25,
+        "end": 39.25,
+        "label": "Gadd9"
+      },
+      {
+        "start": 39.25,
+        "end": 42,
+        "label": "C"
+      },
+      {
+        "start": 42,
+        "end": 43,
+        "label": "G"
+      },
+      {
+        "start": 43,
+        "end": 45.25,
+        "label": "Gadd9"
+      },
+      {
+        "start": 45.25,
+        "end": 47,
+        "label": "G"
+      },
+      {
+        "start": 47,
+        "end": 48.25,
+        "label": "C"
+      },
+      {
+        "start": 48.25,
+        "end": 51,
+        "label": "Gm"
+      },
+      {
+        "start": 51,
+        "end": 54.75,
+        "label": "C"
+      },
+      {
+        "start": 54.75,
+        "end": 56,
+        "label": "Gm"
+      },
+      {
+        "start": 56,
+        "end": 57.25,
+        "label": "Gadd9"
+      },
+      {
+        "start": 57.25,
+        "end": 58.25,
+        "label": "Dm7"
+      },
+      {
+        "start": 58.25,
+        "end": 63,
+        "label": "G"
+      },
+      {
+        "start": 63,
+        "end": 63.75,
+        "label": "C"
+      },
+      {
+        "start": 63.75,
+        "end": 65.5,
+        "label": "Gmaj7"
+      },
+      {
+        "start": 65.5,
+        "end": 66.75,
+        "label": "G6"
+      },
+      {
+        "start": 66.75,
+        "end": 68,
+        "label": "Gaug"
+      },
+      {
+        "start": 68,
+        "end": 69.25,
+        "label": "Gmaj7"
+      },
+      {
+        "start": 69.25,
+        "end": 71.75,
+        "label": "C"
+      },
+      {
+        "start": 71.75,
+        "end": 73.25,
+        "label": "G"
+      },
+      {
+        "start": 73.25,
+        "end": 74.5,
+        "label": "A7"
+      },
+      {
+        "start": 74.5,
+        "end": 77.25,
+        "label": "G"
+      },
+      {
+        "start": 77.25,
+        "end": 78.25,
+        "label": "C"
+      },
+      {
+        "start": 78.25,
+        "end": 80.75,
+        "label": "Gm"
+      },
+      {
+        "start": 80.75,
+        "end": 83.25,
+        "label": "C"
+      },
+      {
+        "start": 83.25,
+        "end": 84.5,
+        "label": "Gsus4"
+      },
+      {
+        "start": 84.5,
+        "end": 86,
+        "label": "Gm"
+      },
+      {
+        "start": 86,
+        "end": 87.25,
+        "label": "A7"
+      },
+      {
+        "start": 87.25,
+        "end": 88.25,
+        "label": "Dm7"
+      },
+      {
+        "start": 88.25,
+        "end": 102.5,
+        "label": "G"
+      },
+      {
+        "start": 102.5,
+        "end": 103.75,
+        "label": "Gadd9"
+      },
+      {
+        "start": 103.75,
+        "end": 105,
+        "label": "C"
+      },
+      {
+        "start": 105,
+        "end": 106,
+        "label": "Gadd9"
+      },
+      {
+        "start": 106,
+        "end": 107.5,
+        "label": "G"
+      },
+      {
+        "start": 107.5,
+        "end": 108.5,
+        "label": "Gadd9"
+      },
+      {
+        "start": 108.5,
+        "end": 111.5,
+        "label": "G"
+      },
+      {
+        "start": 111.5,
+        "end": 112.75,
+        "label": "A7"
+      },
+      {
+        "start": 112.75,
+        "end": 114,
+        "label": "D"
+      },
+      {
+        "start": 114,
+        "end": 115.25,
+        "label": "G6"
+      },
+      {
+        "start": 115.25,
+        "end": 116.5,
+        "label": "Gaug"
+      },
+      {
+        "start": 116.5,
+        "end": 117.75,
+        "label": "Gadd9"
+      },
+      {
+        "start": 117.75,
+        "end": 120.25,
+        "label": "Cm"
+      },
+      {
+        "start": 120.25,
+        "end": 121.75,
+        "label": "G"
+      },
+      {
+        "start": 121.75,
+        "end": 124.25,
+        "label": "Gadd9"
+      },
+      {
+        "start": 124.25,
+        "end": 126.5,
+        "label": "G"
+      },
+      {
+        "start": 126.5,
+        "end": 129,
+        "label": "Gadd9"
+      },
+      {
+        "start": 129,
+        "end": 131.75,
+        "label": "G"
+      },
+      {
+        "start": 131.75,
+        "end": 132.75,
+        "label": "A"
+      },
+      {
+        "start": 132.75,
+        "end": 134.25,
+        "label": "Gadd9"
+      },
+      {
+        "start": 134.25,
+        "end": 137.75,
+        "label": "G"
+      },
+      {
+        "start": 137.75,
+        "end": 138.5,
+        "label": null
+      }
+    ]
+  }
+}

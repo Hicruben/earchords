@@ -1,0 +1,311 @@
+{
+  "meta": {
+    "title": "Budapest",
+    "artist": "George Ezra",
+    "slug": "budapest-chords",
+    "youtubeId": "XyGSQjyaoDA",
+    "key": "F"
+  },
+  "analysis": {
+    "source": "youtube:XyGSQjyaoDA",
+    "duration": 202.58253968253968,
+    "key": {
+      "name": "F",
+      "tonic": 5,
+      "mode": "major",
+      "confidence": 0.99
+    },
+    "tempo": {
+      "bpm": 128,
+      "beat": 0.46864166138014623,
+      "confidence": 0.2200307268618963
+    },
+    "segments": [
+      {
+        "start": 0,
+        "end": 0.5,
+        "label": null
+      },
+      {
+        "start": 0.5,
+        "end": 15.5,
+        "label": "F"
+      },
+      {
+        "start": 15.5,
+        "end": 19.25,
+        "label": "A#"
+      },
+      {
+        "start": 19.25,
+        "end": 30.5,
+        "label": "F"
+      },
+      {
+        "start": 30.5,
+        "end": 34.5,
+        "label": "A#"
+      },
+      {
+        "start": 34.5,
+        "end": 38,
+        "label": "F"
+      },
+      {
+        "start": 38,
+        "end": 42,
+        "label": "A#"
+      },
+      {
+        "start": 42,
+        "end": 45.75,
+        "label": "F"
+      },
+      {
+        "start": 45.75,
+        "end": 47.25,
+        "label": "C"
+      },
+      {
+        "start": 47.25,
+        "end": 48.25,
+        "label": "A#add9"
+      },
+      {
+        "start": 48.25,
+        "end": 49.5,
+        "label": "A#maj7"
+      },
+      {
+        "start": 49.5,
+        "end": 53.25,
+        "label": "F"
+      },
+      {
+        "start": 53.25,
+        "end": 55,
+        "label": "C"
+      },
+      {
+        "start": 55,
+        "end": 56.75,
+        "label": "C7"
+      },
+      {
+        "start": 56.75,
+        "end": 68,
+        "label": "F"
+      },
+      {
+        "start": 68,
+        "end": 72,
+        "label": "A#"
+      },
+      {
+        "start": 72,
+        "end": 75.5,
+        "label": "F"
+      },
+      {
+        "start": 75.5,
+        "end": 79.5,
+        "label": "A#"
+      },
+      {
+        "start": 79.5,
+        "end": 83,
+        "label": "F"
+      },
+      {
+        "start": 83,
+        "end": 85.75,
+        "label": "A#add9"
+      },
+      {
+        "start": 85.75,
+        "end": 87,
+        "label": "A#maj7"
+      },
+      {
+        "start": 87,
+        "end": 90.75,
+        "label": "F"
+      },
+      {
+        "start": 90.75,
+        "end": 92.5,
+        "label": "C"
+      },
+      {
+        "start": 92.5,
+        "end": 94.25,
+        "label": "C7"
+      },
+      {
+        "start": 94.25,
+        "end": 98.5,
+        "label": "F"
+      },
+      {
+        "start": 98.5,
+        "end": 99.75,
+        "label": "C"
+      },
+      {
+        "start": 99.75,
+        "end": 100.75,
+        "label": "A#add9"
+      },
+      {
+        "start": 100.75,
+        "end": 102,
+        "label": "A#maj7"
+      },
+      {
+        "start": 102,
+        "end": 105.75,
+        "label": "F"
+      },
+      {
+        "start": 105.75,
+        "end": 107.5,
+        "label": "C"
+      },
+      {
+        "start": 107.5,
+        "end": 109.25,
+        "label": "A#"
+      },
+      {
+        "start": 109.25,
+        "end": 120.5,
+        "label": "F"
+      },
+      {
+        "start": 120.5,
+        "end": 124.25,
+        "label": "A#"
+      },
+      {
+        "start": 124.25,
+        "end": 135.75,
+        "label": "F"
+      },
+      {
+        "start": 135.75,
+        "end": 139.25,
+        "label": "A#"
+      },
+      {
+        "start": 139.25,
+        "end": 143,
+        "label": "F"
+      },
+      {
+        "start": 143,
+        "end": 146.75,
+        "label": "A#"
+      },
+      {
+        "start": 146.75,
+        "end": 150.75,
+        "label": "F"
+      },
+      {
+        "start": 150.75,
+        "end": 152.25,
+        "label": "C"
+      },
+      {
+        "start": 152.25,
+        "end": 153.25,
+        "label": "A#add9"
+      },
+      {
+        "start": 153.25,
+        "end": 154.5,
+        "label": "A#maj7"
+      },
+      {
+        "start": 154.5,
+        "end": 158.5,
+        "label": "F"
+      },
+      {
+        "start": 158.5,
+        "end": 160,
+        "label": "C"
+      },
+      {
+        "start": 160,
+        "end": 161.75,
+        "label": "A#"
+      },
+      {
+        "start": 161.75,
+        "end": 166,
+        "label": "F"
+      },
+      {
+        "start": 166,
+        "end": 167.25,
+        "label": "C"
+      },
+      {
+        "start": 167.25,
+        "end": 168.25,
+        "label": "A#add9"
+      },
+      {
+        "start": 168.25,
+        "end": 169.25,
+        "label": "A#maj7"
+      },
+      {
+        "start": 169.25,
+        "end": 173.5,
+        "label": "F"
+      },
+      {
+        "start": 173.5,
+        "end": 175,
+        "label": "C"
+      },
+      {
+        "start": 175,
+        "end": 177,
+        "label": "A#"
+      },
+      {
+        "start": 177,
+        "end": 188.25,
+        "label": "F"
+      },
+      {
+        "start": 188.25,
+        "end": 191.75,
+        "label": "A#"
+      },
+      {
+        "start": 191.75,
+        "end": 195.75,
+        "label": "F"
+      },
+      {
+        "start": 195.75,
+        "end": 199.5,
+        "label": "A#"
+      },
+      {
+        "start": 199.5,
+        "end": 201,
+        "label": "F"
+      },
+      {
+        "start": 201,
+        "end": 202.75,
+        "label": null
+      }
+    ]
+  }
+}

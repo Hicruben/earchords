@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node songgen/assemble.mjs",
+    "build": "vite build && node songgen/build-pages.mjs && node songgen/assemble.mjs",
     "preview": "vite preview",
     "deploy": "npm run build && wrangler pages deploy dist --project-name=earchords",
     "analyze": "node validation/analyze_song.mjs",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "vite": "^5.4.0",
-    "wrangler": "^4.113.0"
+    "wrangler": "^4.113.0",
+    "esbuild": "^0.21.5"
   }
 }

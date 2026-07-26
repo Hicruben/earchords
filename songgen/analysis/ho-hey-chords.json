@@ -1,0 +1,266 @@
+{
+  "meta": {
+    "title": "Ho Hey",
+    "artist": "The Lumineers",
+    "slug": "ho-hey-chords",
+    "youtubeId": "d-B_1RpKJHg",
+    "key": "C"
+  },
+  "analysis": {
+    "source": "youtube:d-B_1RpKJHg",
+    "duration": 154.1689342403628,
+    "key": {
+      "name": "C",
+      "tonic": 0,
+      "mode": "major",
+      "confidence": 0.99
+    },
+    "tempo": {
+      "bpm": 79,
+      "beat": 0.7608955950103815,
+      "confidence": 0.21310750229121822
+    },
+    "segments": [
+      {
+        "start": 0,
+        "end": 0.75,
+        "label": "F"
+      },
+      {
+        "start": 0.75,
+        "end": 25,
+        "label": "C"
+      },
+      {
+        "start": 25,
+        "end": 26.75,
+        "label": "Am"
+      },
+      {
+        "start": 26.75,
+        "end": 27.75,
+        "label": "G6"
+      },
+      {
+        "start": 27.75,
+        "end": 35.75,
+        "label": "C"
+      },
+      {
+        "start": 35.75,
+        "end": 36.75,
+        "label": "Gsus4"
+      },
+      {
+        "start": 36.75,
+        "end": 46.5,
+        "label": "C"
+      },
+      {
+        "start": 46.5,
+        "end": 48,
+        "label": "Am"
+      },
+      {
+        "start": 48,
+        "end": 49,
+        "label": "Em7"
+      },
+      {
+        "start": 49,
+        "end": 49.75,
+        "label": "Dm7"
+      },
+      {
+        "start": 49.75,
+        "end": 52.5,
+        "label": "C"
+      },
+      {
+        "start": 52.5,
+        "end": 54.25,
+        "label": "Am"
+      },
+      {
+        "start": 54.25,
+        "end": 55.5,
+        "label": "G"
+      },
+      {
+        "start": 55.5,
+        "end": 58.5,
+        "label": "C"
+      },
+      {
+        "start": 58.5,
+        "end": 60,
+        "label": "Am"
+      },
+      {
+        "start": 60,
+        "end": 61,
+        "label": "Gsus4"
+      },
+      {
+        "start": 61,
+        "end": 73,
+        "label": "C"
+      },
+      {
+        "start": 73,
+        "end": 73.75,
+        "label": "F"
+      },
+      {
+        "start": 73.75,
+        "end": 85.5,
+        "label": "C"
+      },
+      {
+        "start": 85.5,
+        "end": 86.75,
+        "label": "Am"
+      },
+      {
+        "start": 86.75,
+        "end": 88.5,
+        "label": "Am7"
+      },
+      {
+        "start": 88.5,
+        "end": 91.5,
+        "label": "C"
+      },
+      {
+        "start": 91.5,
+        "end": 93,
+        "label": "C6"
+      },
+      {
+        "start": 93,
+        "end": 94.25,
+        "label": "G"
+      },
+      {
+        "start": 94.25,
+        "end": 97.25,
+        "label": "C"
+      },
+      {
+        "start": 97.25,
+        "end": 99,
+        "label": "Am"
+      },
+      {
+        "start": 99,
+        "end": 100.75,
+        "label": "Gsus4"
+      },
+      {
+        "start": 100.75,
+        "end": 103.25,
+        "label": "C"
+      },
+      {
+        "start": 103.25,
+        "end": 104.75,
+        "label": "Am"
+      },
+      {
+        "start": 104.75,
+        "end": 106.5,
+        "label": "Am7"
+      },
+      {
+        "start": 106.5,
+        "end": 112.25,
+        "label": "C"
+      },
+      {
+        "start": 112.25,
+        "end": 113.75,
+        "label": "G"
+      },
+      {
+        "start": 113.75,
+        "end": 115.75,
+        "label": "C"
+      },
+      {
+        "start": 115.75,
+        "end": 117.5,
+        "label": "F"
+      },
+      {
+        "start": 117.5,
+        "end": 118.5,
+        "label": "C"
+      },
+      {
+        "start": 118.5,
+        "end": 121.5,
+        "label": "G"
+      },
+      {
+        "start": 121.5,
+        "end": 122.5,
+        "label": "Fadd9"
+      },
+      {
+        "start": 122.5,
+        "end": 123.75,
+        "label": "F"
+      },
+      {
+        "start": 123.75,
+        "end": 124.5,
+        "label": "C"
+      },
+      {
+        "start": 124.5,
+        "end": 125.75,
+        "label": "G"
+      },
+      {
+        "start": 125.75,
+        "end": 127.5,
+        "label": "C"
+      },
+      {
+        "start": 127.5,
+        "end": 129,
+        "label": "Am"
+      },
+      {
+        "start": 129,
+        "end": 130.5,
+        "label": "Gsus4"
+      },
+      {
+        "start": 130.5,
+        "end": 133.25,
+        "label": "C"
+      },
+      {
+        "start": 133.25,
+        "end": 134.75,
+        "label": "Am"
+      },
+      {
+        "start": 134.75,
+        "end": 136,
+        "label": "Am7"
+      },
+      {
+        "start": 136,
+        "end": 153.5,
+        "label": "C"
+      },
+      {
+        "start": 153.5,
+        "end": 154.25,
+        "label": null
+      }
+    ]
+  }
+}

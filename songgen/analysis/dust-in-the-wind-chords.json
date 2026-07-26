@@ -1,0 +1,456 @@
+{
+  "meta": {
+    "title": "Dust in the Wind",
+    "artist": "Kansas",
+    "slug": "dust-in-the-wind-chords",
+    "youtubeId": "90msAuGKbjY",
+    "key": "Am"
+  },
+  "analysis": {
+    "source": "youtube:90msAuGKbjY",
+    "duration": 203.84802721088437,
+    "key": {
+      "name": "Am",
+      "tonic": 9,
+      "mode": "minor",
+      "confidence": 0.99
+    },
+    "tempo": {
+      "bpm": 94,
+      "beat": 0.6407482506375751,
+      "confidence": 0.2834598179922879
+    },
+    "segments": [
+      {
+        "start": 0,
+        "end": 1.75,
+        "label": "C"
+      },
+      {
+        "start": 1.75,
+        "end": 3,
+        "label": "Cmaj7"
+      },
+      {
+        "start": 3,
+        "end": 5.5,
+        "label": "C"
+      },
+      {
+        "start": 5.5,
+        "end": 7,
+        "label": "Asus2"
+      },
+      {
+        "start": 7,
+        "end": 9.5,
+        "label": "Am"
+      },
+      {
+        "start": 9.5,
+        "end": 10.5,
+        "label": "Asus2"
+      },
+      {
+        "start": 10.5,
+        "end": 11.25,
+        "label": "Cadd9"
+      },
+      {
+        "start": 11.25,
+        "end": 15.75,
+        "label": "C"
+      },
+      {
+        "start": 15.75,
+        "end": 20.5,
+        "label": "Am"
+      },
+      {
+        "start": 20.5,
+        "end": 22.25,
+        "label": "C"
+      },
+      {
+        "start": 22.25,
+        "end": 23.5,
+        "label": "G"
+      },
+      {
+        "start": 23.5,
+        "end": 26,
+        "label": "Am"
+      },
+      {
+        "start": 26,
+        "end": 27.5,
+        "label": "G"
+      },
+      {
+        "start": 27.5,
+        "end": 28.75,
+        "label": "Dm7"
+      },
+      {
+        "start": 28.75,
+        "end": 31.25,
+        "label": "Am"
+      },
+      {
+        "start": 31.25,
+        "end": 32.5,
+        "label": "C"
+      },
+      {
+        "start": 32.5,
+        "end": 33.75,
+        "label": "G"
+      },
+      {
+        "start": 33.75,
+        "end": 36.25,
+        "label": "Am"
+      },
+      {
+        "start": 36.25,
+        "end": 38,
+        "label": "G"
+      },
+      {
+        "start": 38,
+        "end": 39,
+        "label": "Dm7"
+      },
+      {
+        "start": 39,
+        "end": 41.25,
+        "label": "Am"
+      },
+      {
+        "start": 41.25,
+        "end": 42.5,
+        "label": "D"
+      },
+      {
+        "start": 42.5,
+        "end": 44,
+        "label": "G"
+      },
+      {
+        "start": 44,
+        "end": 45,
+        "label": "Am"
+      },
+      {
+        "start": 45,
+        "end": 46.5,
+        "label": "Am7"
+      },
+      {
+        "start": 46.5,
+        "end": 47.5,
+        "label": "D"
+      },
+      {
+        "start": 47.5,
+        "end": 49.25,
+        "label": "G"
+      },
+      {
+        "start": 49.25,
+        "end": 51,
+        "label": "Am"
+      },
+      {
+        "start": 51,
+        "end": 51.75,
+        "label": "G"
+      },
+      {
+        "start": 51.75,
+        "end": 53,
+        "label": "C"
+      },
+      {
+        "start": 53,
+        "end": 54,
+        "label": "G"
+      },
+      {
+        "start": 54,
+        "end": 56.75,
+        "label": "Am"
+      },
+      {
+        "start": 56.75,
+        "end": 58.25,
+        "label": "G"
+      },
+      {
+        "start": 58.25,
+        "end": 59.5,
+        "label": "Dm"
+      },
+      {
+        "start": 59.5,
+        "end": 62,
+        "label": "Am"
+      },
+      {
+        "start": 62,
+        "end": 63.25,
+        "label": "C"
+      },
+      {
+        "start": 63.25,
+        "end": 64.5,
+        "label": "G"
+      },
+      {
+        "start": 64.5,
+        "end": 67,
+        "label": "Am"
+      },
+      {
+        "start": 67,
+        "end": 68.5,
+        "label": "G"
+      },
+      {
+        "start": 68.5,
+        "end": 69.5,
+        "label": "Dm"
+      },
+      {
+        "start": 69.5,
+        "end": 72,
+        "label": "Am"
+      },
+      {
+        "start": 72,
+        "end": 73.25,
+        "label": "D"
+      },
+      {
+        "start": 73.25,
+        "end": 74.75,
+        "label": "G"
+      },
+      {
+        "start": 74.75,
+        "end": 76,
+        "label": "Am"
+      },
+      {
+        "start": 76,
+        "end": 77.25,
+        "label": "Am7"
+      },
+      {
+        "start": 77.25,
+        "end": 78.5,
+        "label": "D"
+      },
+      {
+        "start": 78.5,
+        "end": 80,
+        "label": "G"
+      },
+      {
+        "start": 80,
+        "end": 82.75,
+        "label": "Am"
+      },
+      {
+        "start": 82.75,
+        "end": 85,
+        "label": "Gadd9"
+      },
+      {
+        "start": 85,
+        "end": 89.75,
+        "label": "F"
+      },
+      {
+        "start": 89.75,
+        "end": 92.75,
+        "label": "Asus2"
+      },
+      {
+        "start": 92.75,
+        "end": 95.5,
+        "label": "Gadd9"
+      },
+      {
+        "start": 95.5,
+        "end": 99.5,
+        "label": "F"
+      },
+      {
+        "start": 99.5,
+        "end": 102.75,
+        "label": "Am"
+      },
+      {
+        "start": 102.75,
+        "end": 105.5,
+        "label": "Gadd9"
+      },
+      {
+        "start": 105.5,
+        "end": 110.25,
+        "label": "F"
+      },
+      {
+        "start": 110.25,
+        "end": 115.5,
+        "label": "C"
+      },
+      {
+        "start": 115.5,
+        "end": 120.75,
+        "label": "Am"
+      },
+      {
+        "start": 120.75,
+        "end": 125.75,
+        "label": "C"
+      },
+      {
+        "start": 125.75,
+        "end": 131.25,
+        "label": "Am"
+      },
+      {
+        "start": 131.25,
+        "end": 132.5,
+        "label": "C"
+      },
+      {
+        "start": 132.5,
+        "end": 133.5,
+        "label": "G"
+      },
+      {
+        "start": 133.5,
+        "end": 136,
+        "label": "Am"
+      },
+      {
+        "start": 136,
+        "end": 137.5,
+        "label": "G"
+      },
+      {
+        "start": 137.5,
+        "end": 139,
+        "label": "Dm"
+      },
+      {
+        "start": 139,
+        "end": 141.25,
+        "label": "Am"
+      },
+      {
+        "start": 141.25,
+        "end": 142.5,
+        "label": "C"
+      },
+      {
+        "start": 142.5,
+        "end": 143.75,
+        "label": "G"
+      },
+      {
+        "start": 143.75,
+        "end": 146.5,
+        "label": "Am"
+      },
+      {
+        "start": 146.5,
+        "end": 148,
+        "label": "G"
+      },
+      {
+        "start": 148,
+        "end": 149,
+        "label": "Dm"
+      },
+      {
+        "start": 149,
+        "end": 151.5,
+        "label": "Am"
+      },
+      {
+        "start": 151.5,
+        "end": 152.75,
+        "label": "D"
+      },
+      {
+        "start": 152.75,
+        "end": 154,
+        "label": "G"
+      },
+      {
+        "start": 154,
+        "end": 156.5,
+        "label": "Am7"
+      },
+      {
+        "start": 156.5,
+        "end": 157.75,
+        "label": "D"
+      },
+      {
+        "start": 157.75,
+        "end": 159.25,
+        "label": "G"
+      },
+      {
+        "start": 159.25,
+        "end": 161.75,
+        "label": "Am"
+      },
+      {
+        "start": 161.75,
+        "end": 162.75,
+        "label": "D"
+      },
+      {
+        "start": 162.75,
+        "end": 164.25,
+        "label": "G"
+      },
+      {
+        "start": 164.25,
+        "end": 167,
+        "label": "Am7"
+      },
+      {
+        "start": 167,
+        "end": 168,
+        "label": "D"
+      },
+      {
+        "start": 168,
+        "end": 169.5,
+        "label": "G"
+      },
+      {
+        "start": 169.5,
+        "end": 201.5,
+        "label": "Am"
+      },
+      {
+        "start": 201.5,
+        "end": 203,
+        "label": "Asus2"
+      },
+      {
+        "start": 203,
+        "end": 204,
+        "label": null
+      }
+    ]
+  }
+}

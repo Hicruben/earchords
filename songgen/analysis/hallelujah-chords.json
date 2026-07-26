@@ -1,0 +1,861 @@
+{
+  "meta": {
+    "title": "Hallelujah",
+    "artist": "Jeff Buckley",
+    "slug": "hallelujah-chords",
+    "youtubeId": "3vq7bvOpf14",
+    "key": "C#"
+  },
+  "analysis": {
+    "source": "youtube:3vq7bvOpf14",
+    "duration": 391.5465306122449,
+    "key": {
+      "name": "C#",
+      "tonic": 1,
+      "mode": "major",
+      "confidence": 0.99
+    },
+    "tempo": {
+      "bpm": 100,
+      "beat": 0.6,
+      "confidence": 0.14173544091888327
+    },
+    "segments": [
+      {
+        "start": 0,
+        "end": 8.5,
+        "label": "C#"
+      },
+      {
+        "start": 8.5,
+        "end": 10,
+        "label": "F#"
+      },
+      {
+        "start": 10,
+        "end": 11.25,
+        "label": "F#6"
+      },
+      {
+        "start": 11.25,
+        "end": 15,
+        "label": "C#maj7"
+      },
+      {
+        "start": 15,
+        "end": 17.25,
+        "label": "C#"
+      },
+      {
+        "start": 17.25,
+        "end": 18.25,
+        "label": "C#add9"
+      },
+      {
+        "start": 18.25,
+        "end": 19,
+        "label": "F#maj7"
+      },
+      {
+        "start": 19,
+        "end": 24.75,
+        "label": "F#"
+      },
+      {
+        "start": 24.75,
+        "end": 29.25,
+        "label": "A#m"
+      },
+      {
+        "start": 29.25,
+        "end": 31,
+        "label": "G#add9"
+      },
+      {
+        "start": 31,
+        "end": 34,
+        "label": "D#"
+      },
+      {
+        "start": 34,
+        "end": 34.75,
+        "label": "D#7"
+      },
+      {
+        "start": 34.75,
+        "end": 35.5,
+        "label": "A#m6"
+      },
+      {
+        "start": 35.5,
+        "end": 38.5,
+        "label": "F#"
+      },
+      {
+        "start": 38.5,
+        "end": 40,
+        "label": "C#maj7"
+      },
+      {
+        "start": 40,
+        "end": 42.75,
+        "label": "C#"
+      },
+      {
+        "start": 42.75,
+        "end": 46.25,
+        "label": "F#"
+      },
+      {
+        "start": 46.25,
+        "end": 49.75,
+        "label": "C#"
+      },
+      {
+        "start": 49.75,
+        "end": 51.25,
+        "label": "G#"
+      },
+      {
+        "start": 51.25,
+        "end": 53,
+        "label": "F7"
+      },
+      {
+        "start": 53,
+        "end": 56.75,
+        "label": "A#m"
+      },
+      {
+        "start": 56.75,
+        "end": 60.25,
+        "label": "F#"
+      },
+      {
+        "start": 60.25,
+        "end": 63.5,
+        "label": "A#m"
+      },
+      {
+        "start": 63.5,
+        "end": 67.25,
+        "label": "F#"
+      },
+      {
+        "start": 67.25,
+        "end": 69,
+        "label": "C#"
+      },
+      {
+        "start": 69,
+        "end": 70.5,
+        "label": "G#"
+      },
+      {
+        "start": 70.5,
+        "end": 72.25,
+        "label": "C#"
+      },
+      {
+        "start": 72.25,
+        "end": 77.5,
+        "label": "A#m7"
+      },
+      {
+        "start": 77.5,
+        "end": 79,
+        "label": "C#"
+      },
+      {
+        "start": 79,
+        "end": 80.75,
+        "label": "C#6"
+      },
+      {
+        "start": 80.75,
+        "end": 82.5,
+        "label": "C#"
+      },
+      {
+        "start": 82.5,
+        "end": 88.25,
+        "label": "A#m7"
+      },
+      {
+        "start": 88.25,
+        "end": 90.5,
+        "label": "F#"
+      },
+      {
+        "start": 90.5,
+        "end": 91.25,
+        "label": "G#"
+      },
+      {
+        "start": 91.25,
+        "end": 93.25,
+        "label": "C#"
+      },
+      {
+        "start": 93.25,
+        "end": 94.75,
+        "label": "G#"
+      },
+      {
+        "start": 94.75,
+        "end": 96.75,
+        "label": "C#"
+      },
+      {
+        "start": 96.75,
+        "end": 97.5,
+        "label": "F#"
+      },
+      {
+        "start": 97.5,
+        "end": 98.25,
+        "label": "G#"
+      },
+      {
+        "start": 98.25,
+        "end": 99.25,
+        "label": "C#"
+      },
+      {
+        "start": 99.25,
+        "end": 102,
+        "label": "F#"
+      },
+      {
+        "start": 102,
+        "end": 103.75,
+        "label": "G#"
+      },
+      {
+        "start": 103.75,
+        "end": 105.25,
+        "label": "F7"
+      },
+      {
+        "start": 105.25,
+        "end": 108.75,
+        "label": "A#m"
+      },
+      {
+        "start": 108.75,
+        "end": 112.25,
+        "label": "F#"
+      },
+      {
+        "start": 112.25,
+        "end": 115.75,
+        "label": "A#m"
+      },
+      {
+        "start": 115.75,
+        "end": 119,
+        "label": "F#"
+      },
+      {
+        "start": 119,
+        "end": 120.75,
+        "label": "C#"
+      },
+      {
+        "start": 120.75,
+        "end": 123,
+        "label": "C#add9"
+      },
+      {
+        "start": 123,
+        "end": 124.25,
+        "label": "C#"
+      },
+      {
+        "start": 124.25,
+        "end": 129.75,
+        "label": "A#m"
+      },
+      {
+        "start": 129.75,
+        "end": 131.25,
+        "label": "C#"
+      },
+      {
+        "start": 131.25,
+        "end": 132.75,
+        "label": "A#m"
+      },
+      {
+        "start": 132.75,
+        "end": 134.25,
+        "label": "C#"
+      },
+      {
+        "start": 134.25,
+        "end": 136.25,
+        "label": "A#m"
+      },
+      {
+        "start": 136.25,
+        "end": 138.25,
+        "label": "F#"
+      },
+      {
+        "start": 138.25,
+        "end": 141.25,
+        "label": "C#"
+      },
+      {
+        "start": 141.25,
+        "end": 142.75,
+        "label": "G#"
+      },
+      {
+        "start": 142.75,
+        "end": 144.5,
+        "label": "C#"
+      },
+      {
+        "start": 144.5,
+        "end": 145.25,
+        "label": "F#"
+      },
+      {
+        "start": 145.25,
+        "end": 146.5,
+        "label": "G#7"
+      },
+      {
+        "start": 146.5,
+        "end": 147.75,
+        "label": "A#m"
+      },
+      {
+        "start": 147.75,
+        "end": 150,
+        "label": "F#"
+      },
+      {
+        "start": 150,
+        "end": 151.75,
+        "label": "A#sus4"
+      },
+      {
+        "start": 151.75,
+        "end": 153.25,
+        "label": "Fmaj7"
+      },
+      {
+        "start": 153.25,
+        "end": 156.5,
+        "label": "C#"
+      },
+      {
+        "start": 156.5,
+        "end": 159.75,
+        "label": "F#"
+      },
+      {
+        "start": 159.75,
+        "end": 163.5,
+        "label": "A#m"
+      },
+      {
+        "start": 163.5,
+        "end": 167,
+        "label": "F#"
+      },
+      {
+        "start": 167,
+        "end": 168.75,
+        "label": "C#"
+      },
+      {
+        "start": 168.75,
+        "end": 170.5,
+        "label": "C#add9"
+      },
+      {
+        "start": 170.5,
+        "end": 172,
+        "label": "C#"
+      },
+      {
+        "start": 172,
+        "end": 173,
+        "label": "C#6"
+      },
+      {
+        "start": 173,
+        "end": 175.5,
+        "label": "C#"
+      },
+      {
+        "start": 175.5,
+        "end": 176.75,
+        "label": "C#6"
+      },
+      {
+        "start": 176.75,
+        "end": 179,
+        "label": "C#"
+      },
+      {
+        "start": 179,
+        "end": 180.5,
+        "label": "C#6"
+      },
+      {
+        "start": 180.5,
+        "end": 183,
+        "label": "C#"
+      },
+      {
+        "start": 183,
+        "end": 186.25,
+        "label": "F#"
+      },
+      {
+        "start": 186.25,
+        "end": 187.5,
+        "label": "F#add9"
+      },
+      {
+        "start": 187.5,
+        "end": 189.25,
+        "label": "C#"
+      },
+      {
+        "start": 189.25,
+        "end": 190.75,
+        "label": "G#"
+      },
+      {
+        "start": 190.75,
+        "end": 192.75,
+        "label": "C#"
+      },
+      {
+        "start": 192.75,
+        "end": 193.5,
+        "label": "F#"
+      },
+      {
+        "start": 193.5,
+        "end": 194.25,
+        "label": "G#m"
+      },
+      {
+        "start": 194.25,
+        "end": 196,
+        "label": "C#"
+      },
+      {
+        "start": 196,
+        "end": 198,
+        "label": "F#"
+      },
+      {
+        "start": 198,
+        "end": 199.5,
+        "label": "G#"
+      },
+      {
+        "start": 199.5,
+        "end": 201.5,
+        "label": "Fmaj7"
+      },
+      {
+        "start": 201.5,
+        "end": 204.75,
+        "label": "A#m"
+      },
+      {
+        "start": 204.75,
+        "end": 208.75,
+        "label": "F#"
+      },
+      {
+        "start": 208.75,
+        "end": 212,
+        "label": "A#m"
+      },
+      {
+        "start": 212,
+        "end": 215.25,
+        "label": "F#"
+      },
+      {
+        "start": 215.25,
+        "end": 217,
+        "label": "C#"
+      },
+      {
+        "start": 217,
+        "end": 218.75,
+        "label": "C#add9"
+      },
+      {
+        "start": 218.75,
+        "end": 225.75,
+        "label": "C#"
+      },
+      {
+        "start": 225.75,
+        "end": 228.25,
+        "label": "F#"
+      },
+      {
+        "start": 228.25,
+        "end": 231,
+        "label": "C#"
+      },
+      {
+        "start": 231,
+        "end": 234,
+        "label": "G#"
+      },
+      {
+        "start": 234,
+        "end": 235.75,
+        "label": "C#"
+      },
+      {
+        "start": 235.75,
+        "end": 237,
+        "label": "C#6"
+      },
+      {
+        "start": 237,
+        "end": 239.25,
+        "label": "C#"
+      },
+      {
+        "start": 239.25,
+        "end": 243.25,
+        "label": "C#6"
+      },
+      {
+        "start": 243.25,
+        "end": 244,
+        "label": "C#maj7"
+      },
+      {
+        "start": 244,
+        "end": 246.25,
+        "label": "C#"
+      },
+      {
+        "start": 246.25,
+        "end": 247.75,
+        "label": "G#"
+      },
+      {
+        "start": 247.75,
+        "end": 249.5,
+        "label": "C#"
+      },
+      {
+        "start": 249.5,
+        "end": 250.5,
+        "label": "F#"
+      },
+      {
+        "start": 250.5,
+        "end": 251.25,
+        "label": "G#"
+      },
+      {
+        "start": 251.25,
+        "end": 253,
+        "label": "A#m"
+      },
+      {
+        "start": 253,
+        "end": 254.75,
+        "label": "F#"
+      },
+      {
+        "start": 254.75,
+        "end": 256.25,
+        "label": "G#"
+      },
+      {
+        "start": 256.25,
+        "end": 257.5,
+        "label": "C#"
+      },
+      {
+        "start": 257.5,
+        "end": 258.25,
+        "label": "Emaj7"
+      },
+      {
+        "start": 258.25,
+        "end": 261.5,
+        "label": "F#maj7"
+      },
+      {
+        "start": 261.5,
+        "end": 264.75,
+        "label": "F#"
+      },
+      {
+        "start": 264.75,
+        "end": 265.5,
+        "label": "C#"
+      },
+      {
+        "start": 265.5,
+        "end": 268.25,
+        "label": "C#6"
+      },
+      {
+        "start": 268.25,
+        "end": 271.75,
+        "label": "F#"
+      },
+      {
+        "start": 271.75,
+        "end": 273.25,
+        "label": "C#"
+      },
+      {
+        "start": 273.25,
+        "end": 275.75,
+        "label": "C#add9"
+      },
+      {
+        "start": 275.75,
+        "end": 277,
+        "label": "C#"
+      },
+      {
+        "start": 277,
+        "end": 287,
+        "label": "A#m7"
+      },
+      {
+        "start": 287,
+        "end": 289,
+        "label": "A#m"
+      },
+      {
+        "start": 289,
+        "end": 291,
+        "label": "F#"
+      },
+      {
+        "start": 291,
+        "end": 292.5,
+        "label": "F#add9"
+      },
+      {
+        "start": 292.5,
+        "end": 294.25,
+        "label": "C#"
+      },
+      {
+        "start": 294.25,
+        "end": 299.25,
+        "label": "G#"
+      },
+      {
+        "start": 299.25,
+        "end": 301.25,
+        "label": "C#"
+      },
+      {
+        "start": 301.25,
+        "end": 302,
+        "label": "F#"
+      },
+      {
+        "start": 302,
+        "end": 303.25,
+        "label": "D#sus4"
+      },
+      {
+        "start": 303.25,
+        "end": 305,
+        "label": "A#m"
+      },
+      {
+        "start": 305,
+        "end": 306.75,
+        "label": "F#"
+      },
+      {
+        "start": 306.75,
+        "end": 308.5,
+        "label": "G#"
+      },
+      {
+        "start": 308.5,
+        "end": 310.25,
+        "label": "Fmaj7"
+      },
+      {
+        "start": 310.25,
+        "end": 317,
+        "label": "A#m"
+      },
+      {
+        "start": 317,
+        "end": 320,
+        "label": "F#"
+      },
+      {
+        "start": 320,
+        "end": 322.25,
+        "label": "C#6"
+      },
+      {
+        "start": 322.25,
+        "end": 323.25,
+        "label": "F#"
+      },
+      {
+        "start": 323.25,
+        "end": 324.25,
+        "label": "F#maj7"
+      },
+      {
+        "start": 324.25,
+        "end": 327.5,
+        "label": "F#"
+      },
+      {
+        "start": 327.5,
+        "end": 329.25,
+        "label": "C#"
+      },
+      {
+        "start": 329.25,
+        "end": 331.25,
+        "label": "G#"
+      },
+      {
+        "start": 331.25,
+        "end": 334.75,
+        "label": "F#"
+      },
+      {
+        "start": 334.75,
+        "end": 338,
+        "label": "A#m"
+      },
+      {
+        "start": 338,
+        "end": 341.5,
+        "label": "F#"
+      },
+      {
+        "start": 341.5,
+        "end": 343.25,
+        "label": "C#"
+      },
+      {
+        "start": 343.25,
+        "end": 344.25,
+        "label": "G#"
+      },
+      {
+        "start": 344.25,
+        "end": 345,
+        "label": "G#6"
+      },
+      {
+        "start": 345,
+        "end": 345.75,
+        "label": "F#6"
+      },
+      {
+        "start": 345.75,
+        "end": 347.75,
+        "label": "F#"
+      },
+      {
+        "start": 347.75,
+        "end": 349,
+        "label": "F#7"
+      },
+      {
+        "start": 349,
+        "end": 349.75,
+        "label": "F#maj7"
+      },
+      {
+        "start": 349.75,
+        "end": 351.5,
+        "label": "C#"
+      },
+      {
+        "start": 351.5,
+        "end": 353,
+        "label": "F#maj7"
+      },
+      {
+        "start": 353,
+        "end": 355.25,
+        "label": "F#"
+      },
+      {
+        "start": 355.25,
+        "end": 360.75,
+        "label": "C#"
+      },
+      {
+        "start": 360.75,
+        "end": 364.5,
+        "label": "G#6"
+      },
+      {
+        "start": 364.5,
+        "end": 366,
+        "label": "F#maj7"
+      },
+      {
+        "start": 366,
+        "end": 368,
+        "label": "C#"
+      },
+      {
+        "start": 368,
+        "end": 372,
+        "label": "A#m"
+      },
+      {
+        "start": 372,
+        "end": 375.75,
+        "label": "A#m7"
+      },
+      {
+        "start": 375.75,
+        "end": 379.75,
+        "label": "A#m"
+      },
+      {
+        "start": 379.75,
+        "end": 382.75,
+        "label": "F#maj7"
+      },
+      {
+        "start": 382.75,
+        "end": 385.75,
+        "label": "G#6"
+      },
+      {
+        "start": 385.75,
+        "end": 389.25,
+        "label": "C#"
+      },
+      {
+        "start": 389.25,
+        "end": 391.75,
+        "label": null
+      }
+    ]
+  }
+}

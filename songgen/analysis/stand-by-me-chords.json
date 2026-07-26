@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "title": "Stand By Me",
+    "artist": "Ben E. King",
+    "slug": "stand-by-me-chords",
+    "youtubeId": "TJx9E-rUqhg",
+    "key": "A"
+  },
+  "analysis": {
+    "source": "youtube:TJx9E-rUqhg",
+    "duration": 177.00575963718822,
+    "key": {
+      "name": "A",
+      "tonic": 9,
+      "mode": "major",
+      "confidence": 0.99
+    },
+    "tempo": {
+      "bpm": 79,
+      "beat": 0.7619304058370422,
+      "confidence": 0.15020346076917002
+    },
+    "segments": [
+      {
+        "start": 0,
+        "end": 2,
+        "label": "A"
+      },
+      {
+        "start": 2,
+        "end": 4.5,
+        "label": "Amaj7"
+      },
+      {
+        "start": 4.5,
+        "end": 8.5,
+        "label": "Eadd9"
+      },
+      {
+        "start": 8.5,
+        "end": 10.5,
+        "label": "E7"
+      },
+      {
+        "start": 10.5,
+        "end": 12.25,
+        "label": "E"
+      },
+      {
+        "start": 12.25,
+        "end": 14.75,
+        "label": "Amaj7"
+      },
+      {
+        "start": 14.75,
+        "end": 18,
+        "label": "A"
+      },
+      {
+        "start": 18,
+        "end": 20.5,
+        "label": "Amaj7"
+      },
+      {
+        "start": 20.5,
+        "end": 24.5,
+        "label": "F#m"
+      },
+      {
+        "start": 24.5,
+        "end": 26.5,
+        "label": "D"
+      },
+      {
+        "start": 26.5,
+        "end": 27.25,
+        "label": "Esus4"
+      },
+      {
+        "start": 27.25,
+        "end": 28.75,
+        "label": "E"
+      },
+      {
+        "start": 28.75,
+        "end": 30.25,
+        "label": "A"
+      },
+      {
+        "start": 30.25,
+        "end": 35,
+        "label": "Amaj7"
+      },
+      {
+        "start": 35,
+        "end": 36.75,
+        "label": "Asus4"
+      },
+      {
+        "start": 36.75,
+        "end": 38.75,
+        "label": "Eadd9"
+      },
+      {
+        "start": 38.75,
+        "end": 40.25,
+        "label": "F#m"
+      },
+      {
+        "start": 40.25,
+        "end": 42.75,
+        "label": "E7"
+      },
+      {
+        "start": 42.75,
+        "end": 44.75,
+        "label": "E"
+      },
+      {
+        "start": 44.75,
+        "end": 46.25,
+        "label": "A"
+      },
+      {
+        "start": 46.25,
+        "end": 51,
+        "label": "Amaj7"
+      },
+      {
+        "start": 51,
+        "end": 52.5,
+        "label": "A"
+      },
+      {
+        "start": 52.5,
+        "end": 56.75,
+        "label": "F#m"
+      },
+      {
+        "start": 56.75,
+        "end": 58.75,
+        "label": "D"
+      },
+      {
+        "start": 58.75,
+        "end": 59.5,
+        "label": "Dadd9"
+      },
+      {
+        "start": 59.5,
+        "end": 60.25,
+        "label": "Aadd9"
+      },
+      {
+        "start": 60.25,
+        "end": 61,
+        "label": "Amaj7"
+      },
+      {
+        "start": 61,
+        "end": 68.75,
+        "label": "A"
+      },
+      {
+        "start": 68.75,
+        "end": 71,
+        "label": "F#m7"
+      },
+      {
+        "start": 71,
+        "end": 73.5,
+        "label": "F#m"
+      },
+      {
+        "start": 73.5,
+        "end": 75,
+        "label": "D"
+      },
+      {
+        "start": 75,
+        "end": 76,
+        "label": "A"
+      },
+      {
+        "start": 76,
+        "end": 77.25,
+        "label": "E"
+      },
+      {
+        "start": 77.25,
+        "end": 85,
+        "label": "A"
+      },
+      {
+        "start": 85,
+        "end": 86.5,
+        "label": "F#m"
+      },
+      {
+        "start": 86.5,
+        "end": 87.25,
+        "label": "Esus2"
+      },
+      {
+        "start": 87.25,
+        "end": 89,
+        "label": "F#m"
+      },
+      {
+        "start": 89,
+        "end": 91.25,
+        "label": "D"
+      },
+      {
+        "start": 91.25,
+        "end": 93,
+        "label": "E"
+      },
+      {
+        "start": 93,
+        "end": 94.75,
+        "label": "A"
+      },
+      {
+        "start": 94.75,
+        "end": 101.25,
+        "label": "Amaj7"
+      },
+      {
+        "start": 101.25,
+        "end": 105.25,
+        "label": "F#m"
+      },
+      {
+        "start": 105.25,
+        "end": 107.5,
+        "label": "D"
+      },
+      {
+        "start": 107.5,
+        "end": 108.75,
+        "label": "E"
+      },
+      {
+        "start": 108.75,
+        "end": 111.75,
+        "label": "Amaj7"
+      },
+      {
+        "start": 111.75,
+        "end": 117.5,
+        "label": "A"
+      },
+      {
+        "start": 117.5,
+        "end": 118.75,
+        "label": "F#sus4"
+      },
+      {
+        "start": 118.75,
+        "end": 121.5,
+        "label": "F#sus2"
+      },
+      {
+        "start": 121.5,
+        "end": 123.75,
+        "label": "D"
+      },
+      {
+        "start": 123.75,
+        "end": 125.5,
+        "label": "E"
+      },
+      {
+        "start": 125.5,
+        "end": 126.25,
+        "label": "Aadd9"
+      },
+      {
+        "start": 126.25,
+        "end": 133.5,
+        "label": "A"
+      },
+      {
+        "start": 133.5,
+        "end": 137.75,
+        "label": "F#m"
+      },
+      {
+        "start": 137.75,
+        "end": 139.75,
+        "label": "D"
+      },
+      {
+        "start": 139.75,
+        "end": 142,
+        "label": "E"
+      },
+      {
+        "start": 142,
+        "end": 145,
+        "label": "A"
+      },
+      {
+        "start": 145,
+        "end": 146.25,
+        "label": "Amaj7"
+      },
+      {
+        "start": 146.25,
+        "end": 149.75,
+        "label": "A"
+      },
+      {
+        "start": 149.75,
+        "end": 153.75,
+        "label": "F#m"
+      },
+      {
+        "start": 153.75,
+        "end": 156,
+        "label": "D"
+      },
+      {
+        "start": 156,
+        "end": 157.75,
+        "label": "E"
+      },
+      {
+        "start": 157.75,
+        "end": 165,
+        "label": "A"
+      },
+      {
+        "start": 165,
+        "end": 169.75,
+        "label": "F#m"
+      },
+      {
+        "start": 169.75,
+        "end": 172,
+        "label": "D"
+      },
+      {
+        "start": 172,
+        "end": 173.75,
+        "label": "E"
+      },
+      {
+        "start": 173.75,
+        "end": 174.5,
+        "label": "A"
+      },
+      {
+        "start": 174.5,
+        "end": 175.25,
+        "label": null
+      },
+      {
+        "start": 175.25,
+        "end": 176.25,
+        "label": "Bm"
+      },
+      {
+        "start": 176.25,
+        "end": 177.25,
+        "label": null
+      }
+    ]
+  }
+}

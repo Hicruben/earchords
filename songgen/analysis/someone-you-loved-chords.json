@@ -1,0 +1,501 @@
+{
+  "meta": {
+    "title": "Someone You Loved",
+    "artist": "Lewis Capaldi",
+    "slug": "someone-you-loved-chords",
+    "youtubeId": "xrcMgO2fgpA",
+    "key": "C#"
+  },
+  "analysis": {
+    "source": "youtube:xrcMgO2fgpA",
+    "duration": 182.8053514739229,
+    "key": {
+      "name": "C#",
+      "tonic": 1,
+      "mode": "major",
+      "confidence": 0.99
+    },
+    "tempo": {
+      "bpm": 109,
+      "beat": 0.5512617996267364,
+      "confidence": 0.28010741385301646
+    },
+    "segments": [
+      {
+        "start": 0,
+        "end": 0.5,
+        "label": null
+      },
+      {
+        "start": 0.5,
+        "end": 3,
+        "label": "C#"
+      },
+      {
+        "start": 3,
+        "end": 5.25,
+        "label": "G#"
+      },
+      {
+        "start": 5.25,
+        "end": 7.5,
+        "label": "F#maj7"
+      },
+      {
+        "start": 7.5,
+        "end": 8.5,
+        "label": "F#"
+      },
+      {
+        "start": 8.5,
+        "end": 9.5,
+        "label": "C#6"
+      },
+      {
+        "start": 9.5,
+        "end": 11.75,
+        "label": "C#"
+      },
+      {
+        "start": 11.75,
+        "end": 13.75,
+        "label": "G#"
+      },
+      {
+        "start": 13.75,
+        "end": 16,
+        "label": "A#m"
+      },
+      {
+        "start": 16,
+        "end": 18,
+        "label": "F#"
+      },
+      {
+        "start": 18,
+        "end": 20.25,
+        "label": "C#"
+      },
+      {
+        "start": 20.25,
+        "end": 22.5,
+        "label": "G#"
+      },
+      {
+        "start": 22.5,
+        "end": 24.75,
+        "label": "A#m"
+      },
+      {
+        "start": 24.75,
+        "end": 26.25,
+        "label": "F#"
+      },
+      {
+        "start": 26.25,
+        "end": 29.25,
+        "label": "C#"
+      },
+      {
+        "start": 29.25,
+        "end": 31,
+        "label": "G#"
+      },
+      {
+        "start": 31,
+        "end": 32,
+        "label": "D#m7"
+      },
+      {
+        "start": 32,
+        "end": 33,
+        "label": "C#"
+      },
+      {
+        "start": 33,
+        "end": 35.75,
+        "label": "C#6"
+      },
+      {
+        "start": 35.75,
+        "end": 37.75,
+        "label": "C#"
+      },
+      {
+        "start": 37.75,
+        "end": 38.75,
+        "label": "G#"
+      },
+      {
+        "start": 38.75,
+        "end": 40,
+        "label": "G#6"
+      },
+      {
+        "start": 40,
+        "end": 41.25,
+        "label": "A#m"
+      },
+      {
+        "start": 41.25,
+        "end": 44,
+        "label": "D#m7"
+      },
+      {
+        "start": 44,
+        "end": 46.75,
+        "label": "C#"
+      },
+      {
+        "start": 46.75,
+        "end": 49,
+        "label": "G#"
+      },
+      {
+        "start": 49,
+        "end": 51,
+        "label": "A#m"
+      },
+      {
+        "start": 51,
+        "end": 53.25,
+        "label": "F#"
+      },
+      {
+        "start": 53.25,
+        "end": 55.25,
+        "label": "C#"
+      },
+      {
+        "start": 55.25,
+        "end": 56.25,
+        "label": "G#"
+      },
+      {
+        "start": 56.25,
+        "end": 57.5,
+        "label": "G#6"
+      },
+      {
+        "start": 57.5,
+        "end": 59.5,
+        "label": "A#m"
+      },
+      {
+        "start": 59.5,
+        "end": 62.25,
+        "label": "F#"
+      },
+      {
+        "start": 62.25,
+        "end": 64,
+        "label": "C#"
+      },
+      {
+        "start": 64,
+        "end": 66,
+        "label": "G#"
+      },
+      {
+        "start": 66,
+        "end": 68.25,
+        "label": "A#m"
+      },
+      {
+        "start": 68.25,
+        "end": 70.5,
+        "label": "F#"
+      },
+      {
+        "start": 70.5,
+        "end": 72.75,
+        "label": "C#"
+      },
+      {
+        "start": 72.75,
+        "end": 74.75,
+        "label": "G#"
+      },
+      {
+        "start": 74.75,
+        "end": 77,
+        "label": "A#m"
+      },
+      {
+        "start": 77,
+        "end": 78.5,
+        "label": "F#"
+      },
+      {
+        "start": 78.5,
+        "end": 81.5,
+        "label": "C#"
+      },
+      {
+        "start": 81.5,
+        "end": 83.5,
+        "label": "G#"
+      },
+      {
+        "start": 83.5,
+        "end": 84.25,
+        "label": "D#m7"
+      },
+      {
+        "start": 84.25,
+        "end": 85.5,
+        "label": "C#"
+      },
+      {
+        "start": 85.5,
+        "end": 88,
+        "label": "C#6"
+      },
+      {
+        "start": 88,
+        "end": 89.25,
+        "label": "C#"
+      },
+      {
+        "start": 89.25,
+        "end": 92.25,
+        "label": "G#6"
+      },
+      {
+        "start": 92.25,
+        "end": 93,
+        "label": "A#m"
+      },
+      {
+        "start": 93,
+        "end": 96,
+        "label": "D#m7"
+      },
+      {
+        "start": 96,
+        "end": 96.75,
+        "label": "A#m"
+      },
+      {
+        "start": 96.75,
+        "end": 99,
+        "label": "C#"
+      },
+      {
+        "start": 99,
+        "end": 101.25,
+        "label": "G#"
+      },
+      {
+        "start": 101.25,
+        "end": 103.25,
+        "label": "A#m"
+      },
+      {
+        "start": 103.25,
+        "end": 105,
+        "label": "F#"
+      },
+      {
+        "start": 105,
+        "end": 105.75,
+        "label": "F#maj7"
+      },
+      {
+        "start": 105.75,
+        "end": 107.5,
+        "label": "C#"
+      },
+      {
+        "start": 107.5,
+        "end": 109.75,
+        "label": "G#6"
+      },
+      {
+        "start": 109.75,
+        "end": 112.25,
+        "label": "A#m"
+      },
+      {
+        "start": 112.25,
+        "end": 114.25,
+        "label": "F#"
+      },
+      {
+        "start": 114.25,
+        "end": 116.5,
+        "label": "D#m"
+      },
+      {
+        "start": 116.5,
+        "end": 118.5,
+        "label": "A#m"
+      },
+      {
+        "start": 118.5,
+        "end": 122,
+        "label": "G#"
+      },
+      {
+        "start": 122,
+        "end": 123,
+        "label": "A#m"
+      },
+      {
+        "start": 123,
+        "end": 125.25,
+        "label": "D#m"
+      },
+      {
+        "start": 125.25,
+        "end": 127.5,
+        "label": "A#m7"
+      },
+      {
+        "start": 127.5,
+        "end": 129.75,
+        "label": "G#"
+      },
+      {
+        "start": 129.75,
+        "end": 132.75,
+        "label": "C#"
+      },
+      {
+        "start": 132.75,
+        "end": 133.75,
+        "label": "F#maj7"
+      },
+      {
+        "start": 133.75,
+        "end": 134.75,
+        "label": "C#maj7"
+      },
+      {
+        "start": 134.75,
+        "end": 136.5,
+        "label": "F#maj7"
+      },
+      {
+        "start": 136.5,
+        "end": 139.25,
+        "label": "C#"
+      },
+      {
+        "start": 139.25,
+        "end": 140.25,
+        "label": "F#maj7"
+      },
+      {
+        "start": 140.25,
+        "end": 141.5,
+        "label": "C#"
+      },
+      {
+        "start": 141.5,
+        "end": 142.25,
+        "label": "F#maj7"
+      },
+      {
+        "start": 142.25,
+        "end": 143,
+        "label": "Fm7"
+      },
+      {
+        "start": 143,
+        "end": 144.5,
+        "label": "Fm"
+      },
+      {
+        "start": 144.5,
+        "end": 145.5,
+        "label": "A#sus4"
+      },
+      {
+        "start": 145.5,
+        "end": 148.25,
+        "label": "D#m7"
+      },
+      {
+        "start": 148.25,
+        "end": 151.5,
+        "label": "C#"
+      },
+      {
+        "start": 151.5,
+        "end": 153.5,
+        "label": "G#"
+      },
+      {
+        "start": 153.5,
+        "end": 155.5,
+        "label": "A#m"
+      },
+      {
+        "start": 155.5,
+        "end": 158,
+        "label": "F#"
+      },
+      {
+        "start": 158,
+        "end": 160,
+        "label": "C#"
+      },
+      {
+        "start": 160,
+        "end": 162.25,
+        "label": "G#6"
+      },
+      {
+        "start": 162.25,
+        "end": 164.25,
+        "label": "A#m"
+      },
+      {
+        "start": 164.25,
+        "end": 166.25,
+        "label": "F#"
+      },
+      {
+        "start": 166.25,
+        "end": 168.75,
+        "label": "C#"
+      },
+      {
+        "start": 168.75,
+        "end": 169.5,
+        "label": "G#"
+      },
+      {
+        "start": 169.5,
+        "end": 170.75,
+        "label": "Fm"
+      },
+      {
+        "start": 170.75,
+        "end": 171.5,
+        "label": "A#m"
+      },
+      {
+        "start": 171.5,
+        "end": 174,
+        "label": "D#m7"
+      },
+      {
+        "start": 174,
+        "end": 175.5,
+        "label": "F#"
+      },
+      {
+        "start": 175.5,
+        "end": 181.5,
+        "label": "C#"
+      },
+      {
+        "start": 181.5,
+        "end": 183,
+        "label": null
+      }
+    ]
+  }
+}

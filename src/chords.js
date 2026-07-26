@@ -342,12 +342,24 @@ export function detectChords(notes, duration, opts = {}) {
 
 // 用解码后的和弦段给 24 个调候选打分:和弦音全在调内得满分、仅根音在调内
 // 得部分分;主和弦(根音=主音且大小性质匹配)额外加权。返回得分最高的调。
+// 首尾和弦的主音证据权重(相对总时长)。关系大小调音阶完全相同,时长投票分不开
+// (实测 Someone Like You:D 64s > F#m 58s > A 56s,时长选 F#m,而首尾和弦都是 A),
+// 但曲子几乎总是起于、落于主和弦——尾比首更强,是最经典的终止式线索。
+const FIRST_CHORD_W = 0.05;
+const LAST_CHORD_W = 0.09;
+
 function dominantKeyFromChords(segments, fallback) {
   const MAJ_STEPS = [0, 2, 4, 5, 7, 9, 11];
   const MIN_STEPS = [0, 2, 3, 5, 7, 8, 10];
   let total = 0;
   for (const seg of segments) if (seg.label) total += seg.end - seg.start;
   if (!total) return fallback;
+  const labelled = segments.filter((s) => s.label);
+  const firstChord = chordByLabel(labelled[0]?.label);
+  const lastChord = chordByLabel(labelled[labelled.length - 1]?.label);
+  const isTonicTriad = (c, tonic, mode) => !!c && c.root === tonic
+    && ((mode === 'major' && (c.suffix === '' || c.suffix === '6' || c.suffix === 'maj7' || c.suffix === 'add9'))
+      || (mode === 'minor' && (c.suffix === 'm' || c.suffix === 'm7')));
   let best = null;
   let bestScore = -Infinity;
   for (let tonic = 0; tonic < 12; tonic++) {
@@ -366,6 +378,9 @@ function dominantKeyFromChords(segments, fallback) {
         if (c.root === tonic && ((mode === 'major' && c.suffix === '') || (mode === 'minor' && c.suffix === 'm'))) w += 0.5;
         score += dur * w;
       }
+      // 首尾和弦落在主和弦上:关系大小调之间唯一有区分度的结构性证据
+      if (isTonicTriad(firstChord, tonic, mode)) score += total * FIRST_CHORD_W;
+      if (isTonicTriad(lastChord, tonic, mode)) score += total * LAST_CHORD_W;
       if (score > bestScore) { bestScore = score; best = { tonic, mode }; }
     }
   }

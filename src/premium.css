@@ -134,6 +134,18 @@ body::before {
   box-shadow: inset 0 1px 0 var(--edge), 0 12px 40px rgba(0, 4, 12, 0.35);
   box-sizing: border-box;
 }
+/* 播放/处理视图:头部改为整宽不透明栏,避免半透明胶囊漂在滚动内容(和弦/指法图)上造成重叠 */
+body[data-view='player'] .site-header,
+body[data-view='processing'] .site-header {
+  top: 0;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  border-inline: 0;
+  border-top: 0;
+  background: var(--bg);
+}
+
 /* header 常驻所有视图,便于导航;导航项按视图切换(落地页链接 vs 播放页换歌) */
 .nav-player { display: none; }
 body[data-view='player'] .nav-landing,
@@ -220,7 +232,42 @@ body[data-view='processing'] .nav-player { display: inline-flex; }
   -webkit-text-fill-color: transparent; color: transparent;
   filter: drop-shadow(0 0 26px var(--glow));
 }
-.hero-sub { max-width: 34rem; margin: 1.9rem 0 2.1rem; color: var(--ink-dim); font-size: clamp(1rem, 1.3vw, 1.14rem); line-height: 1.65; }
+.hero-sub { max-width: 32rem; margin: 1.6rem 0 0; color: var(--ink-dim); font-size: clamp(1rem, 1.3vw, 1.18rem); line-height: 1.6; text-wrap: balance; }
+
+/* ---- 极简 hero CTA:两个胶囊 + demo 链接 + 一句说明 ---- */
+.hero-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin-top: 2.2rem; }
+.cta {
+  position: relative; overflow: hidden;
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  padding: 0.95rem 1.6rem;
+  border-radius: 999px;
+  font-family: var(--font-ui); font-weight: 700; font-size: 1rem;
+  cursor: pointer;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease, background 200ms ease;
+}
+.cta > span:not(.cta-ic) { position: relative; z-index: 2; }
+.cta-ic { position: relative; z-index: 2; display: inline-flex; }
+.cta-ic svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.cta-mic {
+  border: 0; color: var(--btn-ink);
+  background: linear-gradient(180deg, var(--accent-strong), var(--accent));
+  box-shadow: 0 10px 30px -10px var(--glow), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.cta-mic:hover, .cta-mic:focus-visible { transform: translateY(-2px); box-shadow: 0 16px 40px -12px var(--glow), inset 0 1px 0 rgba(255, 255, 255, 0.3); outline: none; }
+.cta-mic #drop-canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.22; z-index: 1; pointer-events: none; }
+.cta-upload {
+  border: 1px solid var(--panel-line-hi); color: var(--ink);
+  background: var(--panel); backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 0 var(--edge);
+}
+.cta-upload .cta-ic { color: var(--accent-text); }
+.cta-upload:hover, .cta-upload:focus-visible { transform: translateY(-2px); border-color: var(--accent); box-shadow: inset 0 1px 0 var(--edge), 0 0 30px -10px var(--glow); outline: none; }
+.cta-upload.drag { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 0 34px -8px var(--glow); }
+.cta-upload.is-rejected { border-color: var(--danger); animation: rejectShake 380ms ease; }
+.cta-demo { margin-top: 1.3rem; padding: 0.4rem; color: var(--accent-text); font-weight: 600; font-size: 0.95rem; background: none; border: 0; cursor: pointer; }
+.cta-demo span { display: inline-block; margin-left: 0.45rem; transition: transform 180ms ease; }
+.cta-demo:hover span { transform: translateX(0.3rem); }
+.hero-formats { margin: 1.6rem 0 0; font-size: 0.78rem; letter-spacing: 0.01em; color: var(--ink-faint); }
 
 .drop-zone {
   position: relative;

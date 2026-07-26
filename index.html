@@ -65,36 +65,27 @@
           <div class="hero-copy">
             <h1 class="hero-title">Get the chords<br />from <em>any song.</em></h1>
             <p class="hero-sub">
-              Play a song out loud near your mic. EarChords listens live, finds the
-              harmony, and builds a chord sheet you can play — nothing ever leaves your device.
+              Upload a track or play it near your mic — every chord mapped in seconds, right on your device.
             </p>
 
-            <button id="mic-btn" class="record-primary" type="button" aria-describedby="drop-hint">
-              <canvas id="drop-canvas" aria-hidden="true"></canvas>
-              <span class="rec-ic" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4"/></svg>
-              </span>
-              <span class="rec-copy">
-                <strong class="rec-title">Listen to a song</strong>
-                <span class="rec-choice">Play it near your mic to get chords →</span>
-              </span>
-            </button>
-
-            <div class="hero-actions">
-              <label id="drop-zone" class="upload-secondary" tabindex="0" aria-describedby="drop-hint">
+            <div class="hero-cta">
+              <button id="mic-btn" class="cta cta-mic" type="button" aria-describedby="hero-formats">
+                <canvas id="drop-canvas" aria-hidden="true"></canvas>
+                <span class="cta-ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4"/></svg>
+                </span>
+                <span>Play near your mic</span>
+              </button>
+              <label id="drop-zone" class="cta cta-upload" tabindex="0" aria-describedby="hero-formats">
                 <input id="file-input" type="file" accept="audio/*" hidden />
-                <span class="up-ic" aria-hidden="true">
+                <span class="cta-ic" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M5 15v3.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V15" /></svg>
                 </span>
-                Upload a file
+                <span>Upload a file</span>
               </label>
-              <button id="demo-btn" class="text-link">Try the demo <span>→</span></button>
             </div>
-            <p class="drop-hint" id="drop-hint">Or drop an audio file here · MP3 · WAV · M4A · FLAC · OGG</p>
-            <p class="privacy-note">
-              <span class="lock" aria-hidden="true">⌾</span>
-              Private by design. Audio never leaves this device.
-            </p>
+            <button id="demo-btn" class="cta-demo">Try the demo <span>→</span></button>
+            <p class="hero-formats" id="hero-formats">Free · no signup · MP3 · WAV · M4A · FLAC · OGG · audio never leaves your device</p>
           </div>
         </div>
 

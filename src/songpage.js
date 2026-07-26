@@ -403,11 +403,17 @@ function boot() {
     if (ytReady) { try { yt.setPlaybackRate(v); } catch { /* noop */ } }
   });
 
-  // 跟弹和弦(手动)
+  // 跟弹和弦(手动):点开瞬间立刻弹一下当前和弦,给即时反馈
+  // (否则要等下一次和弦切换才出声,容易以为"没反应")
   $('#ec-chords-toggle').addEventListener('click', () => {
     const on = !state.playChords;
     state.userChords = on;
     setChords(on);
+    if (on) {
+      player.ensure();
+      const ch = chordByLabel(shapeLabel(chords[viewIdx()].c));
+      player.playChord(voicingFor(ch));
+    }
   });
 
   // 清除循环

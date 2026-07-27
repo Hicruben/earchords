@@ -50,6 +50,12 @@ export function renderSongPage(meta, analysis, verified = null) {
 
   // ---- 页面事实内容:以人工核对结果为准(verified),检测结果只驱动时间轴 ----
   const stats = chordStats(segments, duration);
+  // 检测可靠性闸门:健康的歌前 5 个和弦占绝大部分时长(Let Her Go 83%),
+  // 非标准调弦的歌会碎成几十种和弦(Iris 59 种、前5仅 32%)。碎成这样的
+  // 时间轴不能当谱给人看,页面只保留已核对的事实内容。
+  const coveredTime = stats.reduce((n, c) => n + c.time, 0) || 1;
+  const concentration = stats.slice(0, 5).reduce((n, c) => n + c.time, 0) / coveredTime;
+  const timelineReliable = concentration >= 0.5;
   const vChords = verified?.mainChords?.length ? verified.mainChords : stats.slice(0, 4).map((c) => c.label);
   const capo = verified?.capo || null;
   const diff = difficulty(vChords.map((l) => ({ label: l })), bpm);
@@ -139,6 +145,8 @@ ${SONG_CSS}
       </div>
     </div>
 
+    ${timelineReliable ? '' : `<p class="unreliable">Heads up — ${esc(meta.title)} is played in a non-standard tuning, which our automatic detection can't read reliably. The chords below are what the analysis heard, and a lot of them are wrong. The key, chords and capo further down the page are checked against published sources and are the ones to trust.</p>`}
+
     <div class="stage-grid">
       <!-- 和弦网格:主角 -->
       <div class="grid-scroll" id="ec-grid-scroll">
@@ -202,9 +210,11 @@ ${SONG_CSS}
     <div class="static-bars">${vChords.map((c) => `<span class="sbar">${esc(c)}</span>`).join('')}</div>
     ${capo ? `<p class="note">With a capo on fret ${capo.fret}, finger these as ${esc(capo.shapes.join(', '))}.</p>` : ''}
 
-    <h2>Chord progression through the song</h2>
+    ${timelineReliable ? `<h2>Chord progression through the song</h2>
     <div class="static-bars">${staticBars}</div>
-    <p class="note">The bar-by-bar timeline above is detected from the audio by EarChords and can include passing voicings the songbooks simplify away — the key, the core chords and the capo position on this page are checked against published sheet music and audio-analysis sources.</p>
+    <p class="note">The bar-by-bar timeline above is detected from the audio by EarChords and can include passing voicings the songbooks simplify away — the key, the core chords and the capo position on this page are checked against published sheet music and audio-analysis sources.</p>`
+    : `<h2>Why there's no bar-by-bar chart here</h2>
+    <p>This recording defeats automatic chord detection. ${esc(meta.title)} isn't played in standard tuning, so the pitches our analysis hears don't line up with normal chord shapes and the detected timeline comes out fragmented and unreliable. Rather than show you a chart we don't trust, we've left it out — the key, chords and capo above are checked against published sources and are correct.</p>`}
 
     <h2>Frequently asked</h2>
     <div class="faq-list">
@@ -317,6 +327,7 @@ h2{font-family:var(--font-disp);font-weight:700;letter-spacing:.01em;font-size:1
 .ec-chip>span{font-family:var(--font-disp);font-weight:800;font-size:1.15rem}
 .ec-chip svg{max-width:78px;height:auto}
 .intro{color:var(--dim);max-width:66ch}
+.unreliable{max-width:78ch;margin:0 0 1.1rem;padding:.85rem 1.1rem;border:1px solid #6b5a1f;border-left-width:3px;border-radius:10px;background:rgba(214,178,46,.08);color:var(--dim);font-size:.9rem;line-height:1.6}
 .article{max-width:78ch}
 .article h2{font-family:var(--font-disp);font-size:1.9rem;font-weight:700;letter-spacing:-.01em;margin:2.4rem 0 .9rem}
 .article p{color:var(--dim);line-height:1.75;margin:.7rem 0}
